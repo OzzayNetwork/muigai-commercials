@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- index.html   13:53:02 GMT -->
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>RevenueSure | Toll Collection system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="30">
+                                </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+                    <!-- App Search-->
+                    <form class="app-search d-none d-lg-block">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="bx bx-search-alt"></span>
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <div class="d-flex">
+                    <!-- small search -->
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="assets/images/flags/uganda.png" alt="Header Language" height="16">
+                            <span class="the-currency">UGX</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- uganda money -->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="UGX">
+                                <img src="assets/images/flags/uganda.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">UGX</span>
+                            </a>
+                            <!-- USD dollers-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="USD">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">USD</span>
+                            </a>
+                            <!-- kenya-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="KES">
+                                <img src="assets/images/flags/kenya.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">KES</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                <i class="bx bx-fullscreen"></i>
+                            </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <!-- notifications, i will come to this later -->
+                        <button type="button" class="btn header-item noti-icon waves-effect d-none" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-bell bx-tada"></i>
+                                <span class="badge bg-danger rounded-pill">3</span>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="bx bx-cart"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="bx bx-badge-check"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-henry">Adroa Balinda</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="myprofile.html"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">My Profile</span></a>
+                            <a class="dropdown-item" href="my-logs.html"><i class="bx bx-time font-size-16 align-middle me-1"></i> <span key="t-profile">My Logs</span></a>
+                            <a class="dropdown-item" href="auth-lock-screen.html"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title" key="t-menu">Toll Collection System</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="bx bx-home-circle"></i><span>Dashboards</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="charges.html" class="waves-effect">
+                                <i class="mdi mdi-car-cog"></i>
+                                <span>Toll charges</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="messages.html" class="waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span>Messages</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trasactions.html" class="waves-effect">
+                                <i class="mdi mdi-cash-check"></i>
+                                <span>Transactions</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">System Users</li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-boom-gate-up"></i>
+                                <span>Toll takers</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="toll-takerlist.html">Toll takers list</a></li>
+                                <li><a href="toll-takernew.html">Add a toll taker</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-shield-account-outline"></i>
+                                <span>System Admins</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin-list.html">Admins list</a></li>
+                                <li><a href="admin-new.html">Add an admin</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-account-cash-outline"></i>
+                                <span>Client Agents</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="agents-list.html">Agents list</a></li>
+                                <li><a href="agents-requests.html">Agent Requests</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">Reports</li>
+                        <li>
+                            <a href="wallet-topups.html" class="waves-effect">
+                                <i class="mdi mdi-wallet-plus-outline"></i>
+                                <span>Wallet top ups</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="clients.html" class="waves-effect">
+                                <i class="mdi mdi-account-details"></i>
+                                <span>Clients register</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="vehicles.html" class="waves-effect">
+                                <i class="bx bx-car"></i>
+                                <span>Vehicles</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Toll-taker-collection.html" class="waves-effect">
+                                <i class="mdi mdi-boom-gate-outline"></i>
+                                <span>Toll takers Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html" class="waves-effect">
+                                <i class="mdi mdi-car-info"></i>
+                                <span>Collections by category</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="menu-title d-none" key="t-apps">My Account</li>
+                        <li class="d-none">
+                            <a href="myprofile.html" class="waves-effect">
+                                <i class="bx bx-user"></i>
+                                <span>My profile</span>
+                            </a>
+                        </li>
+
+                        <li class="d-none">
+                            <a href="auth-login.html" class="waves-effect">
+                                <i class="bx bx-power-off"></i>
+                                <span>Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-xl-4 px-sm-30px">
+                            <div class="card overflow-hidden">
+                                <div class="bg-primary bg-soft">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="text-primary p-3">
+                                                <h5 class="text-primary">Hello there !</h5>
+                                                <p>Here is some details about your account</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-5 align-self-end">
+                                            <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="avatar-md profile-user-wid mb-4">
+                                                <div class="avatar-xs">
+                                                    <span class="avatar-title img-thumbnail rounded-circle rounded-circle bg-success bg-soft text-primary">
+                                                            <strong>AB</strong>
+                                                        </span>
+                                                </div>
+                                            </div>
+                                            <h5 class="font-size-15 text-truncate mb-0">Adroa Balinda</h5>
+                                            <p class="text-muted mb-0 text-truncate">Super Admin</p>
+                                        </div>
+
+                                        <div class="col-sm-7">
+                                            <div class="pt-4">
+
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5 class="font-size-15 mb-0"><small>22 Min</small></h5>
+                                                        <p class="text-muted mb-0"><small>Log in Duration</small></p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <h5 class="font-size-15 mb-0"><small>22 Jan 2022</small></h5>
+                                                        <p class="text-muted mb-0"><small>Date registered</small></p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Daily Collections</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p class="text-muted">Today</p>
+                                            <h3 class="data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="2562236">UGX 2,562,236</h3>
+                                            <p class="text-muted"><span class="text-success me-2"> 12% <i class="mdi mdi-arrow-up"></i> </span> From previous Day</p>
+
+                                            <div class="mt-4 mb-3">
+                                                <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light"><i class="mdi mdi-calendar-check-outline font-size-16 align-middle me-2"></i>Change Date</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="mt-4 mt-sm-0">
+                                                <div id="radialBar-chart" class="apex-charts"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted mb-0">You can select a different date from up above</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 px-sm-30px">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mini-stats-wid">
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <div class="flex-grow-1">
+                                                    <p class="text-muted fw-medium">Toll takers offline</p>
+                                                    <h4 class="mb-0">1,235</h4>
+                                                </div>
+
+                                                <div class="flex-shrink-0 align-self-center">
+                                                    <div class="mini-stat-icon avatar-sm rounded-circle ">
+                                                        <span class="avatar-title bg-danger">
+                                                                <i class="dripicons-warning font-size-24"></i>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mini-stats-wid">
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <div class="flex-grow-1">
+                                                    <p class="text-muted fw-medium">Total deposits</p>
+                                                    <h4 class="mb-0 text-uppercase data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="723235723">UGX 723,235, 723</h4>
+                                                </div>
+
+                                                <div class="flex-shrink-0 align-self-center ">
+                                                    <div class="avatar-sm rounded-circle bg-primary mini-stat-icon">
+                                                        <span class="avatar-title rounded-circle bg-warning">
+                                                                <i class="bx bx-archive-in font-size-24"></i>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mini-stats-wid">
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <div class="flex-grow-1">
+                                                    <p class="text-muted fw-medium">AVG Daily earnings</p>
+                                                    <h4 class="mb-0 text-uppercase data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="23000230">Ugx 23,000,230</h4>
+                                                </div>
+
+                                                <div class="flex-shrink-0 align-self-center">
+                                                    <div class="avatar-sm rounded-circle bg-success mini-stat-icon">
+                                                        <span class="avatar-title rounded-circle bg-success">
+                                                                <i class="mdi mdi-cash-plus font-size-24"></i>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row -->
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-sm-flex flex-wrap">
+                                        <h4 class="card-title mb-4">Earnings & Client Deposits comparison</h4>
+                                        <div class="ms-auto">
+                                            <ul class="nav nav-pills">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Week</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Month</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#">Year</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div id="stacked-column-chart" class="apex-charts" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row">
+
+                        <div class="col-xl-5 col-md-5 px-sm-30px">
+                            <div class="card height-calc-21">
+                                <div class="card-body ">
+                                    <div class="clearfix">
+                                        <div class="float-end">
+                                            <div class="input-group input-group-sm">
+                                                <select class="form-select form-select-sm">
+                                                        <option value="JA" selected>Jan</option>
+                                                        <option value="DE">Dec</option>
+                                                        <option value="NO">Nov</option>
+                                                        <option value="OC">Oct</option>
+                                                    </select>
+                                                <label class="input-group-text">Month</label>
+                                            </div>
+                                        </div>
+                                        <h4 class="card-title mb-4">Transactions by vehicle category</h4>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <div class="mb-4">
+                                            <i class="mdi mdi-car-info text-primary display-4"></i>
+                                        </div>
+                                        <h3>1,456</h3>
+                                        <p>Total transactions</p>
+                                        <p class="mt-4 mb-0"><span class="badge badge-soft-success font-size-11 me-2"> 0.6% <i class="mdi mdi-arrow-up"></i> </span> From previous period</p>
+                                    </div>
+
+
+
+                                    <div class="table-responsive mt-4">
+                                        <table class="table align-middle mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1">Motorcycle</h5>
+                                                        <p class="text-muted mb-0 data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="155698">UGX 15,5698</p>
+                                                    </td>
+
+                                                    <td>
+                                                        <div id="radialchart-1" class="apex-charts"></div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-1">Transactions</p>
+                                                        <h5 class="mb-0">37 %</h5>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1">Trailer</h5>
+                                                        <p class="text-muted mb-0 data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="1251236000">UGX 125,1236,000</p>
+                                                    </td>
+
+                                                    <td>
+                                                        <div id="radialchart-2 " class="apex-charts "></div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-1 ">Transactions</p>
+                                                        <h5 class="mb-0 ">72 %</h5>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1 ">Salon Car</h5>
+                                                        <p class="text-muted mb-0 data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="63125236">UGX 63,125,236</p>
+                                                    </td>
+
+                                                    <td>
+                                                        <div id="radialchart-3 " class="apex-charts "></div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-1 ">Transactions</p>
+                                                        <h5 class="mb-0 ">54 %</h5>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="text-center mt-4 "><a href="# " class="btn btn-primary waves-effect waves-light btn-sm ">View More <i class="mdi mdi-arrow-right ms-1 "></i></a></div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-xl-7 col-md-7 px-sm-30px ">
+                            <div class="card ">
+                                <div class="card-body ">
+                                    <div class="d-flex align-items-start ">
+                                        <div class="me-2 ">
+                                            <h5 class="card-title mb-4 ">Toll takers perfomance</h5>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="table-responsive ">
+                                        <table class="table align-middle table-nowrap mb-0 ">
+                                            <tr>
+                                                <th scope="col " colspan="2 ">Toll taker</th>
+                                                <th scope="col ">Transactions</th>
+                                                <th scope="col " class="text-right ">Amount collected</th>
+                                                <th scope="col ">Action</th>
+                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="5 " class="text-center text-uppercase bg-danger bg-soft ">
+                                                        <h6 class="mb-0 pb-0 text-danger ">Bottom 3</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 100px; ">
+                                                        <div class="flex-shrink-0 me-3 ">
+                                                            <div class="avatar-xs ">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary ">
+                                                                        <strong>MK</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-13 text-truncate mb-1 "><a href="javascript: void(0); " class="text-dark ">Martha Dembe</a></h5>
+                                                        <p class="text-muted mb-0 ">
+                                                            <a href="tel:0772134569 "><i class="mdi mdi-phone font-12 "></i><span class="pl-3 ">0772134569</span></a>
+                                                        </p>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt align-middle me-1 "></i> 120</td>
+                                                    <td class="text-right ">
+                                                        <i class="mdi mdi-cash align-middle me-1"></i> <span class="data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="124409200">UGX 124,409,200</span></td>
+                                                    <td>
+                                                        <button type="button " class="btn btn-link waves-effect "><i class="mdi mdi-eye-outline align-middle me-1 "></i>View</button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="width: 100px; ">
+                                                        <div class="flex-shrink-0 me-3 ">
+                                                            <div class="avatar-xs ">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary ">
+                                                                        <strong>MK</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-13 text-truncate mb-1 "><a href="javascript: void(0); " class="text-dark ">Josephat Bwanbale</a></h5>
+                                                        <p class="text-muted mb-0 ">
+                                                            <a href="tel:070452589 "><i class="mdi mdi-phone font-12 "></i><span class="pl-3 ">070452589</span></a>
+                                                        </p>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt align-middle me-1 "></i> 100</td>
+                                                    <td class="text-right ">
+                                                        <i class="mdi mdi-cash align-middle me-1 "></i><span class="data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="103278189">UGX 103,278,189</span></td>
+                                                    <td>
+                                                        <button type="button " class="btn btn-link waves-effect "><i class="mdi mdi-eye-outline align-middle me-1 "></i>View</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 100px; ">
+                                                        <div class="flex-shrink-0 me-3 ">
+                                                            <div class="avatar-xs ">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary ">
+                                                                        <strong>MK</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-13 text-truncate mb-1 "><a href="javascript: void(0); " class="text-dark ">Stephen Kaikara</a></h5>
+                                                        <p class="text-muted mb-0 ">
+                                                            <a href="tel:0755437892 "><i class="mdi mdi-phone font-12 "></i><span class="pl-3 ">0755437892</span></a>
+                                                        </p>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt align-middle me-1 "></i> 90</td>
+                                                    <td class="text-right "><i class="mdi mdi-cash align-middle me-1"></i> <span class="data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="50106163">UGX 50,106,163</span> </td>
+                                                    <td>
+                                                        <button type="button " class="btn btn-link waves-effect "><i class="mdi mdi-eye-outline align-middle me-1 "></i>View</button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="5 " class="text-center text-uppercase bg-success bg-soft ">
+                                                        <h6 class="mb-0 pb-0 text-success ">Top 3</h6>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 100px; ">
+                                                        <div class="flex-shrink-0 me-3 ">
+                                                            <div class="avatar-xs ">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary ">
+                                                                        <strong>MK</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-13 text-truncate mb-1 "><a href="javascript: void(0); " class="text-dark ">Austine Mukisa</a></h5>
+                                                        <p class="text-muted mb-0 ">
+                                                            <a href="tel:0764433221 "><i class="mdi mdi-phone font-12 "></i><span class="pl-3 ">0764433221</span></a>
+                                                        </p>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt align-middle me-1 "></i> 175</td>
+                                                    <td class="text-right "><i class="mdi mdi-cash align-middle me-1 "></i><span class="data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="231569263">UGX 231,569,263</span></td>
+                                                    <td>
+                                                        <button type="button " class="btn btn-link waves-effect "><i class="mdi mdi-eye-outline align-middle me-1 "></i>View</button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="width: 100px; ">
+                                                        <div class="flex-shrink-0 me-3 ">
+                                                            <div class="avatar-xs ">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary ">
+                                                                        <strong>MK</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-13 text-truncate mb-1 "><a href="javascript: void(0); " class="text-dark ">Mark sanyu</a></h5>
+                                                        <p class="text-muted mb-0 ">
+                                                            <a href="tel:0779678534 "><i class="mdi mdi-phone font-12 "></i><span class="pl-3 ">0779678534</span></a>
+                                                        </p>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt align-middle me-1 "></i> 162</td>
+                                                    <td class="text-right ">
+                                                        <i class="mdi mdi-cash align-middle me-1 "></i> <span class="data-carrency text-uppercase" data-selected-currency="UGX" data-base="UGX" data-amount="204309200">UGX 204,309,200</span></td>
+                                                    <td>
+                                                        <button type="button " class="btn btn-link waves-effect "><i class="mdi mdi-eye-outline align-middle me-1 "></i>View</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="width: 100px; ">
+                                                        <div class="flex-shrink-0 me-3 ">
+                                                            <div class="avatar-xs ">
+                                                                <span class="avatar-title rounded-circle bg-primary bg-soft text-primary ">
+                                                                        <strong>MK</strong>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-13 text-truncate mb-1 "><a href="javascript: void(0); " class="text-dark ">Ann Miremba</a></h5>
+                                                        <p class="text-muted mb-0 ">
+                                                            <a href="tel:0799435678 "><i class="mdi mdi-phone font-12 "></i><span class="pl-3 ">0799435678</span></a>
+                                                        </p>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt align-middle me-1 "></i> 157</td>
+                                                    <td class="text-right "><i class="mdi mdi-cash align-middle me-1 "></i><span class="data-carrency text-uppercase" data-selected-currency="UGX " data-base="UGX" data-amount="191354100 ">UGX 191,354,100</span> </td>
+                                                    <td>
+                                                        <button type="button " class="btn btn-link waves-effect "><i class="mdi mdi-eye-outline align-middle me-1 "></i>View</button>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                    <div class="text-center mt-4 "><a href="# " class="btn btn-primary waves-effect waves-light btn-sm ">View More <i class="mdi mdi-arrow-right ms-1 "></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © RevenueSure.
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="text-sm-end d-sm-block ">
+                                Developed by Nouveta LTD.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay "></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
+
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js "></script>
+
+
+    <!-- dashboard init -->
+    <script src="assets/js/pages/dashboard.init.js "></script>
+    <!-- Saas dashboard init -->
+    <script src="assets/js/pages/saas-dashboard.init.js "></script>
+
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
+</body>
+
+
+<!-- index.html   13:55:49 GMT -->
+
+</html>

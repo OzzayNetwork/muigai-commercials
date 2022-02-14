@@ -1,0 +1,1583 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- index.html   13:53:02 GMT -->
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>RevenueSure | Toll Collection system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+
+
+    <!-- droping file -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="30">
+                                </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+                    <!-- App Search-->
+                    <form class="app-search d-none d-lg-block">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="bx bx-search-alt"></span>
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <div class="d-flex">
+                    <!-- small search -->
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="assets/images/flags/uganda.png" alt="Header Language" height="16">
+                            <span class="the-currency">UGX</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- uganda money -->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="UGX">
+                                <img src="assets/images/flags/uganda.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">UGX</span>
+                            </a>
+                            <!-- USD dollers-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="USD">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">USD</span>
+                            </a>
+                            <!-- kenya-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="KES">
+                                <img src="assets/images/flags/kenya.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">KES</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                <i class="bx bx-fullscreen"></i>
+                            </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <!-- notifications, i will come to this later -->
+                        <button type="button" class="btn header-item noti-icon waves-effect d-none" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-bell bx-tada"></i>
+                                <span class="badge bg-danger rounded-pill">3</span>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="bx bx-cart"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="bx bx-badge-check"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-henry">Adroa Balinda</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="myprofile.html"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">My Profile</span></a>
+                            <a class="dropdown-item" href="my-logs.html"><i class="bx bx-time font-size-16 align-middle me-1"></i> <span key="t-profile">My Logs</span></a>
+                            <a class="dropdown-item" href="auth-lock-screen.html"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title" key="t-menu">Toll Collection System</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="bx bx-home-circle"></i><span>Dashboards</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="charges.html" class="waves-effect">
+                                <i class="mdi mdi-car-cog"></i>
+                                <span>Toll charges</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="messages.html" class="waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span>Messages</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trasactions.html" class="waves-effect">
+                                <i class="mdi mdi-cash-check"></i>
+                                <span>Transactions</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">System Users</li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-boom-gate-up"></i>
+                                <span>Toll takers</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="toll-takerlist.html">Toll takers list</a></li>
+                                <li><a href="toll-takernew.html">Add a toll taker</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-shield-account-outline"></i>
+                                <span>System Admins</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin-list.html">Admins list</a></li>
+                                <li><a href="admin-new.html">Add an admin</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-account-cash-outline"></i>
+                                <span>Client Agents</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="agents-list.html">Agents list</a></li>
+                                <li><a href="agents-requests.html">Agent Requests</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">Reports</li>
+                        <li>
+                            <a href="wallet-topups.html" class="waves-effect">
+                                <i class="mdi mdi-wallet-plus-outline"></i>
+                                <span>Wallet top ups</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="clients.html" class="waves-effect">
+                                <i class="mdi mdi-account-details"></i>
+                                <span>Clients register</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="bx bx-car"></i>
+                                <span>Vehicles</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-boom-gate-outline"></i>
+                                <span>Toll takers Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-car-info"></i>
+                                <span>Collections by category</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="menu-title d-none" key="t-apps">My Account</li>
+                        <li class="d-none">
+                            <a href="myprofile.html" class="waves-effect">
+                                <i class="bx bx-user"></i>
+                                <span>My profile</span>
+                            </a>
+                        </li>
+
+                        <li class="d-none">
+                            <a href="auth-login.html" class="waves-effect">
+                                <i class="bx bx-power-off"></i>
+                                <span>Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Messages</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Messages</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Left sidebar -->
+                            <div class="email-leftbar card">
+
+
+                                <button type="button" class="btn btn-primary waves-effect waves-light w-100 write-msg-btn">
+                                    <i class="mdi mdi-pencil font-size-16 align-middle me-2"></i> Write Message
+                                </button>
+
+                                <div class="mail-list mt-4">
+                                    <a href="javascript: void(0);" class="active"><i class="mdi mdi-email-outline me-2"></i> All messages <span class="ms-1 float-end">(18)</span></a>
+                                    <a href="javascript: void(0);"><i class="bx bx-check-double me-2"></i>Delivered Messages</a>
+                                    <a href="javascript: void(0);"><i class="bx bx-loader-circle me-2"></i>Pending</a>
+                                    <a href="javascript: void(0);"><i class="mdi mdi-clipboard-edit-outline me-2"></i>Draft</a>
+                                    <a href="javascript: void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Trash</a>
+                                </div>
+
+
+                                <h6 class="mt-4">Labels</h6>
+
+                                <div class="mail-list mt-1">
+                                    <a href="javascript: void(0);"><span class="mdi mdi-arrow-right-drop-circle text-info float-end"></span>All</a>
+                                    <a href="javascript: void(0);"><span class="mdi mdi-arrow-right-drop-circle text-danger float-end"></span>System admins</a>
+                                    <a href="javascript: void(0);"><span class="mdi mdi-arrow-right-drop-circle text-warning float-end"></span>Toll takers</a>
+                                    <a href="javascript: void(0);"><span class="mdi mdi-arrow-right-drop-circle  text-purple float-end"></span>Agents</a>
+                                    <a href="javascript: void(0);"><span class="mdi mdi-arrow-right-drop-circle text-success float-end"></span>Client</a>
+                                </div>
+
+                                <h6 class="mt-4">Contacts</h6>
+
+                                <div class="mt-2">
+                                    <a href="javascript: void(0);" class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img class="rounded-circle" src="assets/images/users/avatar-2.jpg" alt="Generic placeholder image" height="36">
+                                        </div>
+                                        <div class="flex-grow-1 chat-user-box">
+                                            <p class="user-title m-0">Kelvin Njuguna</p>
+                                            <p class="text-muted">Nouveta</p>
+                                        </div>
+                                    </a>
+
+                                    <a href="javascript: void(0);" class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img class="rounded-circle" src="assets/images/users/avatar-3.jpg" alt="Generic placeholder image" height="36">
+                                        </div>
+                                        <div class="flex-grow-1 chat-user-box">
+                                            <p class="user-title m-0">Alex Wanjala</p>
+                                            <p class="text-muted">Developer Nouveta</p>
+                                        </div>
+                                    </a>
+
+                                    <a href="javascript: void(0);" class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img class="rounded-circle" src="assets/images/users/avatar-4.jpg" alt="Generic placeholder image" height="36">
+                                        </div>
+                                        <div class="flex-grow-1 chat-user-box">
+                                            <p class="user-title m-0">Edwin Kiploman</p>
+                                            <p class="text-muted">Developer Nouveta</p>
+                                        </div>
+                                    </a>
+
+                                    <a href="javascript: void(0);" class="d-flex">
+                                        <div class="flex-shrink-0 me-3">
+                                            <img class="rounded-circle" src="assets/images/users/avatar-6.jpg" alt="Generic placeholder image" height="36">
+                                        </div>
+                                        <div class="flex-grow-1 chat-user-box">
+                                            <p class="user-title m-0">NBK Managers</p>
+                                            <p class="text-muted">20 Contacts</p>
+                                        </div>
+                                    </a>
+                                    <button type="button" class="btn btn-outline-info waves-effect waves-light w-100 border-dash">
+                                        <i class="mdi mdi-account-multiple-plus-outline font-size-16 align-middle me-2"></i> Add Contact(s)
+                                    </button>
+
+                                </div>
+
+                            </div>
+                            <!-- End Left sidebar -->
+
+
+                            <!-- Right Sidebar -->
+                            <div class="email-rightbar mb-3">
+
+                                <div class="card">
+                                    <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+                                        <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+
+                                            <div class="d-flex align-items-center flex-grow-1">
+
+
+
+
+
+                                                <div class="btn-group me-2 mb-2 mb-sm-0 mr-15px d-none">
+                                                    <button type="button" class="btn btn-primary waves-light waves-effect" data-table-action="excel"><i class="fa fa-inbox"></i></button>
+                                                    <button type="button" class="btn btn-primary waves-light waves-effect"><i class="fa fa-exclamation-circle"></i></button>
+                                                    <button type="button" class="btn btn-primary waves-light waves-effect"><i class="far fa-trash-alt"></i></button>
+                                                </div>
+
+                                                <div class="btn-group me-2 mb-2 mb-sm-0 d-none">
+                                                    <button type="button" class="btn btn-primary waves-light waves-effect" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-folder"></i> <i class="mdi mdi-chevron-down ms-1"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Updates</a>
+                                                        <a class="dropdown-item" href="#">Social</a>
+                                                        <a class="dropdown-item" href="#">Team Manage</a>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="btn-group me-2 mb-2 mb-sm-0 mr-15px d-none">
+                                                    <button type="button" class="btn btn-primary waves-light waves-effect" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        More <i class="mdi mdi-dots-vertical ms-2"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#">Mark as Unread</a>
+                                                        <a class="dropdown-item" href="#">Mark as Important</a>
+                                                        <a class="dropdown-item" href="#">Add to Tasks</a>
+                                                        <a class="dropdown-item" href="#">Add Star</a>
+                                                        <a class="dropdown-item" href="#">Mute</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex d-sm-none">
+                                                <div class="float-end ms-2">
+                                                    <h5 class="font-size-14 mb-0"><i class="bx bx-wallet text-primary font-size-16 align-middle me-1"></i> $4235.23</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class=" align-items-center d-sm-flex d-none">
+
+
+                                                <div class="flex-grow-1 overflow-hidden text-right">
+
+                                                    <p class="text-truncate mb-0">SMS wallet Balance</p>
+                                                    <h4 class="text-truncate font-size-18 mb-0">UGX 123,260</h4>
+
+                                                </div>
+                                                <div class="avatar-xs ml-7px">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                   <i class="mdi-cash-multiple mdi font-21 text-success"></i>
+
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body the-inbox">
+                                        <table id="emailDataTable-btns" class="table table-borderless dt-responsive  nowrap w-100 table-hover">
+                                            <thead>
+                                                <tr class="d-none">
+                                                    <th>#</th>
+                                                    <th>Name</th>
+                                                    <th>Phone</th>
+                                                    <th>Email</th>
+                                                    <th>Message</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-hover">
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek2">
+                                                            <label for="chek2" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">edwin kiploman</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap unread">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek1">
+                                                            <label for="chek1" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Alex wanjala</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-error text-danger font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>alex@wanjala.com</span><span class="bx bx-error text-danger font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek3">
+                                                            <label for="chek3" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek4">
+                                                            <label for="chek4" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek5">
+                                                            <label for="chek5" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek6">
+                                                            <label for="chek6" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek7">
+                                                            <label for="chek7" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek8">
+                                                            <label for="chek8" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek9">
+                                                            <label for="chek9" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek10">
+                                                            <label for="chek10" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                                <tr class="text-nowrap">
+                                                    <th>
+                                                        <div class="checkbox-wrapper-mail">
+                                                            <input type="checkbox" id="chek11">
+                                                            <label for="chek11" class="toggle"></label>
+                                                        </div>
+                                                    </th>
+                                                    <td class="text-capitalize">Kelvin Njuguna</td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>0704 549 859</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="pb-0 mb-0 d-flex justify-content-between align-items-center"><span>email@email.com</span><span class="bx bx-check-double text-info font-21  ml-7px"></span></p>
+                                                    </td>
+                                                    <td class="the-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque volutpat dolor vitae ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                                        Cras a consequat est. Donec viverra nulla id lacus aliquam, sit amet hendrerit metus venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac dapibus
+                                                        erat. In finibus pharetra laoreet. Phasellus rhoncus, arcu nec maximus feugiat, tortor urna iaculis ex, ullamcorper elementum sem sem mattis arcu. Pellentesque sodales, magna sit amet faucibus tincidunt,
+                                                        erat nunc suscipit neque, a tempor neque augue non urna. Sed finibus, mi in finibus fringilla, mauris quam dignissim magna, lacinia sagittis nisl nisi id elit. Phasellus eu neque vel ex viverra commodo.</td>
+                                                    <td>Feb 28</td>
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+
+                                    <ul class="message-list d-none">
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk19">
+                                                    <label for="chk19" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Peter, me (3)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Hello – <span class="teaser">Trip home from Colombo has been arranged, then Jenna will come get me from Stockholm. :)</span>
+                                                </a>
+                                                <div class="date">Mar 6</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk20">
+                                                    <label for="chk20" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">me, Susanna (7)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject"><span class="bg-warning badge me-2">Freelance</span>Since you asked... and i'm
+                                                    inconceivably bored at the train station –
+                                                    <span class="teaser">Alright thanks. I'll have to re-book that somehow, i'll get back to you.</span>
+                                                </a>
+                                                <div class="date">Mar. 6</div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk6">
+                                                    <label for="chk6" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Web Support Dennis</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Re: New mail settings – 
+                                                    <span class="teaser">Will you answer him asap?</span>
+                                                </a>
+                                                <div class="date">Mar 7</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk7">
+                                                    <label for="chk7" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">me, Peter (2)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject"><span class="bg-info badge me-2">Support</span>Off on Thursday - 
+                                                    <span class="teaser">Eff that place, you might as well stay here with us instead! Sent from my iPhone 4  4 mar 2014 at 5:55 pm</span>
+                                                </a>
+                                                <div class="date">Mar 4</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk8">
+                                                    <label for="chk8" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Medium</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject"><span class="bg-primary badge me-2">Social</span>This Week's Top Stories – 
+                                                    <span class="teaser">Our top pick for you on Medium this week The Man Who Destroyed America’s Ego</span>
+                                                </a>
+                                                <div class="date">Feb 28</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk9">
+                                                    <label for="chk9" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Death to Stock</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Montly High-Res Photos – 
+                                                    <span class="teaser">To create this month's pack, we hosted a party with local musician Jared Mahone here in Columbus, Ohio.</span>
+                                                </a>
+                                                <div class="date">Feb 28</div>
+                                            </div>
+                                        </li>
+
+                                        <li class="unread">
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk3">
+                                                    <label for="chk3" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Randy, me (5)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject"><span class="bg-success badge me-2">Family</span>Last pic over my village – 
+                                                    <span class="teaser">Yeah i'd like that! Do you remember the video you showed me of your train ride between Colombo and Kandy? The one with the mountain view? I would love to see that one again!</span>
+                                                </a>
+                                                <div class="date">5:01 am</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk4">
+                                                    <label for="chk4" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Andrew Zimmer</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Mochila Beta: Subscription Confirmed
+                                                    – <span class="teaser">You've been confirmed! Welcome to the ruling class of the inbox. For your records, here is a copy of the information you submitted to us...</span>
+                                                </a>
+                                                <div class="date">Mar 8</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk5">
+                                                    <label for="chk5" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Infinity HR</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Sveriges Hetaste sommarjobb –
+                                                    <span class="teaser">Hej Nicklas Sandell! Vi vill bjuda in dig till "First tour 2014", ett rekryteringsevent som erbjuder jobb på 16 semesterorter iSverige.</span>
+                                                </a>
+                                                <div class="date">Mar 8</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk10">
+                                                    <label for="chk10" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Revibe</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject"><span class="bg-danger badge me-2">Friends</span>Weekend on Revibe – 
+                                                    <span class="teaser">Today's Friday and we thought maybe you want some music inspiration for the weekend. Here are some trending tracks and playlists we think you should give a listen!</span>
+                                                </a>
+                                                <div class="date">Feb 27</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk11">
+                                                    <label for="chk11" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Erik, me (5)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Regarding our meeting – 
+                                                    <span class="teaser">That's great, see you on Thursday!</span>
+                                                </a>
+                                                <div class="date">Feb 24</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk12">
+                                                    <label for="chk12" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">KanbanFlow</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject"><span class="bg-primary badge me-2">Social</span>Task assigned: Clone ARP's website
+                                                    – <span class="teaser">You have been assigned a task by Alex@Work on the board Web.</span>
+                                                </a>
+                                                <div class="date">Feb 24</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk13">
+                                                    <label for="chk13" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Tobias Berggren</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Let's go fishing! – 
+                                                    <span class="teaser">Hey, You wanna join me and Fred at the lake tomorrow? It'll be awesome.</span>
+                                                </a>
+                                                <div class="date">Feb 23</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk14">
+                                                    <label for="chk14" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Charukaw, me (7)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Hey man – <span class="teaser">Nah man sorry i don't. Should i get it?</span>
+                                                </a>
+                                                <div class="date">Feb 23</div>
+                                            </div>
+                                        </li>
+                                        <li class="unread">
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk15">
+                                                    <label for="chk15" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">me, Peter (5)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject"><span class="bg-info badge me-2">Support</span>Home again! – <span class="teaser">That's just perfect! See you tomorrow.</span>
+                                                </a>
+                                                <div class="date">Feb 21</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk16">
+                                                    <label for="chk16" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Stack Exchange</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">1 new items in your Stackexchange inbox
+                                                    – <span class="teaser">The following items were added to your Stack Exchange global inbox since you last checked it.</span>
+                                                </a>
+                                                <div class="date">Feb 21</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk17">
+                                                    <label for="chk17" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">Google Drive Team</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">You can now use your storage in Google
+                                                    Drive – <span class="teaser">Hey Nicklas Sandell! Thank you for purchasing extra storage space in Google Drive.</span>
+                                                </a>
+                                                <div class="date">Feb 20</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-mail col-mail-1">
+                                                <div class="checkbox-wrapper-mail">
+                                                    <input type="checkbox" id="chk18">
+                                                    <label for="chk18" class="toggle"></label>
+                                                </div>
+                                                <a href="javascript: void(0);" class="title">me, Susanna (11)</a><span class="star-toggle far fa-star"></span>
+                                            </div>
+                                            <div class="col-mail col-mail-2">
+                                                <a href="javascript: void(0);" class="subject">Train/Bus – <span class="teaser">Yes ok, great! I'm not stuck in Stockholm anymore, we're making progress.</span>
+                                                </a>
+                                                <div class="date">Feb 19</div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <!-- card -->
+
+                                <div class="row">
+                                    <div class="col-7">
+                                        Showing 1 - 20 of 1,524
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="btn-group float-end">
+                                            <button type="button" class="btn btn-sm btn-success waves-effect"><i class="fa fa-chevron-left"></i></button>
+                                            <button type="button" class="btn btn-sm btn-success waves-effect"><i class="fa fa-chevron-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end Col-9 -->
+
+                        </div>
+
+                    </div>
+                    <!-- End row -->
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <!-- known contacts modal Modal -->
+            <div class="modal fade" id="composemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="composemodalTitle">Select contacts</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
+                                    <label for="" class="mb-0 text-uppercase"><strong>System Users</strong></label>
+                                    <p>You can select multiple users
+                                    </p>
+                                    <div class="d">
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-check form-check-primary  pl-4 mb-3  mr-15px">
+                                                    <input class="form-check-input" type="checkbox" id="check-customers">
+                                                    <label class="form-check-label" for="check-customers">
+                                                       Customers (103)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form-check form-check-primary  mb-3 mr-15px">
+                                                    <input class="form-check-input" type="checkbox" id="check-super">
+                                                    <label class="form-check-label" for="check-super">
+                                                        Super admins (3)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-check form-check-primary mb-3  pl-4  mr-15px">
+                                                    <input class="form-check-input" type="checkbox" id="check-read">
+                                                    <label class="form-check-label" for="check-read">
+                                                        Read only admins (211)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form-check form-check-primary mb-3  pl-4  mr-15px">
+                                                    <input class="form-check-input" type="checkbox" id="check-toll">
+                                                    <label class="form-check-label" for="check-toll">
+                                                        Toll takers (32)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="mb-5">
+                                    <div class="mb-3">
+                                        <label for="" class="mb-0 text-uppercase"><strong>Saved contacts</strong></label>
+                                        <p>You can select multiple users
+                                        </p>
+                                        <div class="d">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-check form-check-success  pl-4 mb-3  mr-15px">
+                                                        <input class="form-check-input" type="checkbox" id="check-managers">
+                                                        <label class="form-check-label" for="check-managers">
+                                                           NBK Managers (7)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-check form-check-success  mb-3 mr-15px">
+                                                        <input class="form-check-input" type="checkbox" id="check-tenants">
+                                                        <label class="form-check-label" for="check-tenants">
+                                                            Oversees tenants (13)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-check form-check-success mb-3  pl-4  mr-15px">
+                                                        <input class="form-check-input" type="checkbox" id="check-support">
+                                                        <label class="form-check-label" for="check-support">
+                                                            Nouveta Support team (36)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-check form-check-success mb-3  pl-4  mr-15px">
+                                                        <input class="form-check-input" type="checkbox" id="check-staff">
+                                                        <label class="form-check-label" for="check-staff">
+                                                            Staff members (75)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="mb-5">
+                                    <label for="" class="mb-0 text-uppercase"><strong>Upload new contacts</strong></label>
+                                    <p>
+                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample before you continue</a>
+                                    </p>
+                                    <div class="p-4 bg-light">
+                                        <div class="row ">
+                                            <div class="col-12 mb-3">
+                                                <div class="form-group">
+                                                    <label for="">Contacts tittle</label>
+                                                    <input type="text" placeholder="Contacts title" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <form action="#" class="dropzone">
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" multiple="multiple" class="mb-3">
+                                                    </div>
+                                                    <div class="dz-message needsclick">
+                                                        <div class="mb-3">
+                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                        </div>
+
+                                                        <h6>Contacts excell file</h6>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send <i class="fab fa-telegram-plane ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+
+            <!-- predeterminde uploading of contacts -->
+            <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Select contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
+                                    <label for="" class="mb-0 text-uppercase"><strong>Upload new contacts</strong></label>
+                                    <p>
+                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample before you continue</a>
+                                    </p>
+                                    <div class="p-4 bg-light">
+                                        <div class="row ">
+
+                                            <div class="col-12">
+                                                <form action="#" class="dropzone">
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" class="mb-3">
+                                                    </div>
+                                                    <div class="dz-message needsclick">
+                                                        <div class="mb-3">
+                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                        </div>
+
+                                                        <h6>Contacts excell file</h6>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Upload contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of predetermined -->
+
+            <!-- the selected contacts -->
+            <div class="modal fade selected-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="selected-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">My uploaded contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="">
+                                    <div class="row ">
+
+                                        <div class="col-12">
+                                            <div class="table-responsive">
+                                                <table class="table align-middle table-nowrap table-hover mb-0">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th scope="col" style="width: 70px;">#</th>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Email</th>
+                                                            <th scope="col">Phone</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        A
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        J
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Juliet Kemboi</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        T
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tesfa Oze</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        M
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Moureen Akinyi</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        S
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Salome Aringo</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end of the selected contacts -->
+
+
+
+            <!-- the message composer -->
+            <div class="email-overlay d-none">
+                <div class="card the-message-maker">
+                    <div class="card-header bg-primary text-white py-0">
+                        <div class="d-flex justify-content-between align-items-center text-white">
+                            <h4 class="mb-0 p-0 m-0">New message</h4>
+                            <div class="control-btns">
+                                <div class="dropdownd-lg-inline-block ms-1">
+                                    <button type="button" class="btn header-item noti-icon waves-effect minimize">
+                                        <i class="mdi mdi-window-minimize"></i>
+                                    </button>
+                                    <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                        <i class="bx bx-fullscreen"></i>
+                                    </button>
+
+                                    <button type="button" class="btn header-item noti-icon waves-effect close-message-maker">
+                                        <i class="mdi mdi-close"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 d-none selected-contacts-message">
+                                <div class="row flex-nowrap">
+                                    <div class="col-1 mr-0  w-auto d-flex ">
+                                        <span class=" ">
+                                            <strong>To:</strong>
+                                        </span>
+                                    </div>
+                                    <div class=" col-11 ml-0 pl-0 flex-wrap d-flex align-items-start">
+                                        <span class="the-selected-contacts text-capitalize">Alex wanjala, juliet kemboi, tesfa ozem, moureen akinyi, salome aringo,kelvin kamau, william njuguna</span>
+                                        <span data-bs-toggle="modal" data-bs-target="#selected-contacts" class="btn-link waves-effect float-left ">+23 Others</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+                                <div class="pb-3">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#composemodal" class="btn btn-success waves-effect btn-label waves-light d-none"><i class="bx bxs-user-detail label-icon"></i> Select contacts</button>
+                                </div>
+
+                                <div class="pb-3">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#upload-contacts" class="btn btn-success waves-effect btn-label waves-light"><i class="mdi-account-details-outline mdi label-icon"></i> Upload Contacts</button>
+                                </div>
+
+                            </div>
+                            <div class="col-12">
+                                <input type="text" placeholder="Subject" class="form-control mb-3">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="" placeholder="Write your message" id="" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <label for="">Send as?</label>
+                                <div class="d-flex">
+
+                                    <div class="form-check form-check-primary  mr-15px">
+                                        <input class="form-check-input" type="checkbox" id="check-email" checked>
+                                        <label class="form-check-label" for="check-email">
+                                            Email
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-primary  pl-4  mr-15px">
+                                        <input class="form-check-input" type="checkbox" id="check-sms" checked>
+                                        <label class="form-check-label" for="check-sms">
+                                            SMS
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-end">
+                                <button type="button" class="btn btn-light waves-effect waves-light mr-15px btn-rounded" title="Delete the message">
+                                    <i class="bx bx-trash font-size-16 align-middle"></i>
+                                </button>
+                                <button type="submit" class="btn btn-outline-primary btn-rounded chat-send w-md waves-effect waves-light mr-15px" title="Set a time and date for when to send this message"><span class="d-none d-sm-inline-block me-2">Schedule Time</span> <i class="mdi mdi-clock-time-four-outline"></i></button>
+                                <button type="submit" class="btn btn-primary btn-rounded chat-send w-md waves-effect waves-light"><span class="d-none d-sm-inline-block me-2">Send</span> <i class="mdi mdi-send"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- message composer end -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © RevenueSure.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-sm-block">
+                                Developed by Nouveta LTD.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+    <!-- Saas dashboard init -->
+    <script src="assets/js/pages/saas-dashboard.init.js"></script>
+
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+
+<!-- index.html   13:55:49 GMT -->
+
+</html>

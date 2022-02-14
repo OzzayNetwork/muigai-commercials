@@ -1,0 +1,718 @@
+            .navbar-brand-box {
+                text-align: left;
+            }
+            
+            body[data-sidebar=dark] .mm-active .active i {
+                color: #54becc!important;
+            }
+            
+            body[data-sidebar=dark] .mm-active .active {
+                color: #56becc!important;
+            }
+            
+            .breadcrumb-item+.breadcrumb-item::before {
+                float: left;
+                padding-right: .5rem;
+                color: #74788d;
+                font-family: dripicons-v2!important;
+                font-style: normal!important;
+                font-weight: 400!important;
+                content: "\6d";
+            }
+            
+            .text-right {
+                text-align: right !important;
+            }
+            
+            table.dataTable td,
+            table.dataTable th {
+                vertical-align: middle;
+            }
+            
+            .card-header {
+                background-color: rgb(85 110 230 / 16%);
+                padding-top: 1.25rem;
+            }
+            
+            .avatar-xs {
+                height: 3rem;
+                width: 3rem;
+            }
+            
+            .form-control {
+                /* padding: 0.8rem; */
+            }
+            
+            .auth-logo .auth-logo-dark {
+                height: 45px;
+            }
+            
+            .font-28 {
+                font-size: 28px !important;
+            }
+            
+            .font-21 {
+                font-size: 21px !important;
+            }
+            
+            .btn-circle {
+                font-size: 18px;
+                border: 1px solid #92a7c2;
+                width: 40px;
+                height: 40px;
+                padding: 0.4rem;
+                border-radius: 50%;
+                border-style: dashed;
+            }
+            
+            .btn-transparent {
+                background-color: transparent;
+            }
+            
+            .btn-circle:hover {
+                border-style: solid;
+            }
+            
+            .font-18px {
+                font-size: 18px !important;
+            }
+            
+            .table-edits input,
+            .table-edits select,
+            .the-message-maker input:focus {
+                display: block;
+                width: 100%;
+                padding: .47rem .75rem;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1;
+                color: #495057;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                /* padding: 0.5rem 0.5rem; */
+                height: 35px;
+            }
+            
+            .table-edits input:focus {
+                border-color: #556ee6;
+                border-width: 2px;
+            }
+            
+            .table-edits .text-right input {
+                text-align: right;
+            }
+            
+            .add-field {
+                cursor: pointer;
+            }
+            
+            .add-field:hover {
+                color: #556ee6
+            }
+            
+            .height-calc-21 {
+                height: calc(100% - 23px);
+            }
+            
+            .cell-change {
+                width: 190px;
+            }
+            
+            .table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before,
+            table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
+                top: 42%;
+                left: 10px;
+                height: 25px;
+                width: 25px;
+                margin-top: -7px;
+                display: block;
+                position: absolute;
+                color: #fff;
+                border: none;
+                border-radius: 14px;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+                text-align: center;
+                text-indent: 0!important;
+                line-height: 24px;
+                content: '+';
+                background-color: #556ee6;
+                cursor: pointer;
+            }
+            
+            .table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control,
+            table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control {
+                padding-left: 45px;
+            }
+            
+            table.dt-responsive .child {
+                padding: 30px;
+                --bs-table-accent-bg: rgb(85 110 230 / 16%);
+                border: 1px solid black;
+                border-top: none;
+                border-color: #333a4042;
+            }
+            
+            table.dt-responsive .parent td {
+                border-top: 1px solid black;
+                border-bottom: none;
+                border-color: #333a4042;
+            }
+            
+            table.dt-responsive .parent td:first-child {
+                border-left: 1px solid black;
+                border-color: #333a4042;
+            }
+            
+            table.dt-responsive .parent {
+                border-right: 1px solid black;
+                border-color: #333a4042;
+            }
+            
+            table.dt-responsive ul {
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            .btn--icon--text i {
+                font-size: 20px;
+                margin-right: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .border-dash {
+                border: 1px solid dashed !important;
+            }
+            
+            .email-overlay {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                right: 0px;
+                bottom: 0px;
+                background: #00000052;
+                z-index: 1050;
+                /* display: none; */
+                /* transform: scaley(.5); */
+                transition: 0.3s;
+            }
+            
+            .the-message-maker {
+                transform: scale(.1);
+                transform-origin: right bottom;
+                transition: 0.3s;
+            }
+            
+            .email-overlay-transform {
+                transform: scale(1);
+            }
+            
+            .email-overlay .card {
+                border-radius: 0px;
+            }
+            
+            .email-overlay>.header-item {
+                height: 50px;
+                color: white;
+            }
+            
+            .email-overlay .card-header h4,
+            .email-overlay .card-header .noti-icon i {
+                color: white;
+            }
+            
+            .text-white {
+                color: white !important;
+            }
+            
+            .the-message-maker {
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                margin-bottom: 0px;
+                max-width: 600px;
+            }
+            
+            .mr-15px {
+                margin-right: 15px !important;
+            }
+            
+            .mr-7px {
+                margin-right: 7px !important;
+            }
+            
+            .upload-contacts .modal-content,
+            .upload-contacts .modal-header,
+            .selected-contacts .modal-header,
+            .selected-contacts .modal-content {
+                border-radius: 0px;
+                border: none;
+            }
+            
+            .p-0 {
+                padding: 0px !important;
+            }
+            
+            .mr-0 {
+                margin-right: 0px !important;
+            }
+            
+            .pr-0 {
+                padding-right: 0px !important;
+            }
+            
+            .ml-0 {
+                margin-left: 0px !important;
+            }
+            
+            .pl-0 {
+                padding-left: 0px !important;
+            }
+            
+            .the-selected-contacts {
+                max-width: 426px;
+                /* border: 1px solid; */
+                /* padding: 2px 5px; */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: clip;
+                text-overflow: ellipsis;
+                /* height: 25px; */
+                display: block;
+                width: auto;
+                max-width: 80vw;
+            }
+            
+            .the-msg {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: clip;
+                text-overflow: ellipsis;
+                width: auto;
+                max-width: 10vw;
+            }
+            
+            .number-of-rows {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: clip;
+                text-overflow: ellipsis;
+                width: auto;
+                max-width: 8vw;
+            }
+            
+            .float-left {
+                float: left !important;
+            }
+            
+            .selected-contacts .avatar-xs {
+                height: 2rem;
+                width: 2rem;
+            }
+            
+            .selected-contacts .table>:not(caption)>*>* {
+                padding: 0.5rem .5rem;
+            }
+            
+            .page-loader {
+                height: 100vh;
+                width: 100%;
+                background-color: white;
+                z-index: 1000000;
+                position: fixed;
+                bottom: 1;
+                left: 1;
+            }
+            
+            .ml-7px {
+                margin-left: 7px !important;
+            }
+            
+            .the-inbox .checkbox-wrapper-mail input {
+                opacity: 0;
+                cursor: pointer;
+            }
+            
+            .the-inbox .checkbox-wrapper-mail label {
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                left: 0;
+                cursor: pointer;
+                opacity: 0;
+                margin-bottom: 0;
+                -webkit-transition-duration: .05s;
+                transition-duration: .05s;
+                top: 0;
+            }
+            
+            .pl-15px {
+                padding-left: 15px !important;
+            }
+            
+            .the-inbox .col-mail-1 .checkbox-wrapper-mail {
+                margin: 15px 10px 0 20px;
+            }
+            
+            .the-inbox .col-mail-1 .checkbox-wrapper-mail,
+            .the-inbox .col-mail-1 .dot,
+            .the-inbox .col-mail-1 .star-toggle {
+                display: block;
+                float: left;
+            }
+            
+            .the-inbox .checkbox-wrapper-mail {
+                cursor: pointer;
+                height: 20px;
+                width: 20px;
+                position: relative;
+                display: inline-block;
+                -webkit-box-shadow: inset 0 0 0 1px #ced4da;
+                box-shadow: inset 0 0 0 1px #ced4da;
+                border-radius: 1px;
+            }
+            
+            .the-inbox td,
+            .the-inbox th {
+                color: #74788d;
+            }
+            
+            .the-inbox {
+                padding: 0px;
+            }
+            
+            .the-inbox td,
+            .the-inbox th {
+                height: 30px;
+            }
+            
+            .div.dt-buttons {
+                width: auto !important;
+            }
+            
+            .dataTables__bottom {
+                padding-bottom: 15px;
+            }
+            
+            .the-inbox tr td:first-child {
+                padding-left: 10px;
+            }
+            
+            .the-inbox tbody tr th:first-child {
+                padding-left: 15px;
+            }
+            
+            .the-inbox tbody tr td:last-child {
+                padding-right: 15px;
+            }
+            
+            .the-inbox tr {
+                cursor: pointer;
+            }
+            
+            tr.unread td {
+                color: rgb(41, 45, 50);
+            }
+            
+            .the-inbox tr.unread {
+                background-color: rgb(246, 246, 246);
+                font-weight: 500;
+                color: rgb(41, 45, 50);
+            }
+            
+            .the-inbox tr.unread th {
+                border-left: 5px solid rgb(244, 106, 106);
+            }
+            
+            .ml-7px {
+                margin-left: 7px !important
+            }
+            
+            .the-inbox .dataTables_length {
+                /* display: none; */
+            }
+            
+            .the-inbox .dataTables_filter {
+                /* display: none; */
+            }
+            
+            #emailDataTable_info.dataTables_info {
+                padding: 1rem;
+            }
+            
+            #emailDataTable_paginate .pagination {
+                padding-right: 1rem;
+                justify-content: end;
+            }
+            
+            .bootstrap-select .dropdown-toggle:focus,
+            .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+                outline: thin dotted transparent!important;
+                outline: none !important;
+                outline-offset: -2px;
+                border-color: none !important;
+                border: none !important;
+            }
+            
+            .table-rows-selector>button {
+                /* color: red; */
+                padding: .47rem .75rem !important;
+                padding-left: 45px !important;
+                position: relative !important;
+                padding-right: 45px !important;
+                font-size: 13px !important;
+            }
+            
+            .table-rows-selector>button::before {
+                position: absolute;
+                font-family: boxicons!important;
+                content: "\eaaa";
+                left: 10px;
+                font-size: 22px;
+                color: white;
+            }
+            
+            .table-rows-selector>button::after {
+                position: absolute;
+                font-family: boxicons!important;
+                content: "\e9ce";
+                right: 12px;
+                font-size: 15px;
+                color: #ffffffb3;
+            }
+            
+            .pr-15px {
+                padding-right: 15px !important;
+            }
+            
+            .pr-20px {
+                padding-right: 20px !important;
+            }
+            
+            .pl-20px {
+                padding-left: 20px !important;
+            }
+            
+            .emailSearch {
+                border: none;
+                height: 38px;
+                padding-left: 40px;
+                padding-right: 20px;
+                background-color: #f3f3f9;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border-radius: 30px;
+                font-size: 13px;
+            }
+            
+            .emailSearch:focus {
+                background: #f3f3f9 !important;
+                background-color: #f3f3f9 !important;
+            }
+            
+            .dataTables__top {
+                justify-content: space-between;
+                /* padding-top: 25px; */
+                padding-bottom: 25px;
+            }
+            
+            div.dataTables_wrapper div.dataTables_filter input {
+                margin-left: 0px;
+            }
+            
+            div.dt-button-collection {
+                left: auto !important;
+            }
+            /* .the-inbox .table>:not(caption)>*>* {
+        padding: 0px;
+    } */
+            
+            .the-inbox .dataTables_filter {
+                padding-right: 15px;
+                padding-left: 15px;
+                flex-grow: 1;
+            }
+            
+            .dataTables_filter label {
+                flex-grow: 1;
+                width: 100%;
+            }
+            
+            .boarder-right-0 {
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            
+            .dataTables_filter {
+                position: relative;
+            }
+            
+            .dataTables_filter:before {
+                font-family: boxicons!important;
+                position: absolute;
+                z-index: 10;
+                font-size: 16px;
+                line-height: 38px;
+                left: 35px;
+                bottom: -1px;
+                color: #74788d;
+                content: "\eb2d";
+            }
+            
+            div.dataTables_wrapper div.dataTables_filter {
+                width: 100%;
+                margin: 0px 20px;
+            }
+            
+            .the-inbox div.dataTables_wrapper div.dataTables_filter {
+                margin: 0px;
+            }
+            
+            .dt-button-collection .dropdown-item:focus,
+            .dt-button-collection .dropdown-item:hover {
+                background-color: #46909f82;
+            }
+            
+            .dt-button-collection .dropdown-item.active {
+                background-color: #46909f2b;
+                position: relative;
+            }
+            
+            .dt-button-collection .dropdown-item {
+                padding-right: 45px;
+            }
+            
+            .dt-button-collection .dropdown-item {
+                padding-right: 30px;
+            }
+            
+            .dt-buttons .buttons-html5,
+            .dt-buttons .btn {
+                display: flex;
+                align-items: center;
+            }
+            
+            #datatable-buttons_filter {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            
+            #datatable-buttons_wrapper .dataTables_filter:before {
+                left: 17px;
+            }
+            
+            #emailDataTable-btns_wrapper .dataTables__bottom {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            
+            .dataTables_filter label,
+            .dataTables__top label {
+                margin-bottom: 0px;
+            }
+            
+            .the-inbox .dataTables_wrapper {
+                padding-top: 25px;
+            }
+            
+            #emailDataTable-btns_filter {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            
+            .datepicker .next,
+            .datepicker .prev {
+                cursor: pointer;
+            }
+            
+            .date-drop-input,
+            .datepicker-days .day {
+                cursor: pointer;
+            }
+            
+            .alert-border {
+                border: 0.5px solid #556ee657;
+                border-radius: 0px;
+            }
+            
+            table.logs-table td {
+                vertical-align: top;
+            }
+            
+            table.logs-table tr td:first-child {
+                max-width: 82px;
+                padding-left: 1.25rem;
+                width: 82px;
+            }
+            
+            table.logs-table tr td:last-child {
+                padding-right: 1.25rem;
+            }
+            
+            table.logs-table tr td {
+                padding-top: 1.25rem;
+            }
+            
+            .logs-card .card-body {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            
+            .logs-card .dataTables__top,
+            .logs-card .dataTables__bottom {
+                padding-right: 1.25rem !important;
+                padding-left: 1.25rem !important;
+            }
+            
+            @media (max-width: 576px) {
+                .dataTables__top .dropdown-toggle i {
+                    line-height: revert
+                }
+                .dt-buttons .bx,
+                .dt-buttons .mdi {
+                    margin: 0px !important;
+                }
+                .table-rows-selector>button {
+                    padding: .47rem .75rem !important;
+                    padding-left: .75rem !important;
+                    position: relative !important;
+                    padding-right: 30px !important;
+                    font-size: 12px !important;
+                }
+                .table-rows-selector>button::before {
+                    display: none;
+                }
+                .mr-sm-0 {
+                    margin: 0px !important;
+                }
+                .card {
+                    border-radius: 0px;
+                }
+                .page-title-box {
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+                .page-content {
+                    padding-right: 0px;
+                    padding-right: 0px;
+                }
+                .page-content,
+                .container-fluid {
+                    padding-right: 0px;
+                    padding-left: 0px;
+                }
+                .px-sm-30px {
+                    padding-left: 30px !important;
+                    padding-right: 30px !important;
+                }
+            }
+            
+            @media screen and (max-width: 767px) {
+                div.dt-buttons {
+                    width: auto;
+                }
+            }

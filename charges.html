@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- index.html   13:53:02 GMT -->
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>RevenueSure | Toll Collection system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="30">
+                                </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+                    <!-- App Search-->
+                    <form class="app-search d-none d-lg-block">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="bx bx-search-alt"></span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="assets/images/flags/uganda.png" alt="Header Language" height="16">
+                            <span class="the-currency">UGX</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- uganda money -->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="UGX">
+                                <img src="assets/images/flags/uganda.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">UGX</span>
+                            </a>
+                            <!-- USD dollers-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="USD">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">USD</span>
+                            </a>
+                            <!-- kenya-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="KES">
+                                <img src="assets/images/flags/kenya.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">KES</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                <i class="bx bx-fullscreen"></i>
+                            </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <!-- notifications, i will come to this later -->
+                        <button type="button" class="btn header-item noti-icon waves-effect d-none" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-bell bx-tada"></i>
+                                <span class="badge bg-danger rounded-pill">3</span>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="bx bx-cart"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="bx bx-badge-check"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-henry">Adroa Balinda</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="myprofile.html"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">My Profile</span></a>
+                            <a class="dropdown-item" href="my-logs.html"><i class="bx bx-time font-size-16 align-middle me-1"></i> <span key="t-profile">My Logs</span></a>
+                            <a class="dropdown-item" href="auth-lock-screen.html"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title" key="t-menu">Toll Collection System</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="bx bx-home-circle"></i><span>Dashboards</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="charges.html" class="waves-effect">
+                                <i class="mdi mdi-car-cog"></i>
+                                <span>Toll charges</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="messages.html" class="waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span>Messages</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trasactions.html" class="waves-effect">
+                                <i class="mdi mdi-cash-check"></i>
+                                <span>Transactions</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">System Users</li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-boom-gate-up"></i>
+                                <span>Toll takers</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="toll-takerlist.html">Toll takers list</a></li>
+                                <li><a href="toll-takernew.html">Add a toll taker</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-shield-account-outline"></i>
+                                <span>System Admins</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin-list.html">Admins list</a></li>
+                                <li><a href="admin-new.html">Add an admin</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-account-cash-outline"></i>
+                                <span>Client Agents</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="agents-list.html">Agents list</a></li>
+                                <li><a href="agents-requests.html">Agent Requests</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">Reports</li>
+                        <li>
+                            <a href="wallet-topups.html" class="waves-effect">
+                                <i class="mdi mdi-wallet-plus-outline"></i>
+                                <span>Wallet top ups</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="clients.html" class="waves-effect">
+                                <i class="mdi mdi-account-details"></i>
+                                <span>Clients register</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="bx bx-car"></i>
+                                <span>Vehicles</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-boom-gate-outline"></i>
+                                <span>Toll takers Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-car-info"></i>
+                                <span>Collections by category</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="menu-title d-none" key="t-apps">My Account</li>
+                        <li class="d-none">
+                            <a href="myprofile.html" class="waves-effect">
+                                <i class="bx bx-user"></i>
+                                <span>My profile</span>
+                            </a>
+                        </li>
+
+                        <li class="d-none">
+                            <a href="auth-login.html" class="waves-effect">
+                                <i class="bx bx-power-off"></i>
+                                <span>Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Toll charges</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
+                                        <li class="breadcrumb-item active">Toll charges</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card p-4">
+                                <div class="card-body">
+
+                                    <h4 class="card-title">Toll charges by vehicle category</h4>
+                                    <p class="card-title-desc">You can add or change the charges for a specific vehicle category. remember to click save so as to reflect your changes otherwise any changes you make will not be effected</p>
+
+                                    <div class="table-responsive table-responsive-md">
+                                        <table class="table table-editable align-middle table-edits">
+                                            <thead>
+                                                <tr class="text-uppercase">
+                                                    <th>#</th>
+                                                    <th>Vehicle type</th>
+                                                    <th>Description</th>
+                                                    <th class="text-right">Charges</th>
+                                                    <th class="text-right">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">1</td>
+                                                    <td data-field="name">Motor cycles</td>
+                                                    <td data-field="age">Motor cycles exceeding 50CC</td>
+                                                    <td data-field="amount" class="text-right">2,000</td>
+                                                    <td class="text-right cell-change">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr data-id="2">
+                                                    <td style="width: 80px">2</td>
+                                                    <td data-field="name">Motor cars</td>
+                                                    <td data-field="age">light vehicle cars including campervan MPV'S(less than 8 passengers)<br> and their effects,taxi's,limosines,light vehicles towing a caravan<br> or trailer with any number of axles.</td>
+                                                    <td data-field="amount" class="text-right">2,500</td>
+                                                    <td class="text-right cell-change">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                    </td>
+
+
+
+                                                </tr>
+                                                <tr data-id="3">
+                                                    <td style="width: 80px">3</td>
+                                                    <td data-field="name">busses or coaches</td>
+                                                    <td data-field="age">busses or coaches (any number of axles any size) with a capacity<br> to carry 8 or more passengers.</td>
+                                                    <td data-field="amount" class="text-right">2,300</td>
+                                                    <td class="text-right cell-change">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr data-id="4">
+                                                    <td style="width: 80px">4</td>
+                                                    <td data-field="name">Light Good Vehicles</td>
+                                                    <td data-field="age">Good Vehicles,(Vans and any car with no rear window) <br>and adapted for goods .ie No back seats.<br> This includes car,vans,jeep type with back windows panelled out,<br> seats removed and all pick up
+                                                        types included. Whether in the course of trade or otherwise.</td>
+                                                    <td data-field="amount" class="text-right">2,600</td>
+                                                    <td class="text-right cell-change">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr data-id="5">
+                                                    <td style="width: 80px">5</td>
+                                                    <td data-field="name">Goods or Vehicles with two or three axles</td>
+                                                    <td data-field="age">Goods vehicles with a design gross vehicle weight exceeding 3,500 kilograms<br> and having 2 or 3 axles.</td>
+                                                    <td data-field="amount" class="text-right">2,000</td>
+                                                    <td class="text-right cell-change">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr data-id="6">
+                                                    <td style="width: 80px">6</td>
+                                                    <td data-field="name">Goods or vehicles with four or more axles</td>
+                                                    <td data-field="age">Goods vehicles with a design gross vehicle weight exceeding 3,500 kilograms<br> and having 4 or more axles.</td>
+                                                    <td data-field="amount" class="text-right">2,200</td>
+                                                    <td class="text-right cell-change">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="cloneCharges d-none">
+                                                    <td style="width: 80px" class="categoryIndex">#</td>
+                                                    <td data-field="name">
+                                                        <input type="text" class="form-control" placeholder="Enter Category">
+                                                    </td>
+                                                    <td data-field="age">
+                                                        <input type="text" class="form-control" placeholder="Category description">
+                                                    </td>
+                                                    <td data-field="amount" class="text-right">
+                                                        <input type="text" class="form-control" placeholder="UGX">
+                                                    </td>
+                                                    <td class="text-right cell-change">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-new-btn mx-3" title="save">Save</button>
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle  btn-transparent cancel-new-category" title="Cancel"><i class="bx bx-x"></i></a>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="5" class="bg-light add-field">
+                                                        <span class="d-flex align-items-center"><i class="dripicons-plus  mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Toll Charge category</span></span>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © RevenueSure.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-sm-block">
+                                Developed by Nouveta LTD.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Table Editable plugin -->
+    <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
+    <script src="assets/js/pages/table-editable.int.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- dashboard init -->
+    <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <!-- numerals number formater -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+
+<!-- index.html   13:55:49 GMT -->
+
+</html>
