@@ -668,6 +668,28 @@
                 padding-left: 1.25rem !important;
             }
             
+            .auth-full-bg {
+                color: white;
+            }
+            
+            .bg-overlay {
+                opacity: 1 !important;
+            }
+            
+            .auth-full-bg strong {
+                color: #c1f8ff;
+            }
+            
+            .auth-full-bg .bg-overlay::before {
+                background-image: linear-gradient(to bottom, #ff000036, #556ee6bf);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: "";
+            }
+            
             @media (max-width: 576px) {
                 .dataTables__top .dropdown-toggle i {
                     line-height: revert

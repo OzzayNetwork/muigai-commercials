@@ -20,28 +20,7 @@
             //alert(index)
             //alert("the index is" + theIndex);
             $('.the-currency').text(theCurrency).addClass("text-uppercase");
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://fixer-fixer-currency-v1.p.rapidapi.com/convert?from=" + base_currency + "&to=" + theCurrency + "&amount=" + base_amount + " ",
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "fixer-fixer-currency-v1.p.rapidapi.com",
-                    "x-rapidapi-key": "e567644a3dmshde69e5218507697p14e1f1jsnbd76df3e5cd5"
-                }
-            };
 
-            $.ajax(settings).done(function(response) {
-                console.log(response);
-                the_new_value = response.result
-                console.log(numeral(the_new_value).format('0,0.00'));
-                // return the_new_value;
-                $('.data-carrency').eq(index).text(theCurrency + ' ' + numeral(the_new_value).format('0,0'));
-                if (theCurrency == "USD") {
-                    $('.data-carrency').eq(index).text(theCurrency + ' ' + numeral(the_new_value).format('0,0.00'));
-                }
-
-            });
         });
         e = "en"
 
