@@ -61,6 +61,18 @@ $(window).on('load', function() {
             });
         }
     })
+    $("body").on('change', '[name="agreement-type"]', function() {
+        var theVal = $(this).val();
+        if (theVal != 1) {
+            // alert('checked');
+            $('.per-commision').removeClass('d-none')
+        }
+        if (theVal == 1) {
+            $('.per-commision').addClass('d-none')
+        }
+
+    })
+
 
     $('.selectpicker').selectpicker();
 });

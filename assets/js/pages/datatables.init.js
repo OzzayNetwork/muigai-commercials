@@ -51,8 +51,12 @@ $(document).ready(function() {
     </div>
 </div>`), $('.buttons-print').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.buttons-colvis').prepend('<span class="mdi mdi-eye-check-outline font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline');
 
+
     var emailTable;
     emailTable = $("#emailDataTable").DataTable(), $("#emailDataTable-btns").DataTable({
+        order: [
+            [1, "desc"]
+        ],
         lengthMenu: [
             [15, 30, 50, -1],
             ["15 Rows", "30 Rows", "50 Rows", "Everything"],
@@ -94,8 +98,34 @@ $(document).ready(function() {
 
             }
         },
+        "initComplete": function() {
+            var api = this.api();
+            $('body').on('click', '.option-selector-cont .dropdown-menu a', function() {
+                var theFilter
+                var theSelectedption = $(this).children("span").text();
+                theFilter = theSelectedption;
+                if (theSelectedption == "All Messages") {
+                    theFilter = ""
+                }
+                var theActiveOption = $(this).parent().siblings().find("span").text(theSelectedption);
+                filterTableByColumn(2, theFilter)
+            });
 
+            //filter by MSG type
+            $('input[name$="msg-type-filter"]').on('change', function() {
+                var theValue = $(this).val();
+                filterTableByColumn(0, theValue)
 
+            })
+
+            //Filter by delivery status
+            function filterTableByColumn(i, theValue) {
+                api.column(i).search(
+                    theValue
+                ).draw();
+
+            }
+        }
 
 
     }).buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)"), $('.dataTables_length > label').addClass(''), $('.dataTables_length select btn-sm').addClass('form-control selectpicker show-tick table-rows-selector d-flex'), $('.dataTables_filter').eq(1).addClass('d-none d-xl-flex'), $('.dataTables_filter').eq(0).addClass('d-xl-none'), $('.dataTables_length select').attr("data-style", "btn-primary"), $('.the-inbox .dataTables__top').addClass('pr-15px pl-15px d-flex align-items-center w-100'), $('.dataTables_filter input').addClass('emailSearch w-100'), $('#emailDataTable-btns_filter').addClass('mb-3 d-xl-none'), $('.the-inbox .buttons-copy').prepend('<span class="bx bx-copy font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.the-inbox .buttons-pdf').addClass('d-none'), $('.the-inbox .buttons-csv').addClass('d-none'), $('.the-inbox .buttons-excel').addClass('d-none'), $('.the-inbox .buttons-print').prepend('<span class="bx bx-printer font-size-16 align-middle me-2"></span>'), $('#emailDataTable-btns_wrapper .dt-buttons').prepend(`<div class="dropdown m-0 d-flex">
@@ -120,10 +150,26 @@ $(document).ready(function() {
         }
     })
 
+    $('#emailDataTable-btns').on('draw.dt', function() {
+        // alert('Table redrawn');
+    });
+
+
 
     $('#inputSearch').keyup(function() {
+
         emailTable.search($(this).val()).draw();
+
+        emailTable.destroy();
+        alert("Table destroyed");
+
     });
+
+    function filterColumn(i) {
+        $('#tableResponse').DataTable().column(i).search(
+            $('#colNameSearch_filter').val()
+        ).draw();
+    }
 
     $('#length_change').change(function() {
         emailTable.page.len($(this).val()).draw();
