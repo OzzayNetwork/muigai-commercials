@@ -3,8 +3,11 @@ $(function() {
     var e = {};
     $(".table-edits tr").editable({
         dropdowns: {
-            gender: ["Male", "Female"]
+            gender: ["Male", "Female"],
+            unit_purpose: ["Commercial", "Residential"],
+            unit_type: ["Bed sitter", "One Bedroom", "Two Bedroom"],
         },
+
         keyboard: true,
         dblclick: false,
         button: true,
@@ -16,18 +19,22 @@ $(function() {
 
             $(".edit i", this).removeClass("bx-edit-alt").addClass("bx-save").attr("title", "Save").parent().siblings().removeClass('d-none');
             $('.edit').addClass('d-none');
+            $('.new-tenant').addClass('d-none');
 
         },
         save: function(t) {
             $(".edit i", this).removeClass("bx-save").addClass("bx-edit-alt").attr("title", "Edit"), this in e && (e[this].destroy(), delete e[this]);
             $(".save-tbl-btn", this).addClass("d-none").siblings('.cancel-changes').addClass('d-none'), this in e && (e[this].destroy(), delete e[this]);
             $('.edit').removeClass('d-none');
+            $('.new-tenant').removeClass('d-none');
 
         },
         cancel: function(t) {
             $(".edit i", this).removeClass("bx-save").addClass("bx-edit-alt").attr("title", "Edit"), this in e && (e[this].destroy(), delete e[this]);
             $(".cancel-changes", this).addClass('d-none').siblings('.save-tbl-btn').addClass('d-none'), this in e && (e[this].destroy(), delete e[this]);
             $('.edit').removeClass('d-none');
+            $('.new-tenant').removeClass('d-none');
+
 
         }
     })

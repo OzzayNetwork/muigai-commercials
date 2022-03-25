@@ -7,22 +7,29 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Muigai Commercials | Property Units</title>
+    <title>RevenueSure | Muigai Commercial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- droping file -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
-
 
 </head>
 
@@ -69,10 +76,12 @@
                             <span class="bx bx-search-alt"></span>
                         </div>
                     </form>
+
+
                 </div>
 
                 <div class="d-flex">
-
+                    <!-- small search -->
                     <div class="dropdown d-inline-block d-lg-none ms-2">
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
@@ -91,8 +100,6 @@
                             </form>
                         </div>
                     </div>
-
-
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="bx bx-fullscreen"></i>
@@ -199,8 +206,6 @@
                             <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </header>
@@ -339,14 +344,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Property name</h4>
+                                <h4 class="mb-sm-0 font-size-18">Property Name tenants</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="property-list.html">All properties</a></li>
                                         <li class="breadcrumb-item"><a href="property-details.html">Property Name</a></li>
-                                        <li class="breadcrumb-item active">Property units</li>
+                                        <li class="breadcrumb-item active">Tenants</li>
                                     </ol>
                                 </div>
 
@@ -387,149 +392,228 @@
                     </div>
 
                     <!-- end of tool bar -->
+
+
+
                     <div class="row">
                         <div class="col-12">
-                            <div class="card p-4">
-                                <div class="card-body">
+                            <div class="card">
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <h4 class="mb-0 ">Property Register</h4>
+                                        <div class="d-flex">
 
-                                    <h4 class="card-title text-capitalize mb-3">Property units</h4>
-
-                                    <div class="table-responsive table-responsive-md">
-                                        <table class="table table-editable align-middle table-edits">
-                                            <thead class="table-light">
-                                                <tr class=" text-uppercase ">
-                                                    <th>#</th>
-                                                    <th>Num.</th>
-                                                    <th>Size(M<sup>2</sup>)</th>
-                                                    <th class=" ">Hse Type</th>
-                                                    <th class=" ">Rooms</th>
-                                                    <th class=" ">Unit Purpose</th>
-                                                    <th class=" ">KPLC No.</th>
-                                                    <th class=" ">Water No.</th>
-                                                    <th class=" ">Status</th>
-                                                    <th class="text-right ">Rent</th>
-                                                    <th class="text-right w-220px">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr data-id="1 ">
-                                                    <td style="width: 80px ">1</td>
-                                                    <td data-field="unit-num ">410</td>
-                                                    <td data-field="unit-size ">2.5</td>
-                                                    <td data-field="unit_type ">Bed Sitter</td>
-                                                    <td data-field="unit-rooms">2</td>
-                                                    <td data-field="unit_purpose" style="width:130px">Commercial</td>
-                                                    <td data-field="unit-kplc" style="width:130px">123456</td>
-                                                    <td data-field="unit-water " style="width:130px">123456</td>
-                                                    <td> <span class="badge badge-soft-success font-size-11 m-1 text-capitalize fw-semibold">OCCUPIED</span></td>
-                                                    <td data-field="amount " class="text-right " style="width:130px">12,000</td>
-                                                    <td class="text-right cell-change ">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr data-id="1 ">
-                                                    <td style="width: 80px ">2</td>
-                                                    <td data-field="unit-num ">411</td>
-                                                    <td data-field="unit-size ">2.5</td>
-                                                    <td data-field="unit_type " class="w-220px">Bed Sitter</td>
-                                                    <td data-field="unit-rooms">2</td>
-                                                    <td data-field="unit_purpose" class="w-220px">Residential</td>
-                                                    <td data-field="unit-kplc" style="width:130px">123456</td>
-                                                    <td data-field="unit-water " style="width:130px">123456</td>
-                                                    <td> <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase fw-semibold">Vacant</span></td>
-                                                    <td data-field="amount " class="text-right " style="width:130px">12,000</td>
-                                                    <td class="text-right cell-change d-flex align-items-center justify-content-end w-220px">
-                                                        <a href="#" class="btn btn-success btn-sm text-uppercase px-3 save-tbl-btn mx-3 text-nowrap new-tenant" title="Assign a tenant">Assign Tenant</a>
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr class="cloneCharges d-none">
-                                                    <td style="width: 80px " class="categoryIndex ">#</td>
-                                                    <td>
-                                                        <input type="text " class="form-control " style="width:50px;" placeholder="No. ">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text " class="form-control " style="width: 90px;" placeholder="Size (MSq) ">
-                                                    </td>
-                                                    <td>
-                                                        <select class="form-select" style="width:130px">
-                                                            <option value="">Bed sitter</option>
-                                                            <option value="">One Bedroom</option>
-                                                            <option value="">Two Bedroom</option>
-                                                      </select>
-                                                    </td>
-                                                    <td>
-                                                        <input type="text " class="form-control" style="width: 70px;" placeholder="Rooms">
-                                                    </td>
-                                                    <td>
-                                                        <select class="form-select" style="width:130px">
-                                                            <option value="">Residential</option>
-                                                            <option value="">Commercial</option>
-                                                      </select>
-                                                    </td>
-                                                    <td>
-                                                        <input type="text " class="form-control " style="width: 100px;" placeholder="KPLC No.">
-                                                    </td>
-                                                    <td>
-                                                        <input type="text " class="form-control " style="width: 100px;" placeholder="Water No.">
-                                                    </td>
-                                                    <td>
-
-                                                    </td>
-
-                                                    <td data-field="amount " class="text-right ">
-                                                        <input type="text " class="form-control " style="width: 100px;" placeholder="KES">
-                                                    </td>
-                                                    <td class="text-right cell-change d-flex align-items-center justify-content-end">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-new-btn mx-3 " title="save ">Save</button>
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category " title="Cancel "><i class="bx bx-x "></i></a>
-                                                    </td>
-                                                </tr>
+                                            <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                                <i class="mdi mdi-account-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Property</span>
+                                            </button>
+                                        </div>
 
 
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colspan="11" class="bg-light add-field ">
-                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Unit</span></span>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
                                     </div>
+                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
 
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="bx  bx-trash label-icon"></i> Delete Properties</button>
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Message property Tenants</button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
+                                        <thead class="table-light">
+                                            <tr>
+
+                                                <th scope="col">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <label for="selectAll" class="d-none">Select All</label>
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
+
+                                                    </div>
+                                                </th>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Property</th>
+                                                <th scope="col">Owner</th>
+                                                <th scope="col">Agreement type</th>
+                                                <th scope="col">Property type</th>
+                                                <th scope="col">Units</th>
+                                                <th scope="col">Vacant</th>
+                                                <th scope="col">Occupied</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>
+                                                    <div class="d-flex  align-items-center">
+                                                        <div class="the-mail-checkbox pr-4">
+                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                                <td class="text-capitalize">1</td>
+                                                <td class="text-capitalize">90 degrees by Tsavo</td>
+                                                <td>
+                                                    <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Mark Ellison</a></h5>
+                                                    <p class="text-muted mb-0">
+                                                        <a href="tell:0704549859">0704549859</a> /
+                                                        <a href="mailto:email@email.com">email@email.com</a>
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    Management
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-soft-success font-size-11 m-1">Commercial building</span>
+                                                </td>
+                                                <td>56</td>
+                                                <td class="text-danger">
+                                                    36
+                                                </td>
+                                                <td class="text-success">
+                                                    20
+                                                </td>
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-plus me-3 text-success"></i>Add units</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-remove me-3 text-danger"></i>Remove a unit</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
+
                     <!-- end row -->
-
-
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
 
+            <!-- upload contacts modal -->
+            <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Upload New Contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
 
-            <footer class="footer ">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-sm-6 ">
+                                    <p>
+                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample for reference</a>
+                                    </p>
+
+                                    <div class="form-group mb-4">
+                                        <label for="">Contacts title</label>
+                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
+                                    </div>
+                                    <div class="p-4 bg-light">
+                                        <div class="row ">
+
+                                            <div class="col-12">
+                                                <form action="#" class="dropzone">
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" class="mb-3">
+                                                    </div>
+                                                    <div class="dz-message needsclick">
+                                                        <div class="mb-3">
+                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                        </div>
+
+                                                        <h6>Contacts excell file</h6>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Save Contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- upload contacts modal -->
+
+            <!-- adding a new contact -->
+            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Add New Contact</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
+                                    <div class="form-group mb-3">
+                                        <label for="">Contact name</label>
+                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="">Phone Number</label>
+                                        <input type="text" class="form-control" placeholder="Enter the phone number">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="">Email address</label>
+                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="">Contact's title</label>
+                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Save Contact <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- adding a new contact -->
+
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © RevenueSure.
+                            </script> © Early Bird
                         </div>
-                        <div class="col-sm-6 ">
-                            <div class="text-sm-end d-sm-block ">
-                                Developed by Nouveta LTD.
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-sm-block">
+                                Connecting you to your World
                             </div>
                         </div>
                     </div>
@@ -541,34 +625,46 @@
     </div>
     <!-- END layout-wrapper -->
 
-
-
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
 
     <!-- JAVASCRIPT -->
-    <script src="assets/libs/jquery/jquery.min.js "></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
-    <script src="assets/libs/simplebar/simplebar.min.js "></script>
-    <script src="assets/libs/node-waves/waves.min.js "></script>
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
 
-    <!-- Table Editable plugin -->
-    <script src="assets/libs/table-edits/build/table-edits.min.js "></script>
-    <script src="assets/js/pages/table-editable.int.js "></script>
 
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js "></script>
-
-    <!-- dashboard init -->
-    <script src="assets/js/pages/dashboard.init.js "></script>
-
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
     <!-- numerals number formater -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js "></script>
+    <script src="assets/libs/numeral/numeral.js "></script>
 
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js"></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js "></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 
 
