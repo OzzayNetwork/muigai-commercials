@@ -472,44 +472,13 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
-
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <div class="d-flex align-items-center flex-grow-1">
-                                            <div class="btn-group pr-3" role="group" aria-label="Basic radio toggle button group">
-                                                <input type="radio" class="btn-check" name="msg-type-filter" value="" id="btn-allmsgs" autocomplete="off" checked="">
-                                                <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-allmsgs"><span class="d-inline">All</span></label>
-
-                                                <input type="radio" class="btn-check" value="SMS" name="msg-type-filter" id="btn-sms" autocomplete="off">
-                                                <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-sms"><i class="mdi mdi-home-account  font-size-16"></i><span class="pl-1 d-none d-lg-inline d-md-inline">Residential</span></label>
-
-                                                <input type="radio" class="btn-check" value="Email" name="msg-type-filter" id="btn-email" autocomplete="off">
-                                                <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-email"><i class="mdi mdi-home-currency-usd   font-size-16"></i><span class="pl-1 d-none d-lg-inline d-md-inline">Commercial</span></label>
-
-                                                <input type="radio" class="btn-check" value="WhatsApp" name="msg-type-filter" id="btn-whatsApp" autocomplete="off">
-                                                <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-whatsApp"><i class="mdi mdi-store font-size-16"></i> <span class="pl-1 d-none d-lg-inline d-md-inline">Commercial/Residential</span></label>
-
-                                            </div>
-
-                                            <div class="btn-group mr-15px option-selector-cont">
-                                                <button type="button" class="btn btn-secondary dropdown-toggle option-selector" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="mdi mdi-file-document-outline font-size-16"></i> <span class="pl-1 d-none d-sm-inline">Agreement Type</span>  <i class="mdi mdi-chevron-down"></i>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#"><i class="mdi mdi-checkbox-blank text-white"></i><span class="pl-1">All Properties</span></a>
-                                                    <a class="dropdown-item" href="#"><i class="mdi mdi-checkbox-blank text-info"></i><span class="pl-1">Lease Agreement</span></a>
-                                                    <a class="dropdown-item" href="#"><i class="mdi mdi-checkbox-blank text-dark opacity-25"></i><span class="pl-1">Management Agreement</span></a>
-
-                                                </div>
-                                            </div>
-
-
-                                        </div>
+                                        <h4 class="mb-0 ">Property Register</h4>
                                         <div class="d-flex">
 
-                                            <button type="button" class="btn btn-primary dropdown-toggle option-selector">
-                                                <i class="dripicons-plus font-size-16"></i> <span class="pl-1 d-md-inline">Add A Property</span>
+                                            <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                                <i class="mdi mdi-account-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Property</span>
                                             </button>
-
                                         </div>
 
 
@@ -585,7 +554,8 @@
 
                                                         <div class="dropdown-menu dropdown-menu-end">
                                                             <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-home-variant me-3"></i>Units</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-plus me-3 text-success"></i>Add units</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-remove me-3 text-danger"></i>Remove a unit</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
@@ -607,6 +577,104 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- upload contacts modal -->
+            <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Upload New Contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
+
+                                    <p>
+                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample for reference</a>
+                                    </p>
+
+                                    <div class="form-group mb-4">
+                                        <label for="">Contacts title</label>
+                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
+                                    </div>
+                                    <div class="p-4 bg-light">
+                                        <div class="row ">
+
+                                            <div class="col-12">
+                                                <form action="#" class="dropzone">
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" class="mb-3">
+                                                    </div>
+                                                    <div class="dz-message needsclick">
+                                                        <div class="mb-3">
+                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                        </div>
+
+                                                        <h6>Contacts excell file</h6>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Save Contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- upload contacts modal -->
+
+            <!-- adding a new contact -->
+            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Add New Contact</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
+                                    <div class="form-group mb-3">
+                                        <label for="">Contact name</label>
+                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="">Phone Number</label>
+                                        <input type="text" class="form-control" placeholder="Enter the phone number">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="">Email address</label>
+                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="">Contact's title</label>
+                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Save Contact <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- adding a new contact -->
+
+
 
             <footer class="footer">
                 <div class="container-fluid">
