@@ -344,12 +344,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Properties</h4>
+                                <h4 class="mb-sm-0 font-size-18">90 Degrees Details</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Property Register</li>
+                                        <li class="breadcrumb-item"><a href="property-list.html">All Properties</a></li>
+                                        <li class="breadcrumb-item active">90 Degrees</li>
                                     </ol>
                                 </div>
 
@@ -391,110 +392,326 @@
 
                     <!-- end of tool bar -->
 
-
-
+                    <!-- property stats -->
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-lg-12 px-sm-30px">
                             <div class="card">
-                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
-                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <h4 class="mb-0 ">Property Register</h4>
-                                        <div class="d-flex">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="d-flex">
 
-                                            <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-primary dropdown-toggle option-selector">
-                                                <i class="mdi mdi-account-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Property</span>
-                                            </button>
+                                                <div class="flex-grow-1 align-self-center">
+                                                    <div class="text-muted">
+                                                        <h5 class="mb-3">Quick Overview on 90 Degrees</h5>
+                                                        <p class="d-none">Quick stats on the registered Tenants.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
 
-                                    </div>
-                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+                                        <div class="col-lg-12 col-md-12 align-self-center">
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <div class="text-lg-left mt-4 mt-lg-0">
+                                                        <div class="row">
+                                                            <div class="col-sm-3 col-md-2 text-capitalize">
+                                                                <div>
+                                                                    <div class="avatar-xs-2 mb-3">
+                                                                        <span class="avatar-title rounded-circle bg-info font-size-24">
+                                                                                <i class="mdi mdi-account-group text-white"></i>
+                                                                            </span>
+                                                                    </div>
+                                                                    <p class="text-muted text-truncate mb-2">Units</p>
+                                                                    <h5 class="mb-0">64</h5>
+                                                                </div>
+                                                            </div>
 
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="bx  bx-trash label-icon"></i> Delete Properties</button>
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Message property Tenants</button>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
-                                            <tr>
+                                                            <div class="col-sm-3 col-md-2 d-md-flex text-capitalize">
+                                                                <div>
+                                                                    <div class="avatar-xs-2 mb-3">
+                                                                        <span class="avatar-title rounded-circle bg-info font-size-24">
+                                                                                <i class="mdi  mdi-account-multiple-plus text-white"></i>
+                                                                            </span>
+                                                                    </div>
+                                                                    <p class="text-muted text-truncate mb-2">Vacated Units</p>
+                                                                    <!-- the new tenants who moved in march -->
+                                                                    <h5 class="mb-0">23 <small class="text-muted fw-light d-none">In Mar</small></h5>
 
-                                                <th scope="col">
-                                                    <div class="the-mail-checkbox pr-4">
-                                                        <label for="selectAll" class="d-none">Select All</label>
-                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
+                                                                </div>
+                                                            </div>
 
-                                                    </div>
-                                                </th>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Property</th>
-                                                <th scope="col">Owner</th>
-                                                <th scope="col">Agreement type</th>
-                                                <th scope="col">Property type</th>
-                                                <th scope="col">Units</th>
-                                                <th scope="col">Vacant</th>
-                                                <th scope="col">Occupied</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
+                                                            <div class="col-sm-3 col-md-2 d-md-flex text-capitalize">
+                                                                <div>
+                                                                    <div class="avatar-xs-2 mb-3">
+                                                                        <span class="avatar-title rounded-circle bg-info font-size-24">
+                                                                                <i class="mdi  mdi-account-clock text-white"></i>
+                                                                            </span>
+                                                                    </div>
+                                                                    <p class="text-muted text-truncate mb-2">Serving Notice</p>
+                                                                    <!-- the new tenants who moved in march -->
+                                                                    <h5 class="mb-0">10 </h5>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-3 col-md-2 text-capitalize">
+                                                                <div>
+                                                                    <div class="avatar-xs-2 mb-3">
+                                                                        <span class="avatar-title bg-success rounded-circle font-size-24">
+                                                                                <i class="mdi mdi-account-multiple-check text-white"></i>
+                                                                            </span>
+                                                                    </div>
+                                                                    <p class="text-muted text-truncate  mb-2">Tenants</p>
+                                                                    <h5 class="mb-0">46</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3 col-md-2 text-capitalize">
+                                                                <div>
+                                                                    <div class="avatar-xs-2 mb-3">
+                                                                        <span class="avatar-title rounded-circle bg-danger font-size-24">
+                                                                                <i class="mdi mdi-account-cash text-white"></i>
+                                                                            </span>
+                                                                    </div>
+                                                                    <p class="text-muted text-truncate mb-2">Tenants with arrears</p>
+                                                                    <h5 class="mb-0">5</h5>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-3 col-md-2 text-capitalize">
+                                                                <div>
+                                                                    <div class="avatar-xs-2 mb-3">
+                                                                        <span class="avatar-title rounded-circle bg-danger font-size-24">
+                                                                                <i class="mdi mdi-account-cancel text-white"></i>
+                                                                            </span>
+                                                                    </div>
+                                                                    <p class="text-muted text-truncate mb-2">Reported to auctioneers</p>
+                                                                    <h5 class="mb-0">2</h5>
+
+                                                                </div>
+                                                            </div>
+
+
+
+
+
+
                                                         </div>
-
                                                     </div>
-                                                </td>
-                                                <td class="text-capitalize">1</td>
-                                                <td class="text-capitalize">90 degrees by Tsavo</td>
-                                                <td>
-                                                    <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Mark Ellison</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a> /
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    Management
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1">Commercial building</span>
-                                                </td>
-                                                <td>56</td>
-                                                <td class="text-danger">
-                                                    36
-                                                </td>
-                                                <td class="text-success">
-                                                    20
-                                                </td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-plus me-3 text-success"></i>Add units</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-remove me-3 text-danger"></i>Remove a unit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
+                                                </div>
+                                                <div class="col-md-2 text-capitalize">
+                                                    <div>
+                                                        <div class="avatar-xs-2 mb-3">
+                                                            <span class="avatar-title rounded-circle bg-warning font-size-24">
+                                                                    <i class="mdi mdi-cash-remove text-white"></i>
+                                                                </span>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                        <p class="text-muted text-truncate mb-2">Compliant Tenants</p>
+                                                        <h5 class="mb-0">41</h5>
 
-                                        </tbody>
-                                    </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <!-- end row -->
                                 </div>
                             </div>
                         </div>
-                        <!-- end col -->
+                    </div>
+
+                    <!-- end of property stats -->
+
+
+
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="card calc-h-3px">
+                                <div class="card-body">
+
+                                    <div class="d-flex align-items-center text-capitalize">
+                                        <div class="mb-0 me-3 font-35px">
+                                            <i class="mdi mdi-home-city-outline  text-primary h1"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="text-capitalize mb-0 pb-0">90 Degrees <span class="badge d-none badge-pill badge-soft-success font-size-11">Active</span></h5>
+                                            <p class="text-muted mb-0 pb-0">Commercial/ residential building</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <p class="p-0 m-0"><span class="text-muted">Plot No.</span>BLK 123/102/0013A</p>
+                                </div>
+                                <div class="card-body border-top">
+                                    <p class="p-0 m-0"><span class="mdi mdi-map-marker me-2 font-18px"></span> Bahati Estate</p>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h4 class="text-capitalize font-14px">
+                                        <a href="">Kelvin Njuguna (Landlord)</a>
+                                    </h4>
+                                    <p class="text-muted mb-0 d-flex align-items-center">
+                                        <a href="tel:0704549859" class="d-flex align-items-center"><i class="mdi mdi-phone me-2 font-size-18"></i> 0704 549 859</a> <span class="px-3 px-3">|</span>
+                                        <a class="d-flex align-items-center" href="mailto:email@email.com"><i class="mdi mdi-email-outline font-size-18 me-2"></i> email@email.com</a>
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top pt-4 pb-4 pb-4">
+                                    <div class="text-left">
+
+
+                                        <a type="button" class="btn btn-outline-secondary waves-effect waves-light me-2 w-md btn-sm">
+                                            <i class="mdi mdi-home-export-outline  font-size-16 align-middle me-2"></i> Custom tenant(s) SMS
+                                        </a>
+
+                                        <a type="button" class="btn btn-primary waves-effect waves-light me-2 w-md btn-sm">
+                                            <i class="mdi mdi-file-clock-outline  font-size-16 align-middle me-2"></i> Rent Reminder
+                                        </a>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="card-body border-top pb-2 pt-3">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="text-muted">
+                                                <table class="table table-borderless mb-0 table-sm table-striped">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Property Type</td>
+                                                            <td class="pb-0"><span class="text-black">Residential/Commercial</span></td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Agreement type</td>
+                                                            <td class="pb-0"><span class="text-black">Management</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>MCA Commision</td>
+                                                            <td class="pb-0"><span class="text-black">30%</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Commercial units</td>
+                                                            <td class="pb-0"><span class="text-black">2</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Residential units</td>
+                                                            <td class="pb-0"><span class="text-black">62</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Bed sitters</td>
+                                                            <td class="pb-0"><span class="text-black">32</span></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>One Bedrooms</td>
+                                                            <td class="pb-0"><span class="text-black">30</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Date registered</td>
+                                                            <td class="pb-0"><span class="text-black">30 Apr 2009</span></td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="text-muted mb-4 d-flex align-items-center">
+                                                <i class="mdi mdi-home-account h2 text-success align-middle mb-0 me-3 font-size-30"></i>
+                                                <div class="d-flex flex-column">
+                                                    <span>Rent Balances</span>
+                                                </div>
+                                            </div>
+                                            <div class="text-success mt-4">
+                                                <h4 class="text-danger">KES 302,000<i class="mdi mdi-chevron-up ms-1 text-success d-none"></i></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="text-muted mb-4 d-flex align-items-center">
+                                                <i class="mdi mdi-home-currency-usd h2 text-info align-middle mb-0 me-3 font-size-30"></i>
+                                                <div class="d-flex flex-column">
+                                                    <span>Utility Bills</span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="text-muted mt-4 text-uppercase">
+                                                <h4>kes 20,326<i class="mdi mdi-currency-usd-off ms-1 text-success d-none"></i></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="text-muted mb-4 d-flex align-items-center">
+                                                <i class="mdi mdi-currency-usd-off h2 text-danger align-middle mb-0 me-3 font-size-30"></i>
+                                                <div class="d-flex flex-column ">
+                                                    <span>Accumulated penalties</span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="text-muted mt-4 text-uppercase">
+                                                <h4>kes 5,500<i class="mdi mdi-chevron-up ms-1 text-success d-none"></i></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="p-4">
+                                                <h5 class="text-primary mb-0 pb-0">Rent collection summary</h5>
+                                                <span>Rent collection summary for the last 12 Months</span>
+                                                <div class="row">
+
+                                                    <div class="col-12">
+                                                        <div id="property-chart"></div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-body border-top d-flex">
+                                    <h6 class="text-muted fw-lighter me-3">Rent Revenue <span class="fw-semibold">KES 58,956,360 (92%)</span></h6>
+                                    <h6 class="text-muted fw-lighter">Penalty Revenue <span class="fw-semibold">KES 122,659 (8%)</span></h6>
+                                </div>
+                            </div>
+
+
+
+                        </div>
                     </div>
 
                     <!-- end row -->
@@ -503,101 +720,7 @@
             </div>
             <!-- End Page-content -->
 
-            <!-- upload contacts modal -->
-            <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-primary text-white">
-                            <h5 class="modal-title text-white" id="composemodalTitle">Upload New Contacts</h5>
-                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div>
-                                <div class="mb-5">
 
-                                    <p>
-                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample for reference</a>
-                                    </p>
-
-                                    <div class="form-group mb-4">
-                                        <label for="">Contacts title</label>
-                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
-                                    </div>
-                                    <div class="p-4 bg-light">
-                                        <div class="row ">
-
-                                            <div class="col-12">
-                                                <form action="#" class="dropzone">
-                                                    <div class="fallback">
-                                                        <input name="file" type="file" class="mb-3">
-                                                    </div>
-                                                    <div class="dz-message needsclick">
-                                                        <div class="mb-3">
-                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
-                                                        </div>
-
-                                                        <h6>Contacts excell file</h6>
-                                                    </div>
-                                                </form>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success upload-the-contacts">Save Contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- upload contacts modal -->
-
-            <!-- adding a new contact -->
-            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-primary text-white">
-                            <h5 class="modal-title text-white" id="composemodalTitle">Add New Contact</h5>
-                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div>
-                                <div class="mb-5">
-                                    <div class="form-group mb-3">
-                                        <label for="">Contact name</label>
-                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label for="">Phone Number</label>
-                                        <input type="text" class="form-control" placeholder="Enter the phone number">
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <label for="">Email address</label>
-                                        <input type="email" class="form-control" placeholder="Enter the email address">
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <label for="">Contact's title</label>
-                                        <input type="email" class="form-control" placeholder="Enter the email address">
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success upload-the-contacts">Save Contact <i class="mdi mdi-account-details-outline  ms-1"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- adding a new contact -->
 
 
 
@@ -660,12 +783,23 @@
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js"></script>
 
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- crypto dash init js -->
+    <script src="assets/js/pages/property-chart.js"></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
     <!-- App js -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
 
 
+<!-- index.html   13:55:49 GMT -->
+
+</html>
 <!-- index.html   13:55:49 GMT -->
 
 </html>

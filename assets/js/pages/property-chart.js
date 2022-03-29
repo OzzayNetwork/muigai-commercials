@@ -44,10 +44,10 @@ var options = {
         },
         series: [{
             name: "Amount Invoiced",
-            data: [0, 0, 24500, 12500, 25000, 47500, 59500, 0, 0, 0, 0, 0]
+            data: [520000, 596000, 245000, 125000, 250000, 475000, 595000, 236000, 526000, 125600, 222000, 452000]
         }, {
             name: "Amount Paid",
-            data: [0, 0, 24500, 0, 0, 0, 71500]
+            data: [510000, 520000, 241500, 105000, 150000, 475000, 271500, 475000, 360259, 100000, 271900, 475000]
         }],
         xaxis: {
             categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -124,5 +124,5 @@ var options = {
         }
 
     },
-    chart = new ApexCharts(document.querySelector("#tenant-chart"), options);
+    chart = new ApexCharts(document.querySelector("#property-chart"), options);
 chart.render();
