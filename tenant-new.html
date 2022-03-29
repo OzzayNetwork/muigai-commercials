@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.svg">
 
     <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
     <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
@@ -22,8 +23,11 @@
     <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
 
 
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -256,8 +260,8 @@
                                 <span>Tenants</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Tenants List</a></li>
-                                <li><a href="#">Add a tenant</a></li>
+                                <li><a href="tenant-list.html">Tenants List</a></li>
+                                <li><a href="tenant-new.html">Add a tenant</a></li>
                             </ul>
                         </li>
 
@@ -381,157 +385,7 @@
                                                                     <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Property Name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Plot No. <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Location <strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select from list</option>
-                                                                <option value="">ZOne A</option>
-                                                                <option value="">Zone B</option>
-                                                                <option value="">Zone c</option>
-                                                                <option value="">Zone D</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Building type <strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select property type</option>
-                                                                <option value="">Apartment</option>
-                                                                <option value="">Mansionate</option>
-                                                                <option value="">Town House</option>
-                                                                <option value="">Discover</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Property type<strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select Building type</option>
-                                                                <option value="">Commercial property</option>
-                                                                <option value="">Residential Property</option>
-                                                                <option value="">Residential/Commercial</option>
-                                                                
-                                                          </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                                        <div class="mb-4">
-                                                            <label for="" class="">Registration Date<strong class="text-danger">*</strong></label>
-                                                            <div class="input-group" id="datepicker1">
-                                                                <input type="text" class="form-control mouse-pointer" placeholder="Select registration date" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">File No.<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </section>
-                                        <!-- Landlord details -->
-                                        <h3>Landlord details</h3>
-                                        <section>
-                                            <form>
-                                                <div class="row">
-
-                                                    <div class="col-12">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                                                    <p class="fw-semibold">Is this a new landlord or an already existing land lord? If yes Check the correct button below.</p>
-                                                                    <div class="d-flex">
-                                                                        <div class="form-check mb-3 pr-15px">
-                                                                            <input class="form-check-input" type="radio" name="landlord-reg" id="landlord-not-existing" checked>
-                                                                            <label class="form-check-label mb-0" for="landlord-not-existing">
-                                                                                Yes, Its a new Landlord
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="landlord-reg" id="landlord-not-new">
-                                                                            <label class="form-check-label mb-0" for="landlord-not-new">
-                                                                                No, its an already existing landlord
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">ID/PP Num.</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter ID or PP Num.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">Other Name(s)</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-
-                                                    <div class="col-md-6 col-lg-4 col-sm-12">
-
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="mb-4">
-                                                                    <label for="" class="">Registration Date<strong class="text-danger">*</strong></label>
-                                                                    <div class="input-group" id="datepicker1">
-                                                                        <input type="text" class="form-control mouse-pointer" placeholder="dd M, yyyy" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                        <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
+                                                            <div class="col-4">
                                                                 <div class="row">
                                                                     <label for="" class="">Gender: <strong class="text-danger">*</strong></label>
                                                                     <div class="d-flex">
@@ -551,114 +405,258 @@
                                                                 </div>
 
                                                             </div>
-
-
                                                         </div>
-
                                                     </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-phoneno-input">Phone <strong class="text-danger">*</strong></label>
-                                                                    <input type="text" class="form-control" id="basicpill-phoneno-input" placeholder="Enter Your Phone No.">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-email-input">Email <strong class="text-danger">*</strong></label>
-                                                                    <input type="email" class="form-control" id="basicpill-email-input" placeholder="Enter Your Email ID">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-lg-4">
+                                                    <div class="col-lg-4 col-md-6">
                                                         <div class="mb-4">
-                                                            <label for="basicpill-address-input">Postal Address</label>
-                                                            <textarea id="basicpill-address-input" class="form-control" rows="5" placeholder="Enter Your Address"></textarea>
+                                                            <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
                                                         </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="">Other Name(s)</label>
+                                                            <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 col-sm-12">
+                                                        <div class="mb-4">
+                                                            <label for="" class="">Date of Birth<strong class="text-danger">*</strong></label>
+                                                            <div class="input-group" id="datepicker1">
+                                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
+
+                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-lastname-input">Nationality <strong class="text-danger">*</strong></label>
+                                                            <select class="form-control selectpicker" data-live-search="true" title="Select nationality">
+                                                                
+                                                                <option value="" selected>Kenya</option>
+                                                                <option value="">Brazil</option>
+                                                                <option value="">South Africa</option>                                                                
+                                                          </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-lastname-input">Marital Status <strong class="text-danger">*</strong></label>
+                                                            <select class="form-control selectpicker" data-live-search="true" title="Select Marital status">
+                                                               
+                                                                <option value="">Single</option>
+                                                                <option value="">Married</option>                                                                
+                                                          </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-firstname-input">Occupation <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control" id="Enter tenants Phone Number" placeholder="Enter the tenants Occupation">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-firstname-input">Email. <strong class="text-danger">*</strong></label>
+                                                            <input type="email" class="form-control" id="Enter tenants email address" placeholder="Enter property plot No.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-firstname-input">Phone. <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control" id="Enter tenants Phone Number" placeholder="Enter property plot No.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 col-sm-12">
+                                                        <div class="mb-4">
+                                                            <label for="" class="">Date of Registration<strong class="text-danger">*</strong></label>
+                                                            <div class="input-group" id="datepicker1">
+                                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
+
+                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </section>
+                                        <!-- Landlord details -->
+                                        <h3>Next of Kin & Dependents</h3>
+                                        <section>
+                                            <form>
+                                                <div class="row">
+
+                                                    <div class="col-12">
+                                                        <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                            <p class="fw-semibold mb-0 pb-0">Next of Kin details</p>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-12 next-of-kin-cont">
+                                                        <div class="row next-of-kin">
+                                                            <div class="col-lg-4 col-sm-6">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
+                                                                    <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-sm-6">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
+                                                                    <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-sm-6">
+                                                                <div class="mb-4">
+                                                                    <label for="">Other Name(s)</label>
+                                                                    <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6">
+                                                                <div class="mb-4">
+                                                                    <label for="">ID/PP Num.</label>
+                                                                    <input type="text" class="form-control" id="" placeholder="Enter identification number">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-lastname-input">Relationship <strong class="text-danger">*</strong></label>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select relationship">
+                                                                        <option value="">Father</option>
+                                                                        <option value="">Mother</option>   
+                                                                        <option value="">Sister</option>                                                                
+                                                                  </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col mb-3">
+                                                            <button type="button" class="btn btn-success waves-effect btn-label waves-light"><i class="bx bx-plus label-icon"></i> Add Kin</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0">Dependents details</p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row next-of-kin">
+                                                        <div class="col-lg-4 col-sm-6">
+                                                            <div class="mb-4">
+                                                                <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
+                                                                <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-sm-6">
+                                                            <div class="mb-4">
+                                                                <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
+                                                                <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-sm-6">
+                                                            <div class="mb-4">
+                                                                <label for="">Other Name(s)</label>
+                                                                <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-6">
+                                                            <div class="mb-4">
+                                                                <label for="">ID/PP Num.</label>
+                                                                <input type="text" class="form-control" id="" placeholder="Enter identification number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-6">
+                                                            <div class="mb-4">
+                                                                <label for="basicpill-lastname-input">Relationship <strong class="text-danger">*</strong></label>
+                                                                <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
+                                                                    
+                                                                    <option value="">Father</option>
+                                                                    <option value="">Mother</option>   
+                                                                    <option value="">Sister</option>                                                                
+                                                              </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-success waves-effect btn-label waves-light"><i class="bx bx-plus label-icon"></i> Add Dependents</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </form>
+                                        </section>
+
+                                        <!-- Payment Details -->
+                                        <h3>Unit assignment</h3>
+                                        <section>
+                                            <form>
+                                                <div class="row clone-cont">
+                                                    <div class="col-12 clone-me">
+                                                        <div class="row ">
+
+                                                            <div class="col-lg-4 col-md-6">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-lastname-input">Property Name<strong class="text-danger">*</strong></label>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select the property">
+                                                                        <option value="">Tsavo 90 degress</option>
+                                                                        <option value="">Braka Apartments</option>
+                                                                  </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-2 col-sm-4">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-lastname-input">Hse No.<strong class="text-danger">*</strong></label>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Hse. Num">
+                                                                        <option value="">310</option>
+                                                                        <option value="">311</option>
+                                                                  </select>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-lastname-input">Rent Amount<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" class="form-control" placeholder="Percentage Commision %">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-lastname-input">Payable Security<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" class="form-control" placeholder="Percentage Commision %">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <button type="button" class="btn btn-success waves-effect btn-label waves-light clone-fileds"><i class="bx bx-plus label-icon"></i> Add Unit</button>
                                                     </div>
                                                 </div>
                                             </form>
                                         </section>
 
-                                        <!-- Payment Details -->
-                                        <h3>Agreement and Bank details</h3>
-                                        <section>
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-pancard-input">Bank</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Bank Name">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">Account No.</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Bank Account Number">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Agreement Type<strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select agreement type</option>
-                                                                <option value="">Property Management</option>
-                                                                <option value="">Unit Letting</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-lg-12">
-                                                        <div class="row">
-                                                            <label for="" class="">Nature of letting commission<strong class="text-danger">*</strong></label>
-                                                            <div class="col-12">
-                                                                <div class="d-flex w-100">
-                                                                    <div class="form-chec pr-15px">
-                                                                        <input class="form-check-input" type="radio" value="1" name="agreement-type" id="formRadios2" checked>
-                                                                        <label class="form-check-label" for="formRadios2">
-                                                                        Specified % Cut on rent
-                                                                    </label>
-                                                                    </div>
-
-                                                                    <div class="form-check mb-3 pr-15px">
-                                                                        <input class="form-check-input" type="radio" value="2" name="agreement-type" id="formRadios1">
-                                                                        <label class="form-check-label" for="formRadios1">
-                                                                        100% 1st Month Rent
-                                                                    </label>
-                                                                    </div>
-
-                                                                    <div class="form-check">
-                                                                        <input class="form-check-input" type="radio" value="3" name="agreement-type" id="formRadios3">
-                                                                        <label class="form-check-label" for="formRadios3">
-                                                                        Specified  % Cut on total rent collection
-                                                                    </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-12 per-commision d-none">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Percentage commission<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" placeholder="Percentage Commision %">
-                                                        </div>
-                                                    </div>
-
-
-
-                                                    <br> <br>
-
-                                            </form>
-                                        </section>
-
 
                                         <!-- Confirm Details -->
-                                        <h3>Confirm Detail</h3>
+                                        <h3>Confirm</h3>
                                         <section>
                                             <div class="row justify-content-center">
                                                 <div class="col-lg-6">
@@ -675,148 +673,153 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        </div>
-
                                     </div>
-                                    <!-- end card body -->
+
                                 </div>
-                                <!-- end card -->
+                                <!-- end card body -->
                             </div>
-                            <!-- end col -->
+                            <!-- end card -->
                         </div>
-
-                        <!-- end row -->
+                        <!-- end col -->
                     </div>
-                    <!-- container-fluid -->
+
+                    <!-- end row -->
                 </div>
-                <!-- End Page-content -->
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
 
-                <!-- OTP modal -->
-                <div class="modal fade OTP-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header border-bottom-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="text-center mb-4">
-                                    <div class="avatar-md mx-auto mb-4">
-                                        <div class="avatar-title bg-light rounded-circle text-primary h1">
-                                            <i class="mdi mdi-cellphone-message"></i>
-                                        </div>
+            <!-- OTP modal -->
+            <div class="modal fade OTP-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-4">
+                                <div class="avatar-md mx-auto mb-4">
+                                    <div class="avatar-title bg-light rounded-circle text-primary h1">
+                                        <i class="mdi mdi-cellphone-message"></i>
                                     </div>
+                                </div>
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-10">
-                                            <h4 class="text-primary">Confirm OTP</h4>
-                                            <p class="text-muted font-size-14 mb-4">An OTP has been sent to <strong>0704549859</strong> kindly ask the Member being registered to check their phone and share the OTP sent to them with you and enetr it below to confirm</p>
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-10">
+                                        <h4 class="text-primary">Confirm OTP</h4>
+                                        <p class="text-muted font-size-14 mb-4">An OTP has been sent to <strong>0704549859</strong> kindly ask the Member being registered to check their phone and share the OTP sent to them with you and enetr it below to confirm</p>
 
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit1-input" class="visually-hidden">Dight 1</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="1" id="digit1-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit2-input" class="visually-hidden">Dight 2</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="2" id="digit2-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit3-input" class="visually-hidden">Dight 3</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="3" id="digit3-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit4-input" class="visually-hidden">Dight 4</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="4" id="digit4-input">
-                                                        </div>
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <div class="mb-3">
+                                                        <label for="digit1-input" class="visually-hidden">Dight 1</label>
+                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="1" id="digit1-input">
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-primary btn-block w-100">
+
+                                                <div class="col-3">
+                                                    <div class="mb-3">
+                                                        <label for="digit2-input" class="visually-hidden">Dight 2</label>
+                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="2" id="digit2-input">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <div class="mb-3">
+                                                        <label for="digit3-input" class="visually-hidden">Dight 3</label>
+                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="3" id="digit3-input">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <div class="mb-3">
+                                                        <label for="digit4-input" class="visually-hidden">Dight 4</label>
+                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="4" id="digit4-input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary btn-block w-100">
                                                 Verify phone number
                                             </button>
-                                            </form>
+                                        </form>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.modal-dialog -->
                 </div>
-                <!-- end modal -->
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end modal -->
 
 
 
-                <footer class="footer ">
-                    <div class="container-fluid ">
-                        <div class="row ">
-                            <div class="col-sm-6 ">
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script> © Early Bird
-                            </div>
-                            <div class="col-sm-6 ">
-                                <div class="text-sm-end d-sm-block ">
-                                    South Imenti Dairy
-                                </div>
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © Early Bird
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="text-sm-end d-sm-block ">
+                                South Imenti Dairy
                             </div>
                         </div>
                     </div>
-                </footer>
-            </div>
-            <!-- end main content-->
-
+                </div>
+            </footer>
         </div>
-        <!-- END layout-wrapper -->
+        <!-- end main content-->
 
-        <!-- Right bar overlay-->
-        <div class="rightbar-overlay "></div>
+    </div>
+    <!-- END layout-wrapper -->
 
-        <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js "></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js "></script>
-        <script src="assets/libs/simplebar/simplebar.min.js "></script>
-        <script src="assets/libs/node-waves/waves.min.js "></script>
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay "></div>
 
-        <!-- Bootstrap select -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+    <!-- JAVASCRIPT -->
 
-        <script src="assets/libs/select2/js/select2.min.js "></script>
-        <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
-        <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
-        <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js "></script>
-        <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js "></script>
-        <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
-        <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
+    <script src="assets/libs/jquery/jquery.min.js"></script>
 
-        <!-- numerals number formater -->
-        <script src="assets/libs/numeral/numeral.js "></script>
-        <!-- jquery step -->
-        <script src="assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
-
-        <!-- form wizard init -->
-        <script src="assets/js/pages/form-wizard.init.js"></script>
-        <!-- Datatable init js -->
-        <script src="assets/js/pages/datatables.init.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
 
 
 
+    <script src="assets/libs/select2/js/select2.min.js "></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js "></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js "></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
 
-        <!-- App js -->
-        <script src="assets/js/app.js "></script>
-        <script src="assets/js/custom.js "></script>
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
+    <!-- jquery step -->
+    <script src="assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
+
+    <!-- form wizard init -->
+    <script src="assets/js/pages/form-wizard.init.js"></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js "></script>
+
+
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
 </body>
 
 
