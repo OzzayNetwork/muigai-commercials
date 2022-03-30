@@ -1039,6 +1039,32 @@ body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hov
     .dt-buttons .mdi {
         margin: 0px !important;
     }
+    .month-picker>button {
+        padding: .47rem .75rem !important;
+        padding-left: .75rem !important;
+        position: relative !important;
+        padding-right: 30px !important;
+        font-size: 12px !important;
+    }
+    .month-picker>button::before {
+        position: absolute;
+        font-family: boxicons!important;
+        content: "\eaaa";
+        left: 10px;
+        font-size: 22px;
+        color: white;
+    }
+    .month-picker>button::after {
+        position: absolute;
+        font-family: boxicons!important;
+        content: "\e9ce";
+        right: 12px;
+        font-size: 15px;
+        color: #ffffffb3;
+    }
+    .month-picker>button::before {
+        display: none;
+    }
     .table-rows-selector>button {
         padding: .47rem .75rem !important;
         padding-left: .75rem !important;
