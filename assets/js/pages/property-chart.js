@@ -101,6 +101,16 @@ var options = {
             style: {
                 fontSize: '12px',
                 fontFamily: undefined
+
+            },
+            fillSeriesColor: false,
+            theme: "light",
+
+            marker: {
+                show: true,
+            },
+            onDatasetHover: {
+                highlightDataSeries: true,
             },
             // custom: function({ series, seriesIndex, dataPointIndex, w }) {
             //     let currentTotal = 0
