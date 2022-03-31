@@ -336,12 +336,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Toll charges</h4>
+                                <h4 class="mb-sm-0 font-size-18">Applicable charges</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Toll charges</li>
+                                        <li class="breadcrumb-item"><a href="#">Set Ups</a></li>
+                                        <li class="breadcrumb-item active">Applicable charges</li>
                                     </ol>
                                 </div>
 
@@ -351,125 +352,74 @@
                     <!-- end page title -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="card p-4">
+                            <div class="card">
                                 <div class="card-body">
 
                                     <h4 class="card-title">Toll charges by vehicle category</h4>
-                                    <p class="card-title-desc">You can add or change the charges for a specific vehicle category. remember to click save so as to reflect your changes otherwise any changes you make will not be effected</p>
+                                    <p class="card-title-desc">
+                                        This bil items will appear monthly on the created invoices as the items to be charged for the total invoice amount.
+                                    </p>
 
                                     <div class="table-responsive table-responsive-md">
-                                        <table class="table table-editable align-middle table-edits">
+                                        <table class="table table-striped align-middle table-edits">
                                             <thead>
-                                                <tr class="text-uppercase">
+                                                <tr class="text-uppercase table-dark">
                                                     <th>#</th>
-                                                    <th>Vehicle type</th>
+                                                    <th>Invoice item</th>
+                                                    <th>To be charged Monthly</th>
+                                                    <th>When To Invoice</th>
                                                     <th>Description</th>
-                                                    <th class="text-right">Charges</th>
+                                                    <th class="">Charge Nature</th>
                                                     <th class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr data-id="1">
                                                     <td style="width: 80px">1</td>
-                                                    <td data-field="name">Motor cycles</td>
-                                                    <td data-field="age">Motor cycles exceeding 50CC</td>
-                                                    <td data-field="amount" class="text-right">2,000</td>
+                                                    <td>Rent</td>
+                                                    <td>Monthly</td>
+                                                    <td>Day 1 of the Month</td>
+                                                    <td>Monthly rent for the Unit</td>
+                                                    <td class="">Vary</td>
                                                     <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
                                                     </td>
-
                                                 </tr>
-                                                <tr data-id="2">
+                                                <tr data-id="1">
                                                     <td style="width: 80px">2</td>
-                                                    <td data-field="name">Motor cars</td>
-                                                    <td data-field="age">light vehicle cars including campervan MPV'S(less than 8 passengers)<br> and their effects,taxi's,limosines,light vehicles towing a caravan<br> or trailer with any number of axles.</td>
-                                                    <td data-field="amount" class="text-right">2,500</td>
+                                                    <td>Rent VAT</td>
+                                                    <td>Monthly</td>
+                                                    <td>Day 1 of the Month</td>
+                                                    <td>Imposed by the Government of Kenya</td>
+                                                    <td class="">18% of Rent</td>
                                                     <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
                                                     </td>
-
-
-
                                                 </tr>
-                                                <tr data-id="3">
+                                                <tr data-id="1">
                                                     <td style="width: 80px">3</td>
-                                                    <td data-field="name">busses or coaches</td>
-                                                    <td data-field="age">busses or coaches (any number of axles any size) with a capacity<br> to carry 8 or more passengers.</td>
-                                                    <td data-field="amount" class="text-right">2,300</td>
+                                                    <td>Rent Deposit</td>
+                                                    <td>Not Monthly</td>
+                                                    <td>Day 1 only</td>
+                                                    <td>Security on the renting facility</td>
+                                                    <td class=""><strong class="text-uppercase">x2</strong> the rent</td>
                                                     <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
                                                     </td>
-
                                                 </tr>
-                                                <tr data-id="4">
+                                                <tr data-id="1">
                                                     <td style="width: 80px">4</td>
-                                                    <td data-field="name">Light Good Vehicles</td>
-                                                    <td data-field="age">Good Vehicles,(Vans and any car with no rear window) <br>and adapted for goods .ie No back seats.<br> This includes car,vans,jeep type with back windows panelled out,<br> seats removed and all pick up
-                                                        types included. Whether in the course of trade or otherwise.</td>
-                                                    <td data-field="amount" class="text-right">2,600</td>
+                                                    <td>Rent Penalty</td>
+                                                    <td>Not Monthly</td>
+                                                    <td>Day 10 of the month if rent is not paid</td>
+                                                    <td>Security on the renting facility</td>
+                                                    <td class="">KES 500</td>
                                                     <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr data-id="5">
-                                                    <td style="width: 80px">5</td>
-                                                    <td data-field="name">Goods or Vehicles with two or three axles</td>
-                                                    <td data-field="age">Goods vehicles with a design gross vehicle weight exceeding 3,500 kilograms<br> and having 2 or 3 axles.</td>
-                                                    <td data-field="amount" class="text-right">2,000</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr data-id="6">
-                                                    <td style="width: 80px">6</td>
-                                                    <td data-field="name">Goods or vehicles with four or more axles</td>
-                                                    <td data-field="age">Goods vehicles with a design gross vehicle weight exceeding 3,500 kilograms<br> and having 4 or more axles.</td>
-                                                    <td data-field="amount" class="text-right">2,200</td>
-                                                    <td class="text-right cell-change">
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit" title="Edit"><i class="bx bx-edit-alt"></i></a>
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none" title="save">Save</button>
-                                                        <a class="btn btn-light btn-circle waves-effect font-18px  btn-transparent cancel-changes d-none" title="Cancel"><i class="bx bx-x"></i></a>
-                                                    </td>
-
-                                                </tr>
-                                                <tr class="cloneCharges d-none">
-                                                    <td style="width: 80px" class="categoryIndex">#</td>
-                                                    <td data-field="name">
-                                                        <input type="text" class="form-control" placeholder="Enter Category">
-                                                    </td>
-                                                    <td data-field="age">
-                                                        <input type="text" class="form-control" placeholder="Category description">
-                                                    </td>
-                                                    <td data-field="amount" class="text-right">
-                                                        <input type="text" class="form-control" placeholder="UGX">
-                                                    </td>
-                                                    <td class="text-right cell-change">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-new-btn mx-3" title="save">Save</button>
-                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle  btn-transparent cancel-new-category" title="Cancel"><i class="bx bx-x"></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
-
-
                                             </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td colspan="5" class="bg-light add-field">
-                                                        <span class="d-flex align-items-center"><i class="dripicons-plus  mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Toll Charge category</span></span>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
+
                                         </table>
                                     </div>
 
