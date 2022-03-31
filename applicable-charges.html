@@ -13,9 +13,20 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -353,9 +364,26 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <div class="d-flex align-items-center flex-grow-1">
+                                            <h4 class="mb-0  bg-transparent  p-0 m-0">Invoice Items</h4>
+                                        </div>
+                                        <div class="d-flex">
+
+                                            <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3" data-bs-toggle="modal" data-bs-target="#new-invoice-item-modal">
+                                                <i class="mdi mdi-plus label-icon"></i> Add Invoice Item
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
                                 <div class="card-body">
 
-                                    <h4 class="card-title">Toll charges by vehicle category</h4>
                                     <p class="card-title-desc">
                                         This bil items will appear monthly on the created invoices as the items to be charged for the total invoice amount.
                                     </p>
@@ -366,56 +394,83 @@
                                                 <tr class="text-uppercase table-dark">
                                                     <th>#</th>
                                                     <th>Invoice item</th>
-                                                    <th>To be charged Monthly</th>
+                                                    <th>Item type</th>
                                                     <th>When To Invoice</th>
                                                     <th>Description</th>
-                                                    <th class="">Charge Nature</th>
+                                                    <th class="text-nowrap">Charge Nature</th>
                                                     <th class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
+                                            <tfoot class="table-dark">
+                                                <tr class="text-capitalize">
+                                                    <th colspan="7">6 Billable items</th>
+                                                </tr>
+                                            </tfoot>
                                             <tbody>
                                                 <tr data-id="1">
                                                     <td style="width: 80px">1</td>
                                                     <td>Rent</td>
-                                                    <td>Monthly</td>
-                                                    <td>Day 1 of the Month</td>
+                                                    <td>Rent</td>
+                                                    <td>Day 1 of Every Month</td>
                                                     <td>Monthly rent for the Unit</td>
                                                     <td class="">Vary</td>
                                                     <td class="text-right cell-change">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
                                                 <tr data-id="1">
                                                     <td style="width: 80px">2</td>
                                                     <td>Rent VAT</td>
-                                                    <td>Monthly</td>
-                                                    <td>Day 1 of the Month</td>
+                                                    <td>TAX</td>
+                                                    <td>Day 1 of Every Month</td>
                                                     <td>Imposed by the Government of Kenya</td>
                                                     <td class="">18% of Rent</td>
                                                     <td class="text-right cell-change">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
                                                 <tr data-id="1">
                                                     <td style="width: 80px">3</td>
                                                     <td>Rent Deposit</td>
-                                                    <td>Not Monthly</td>
-                                                    <td>Day 1 only</td>
+                                                    <td>Security Deposit</td>
+                                                    <td>Day 1 of the First Month</td>
                                                     <td>Security on the renting facility</td>
                                                     <td class=""><strong class="text-uppercase">x2</strong> the rent</td>
                                                     <td class="text-right cell-change">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
                                                 <tr data-id="1">
                                                     <td style="width: 80px">4</td>
                                                     <td>Rent Penalty</td>
-                                                    <td>Not Monthly</td>
+                                                    <td>Penalty</td>
                                                     <td>Day 10 of the month if rent is not paid</td>
-                                                    <td>Security on the renting facility</td>
+                                                    <td>Applicable on delayed rent payments</td>
                                                     <td class="">KES 500</td>
                                                     <td class="text-right cell-change">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3" title="save">Edit</button>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
+                                                    </td>
+                                                </tr>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">5</td>
+                                                    <td>Utility Deposit</td>
+                                                    <td>Security deposit</td>
+                                                    <td>Day 1 of The first Month</td>
+                                                    <td>Security on the utilities</td>
+                                                    <td class="">KES 5,000</td>
+                                                    <td class="text-right cell-change">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
+                                                    </td>
+                                                </tr>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">6</td>
+                                                    <td>Auctioneer Fees</td>
+                                                    <td>Other</td>
+                                                    <td>random date</td>
+                                                    <td>To be charged if the tenant has been reported to auctioneers</td>
+                                                    <td class="">Vary</td>
+                                                    <td class="text-right cell-change">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -435,6 +490,166 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- modals -->
+            <div class="modal fade" id="new-invoice-item-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">New invoice item</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="form-group mb-4">
+                                        <label for="">Invoice item name</label>
+                                        <input type="text" class="form-control" placeholder="Invoice item name">
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-group mb-4">
+                                        <label for="">Invoice item type</label>
+                                        <select class="selectpicker form-control" data-live-search="true" title="Select Invoice Item type">
+                                            <option>Security Deposit</option>
+                                            <option>Penalty</option>
+                                            <option>Premises Utility</option>
+                                            <option>Rent</option>
+                                            <option>Tax</option>
+                                            <option>Other</option>                                            
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-none">
+                                    <div class="form-group mb-3">
+                                        <h5 class="text-muted"><label for="">When should this Fee be charged?</label></h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="">When should this Invoice item be added?</label>
+                                            <div class="d-flex">
+                                                <div class="form-check mb-3 me-3">
+                                                    <input class="form-check-input" type="radio" name="invoice-period" id="each-month" checked="">
+                                                    <label class="form-check-label" for="each-month">
+                                                        Every Month
+                                                    </label>
+                                                </div>
+                                                <div class="form-check me-3">
+                                                    <input class="form-check-input" type="radio" name="invoice-period" id="month-1">
+                                                    <label class="form-check-label" for="month-1">
+                                                        1st Month only
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="invoice-period" id="random-day">
+                                                    <label class="form-check-label" for="random-day">
+                                                        Random Date (To be added manually)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">On what day should this invoice item be added?</label>
+                                        <select class="selectpicker form-control" data-live-search="true" title="Select the specific Day">
+                                        <option>Day 1</option>
+                                        <option>Day 2</option>
+                                        <option>Day 3</option>
+                                        <option>Day 4</option>
+                                        <option>Day 5</option>
+                                        <option>Day 6</option>
+                                        <option>Day 7</option>
+                                        <option>Day 8</option>
+                                        <option>Day 9</option>
+                                        <option>Day 10</option>
+                                        <option>Day 11</option>
+                                        <option>Day 12</option>
+                                        <option>Day 13</option>
+                                        <option>Day 14</option>
+                                        <option>Day 15</option>
+                                        <option>Day 16</option>
+                                        <option>Day 17</option>
+                                        <option>Day 18</option>
+                                        <option>Day 19</option>
+                                        <option>Day 20</option>
+                                        <option>Day 21</option>
+                                        <option>Day 22</option>
+                                        <option>Day 23</option>
+                                        <option>Day 24</option>
+                                        <option>Day 25</option>
+                                        <option>Day 26</option>
+                                        <option>Day 27</option>
+                                        <option>Day 28</option>
+                                        </select>
+                                        <small>Select day number of the selected period for this Invoice item to be updated</small>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="">What's the nature of this new invoice item</label>
+                                            <div class="d-flex">
+                                                <div class="form-check mb-3 me-3">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" id="fixed-amount" checked="">
+                                                    <label class="form-check-label" for="fixed-amount">
+                                                        Fixed amount
+                                                    </label>
+                                                </div>
+                                                <div class="form-check me-3">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" id="per-on-rent">
+                                                    <label class="form-check-label" for="per-on-rent">
+                                                        Percentage on rent
+                                                    </label>
+                                                </div>
+                                                <div class="form-check me-3">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" id="multiple-on-rent">
+                                                    <label class="form-check-label" for="multiple-on-rent">
+                                                        Multiple on the rent
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" id="random-fee">
+                                                    <label class="form-check-label" for="random-fee">
+                                                        Amount varies
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">Fee Amount</label>
+                                        <input type="text" class="form-control" placeholder="Enter amount applicable">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">Invoice item description</label>
+                                        <textarea name="" class="form-control" id="" rows="2" placeholder="Enter a description">
+
+                                        </textarea>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modals end -->
 
 
             <footer class="footer">
@@ -466,10 +681,16 @@
 
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js"></script>
     <script src="assets/libs/simplebar/simplebar.min.js"></script>
     <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
 
     <!-- Table Editable plugin -->
     <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
