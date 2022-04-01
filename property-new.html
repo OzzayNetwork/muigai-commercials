@@ -13,8 +13,8 @@
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
-
     <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
     <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
@@ -22,8 +22,11 @@
     <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
 
 
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -364,107 +367,39 @@
                             <div class="card">
                                 <div class="card-body">
                                     <p>Fill in the form correctly. Fields with an Asterisk <strong class="text-danger">*</strong> are mandatory fields.</p>
-                                    <div id="basic-example">
-                                        <!-- Property details -->
-                                        <h3>Property details</h3>
-                                        <section>
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Property Name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
-                                                        </div>
-                                                    </div>
+                                    <div id="basic-example" class="create-property">
 
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Plot No. <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Location <strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select from list</option>
-                                                                <option value="">ZOne A</option>
-                                                                <option value="">Zone B</option>
-                                                                <option value="">Zone c</option>
-                                                                <option value="">Zone D</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Building type <strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select property type</option>
-                                                                <option value="">Apartment</option>
-                                                                <option value="">Mansionate</option>
-                                                                <option value="">Town House</option>
-                                                                <option value="">Discover</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Property type<strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select Building type</option>
-                                                                <option value="">Commercial property</option>
-                                                                <option value="">Residential Property</option>
-                                                                <option value="">Residential/Commercial</option>
-                                                                
-                                                          </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                                        <div class="mb-4">
-                                                            <label for="" class="">Registration Date<strong class="text-danger">*</strong></label>
-                                                            <div class="input-group" id="datepicker1">
-                                                                <input type="text" class="form-control mouse-pointer" placeholder="Select registration date" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">File No.<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </section>
                                         <!-- Landlord details -->
                                         <h3>Landlord details</h3>
                                         <section>
                                             <form>
-                                                <div class="row">
-
+                                                <div class="row ">
                                                     <div class="col-12">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="bg-primary border-2 bg-soft p-4 mb-4">
-                                                                    <p class="fw-semibold">Is this a new landlord or an already existing land lord? If yes Check the correct button below.</p>
-                                                                    <div class="d-flex">
-                                                                        <div class="form-check mb-3 pr-15px">
-                                                                            <input class="form-check-input" type="radio" name="landlord-reg" id="landlord-not-existing" checked>
-                                                                            <label class="form-check-label mb-0" for="landlord-not-existing">
-                                                                                Yes, Its a new Landlord
-                                                                            </label>
+                                                        <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Personal details</p>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-12 d-none ">
+                                                        <div class="row ">
+                                                            <div class="col-12 ">
+                                                                <div class="bg-primary border-2 bg-soft p-4 mb-4 ">
+                                                                    <p class="fw-semibold ">Is this a new landlord or an already existing land lord? If yes Check the correct button below.</p>
+                                                                    <div class="d-flex ">
+                                                                        <div class="form-check mb-3 pr-15px ">
+                                                                            <input class="form-check-input " type="radio " name="landlord-reg " id="landlord-not-existing " checked>
+                                                                            <label class="form-check-label mb-0 " for="landlord-not-existing ">
+                                                                                 Yes, Its a new Landlord
+                                                                             </label>
                                                                         </div>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="landlord-reg" id="landlord-not-new">
-                                                                            <label class="form-check-label mb-0" for="landlord-not-new">
-                                                                                No, its an already existing landlord
-                                                                            </label>
+                                                                        <div class="form-check ">
+                                                                            <input class="form-check-input " type="radio " name="landlord-reg " id="landlord-not-new ">
+                                                                            <label class="form-check-label mb-0 " for="landlord-not-new ">
+                                                                                 No, its an already existing landlord
+                                                                             </label>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -472,65 +407,61 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">ID/PP Num.</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter ID or PP Num.">
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">ID/PP Num.</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter ID or PP Num. ">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-firstname-input ">First name <strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter Your First Name ">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Last Name <strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-lastname-input " placeholder="Enter Your Last Name ">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">Other Name(s)</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Other Name(s)</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter Your Last Name ">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
 
-                                                    <div class="col-md-6 col-lg-4 col-sm-12">
+                                                <div class="row ">
+                                                    <div class="col-lg-4 ">
+                                                        <div class="row ">
+                                                            <div class="col-12 ">
+                                                                <div class="mb-4 ">
+                                                                    <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
+                                                                    <div class="input-group " id="datepicker1 ">
+                                                                        <input type="text " class="form-control mouse-pointer " placeholder="dd M, yyyy " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
+                                                                        " data-date-autoclose="true ">
 
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-4">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <div class="mb-4">
-                                                                    <label for="" class="">Registration Date<strong class="text-danger">*</strong></label>
-                                                                    <div class="input-group" id="datepicker1">
-                                                                        <input type="text" class="form-control mouse-pointer" placeholder="dd M, yyyy" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                        <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                                                        <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12">
-                                                                <div class="row">
-                                                                    <label for="" class="">Gender: <strong class="text-danger">*</strong></label>
-                                                                    <div class="d-flex">
-                                                                        <div class="form-check mb-3 pr-15px">
-                                                                            <input class="form-check-input" type="radio" name="gender" id="formRadios1" checked>
-                                                                            <label class="form-check-label" for="formRadios1">
+                                                            <div class="col-12 ">
+                                                                <div class="row ">
+                                                                    <label for=" " class=" ">Gender: <strong class="text-danger ">*</strong></label>
+                                                                    <div class="d-flex ">
+
+                                                                        <div class="form-check me-3">
+                                                                            <input class="form-check-input" type="radio" name="gender" id="gender-male">
+                                                                            <label class="form-check-label" for="gender-male">
                                                                                 Male
                                                                             </label>
                                                                         </div>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="gender" id="formRadios2">
-                                                                            <label class="form-check-label" for="formRadios2">
+
+                                                                        <div class="form-check me-3">
+                                                                            <input class="form-check-input" type="radio" name="gender" id="gender-female">
+                                                                            <label class="form-check-label" for="gender-female">
                                                                                 Female
                                                                             </label>
                                                                         </div>
@@ -543,84 +474,84 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-phoneno-input">Phone <strong class="text-danger">*</strong></label>
-                                                                    <input type="text" class="form-control" id="basicpill-phoneno-input" placeholder="Enter Your Phone No.">
+                                                    <div class="col-lg-4 ">
+                                                        <div class="row ">
+                                                            <div class="col-lg-12 ">
+                                                                <div class="mb-4 ">
+                                                                    <label for="basicpill-phoneno-input ">Phone <strong class="text-danger ">*</strong></label>
+                                                                    <input type="text " class="form-control " id="basicpill-phoneno-input " placeholder="Enter Your Phone No. ">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-12">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-email-input">Email <strong class="text-danger">*</strong></label>
-                                                                    <input type="email" class="form-control" id="basicpill-email-input" placeholder="Enter Your Email ID">
+                                                            <div class="col-lg-12 ">
+                                                                <div class="mb-4 ">
+                                                                    <label for="basicpill-email-input ">Email <strong class="text-danger ">*</strong></label>
+                                                                    <input type="email " class="form-control " id="basicpill-email-input " placeholder="Enter Your Email ID ">
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-address-input">Postal Address</label>
-                                                            <textarea id="basicpill-address-input" class="form-control" rows="5" placeholder="Enter Your Address"></textarea>
+                                                    <div class="col-lg-4 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-address-input ">Postal Address</label>
+                                                            <textarea id="basicpill-address-input " class="form-control " rows="5 " placeholder="Enter Your Address "></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </form>
-                                        </section>
+                                                <div class="col-12">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Banking details and Landlord MCA Property agreement</p>
 
-                                        <!-- Payment Details -->
-                                        <h3>Agreement and Bank details</h3>
-                                        <section>
-                                            <form>
+                                                    </div>
+                                                </div>
                                                 <div class="row">
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-pancard-input">Bank</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Bank Name">
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-pancard-input ">Bank</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter Bank Name ">
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">Account No.</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Bank Account Number">
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Account No.</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter Bank Account Number ">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Agreement Type<strong class="text-danger">*</strong></label>
-                                                            <select class="form-select">
-                                                                <option selected>Select agreement type</option>
-                                                                <option value="">Property Management</option>
-                                                                <option value="">Unit Letting</option>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Agreement Type<strong class="text-danger ">*</strong></label>
+                                                            <select class="form-control selectpicker " title="Landlord MCA agreement type">
+                                                                <option value=" ">Property Management</option>
+                                                                <option value=" ">Unit Letting</option>
                                                           </select>
                                                         </div>
                                                     </div>
 
 
-                                                    <div class="col-lg-12">
-                                                        <div class="row">
-                                                            <label for="" class="">Nature of letting commission<strong class="text-danger">*</strong></label>
-                                                            <div class="col-12">
-                                                                <div class="d-flex w-100">
-                                                                    <div class="form-chec pr-15px">
-                                                                        <input class="form-check-input" type="radio" value="1" name="agreement-type" id="formRadios2" checked>
-                                                                        <label class="form-check-label" for="formRadios2">
+                                                    <div class="col-lg-12 ">
+                                                        <div class="row ">
+                                                            <label for=" " class=" ">Nature of letting commission<strong class="text-danger ">*</strong></label>
+                                                            <div class="col-12 ">
+                                                                <div class="d-flex w-100 ">
+
+                                                                    <div class="form-check pr-15px ">
+                                                                        <input class="form-check-input " type="radio" value="1" name="agreement-type" id="formRadios2" checked>
+                                                                        <label class="form-check-label " for="formRadios2">
                                                                         Specified % Cut on rent
                                                                     </label>
                                                                     </div>
 
-                                                                    <div class="form-check mb-3 pr-15px">
-                                                                        <input class="form-check-input" type="radio" value="2" name="agreement-type" id="formRadios1">
-                                                                        <label class="form-check-label" for="formRadios1">
+
+                                                                    <div class="form-check mb-3 pr-15px ">
+                                                                        <input class="form-check-input " type="radio" value="2" name="agreement-type" id="formRadios1">
+                                                                        <label class="form-check-label " for="formRadios1">
                                                                         100% 1st Month Rent
                                                                     </label>
                                                                     </div>
 
-                                                                    <div class="form-check">
-                                                                        <input class="form-check-input" type="radio" value="3" name="agreement-type" id="formRadios3">
+                                                                    <div class="form-check ">
+                                                                        <input class="form-check-input " type="radio" value="3" name="agreement-type" id="formRadios3">
                                                                         <label class="form-check-label" for="formRadios3">
                                                                         Specified  % Cut on total rent collection
                                                                     </label>
@@ -629,181 +560,600 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-12 per-commision d-none">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Percentage commission<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" placeholder="Percentage Commision %">
+                                                    <div class="col-lg-3 col-md-4 col-sm-12 per-commision d-none ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Percentage commission<strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " placeholder="Percentage Commision % ">
                                                         </div>
                                                     </div>
 
+                                                </div>
+
+                                            </form>
+                                        </section>
+                                        <!-- Property details -->
+                                        <h3>Property details</h3>
+                                        <section>
+                                            <form>
+                                                <div class="row ">
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-firstname-input ">Property Name <strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter Your First Name ">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-firstname-input ">Plot No. <strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter property plot No. ">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Estate <strong class="text-danger ">*</strong></label>
+                                                            <select class=" selectpicker form-control " data-live-search="true " title="Select estate ">
+                                                                <option value=" ">Bahati</option>
+                                                                <option value=" ">KITI</option>
+                                                                <option value=" ">London</option>
+                                                                <option value=" ">Area 58</option>
+                                                          </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Building type <strong class="text-danger ">*</strong></label>
+                                                            <select class="form-control selectpicker " title="Select Building type " data-live-search="true ">
+                                                                <option value=" ">Apartment</option>
+                                                                <option value=" ">Mansionate</option>
+                                                                <option value=" ">Town House</option>
+                                                                <option value=" ">Discover</option>
+                                                          </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Property Use type<strong class="text-danger ">*</strong></label>
+                                                            <select class="form-control selectpicker " title="Select Property use type " data-live-search="true ">
+                                                                <option value=" ">Commercial property</option>
+                                                                <option value=" ">Residential Property</option>
+                                                                <option value=" ">Residential/Commercial</option>
+                                                                
+                                                          </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Unit/House types<strong class="text-danger ">*</strong></label>
+                                                            <select class="form-control selectpicker " data-live-search="true " multiple title="You can select several types ">
+                                                                <option value=" ">Bed sitter</option>
+                                                                <option value=" ">One bedroom</option>
+                                                                <option value=" ">Two bedroom</option>
+                                                                <option value=" ">Single room</option> 
+                                                                <option value=" ">Three bedroom</option>  
+                                                                <option value=" ">Town house</option>    
+                                                                <option value=" ">Meeting hall</option>                                                         
+                                                          </select>
+                                                            <small>Select the unit type(s) Available for renting</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-4 col-sm-12 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
+                                                            <div class="input-group " id="datepicker1 ">
+                                                                <input type="text " class="form-control mouse-pointer " placeholder="Select registration date " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
+                                                                        " data-date-autoclose="true ">
+
+                                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-firstname-input ">File No.<strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter property plot No. ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </section>
 
 
-                                                    <br> <br>
+                                        <!-- Payment Details -->
+                                        <!-- Landlord details -->
+                                        <h3>Unit/Hse Types Registration</h3>
+                                        <section>
+                                            <form>
+                                                <h6>Enter details on the different types of units on offer for this property</h6>
+                                                <div class="table-responsive table-responsive-md">
+                                                    <table class="table table-editable align-middle table-edits">
+                                                        <thead class="table-light">
+                                                            <tr class="text-uppercase table-dark">
+                                                                <th class="vertical-align-middle">#</th>
+                                                                <th class="vertical-align-middle">House type</th>
+                                                                <th class="vertical-align-middle">No. of rooms</th>
+                                                                <th class="vertical-align-middle">Unit size M <sup>2</sup></th>
+                                                                <th class="vertical-align-middle">Unit purpose</th>
+                                                                <th style="width: 295px;">Tenancy Renewal
+                                                                    <button type="button" data-toggle="modal" data-target=".tenancy-renewal-help" class="btn btn-link btn-rounded waves-effect font-16px "><span class="mdi mdi-help-circle text-white"></span></button></th>
+                                                                <th class="text-right"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr data-id="1">
+                                                                <td style="width: 80px">1.</td>
+                                                                <td>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select hse/unit type">
+                                                                        <option value="">Bed sitter</option>
+                                                                        <option value="">Two bedroom</option>   
+                                                                        <option value="">three bedroom</option>
+                                                                        <option value="">Four bedroom</option>                                                                
+                                                                  </select>
+                                                                </td>
+                                                                <td class="">
+                                                                    <input type="number" class="form-control " placeholder="Rooms" spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <input type="number" class="form-control " placeholder="Size (MSQ)" spellcheck="false" data-ms-editor="true">
+                                                                </td>
 
+                                                                <td>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select unit purpose">
+                                                                        <option value="">Residential</option>
+                                                                        <option value="">Commercial</option>   
+                                                                  </select>
+                                                                </td>
+                                                                <td class="">
+                                                                    <input type="number" class="form-control " placeholder="No. of months for agreement Renewal" spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr class="cloneCharges d-none">
+                                                                <td style="width: 80px " class="categoryIndex ">#</td>
+
+                                                                <td>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select hse/unit type">
+                                                                        <option value="">Bed sitter</option>
+                                                                        <option value="">Two bedroom</option>   
+                                                                        <option value="">three bedroom</option>
+                                                                        <option value="">Four bedroom</option>                                                                
+                                                                  </select>
+                                                                </td>
+                                                                <td class="">
+                                                                    <input type="number" class="form-control " placeholder="Rooms" spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <input type="number" class="form-control " placeholder="Size (MSQ)" spellcheck="false" data-ms-editor="true">
+                                                                </td>
+
+                                                                <td>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select unit purpose">
+                                                                        <option value="">Residential</option>
+                                                                        <option value="">Commercial</option>   
+                                                                  </select>
+                                                                </td>
+                                                                <td class="">
+                                                                    <input type="number" class="form-control " placeholder="No. of months for agreement Renewal" spellcheck="false" data-ms-editor="true">
+                                                                </td>
+
+                                                                <td class="text-right d-flex align-items-center justify-content-end">
+                                                                    <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
+                                                                </td>
+                                                            </tr>
+
+
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td colspan="7" class="bg-light add-field ">
+                                                                    <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Unit</span></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
                                             </form>
                                         </section>
 
 
                                         <!-- Confirm Details -->
-                                        <h3>Confirm Detail</h3>
+                                        <h3>Invoices breakdown</h3>
                                         <section>
                                             <div class="row justify-content-center">
-                                                <div class="col-lg-6">
-                                                    <div class="text-center">
-                                                        <div class="mb-4">
-                                                            <i class="mdi mdi-check-circle-outline text-success display-4"></i>
-                                                        </div>
-                                                        <div>
-                                                            <h5>Confirm Detail</h5>
-                                                            <p class="text-muted">If you are okay with the details you have just entered Click Finish to register the Property. Once the property has been registered, you can proceed to input the units in the just registered
-                                                                property or continue registering other properties.</p>
-                                                        </div>
+                                                <div class="col-12">
+                                                    <div class="table-responsive table-responsive-md">
+                                                        <table class="table align-middle table-edits rent-invoicing">
+                                                            <thead>
+                                                                <tr class="text-uppercase table-light">
+                                                                    <th>#</th>
+                                                                    <th>Item type</th>
+                                                                    <th>Period</th>
+                                                                    <th>Charge description</th>
+                                                                    <th>Bed sitter</th>
+                                                                    <th>one Bedroom</th>
+                                                                    <th>Two bedroom</th>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tfoot class="table-light">
+                                                                <tr class="text-capitalize deposit-fee boarder-bottom">
+                                                                    <th></th>
+                                                                    <th colspan="2">Total security Deposit</th>
+                                                                    <th class="d-none"></th>
+                                                                    <th>First Month only</th>
+                                                                    <th class="deposit-fee">-</th>
+                                                                    <th class="deposit-fee">-</th>
+                                                                    <th class="deposit-fee">-</th>
+                                                                </tr>
+                                                                <tr class="text-capitalize monthly-fee">
+                                                                    <th></th>
+                                                                    <th colspan="2">Least Monthly Invoice Amount</th>
+                                                                    <th class="d-none"></th>
+                                                                    <th>Monthly</th>
+                                                                    <th class="monthly-fee">-</th>
+                                                                    <th class="monthly-fee">-</th>
+                                                                    <th class="monthly-fee">-</th>
+
+                                                                </tr>
+                                                            </tfoot>
+                                                            <tbody>
+                                                                <tr data-id="1">
+                                                                    <td>1.</td>
+                                                                    <td>Monthly Rent</td>
+                                                                    <td>Rent fee</td>
+                                                                    <td>Monthly</td>
+                                                                    <td invoice-permonth=true deposit-amount="true" invoice-item-name="rent">
+                                                                        <input type="text " class="form-control " placeholder="Enter Amount" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td invoice-permonth=true deposit-amount="true" invoice-item-name="rent">
+                                                                        <input type="text " class="form-control " placeholder="Enter Amount" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td invoice-permonth=true deposit-amount="true" invoice-item-name="rent">
+                                                                        <input type="text " class="form-control " placeholder="Enter Amount" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr data-id="1">
+                                                                    <td style="width: 80px">2</td>
+                                                                    <td>Rent VAT</td>
+                                                                    <td>TAX</td>
+                                                                    <td>Monthly</td>
+                                                                    <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
+                                                                    <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
+                                                                    <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
+
+                                                                </tr>
+                                                                <tr data-id=" 1 ">
+                                                                    <td style="width: 80px ">3</td>
+                                                                    <td>Rent Deposit</td>
+                                                                    <td>Security Deposit</td>
+                                                                    <td>First Month only</td>
+                                                                    <td invoice-permonth="false" deposit-amount="true">
+                                                                        <input type="text " class="form-control " placeholder="Enter Amount " spellcheck="false " data-ms-editor="true ">
+                                                                    </td>
+                                                                    <td invoice-permonth="false" deposit-amount="true">
+                                                                        <input type="text " class="form-control " placeholder="Enter Amount " spellcheck="false " data-ms-editor="true ">
+                                                                    </td>
+                                                                    <td invoice-permonth="false" deposit-amount="true">
+                                                                        <input type="text " class="form-control " placeholder="Enter Amount " spellcheck="false " data-ms-editor="true ">
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr data-id="1 ">
+                                                                    <td style="width: 80px ">4</td>
+                                                                    <td>Rent Penalty</td>
+                                                                    <td>Penalty</td>
+                                                                    <td>Day 10 of each month</td>
+                                                                    <td invoice-permonth="false" the-val=500 deposit-amount=false>KES 500</td>
+                                                                    <td invoice-permonth="false" the-val=500 deposit-amount=false>KES 500</td>
+                                                                    <td invoice-permonth="false" the-val=500 deposit-amount=false class=" ">KES 500</td>
+
+                                                                </tr>
+                                                                <tr data-id="1 ">
+                                                                    <td style="width: 80px ">5</td>
+                                                                    <td>Utility Deposit</td>
+                                                                    <td>Security deposit</td>
+                                                                    <td>First month only</td>
+                                                                    <td invoice-permonth="false" value="200" deposit-amount="true" the-val=5000>KES 5,000</td>
+                                                                    <td invoice-permonth="false" deposit-amount="true" the-val=5000>KES 5,000</td>
+                                                                    <td invoice-permonth="false" deposit-amount="true" the-val=5000 class=" ">KES 5,000</td>
+
+                                                                </tr>
+                                                                <tr data-id="1 ">
+                                                                    <td style="width: 80px ">6</td>
+                                                                    <td>Auctioneer Fees</td>
+                                                                    <td>Other</td>
+                                                                    <td>Random date</td>
+                                                                    <td the-val=20>Manually added</td>
+                                                                    <td the-val=20>Manually added</td>
+                                                                    <td class=" " the-val=20>Manually added</td>
+
+                                                                </tr>
+                                                            </tbody>
+
+                                                        </table>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </section>
-                                        </div>
 
                                     </div>
-                                    <!-- end card body -->
+
                                 </div>
-                                <!-- end card -->
+                                <!-- end card body -->
                             </div>
-                            <!-- end col -->
+                            <!-- end card -->
                         </div>
-
-                        <!-- end row -->
+                        <!-- end col -->
                     </div>
-                    <!-- container-fluid -->
+
+                    <!-- end row -->
                 </div>
-                <!-- End Page-content -->
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
 
-                <!-- OTP modal -->
-                <div class="modal fade OTP-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header border-bottom-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="text-center mb-4">
-                                    <div class="avatar-md mx-auto mb-4">
-                                        <div class="avatar-title bg-light rounded-circle text-primary h1">
-                                            <i class="mdi mdi-cellphone-message"></i>
-                                        </div>
+            <!-- OTP modal -->
+            <div class="modal fade OTP-modal " tabindex="-1 " role="dialog " aria-hidden="true ">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content ">
+                        <div class="modal-header border-bottom-0 ">
+                            <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="text-center mb-4 ">
+                                <div class="avatar-md mx-auto mb-4 ">
+                                    <div class="avatar-title bg-light rounded-circle text-primary h1 ">
+                                        <i class="mdi mdi-cellphone-message "></i>
                                     </div>
+                                </div>
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-10">
-                                            <h4 class="text-primary">Confirm OTP</h4>
-                                            <p class="text-muted font-size-14 mb-4">An OTP has been sent to <strong>0704549859</strong> kindly ask the Member being registered to check their phone and share the OTP sent to them with you and enetr it below to confirm</p>
+                                <div class="row justify-content-center ">
+                                    <div class="col-xl-10 ">
+                                        <h4 class="text-primary ">Confirm OTP</h4>
+                                        <p class="text-muted font-size-14 mb-4 ">An OTP has been sent to <strong>0704549859</strong> kindly ask the Member being registered to check their phone and share the OTP sent to them with you and enetr it below to confirm</p>
 
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit1-input" class="visually-hidden">Dight 1</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="1" id="digit1-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit2-input" class="visually-hidden">Dight 2</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="2" id="digit2-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit3-input" class="visually-hidden">Dight 3</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="3" id="digit3-input">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-3">
-                                                        <div class="mb-3">
-                                                            <label for="digit4-input" class="visually-hidden">Dight 4</label>
-                                                            <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="4" id="digit4-input">
-                                                        </div>
+                                        <form>
+                                            <div class="row ">
+                                                <div class="col-3 ">
+                                                    <div class="mb-3 ">
+                                                        <label for="digit1-input " class="visually-hidden ">Dight 1</label>
+                                                        <input type="text " class="form-control form-control-lg text-center two-step " maxLength="1 " data-value="1 " id="digit1-input ">
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-primary btn-block w-100">
+
+                                                <div class="col-3 ">
+                                                    <div class="mb-3 ">
+                                                        <label for="digit2-input " class="visually-hidden ">Dight 2</label>
+                                                        <input type="text " class="form-control form-control-lg text-center two-step " maxLength="1 " data-value="2 " id="digit2-input ">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3 ">
+                                                    <div class="mb-3 ">
+                                                        <label for="digit3-input " class="visually-hidden ">Dight 3</label>
+                                                        <input type="text " class="form-control form-control-lg text-center two-step " maxLength="1 " data-value="3 " id="digit3-input ">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-3 ">
+                                                    <div class="mb-3 ">
+                                                        <label for="digit4-input " class="visually-hidden ">Dight 4</label>
+                                                        <input type="text " class="form-control form-control-lg text-center two-step " maxLength="1 " data-value="4 " id="digit4-input ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary btn-block w-100 ">
                                                 Verify phone number
                                             </button>
-                                            </form>
+                                        </form>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.modal-dialog -->
                 </div>
-                <!-- end modal -->
-
-
-
-                <footer class="footer ">
-                    <div class="container-fluid ">
-                        <div class="row ">
-                            <div class="col-sm-6 ">
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script> © RevenueSure
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- if property is created succesfully -->
+            <div class="modal fade" id="createdModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0 d-none">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body loading-cont">
+                            <div class="row">
+                                <div class="col-12 mt-5 mb-5">
+                                    <div class="d-flex justify-content-center align-items-center justify-content-center flex-column">
+                                        <div class="spinner-border text-info m-1 mb-4" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <h4 class="text-uppercase text-info">loading</h4>
+                                            <p>Please wait as the property is being registered</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-6 ">
-                                <div class="text-sm-end d-sm-block ">
-                                    South Imenti Dairy
+                        </div>
+                        <div class="modal-body d-none">
+                            <div class="text-center mt-5 mb-5">
+                                <div class="avatar-md mx-auto mb-4 ">
+                                    <div class="avatar-title bg-light rounded-circle text-success h1 ">
+                                        <i class="mdi mdi-office-building "></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center ">
+                                    <div class="col-xl-10 ">
+                                        <h4 class="text-success text-uppercase">Registered successfully</h4>
+                                        <p class="text-muted  mb-4 ">
+                                            The property was registered successfully. You can choose to proceed with unit registration you can stay on this page and register another Property
+                                        </p>
+
+                                    </div>
+                                    <div class="col-10">
+                                        <a href="property-units.html" type="button" class="btn btn-primary waves-effect waves-light w-100 text-capitalize">
+                                            <i class="mdi mdi-home-plus font-size-18 align-middle me-2"></i> Proceed to unit registration
+                                        </a>
+
+                                        <button type="button" class="btn btn-outline-secondary waves-effect waves-light w-100 mt-3 text-capitalize stay-on-page">
+                                            <i class="mdi mdi-window-close font-size-18 align-middle me-2"></i> close & stay on this page
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </footer>
+                </div>
             </div>
-            <!-- end main content-->
 
+
+            <!-- enter landlord's id modal -->
+            <div class="modal fade" id="subscribeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="text-center mb-4 ">
+                                <div class="avatar-md mx-auto mb-4 ">
+                                    <div class="avatar-title bg-light rounded-circle text-primary h1 ">
+                                        <i class="mdi mdi-card-account-details-outline "></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center ">
+                                    <div class="col-xl-10 ">
+                                        <h4 class="text-primary ">Landlord's ID num</h4>
+                                        <p class="text-muted font-size-14 mb-4 ">
+                                            Enter landlord's ID number. This step is necessary so as to check whether the landlord existst in the system
+                                        </p>
+
+                                        <form>
+                                            <div class="row ">
+                                                <div class="col-12 ">
+                                                    <div class="mb-3 ">
+                                                        <label for="digit1-input " class="visually-hidden ">ID Number</label>
+                                                        <input type="text " class="form-control form-control-lg text-center two-step " placeholder="ID / PPT No. ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary btn-block w-100 ">
+                                                    <i class="bx bx-search-alt-2 font-size-16 align-middle me-2 "></i>
+                                                Search
+                                            </button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of ID modal -->
+
+            <!-- the about agreement details modal -->
+            <div class="modal fade tenancy-renewal-help" tabindex="-1 " role="dialog " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
+                <div class="modal-dialog modal-dialog-centered ">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Tenancy renewal</h5>
+                            <button type="button" class="btn-close d-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="bg-light-warning badge-soft-warning text-black p-4">
+                                <h5 class="mb-3">What this means?</h5>
+                                <p class="mb-0 pb-0">The figure to be entered in this section for a specific unit type will be the exact number of months after which a tenant's agreement in terms of the renting fee will be renewed after the date they moved in. A notification
+                                    on the renewal will be sent to you two weeks earlier before the effective date.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- the about agreement details modal end-->
+
+
+
+
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © RevenueSure
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="text-sm-end d-sm-block ">
+                                Muigai Commercials Agency
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <!-- END layout-wrapper -->
+        <!-- end main content-->
 
-        <!-- Right bar overlay-->
-        <div class="rightbar-overlay "></div>
+    </div>
+    <!-- END layout-wrapper -->
 
-        <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js "></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js "></script>
-        <script src="assets/libs/simplebar/simplebar.min.js "></script>
-        <script src="assets/libs/node-waves/waves.min.js "></script>
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay "></div>
 
-        <!-- Bootstrap select -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js "></script>
 
-        <script src="assets/libs/select2/js/select2.min.js "></script>
-        <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
-        <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
-        <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js "></script>
-        <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js "></script>
-        <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
-        <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
 
-        <!-- numerals number formater -->
-        <script src="assets/libs/numeral/numeral.js "></script>
-        <!-- jquery step -->
-        <script src="assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
-
-        <!-- form wizard init -->
-        <script src="assets/js/pages/form-wizard.init.js"></script>
-        <!-- Datatable init js -->
-        <script src="assets/js/pages/datatables.init.js "></script>
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+    <!-- Table Editable plugin -->
+    <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
+    <script src="assets/js/pages/table-editable.int.js"></script>
 
 
+    <script src="assets/libs/select2/js/select2.min.js "></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js "></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js "></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
+
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
+    <!-- jquery step -->
+    <script src="assets/libs/jquery-steps/build/jquery.steps.min.js "></script>
+
+    <!-- form wizard init -->
+    <script src="assets/js/pages/form-wizard.init.js "></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js "></script>
 
 
-        <!-- App js -->
-        <script src="assets/js/app.js "></script>
-        <script src="assets/js/custom.js "></script>
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
 </body>
 
 

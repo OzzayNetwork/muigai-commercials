@@ -41,21 +41,69 @@ $(function() {
 
     // creating new fields
 
-    $('body').on('click', '.add-field', function() {
+    $('body').on('click', '.add-field-2', function() {
+        //alert("field clicked")
         // $(this).addClass('d-none');
-        $(this).slideToggle();
-        var currentIndex = $('.table-editable tbody tr').last().index();
-        var cloneItem = $('.cloneCharges');
+        var the_parent = $(this).parent().parent().parent();
+        console.log(the_parent);
+        $('.selectpicker').each(function(index) {
+            $(this).selectpicker('destroy');
+
+        });
+
+        // $(this).slideToggle();
+        //var currentIndex = $('.table-editable tbody tr').last().index();
+        var currentIndex = the_parent.children('tbody').children('tr').last().index()
+        var cloneItem = the_parent.find('.cloneCharges');
+        // alert(currentIndex);
+
+        //this area clones the new input fields
+        $(cloneItem).eq(0).clone(true).appendTo('.table-editable-2 tbody').removeClass('d-none');
+        //$('.table-editable tbody tr').last().children('.categoryIndex').text(currentIndex + 1);
+        the_parent.children('tbody').children('tr').last().children('.categoryIndex').text(currentIndex + 1);
+        // $(cloneItem).eq(clickedIndex).removeClass('d-none');
+        $('select.form-control').each(function(index) {
+            $(this).selectpicker('render').addClass('selectpicker');
+
+        });
+    });
+
+    // the trialcloaning
+    $('body').on('click', '.add-field', function() {
+        //alert("field clicked")
+        // $(this).addClass('d-none');
+        var the_parent = $(this).parent().parent().parent();
+        console.log(the_parent);
+        $('.selectpicker').each(function(index) {
+            $(this).selectpicker('destroy');
+
+        });
+
+        // $(this).slideToggle();
+        //var currentIndex = $('.table-editable tbody tr').last().index();
+        var currentIndex = the_parent.children('tbody').children('tr').last().index()
+        var cloneItem = the_parent.find('.cloneCharges');
+        //alert(currentIndex);
 
         //this area clones the new input fields
         $(cloneItem).eq(0).clone(true).appendTo('.table-editable tbody').removeClass('d-none');
-        $('.table-editable tbody tr').last().children('.categoryIndex').text(currentIndex + 1);
+        //$('.table-editable tbody tr').last().children('.categoryIndex').text(currentIndex + 1);
+        the_parent.children('tbody').children('tr').last().children('.categoryIndex').text(currentIndex + 1);
         // $(cloneItem).eq(clickedIndex).removeClass('d-none');
+        $('select.form-control').each(function(index) {
+            $(this).selectpicker('render').addClass('selectpicker');
+
+        });
     });
 
     $('body').on('click', '.cancel-new-category', function() {
         $(this).parent().parent().remove();
         $('.table-editable .add-field').slideToggle()
+    });
+
+    $('body').on('click', '.cancel-new-category-2', function() {
+        $(this).parent().parent().remove();
+        //$('.table-editable .add-field').slideToggle()
     });
 
 

@@ -1,4 +1,8 @@
 $(window).on('load', function() {
+    setTimeout(function() {
+        $("#subscribeModal").modal("show")
+    }, 0);
+
     $('body').on('click', '.upload-the-contacts', function() {
         $('.selected-contacts-message').removeClass('d-none')
 
@@ -88,6 +92,115 @@ $(window).on('load', function() {
         });
     })
 
+    // calculating rent totals
+    $('.rent-invoicing td input').on('keyup', function() {
+        // alert("changed");
+        var monthlyFee = 0;
+        var depositFee = 0;
+        var theval = $(this).val();
+        var theIndex = $(this).parent('td').index();
+        var theBody = $(this).parent().parent().parent();
+        // alert(theIndex);
+
+        $(theBody).children('tr').each(function(index) {
+            var invoiceItemName = $(this).children('td').eq(theIndex).attr('invoice-item-name');
+            var isMonthlyItem = $(this).children('td').eq(theIndex).attr('invoice-permonth');
+            var isDepositItem = $(this).children('td').eq(theIndex).attr('deposit-amount');
+            var theCell = $(this).children('td').eq(theIndex);
+            var theAdditionalVal;
+
+            if (theCell.find('input').length) {
+                theAdditionalVal = parseFloat(theCell.children('input').val())
+            } else {
+                theCell.attr('the-val')
+                theAdditionalVal = parseFloat(theCell.attr('the-val'))
+                console.log(theAdditionalVal);
+                if (theCell.attr('per-of')) {
+                    // alert("yes it is a percentage")
+                    var percentageOff = theCell.attr('per-of');
+                    var theOutput;
+                    var thePer = theAdditionalVal
+
+                    $(theBody).children('tr').each(function(index) {
+                        var theInputName = $(this).children('td').eq(theIndex).attr('invoice-item-name');
+                        var thePricipleVal;
+                        if ($(this).children('td').eq(theIndex).find('input').length) {
+                            thePricipleVal = parseFloat($(this).children('td').eq(theIndex).children('input').val())
+                        } else {
+                            thePricipleVal = parseFloat($(this).children('td').eq(theIndex).attr('the-val'))
+                        }
+                        if (theInputName == percentageOff) {
+                            // alert("we found a match");
+                            theOutput = (thePer / 100) * thePricipleVal;
+                            console.log("the tax percentage was " + thePer + "% The Principle value was " + thePricipleVal + " The calculated intrest was " + theOutput);
+                            // alert(theOutput)
+                            theAdditionalVal = theOutput;
+
+                        }
+
+                    });
+                    $(this).children('td').eq(theIndex).text("KES " + numeral(theAdditionalVal).format('0,0') + " (" + thePer + "%)")
+                }
+            }
+
+            if (isMonthlyItem == "true") {
+                monthlyFee = theAdditionalVal + parseFloat(monthlyFee);
+            }
+            if (isDepositItem == "true") {
+                depositFee = theAdditionalVal + parseFloat(depositFee);
+            }
+
+            function findingPerVal(thePerVal) {
+                var percentageOff = theCell.attr('per-of');
+                var theOutput;
+                var thePer = thePerVal
+
+                $(theBody).children('tr').each(function(index) {
+                    var theInputName = $(this).children('td').eq(theIndex).attr('invoice-item-name');
+                    var thePricipleVal;
+                    if ($(this).children('td').eq(theIndex).find('input').length) {
+                        thePricipleVal = parseFloat($(this).children('td').eq(theIndex).children('input').val())
+                    } else {
+                        thePricipleVal = parseFloat($(this).children('td').eq(theIndex).attr('the-val'))
+                    }
+                    if (theInputName == percentageOff) {
+                        // alert("we found a match");
+                        theOutput = (thePer / 100) * thePricipleVal;
+                        console.log("the tax percentage was " + thePer + "% The Principle value was " + thePricipleVal + " The calculated intrest was " + theOutput);
+
+                    } else {
+                        theOutput = thePricipleVal
+                    }
+                    return theOutput;
+
+                });
+            }
+
+        });
+        $('.rent-invoicing tfoot').children('tr.deposit-fee').children('th').eq(theIndex).text("KES " + numeral(depositFee).format('0,0'));
+        $('.rent-invoicing tfoot').children('tr.monthly-fee').children('th').eq(theIndex).text("KES " + numeral(monthlyFee).format('0,0'));
+
+        console.log(depositFee)
+            // alert(monthlyFee);
+
+
+    });
+    $('.create-property').on('click', 'a', function() {
+
+        if ($(this).attr("href") == "#finish") {
+            $("#createdModal").modal("show");
+            setTimeout(function() {
+                $('.loading-cont').addClass('d-none').siblings('.modal-body').removeClass('d-none')
+            }, 4000);
+        }
+
+
+    });
+    $('body').on('click', '.stay-on-page', function() {
+
+
+        window.location.reload();
+    })
 
     $('.selectpicker').selectpicker();
 });
