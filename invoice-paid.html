@@ -279,7 +279,7 @@
                                 <li><a href="invoice-new.html">Create an invoice</a></li>
                                 <li><a href="invoice-unpaid.html">Unpaid invoices</a></li>
                                 <li><a href="invoice-partial.html">Partially paid</a></li>
-                                <li><a href="invoice-paid.html">Paid invoices</a></li>
+                                <li><a href="invoice-paid.html">Cleared Invoices</a></li>
                             </ul>
                         </li>
                         <li>
@@ -364,13 +364,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Paid invoices</h4>
+                                <h4 class="mb-sm-0 font-size-18">Cleared invoices</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Invoices</a></li>
-                                        <li class="breadcrumb-item active">Paid invoices</li>
+                                        <li class="breadcrumb-item active">Cleared invoices</li>
                                     </ol>
                                 </div>
 
@@ -385,13 +385,22 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Paid invoices
+                                            Cleared Invoices for March 2022
                                         </h4>
 
                                         <div class="d-flex">
-                                            <a href="invoice-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                            <a href="invoice-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3">
                                                 <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create an invoice</span>
                                             </a>
+                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
+                                                <option value="" selected>Mar 2022</option>
+                                                <option value="">Feb 2022</option>
+                                                <option value="">Jan 2022</option>
+                                                <option value="">Dec 2021</option>
+                                                <option value="">Nov 2021</option>
+                                                <option value="">Sep 2021</option>
+                                                <option value="">Oct 2021</option>
+                                          </select>
 
                                         </div>
 
