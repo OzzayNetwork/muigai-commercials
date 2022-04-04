@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Muigai Commercials | List of tenants</title>
+    <title>Muigai Commercials | Transaction Receipts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -364,13 +364,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Unpaid Invoices</h4>
+                                <h4 class="mb-sm-0 font-size-18">Transaction Receipts</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Invoices</a></li>
-                                        <li class="breadcrumb-item active">Unpaid Invoices</li>
+                                        <li class="breadcrumb-item text-capitalize"><a href="#">All receipts</a></li>
                                     </ol>
                                 </div>
 
@@ -385,13 +384,20 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Unpaid Invoices
+                                            All receipts for March 2022
                                         </h4>
 
                                         <div class="d-flex">
-                                            <a href="invoice-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector">
-                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create an invoice</span>
-                                            </a>
+                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
+                                                <option value="" selected>Mar 2022</option>
+                                                <option value="">Feb 2022</option>
+                                                <option value="">Jan 2022</option>
+                                                <option value="">Dec 2021</option>
+                                                <option value="">Nov 2021</option>
+                                                <option value="">Sep 2021</option>
+                                                <option value="">Oct 2021</option>
+                                          </select>
+
 
                                         </div>
 
@@ -417,11 +423,12 @@
                                                     </th>
                                                     <th scope="col">NO.</th>
                                                     <th scope="col">Tenant</th>
-                                                    <th scope="col">Description</th>
                                                     <th scope="col">Hse/Unit</th>
+                                                    <th scope="col">Invoice</th>
                                                     <th scope="col">Date</th>
-                                                    <th scope="col" class="text-nowrap">Created By</th>
-                                                    <th scope="col" class="text-right">Amount</th>
+                                                    <th scope="col" class="text-nowrap">Served By</th>
+                                                    <th scope="col" class="text-nowrap">Mode</th>
+                                                    <th scope="col" class="text-right text-nowrap">Amount</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -436,22 +443,26 @@
 
                                                         </div>
                                                     </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        90 Degrees 410:Kelvin Njuguna Rent March 2020 & Deposit Invoice.
-                                                    </td>
-                                                    <td>
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
+                                                    <td>
+                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                    </td>
+
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        01 Mar 2022, 10:23 AM
                                                     </td>
 
                                                     <td class="text-capitalize ">
                                                         Stan Lee
+                                                    </td>
+                                                    <td class="text-capitalize ">
+                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -459,7 +470,7 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -486,22 +497,26 @@
 
                                                         </div>
                                                     </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        90 Degrees 410:Kelvin Njuguna Rent March 2020 & Deposit Invoice.
-                                                    </td>
-                                                    <td>
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
+                                                    <td>
+                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                    </td>
+
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        01 Mar 2022, 10:23 AM
                                                     </td>
 
                                                     <td class="text-capitalize ">
                                                         Stan Lee
+                                                    </td>
+                                                    <td class="text-capitalize ">
+                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -509,7 +524,7 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -536,22 +551,26 @@
 
                                                         </div>
                                                     </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        90 Degrees 410:Kelvin Njuguna Rent March 2020 & Deposit Invoice.
-                                                    </td>
-                                                    <td>
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
+                                                    <td>
+                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                    </td>
+
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        01 Mar 2022, 10:23 AM
                                                     </td>
 
                                                     <td class="text-capitalize ">
                                                         Stan Lee
+                                                    </td>
+                                                    <td class="text-capitalize ">
+                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -559,7 +578,7 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -586,22 +605,26 @@
 
                                                         </div>
                                                     </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        90 Degrees 410:Kelvin Njuguna Rent March 2020 & Deposit Invoice.
-                                                    </td>
-                                                    <td>
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
+                                                    <td>
+                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                    </td>
+
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        01 Mar 2022, 10:23 AM
                                                     </td>
 
                                                     <td class="text-capitalize ">
                                                         Stan Lee
+                                                    </td>
+                                                    <td class="text-capitalize ">
+                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -609,7 +632,7 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -636,22 +659,26 @@
 
                                                         </div>
                                                     </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        90 Degrees 410:Kelvin Njuguna Rent March 2020 & Deposit Invoice.
-                                                    </td>
-                                                    <td>
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
+                                                    <td>
+                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                    </td>
+
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        01 Mar 2022, 10:23 AM
                                                     </td>
 
                                                     <td class="text-capitalize ">
                                                         Stan Lee
+                                                    </td>
+                                                    <td class="text-capitalize ">
+                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -659,7 +686,7 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -684,11 +711,11 @@
                                                     <td>
 
                                                     </td>
-                                                    <th class="text-capitalize text-nowrap" colspan="3">23 Invoies</th>
+                                                    <th class="text-capitalize text-nowrap" colspan="2">23 receipts</th>
 
                                                     <th class="text-nowrap">63 Units</th>
 
-                                                    <td class="text-nowrap text-right " colspan="3">
+                                                    <td class="text-nowrap text-right " colspan="5">
                                                         <span class="fw-semibold ">KES 25,500</span>
                                                     </td>
 
@@ -720,49 +747,48 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="col-12">
-                                <address>
-                                    <strong>Billed To:</strong><br>
-                                    Kelvin Njuguna<br>
-                                    email@mail.com, 0704 549 859<br>                                   
-                                    Hse No. 410, 90 Degrees By Tsavo
-                                    <br><br>
-                                    1 Mar 2022, 10:20 AM
-                                </address>
+                            <div class="row">
+                                <div class="col-6">
+                                    <address>
+                                        <strong class="text-capitalize">Received from:</strong><br>
+                                        Kelvin Njuguna<br>
+                                        email@mail.com, 0704 549 859<br>                                   
+                                        Hse No. 410, 90 Degrees By Tsavo
+                                        
+                                    </address>
+                                </div>
+                                <div class="col-sm-6 text-sm-end">
+                                    <address class="mt-2 mt-sm-0">
+                                        <strong>Payment Method</strong><br>
+                                        <span class="fw-medium">MPESA</span><br>
+                                        Phone No. 0704 549 859<br> <br>
+                                        On 1 Mar 2022, 10:20 AM
+                                    </address>
+                                </div>
                             </div>
                             <div class="col-12">
                                 <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
+                                    <h3 class="font-size-15 fw-bold">ND12368</h3>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="table-responsive">
                                     <table class="table table-nowrap">
-                                        <thead>
+                                        <thead class="table-dark">
                                             <tr>
-                                                <th style="width: 70px;">No.</th>
-                                                <th>Item</th>
+                                                <th style="width:">Receipt Invoice</th>
+                                                <th>Payment Description</th>
                                                 <th class="text-end">Amount</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>01</td>
-                                                <td>Rent Deposit</td>
+                                                <td>IN12345</td>
+                                                <td>Rent plus deposit for hse Num 410, 90 degrees</td>
                                                 <td class="text-end">KES 24,500</td>
                                             </tr>
 
-                                            <tr>
-                                                <td>02</td>
-                                                <td>Monthly Rent</td>
-                                                <td class="text-end">KES 12,000</td>
-                                            </tr>
 
-                                            <tr>
-                                                <td>03</td>
-                                                <td>TAX (18%)</td>
-                                                <td class="text-end">KES 250</td>
-                                            </tr>
 
                                             <tr>
                                                 <td colspan="2" class="border-0 text-end">
@@ -777,46 +803,13 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <div class="col-12">
-                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
-                                    <table class="w-100">
-                                        <tbody>
-                                            <tr data-id="1">
-                                                <td>
-                                                    <label for="" class="">Payment Method</label>
-                                                    <select class="form-control selectpicker w-100 payment-method" data-style="btn-secondary w-100" data-live-search="true" title="Select payment Method">
-                                                        <option value="Mpesa">MPESA</option>
-                                                        <option value="Cash">CASH</option>   
-                                                     </select>
-                                                </td>
-                                                <td class="px-3 ">
-                                                    <div class="phone-num d-none">
-                                                        <label for="">Phone No.</label>
-                                                        <input type="text " class="form-control w-100 d-flex " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
-                                                    </div>
-
-                                                </td>
-                                                <td class="px-3">
-                                                    <label for="">Amount To Be Paid</label>
-                                                    <input type="text " class="form-control w-100 d-flex" placeholder="KES" spellcheck="false" data-ms-editor="true">
-
-                                                </td>
-                                                <td class="text-right float-right">
-                                                    <div class="d-flex flex-column">
-                                                        <label class="opacity-0">Something</label>
-                                                        <a href="#" class="btn btn-primary w-md waves-effect waves-light">Submit</a>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
+                            <button type="button" class="btn btn-outline-secondary waves-effect waves-light">
+                                <i class="mdi mdi-backup-restore font-size-16 align-middle me-2"></i> Reverse Transaction
+                            </button>
+                            <button type="button" class="btn btn-primary waves-effect waves-light">
+                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print receipt
+                            </button>
                         </div>
-
                     </div>
                     <!-- /.modal-content -->
                 </div>
@@ -826,7 +819,7 @@
 
             <!-- invoice details -->
             <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="myLargeModalLabel">Receipt Invoice</h5>
@@ -835,7 +828,7 @@
                         <div class="modal-body">
                             <div class="col-12">
                                 <address>
-                                    <strong>Billed To:</strong><br>
+                                    <strong>receipt For:</strong><br>
                                     Kelvin Njuguna<br>
                                     email@mail.com, 0704 549 859<br>                                   
                                     Hse No. 410, 90 Degrees By Tsavo
