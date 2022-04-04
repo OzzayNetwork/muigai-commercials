@@ -200,7 +200,26 @@ $(window).on('load', function() {
 
 
         window.location.reload();
-    })
+    });
+    $('.payment-metho').on('change', function() {
+        var theMethod = $(this).val();
+        alert(theMethod);
+        if (theMethod == "MPESA") {
+            $('.phone-num').removeClass('d-none');
+
+        } else {
+            $('.phone-num').addClass('d-none');
+        }
+    });
+    $('.payment-method').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+        if (clickedIndex == 1) {
+            $('.phone-num').removeClass('d-none');
+
+        } else {
+            $('.phone-num').addClass('d-none');
+        }
+    });
+
 
     $('.selectpicker').selectpicker();
 });

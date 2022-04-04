@@ -288,10 +288,9 @@
                                 <span>Receipts</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="receipts.html">Create an invoice</a></li>
-                                <li><a href="receipts-overdraft.html">Unpaid invoices</a></li>
-                                <li><a href="receipts-reverse.html">Partially paid</a></li>
-                                <li><a href="receipts-reversed-table.html">Paid invoices</a></li>
+                                <li><a href="receipts.html">All receipts</a></li>
+                                <li class="d-none"><a href="receipts-reverse.html">Reverse Transaction</a></li>
+                                <li><a href="receipts-reversed-table.html">reversed transactions</a></li>
                             </ul>
                         </li>
                         <li>
@@ -459,16 +458,20 @@
                                                     </td>
 
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </a>
+                                                        <div class="d-flex">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
 
-                                                            <div class="dropdown-menu dropdown-menu-end ">
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -505,16 +508,20 @@
                                                     </td>
 
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </a>
+                                                        <div class="d-flex">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
 
-                                                            <div class="dropdown-menu dropdown-menu-end ">
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -551,16 +558,20 @@
                                                     </td>
 
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </a>
+                                                        <div class="d-flex">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
 
-                                                            <div class="dropdown-menu dropdown-menu-end ">
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -597,16 +608,20 @@
                                                     </td>
 
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </a>
+                                                        <div class="d-flex">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
 
-                                                            <div class="dropdown-menu dropdown-menu-end ">
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -643,16 +658,20 @@
                                                     </td>
 
                                                     <td>
-                                                        <div class="dropdown">
-                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </a>
+                                                        <div class="d-flex">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
 
-                                                            <div class="dropdown-menu dropdown-menu-end ">
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
-                                                                <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -691,6 +710,244 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- receipting modal -->
+            <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Receipt Invoice</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Billed To:</strong><br>
+                                    Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    1 Mar 2022, 10:20 AM
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="py-2 mt-3">
+                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 70px;">No.</th>
+                                                <th>Item</th>
+                                                <th class="text-end">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Rent Deposit</td>
+                                                <td class="text-end">KES 24,500</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Monthly Rent</td>
+                                                <td class="text-end">KES 12,000</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>03</td>
+                                                <td>TAX (18%)</td>
+                                                <td class="text-end">KES 250</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="border-0 text-end">
+                                                    <strong>Total</strong></td>
+                                                <td class="border-0 text-end">
+                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="col-12">
+                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
+                                    <table class="w-100">
+                                        <tbody>
+                                            <tr data-id="1">
+                                                <td>
+                                                    <label for="" class="">Payment Method</label>
+                                                    <select class="form-control selectpicker w-100 payment-method" data-style="btn-secondary w-100" data-live-search="true" title="Select payment Method">
+                                                        <option value="Mpesa">MPESA</option>
+                                                        <option value="Cash">CASH</option>   
+                                                     </select>
+                                                </td>
+                                                <td class="px-3 ">
+                                                    <div class="phone-num d-none">
+                                                        <label for="">Phone No.</label>
+                                                        <input type="text " class="form-control w-100 d-flex " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
+                                                    </div>
+
+                                                </td>
+                                                <td class="px-3">
+                                                    <label for="">Amount To Be Paid</label>
+                                                    <input type="text " class="form-control w-100 d-flex" placeholder="KES" spellcheck="false" data-ms-editor="true">
+
+                                                </td>
+                                                <td class="text-right float-right">
+                                                    <div class="d-flex flex-column">
+                                                        <label class="opacity-0">Something</label>
+                                                        <a href="#" class="btn btn-primary w-md waves-effect waves-light">Submit</a>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end of receipting modal -->
+
+            <!-- invoice details -->
+            <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Receipt Invoice</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Billed To:</strong><br>
+                                    Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    1 Mar 2022, 10:20 AM
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="py-2 mt-3">
+                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 70px;">No.</th>
+                                                <th>Item</th>
+                                                <th class="text-end">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Rent Deposit</td>
+                                                <td class="text-end">KES 24,500</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Monthly Rent</td>
+                                                <td class="text-end">KES 12,000</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>03</td>
+                                                <td>TAX (18%)</td>
+                                                <td class="text-end">KES 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-end">Total</td>
+                                                <td class="text-end fw-bold">KES 36,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-end">Paid</td>
+                                                <td class="text-end  fw-bold">KES 0.00</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="border-0 text-end">
+                                                    <strong>Balance</strong></td>
+                                                <td class="border-0 text-end">
+                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="col-12 d-none">
+                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
+                                    <table class="w-100">
+                                        <tbody>
+                                            <tr data-id="1">
+                                                <td>
+                                                    <label for="" class="">Payment Method</label>
+                                                    <select class="form-control selectpicker w-100 payment-method" data-style="btn-secondary w-100" data-live-search="true" title="Select payment Method">
+                                                        <option value="Mpesa">MPESA</option>
+                                                        <option value="Cash">CASH</option>   
+                                                     </select>
+                                                </td>
+                                                <td class="px-3 ">
+                                                    <div class="phone-num d-none">
+                                                        <label for="">Phone No.</label>
+                                                        <input type="text " class="form-control w-100 d-flex " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
+                                                    </div>
+
+                                                </td>
+                                                <td class="px-3">
+                                                    <label for="">Amount To Be Paid</label>
+                                                    <input type="text " class="form-control w-100 d-flex" placeholder="KES" spellcheck="false" data-ms-editor="true">
+
+                                                </td>
+                                                <td class="text-right float-right">
+                                                    <div class="d-flex flex-column">
+                                                        <label class="opacity-0">Something</label>
+                                                        <a href="#" class="btn btn-primary w-md waves-effect waves-light">Submit</a>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <div class="float-end">
+                                <a href="javascript:window.print()" class="btn btn-success waves-effect waves-light me-1"><i class="mdi mdi-printer font-16px"></i></a>
+                                <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light">Receive Payment</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- invoice details -->
 
             <footer class="footer ">
                 <div class="container-fluid ">
@@ -761,5 +1018,7 @@
 
 
 <!-- index.html   13:55:49 GMT -->
+
+</html>dex.html 13:55:49 GMT -->
 
 </html>

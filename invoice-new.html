@@ -293,10 +293,9 @@
                                 <span>Receipts</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="receipts.html">Create an invoice</a></li>
-                                <li><a href="receipts-overdraft.html">Unpaid invoices</a></li>
-                                <li><a href="receipts-reverse.html">Partially paid</a></li>
-                                <li><a href="receipts-reversed-table.html">Paid invoices</a></li>
+                                <li><a href="receipts.html">All receipts</a></li>
+                                <li class="d-none"><a href="receipts-reverse.html">Reverse Transaction</a></li>
+                                <li><a href="receipts-reversed-table.html">reversed transactions</a></li>
                             </ul>
                         </li>
                         <li>
@@ -370,13 +369,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">New Tenant</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">New Invoice</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="tenants.html">Tenants</a></li>
-                                        <li class="breadcrumb-item active">Add Tenant</li>
+                                        <li class="breadcrumb-item"><a href="invoice-unpaid.html">Invoices</a></li>
+                                        <li class="breadcrumb-item active">Create Invoice</li>
                                     </ol>
                                 </div>
 
@@ -389,368 +388,91 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>Fill in the form correctly. Fields with an Asterisk <strong class="text-danger">*</strong> are mandatory fields.</p>
-                                    <div id="basic-example">
+                            <div class="card p-5">
+                                <div class="card-body ">
+                                    <div class="row d-flex align-items-center justify-content-center ">
+                                        <div class="col-sm-12 col-md-7 col-lg-6">
+                                            <div class="d-flex justify-items-center align-items-center">
+                                                <div class="card-body border-1 invoice-form p-5">
+                                                    <h4 class="card-title mb-4">Enter the invoice details beow</h4>
 
-                                        <!-- Property details -->
-                                        <h3>Tenant Details</h3>
-                                        <section>
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-12">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="formrow-firstname-input" class="form-label">Client</label>
+                                                            <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select a tenant">
+                                                                <option value=" ">Kelvin Njuguna</option>
+                                                                <option value=" ">Alex wanjala</option>
+                                                                <option value=" ">Makori</option>
+                                                          </select>
+                                                        </div>
                                                         <div class="row">
-                                                            <div class="col-lg-4 col-md-6">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-firstname-input">ID Num/ PPT Num<strong class="text-danger">*</strong></label>
-                                                                    <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
+
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-email-input" class="form-label">Tenant's Email</label>
+                                                                    <input type="email" class="form-control" id="formrow-email-input" placeholder="Waiting..." readonly>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-4">
-                                                                <div class="row">
-                                                                    <label for="" class="">Gender: <strong class="text-danger">*</strong></label>
-                                                                    <div class="d-flex">
-                                                                        <div class="form-check mb-3 pr-15px">
-                                                                            <input class="form-check-input" type="radio" name="gender" id="formRadios1" checked>
-                                                                            <label class="form-check-label" for="formRadios1">
-                                                                                Male
-                                                                            </label>
-                                                                        </div>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="radio" name="gender" id="formRadios2">
-                                                                            <label class="form-check-label" for="formRadios2">
-                                                                                Female
-                                                                            </label>
-                                                                        </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-password-input" class="form-label">Tenant's Phone</label>
+                                                                    <input type="text" class="form-control" id="formrow-password-input" placeholder="Waiting..." readonly>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="formrow-firstname-input" class="form-label">Invoice title</label>
+                                                            <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select the invoice type">
+                                                                <option value=" ">Auctioneers fees</option>
+                                                                <option value=" ">Damage of property</option>
+                                                                <option value=" ">Service charge</option>
+                                                          </select>
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="formrow-firstname-input" class="form-label">Description</label>
+                                                            <textarea name="" id="" cols="30" rows="5" placeholder="Enter description" class="form-control"></textarea>
+                                                        </div>
+
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-inputCity" class="form-label">Due Date</label>
+                                                                    <div class="input-group" id="datepicker2">
+                                                                        <input type="text" class="form-control" placeholder="To be paid By" data-date-format="dd M, yyyy" data-date-container='#datepicker2' data-provide="datepicker" data-date-autoclose="true">
+
+                                                                        <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
                                                                     </div>
                                                                 </div>
-
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">Other Name(s)</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                                        <div class="mb-4">
-                                                            <label for="" class="">Date of Birth<strong class="text-danger">*</strong></label>
-                                                            <div class="input-group" id="datepicker1">
-                                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Nationality <strong class="text-danger">*</strong></label>
-                                                            <select class="form-control selectpicker" data-live-search="true" title="Select nationality">
-                                                                
-                                                                <option value="" selected>Kenya</option>
-                                                                <option value="">Brazil</option>
-                                                                <option value="">South Africa</option>                                                                
-                                                          </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Marital Status <strong class="text-danger">*</strong></label>
-                                                            <select class="form-control selectpicker" data-live-search="true" title="Select Marital status">
-                                                               
-                                                                <option value="">Single</option>
-                                                                <option value="">Married</option>                                                                
-                                                          </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Occupation <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="Enter tenants Phone Number" placeholder="Enter the tenants Occupation">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Email. <strong class="text-danger">*</strong></label>
-                                                            <input type="email" class="form-control" id="Enter tenants email address" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Phone. <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="Enter tenants Phone Number" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                                        <div class="mb-4">
-                                                            <label for="" class="">Date of Registration<strong class="text-danger">*</strong></label>
-                                                            <div class="input-group" id="datepicker1">
-                                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </section>
-                                        <!-- next of kin and dependents -->
-                                        <h3>Next of Kin & Dependents</h3>
-                                        <section>
-                                            <form>
-                                                <div class="row">
-
-                                                    <div class="col-12">
-                                                        <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                                            <p class="fw-semibold mb-0 pb-0">Next of Kin details</p>
-
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="table-responsive table-responsive-md">
-                                                        <table class="table table-editable-2 align-middle table-edits">
-                                                            <thead class="table-light">
-                                                                <tr class="text-uppercase table-dark">
-                                                                    <th>#</th>
-                                                                    <th>First name</th>
-                                                                    <th class="">Middle name</th>
-                                                                    <th class="">other names</th>
-                                                                    <th class="">Relationship</th>
-                                                                    <th></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr data-id="1">
-                                                                    <td style="width: 80px">1.</td>
-                                                                    <td>
-                                                                        <input type="text " class="form-control " placeholder="Enter First name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-                                                                    <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-                                                                    <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-                                                                    <td>
-                                                                        <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                     <option value="">Father</option>
-                                     <option value="">Mother</option>   
-                                     <option value="">Sister</option>                                                                
-                               </select>
-                                                                    </td>
-                                                                    <td></td>
-
-                                                                </tr>
-
-                                                                <tr class="cloneCharges d-none">
-                                                                    <td style="width: 80px " class="categoryIndex ">#</td>
-
-                                                                    <td>
-                                                                        <input type="text " class="form-control " placeholder="Enter First name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-                                                                    <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-                                                                    <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-                                                                    <td>
-                                                                        <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                     <option value="">Father</option>
-                                     <option value="">Mother</option>   
-                                     <option value="">Sister</option>                                                                
-                               </select>
-                                                                    </td>
-
-                                                                    <td class="text-right cell-change d-flex align-items-center justify-content-end">
-                                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
-                                                                    </td>
-                                                                </tr>
-
-
-                                                            </tbody>
-                                                            <tfoot>
-                                                                <tr>
-                                                                    <td colspan="7" class="bg-light add-field-2 cursor-pinter ">
-                                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add a Kin</span></span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tfoot>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                                        <p class="fw-semibold mb-0 pb-0">Dependents details</p>
-
-                                                    </div>
-                                                </div>
-                                                <div class="table-responsive table-responsive-md">
-                                                    <table class="table table-editable-1 align-middle table-edits">
-                                                        <thead class="table-light">
-                                                            <tr class="text-uppercase table-dark">
-                                                                <th>#</th>
-                                                                <th>First name</th>
-                                                                <th class="">Middle name</th>
-                                                                <th class="">other names</th>
-                                                                <th class="">Relationship</th>
-                                                                <th></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr data-id="1">
-                                                                <td style="width: 80px">1.</td>
-                                                                <td>
-                                                                    <input type="text " class="form-control " placeholder="Enter First name" spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="">
-                                                                    <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="">
-                                                                    <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                                                            <option value="">Father</option>
-                                                                            <option value="">Mother</option>   
-                                                                            <option value="">Sister</option>                                                                
-                                                                    </select>
-                                                                </td>
-                                                                <td></td>
-
-                                                            </tr>
-
-                                                            <tr class="cloneCharges d-none">
-                                                                <td style="width: 80px " class="categoryIndex ">#</td>
-
-                                                                <td>
-                                                                    <input type="text " class="form-control " placeholder="Enter First name" spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="">
-                                                                    <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="">
-                                                                    <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                                                        <option value="">Father</option>
-                                                                        <option value="">Mother</option>   
-                                                                        <option value="">Sister</option>                                                                
-                                                                </select>
-                                                                </td>
-
-                                                                <td class="text-right cell-change d-flex align-items-center justify-content-end">
-                                                                    <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
-                                                                </td>
-                                                            </tr>
-
-
-                                                        </tbody>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <td colspan="7" class="bg-light add-field-1 cursor-pointer">
-                                                                    <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Dependent</span></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tfoot>
-                                                    </table>
-                                                </div>
-
-
-                                            </form>
-                                        </section>
-
-
-                                        <!-- Payment Details -->
-                                        <h3>Unit assignment</h3>
-                                        <section>
-                                            <form>
-                                                <div class="row clone-cont">
-                                                    <div class="col-12 clone-me">
-                                                        <div class="row ">
-
-                                                            <div class="col-lg-4 col-md-6">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-lastname-input">Property Name<strong class="text-danger">*</strong></label>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select the property">
-                                                                        <option value="">Tsavo 90 degress</option>
-                                                                        <option value="">Braka Apartments</option>
-                                                                  </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-2 col-sm-4">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-lastname-input">Hse No.<strong class="text-danger">*</strong></label>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Hse. Num">
-                                                                        <option value="">310</option>
-                                                                        <option value="">311</option>
-                                                                  </select>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-password-input" class="form-label">Invoice amount</label>
+                                                                    <input type="text" class="form-control" id="formrow-password-input" placeholder="KES">
                                                                 </div>
                                                             </div>
 
 
-
-                                                            <div class=" col-md-3 col-sm-12">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-lastname-input">Rent Amount<strong class="text-danger">*</strong></label>
-                                                                    <input type="text" class="form-control" placeholder="Percentage Commision %">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class=" col-md-3 col-sm-12">
-                                                                <div class="mb-4">
-                                                                    <label for="basicpill-lastname-input">Payable Security<strong class="text-danger">*</strong></label>
-                                                                    <input type="text" class="form-control" placeholder="Percentage Commision %">
-                                                                </div>
-                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-success waves-effect btn-label waves-light clone-fileds"><i class="bx bx-plus label-icon"></i> Add Unit</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </section>
 
+                                                        <div class="mb-3 d-none">
 
-                                        <!-- Confirm Details -->
-                                        <h3>Confirm</h3>
-                                        <section>
-                                            <div class="row justify-content-center">
-                                                <div class="col-lg-6">
-                                                    <div class="text-center">
-                                                        <div class="mb-4">
-                                                            <i class="mdi mdi-check-circle-outline text-success display-4"></i>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                                <label class="form-check-label" for="gridCheck">
+                                                                  Check me out
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                         <div>
-                                                            <h5>Confirm Detail</h5>
-                                                            <p class="text-muted">If you are okay with the details you have just entered Click Finish to register the Property. Once the property has been registered, you can proceed to input the units in the just registered
-                                                                property or continue registering other properties.</p>
+                                                            <button type="submit" class="btn btn-primary w-md">Submit</button>
                                                         </div>
-                                                    </div>
+                                                    </form>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -767,116 +489,8 @@
             </div>
             <!-- End Page-content -->
 
-            <!-- OTP modal -->
-            <div class="modal fade OTP-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header border-bottom-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="text-center mb-4">
-                                <div class="avatar-md mx-auto mb-4">
-                                    <div class="avatar-title bg-light rounded-circle text-primary h1">
-                                        <i class="mdi mdi-cellphone-message"></i>
-                                    </div>
-                                </div>
 
-                                <div class="row justify-content-center">
-                                    <div class="col-xl-10">
-                                        <h4 class="text-primary">Confirm OTP</h4>
-                                        <p class="text-muted font-size-14 mb-4">An OTP has been sent to <strong>0704549859</strong> kindly ask the Member being registered to check their phone and share the OTP sent to them with you and enetr it below to confirm</p>
 
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-3">
-                                                    <div class="mb-3">
-                                                        <label for="digit1-input" class="visually-hidden">Dight 1</label>
-                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="1" id="digit1-input">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-3">
-                                                    <div class="mb-3">
-                                                        <label for="digit2-input" class="visually-hidden">Dight 2</label>
-                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="2" id="digit2-input">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-3">
-                                                    <div class="mb-3">
-                                                        <label for="digit3-input" class="visually-hidden">Dight 3</label>
-                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="3" id="digit3-input">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-3">
-                                                    <div class="mb-3">
-                                                        <label for="digit4-input" class="visually-hidden">Dight 4</label>
-                                                        <input type="text" class="form-control form-control-lg text-center two-step" maxLength="1" data-value="4" id="digit4-input">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button class="btn btn-primary btn-block w-100">
-                                                Verify phone number
-                                            </button>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- end modal -->
-
-            <!-- tenant id number modal -->
-            <div class="modal fade" id="subscribeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header border-bottom-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body ">
-                            <div class="text-center mb-4 ">
-                                <div class="avatar-md mx-auto mb-4 ">
-                                    <div class="avatar-title bg-light rounded-circle text-primary h1 ">
-                                        <i class="mdi mdi-card-account-details-outline "></i>
-                                    </div>
-                                </div>
-
-                                <div class="row justify-content-center ">
-                                    <div class="col-xl-10 ">
-                                        <h4 class="text-primary ">Tenants ID num</h4>
-                                        <p class="text-muted font-size-14 mb-4 ">
-                                            Enter tenants ID number. This step is necessary so as to check whether the Tenant exists in the system
-                                        </p>
-
-                                        <form>
-                                            <div class="row ">
-                                                <div class="col-12 ">
-                                                    <div class="mb-3 ">
-                                                        <label for="digit1-input " class="visually-hidden ">ID Number</label>
-                                                        <input type="text " class="form-control form-control-lg text-center two-step " placeholder="ID / PPT No. ">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button class="btn btn-primary btn-block w-100 ">
-                                                    <i class="bx bx-search-alt-2 font-size-16 align-middle me-2 "></i>
-                                                Search
-                                            </button>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- tenant id number modal -->
 
 
 
