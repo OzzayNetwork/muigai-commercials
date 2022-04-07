@@ -227,43 +227,40 @@
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="menu-title" key="t-menu">Muigai Commercial Agencies</li>
+                        <li class="menu-title d-none" key="t-menu">Muigai Commercial Agencies</li>
 
                         <li>
                             <a href="index.html" class="waves-effect">
                                 <i class="bx bx-home-circle"></i><span>Dashboards</span>
                             </a>
                         </li>
-
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-office-building-outline"></i>
-                                <span>Properties</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="property-list.html">Property List</a></li>
-                                <li><a href="property-new.html">Add a Property</a></li>
-                            </ul>
-                        </li>
-
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-shield-home"></i>
                                 <span>Landlord</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="landlord.html">Landlord List</a></li>
+                                <li><a href="landlord.html">Landlord Register</a></li>
                                 <li><a href="landlord-new.html">Add a Landlord</a></li>
                             </ul>
                         </li>
-
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-office-building-outline"></i>
+                                <span>Premises</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="property-list.html">Premises Register</a></li>
+                                <li><a href="property-new.html">Add a premises</a></li>
+                            </ul>
+                        </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-account-key"></i>
                                 <span>Tenants</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tenant-list.html">Tenants List</a></li>
+                                <li><a href="tenant-list.html">Tenants Register</a></li>
                                 <li><a href="tenant-new.html">Add a tenant</a></li>
                             </ul>
                         </li>
@@ -277,6 +274,12 @@
                                 <li><a href="estates.htm">Estate</a></li>
                                 <li><a href="house-types.html">House types</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="messages.html" class="waves-effect">
+                                <i class="bx bx-chat"></i>
+                                <span>Messenger</span>
+                            </a>
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
@@ -310,13 +313,6 @@
                                 <li><a href="admin-list.html">Admins list</a></li>
                                 <li><a href="admin-new.html">Add an admin</a></li>
                             </ul>
-                        </li>
-
-                        <li>
-                            <a href="messages.html" class="waves-effect">
-                                <i class="bx bx-chat"></i>
-                                <span>System Messenger</span>
-                            </a>
                         </li>
 
                         <li class="menu-title" key="t-apps">Reports</li>
@@ -372,14 +368,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Kelvin's Properties</h4>
+                                <h4 class="mb-sm-0 font-size-18">Kelvin's Financial statements</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="landlord.html">All Landlords</a></li>
                                         <li class="breadcrumb-item"><a href="landlord-details.html">Kelvin Njuguna</a></li>
-                                        <li class="breadcrumb-item active">Kelvin's properties</li>
+                                        <li class="breadcrumb-item active">Statements</li>
                                     </ol>
                                 </div>
 
@@ -586,262 +582,74 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
-                                            <tr>
+                                    <div class="table-responsive">
+                                        <table class="table align-middle table-nowrap table-hover  contacts-table" id="datatable-buttons">
+                                            <thead class="table-light">
+                                                <tr>
 
-                                                <th scope="col">
-                                                    <div class="the-mail-checkbox pr-4">
-                                                        <label for="selectAll" class="d-none">Select All</label>
-                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
 
-                                                    </div>
-                                                </th>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Property</th>
-                                                <th scope="col">Percentage cut</th>
-                                                <th scope="col">Agreement type</th>
-                                                <th scope="col">Property type</th>
-                                                <th scope="col">Units</th>
-                                                <th scope="col">Vacant</th>
-                                                <th scope="col">Occupied</th>
-                                                <th scope="col" class="text-right">Balance</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
+                                                    <th scope="col">Month</th>
+                                                    <th scope="col">Property</th>
+                                                    <th scope="col">Agreement type</th>
+                                                    <th scope="col">Landlord's % share</th>
+                                                    <th scope="col">Status</th>
+                                                    <th>Date paid</th>
+                                                    <th scope="col">Amount collected</th>
+                                                    <th scope="col">Landlord's share</th>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td class="text-capitalize">January</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="property-details.html" title="View Details">90 degrees by Tsavo</a>
+                                                    </td>
+                                                    <td>
+                                                        Management
+                                                    </td>
+                                                    <td>
+                                                        70%
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-danger font-size-11 m-1">UNPAID</span>
+                                                    </td>
+
+                                                    <td>
+                                                        -
+                                                    </td>
+
+                                                    <td>
+                                                        <span class="text-right">KES 1,524,600</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-right">KES 1,067,220</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                                <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-home-variant me-3"></i>Units</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
+                                                            </div>
                                                         </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">1</td>
-                                                <td class="text-capitalize">
-                                                    <a href="property-details.html" title="View Details">90 degrees by Tsavo</a>
-                                                </td>
-                                                <td>
-                                                    30%
-                                                </td>
-                                                <td>
-                                                    Management
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1">Commercial building</span>
-                                                </td>
-                                                <td>56</td>
-                                                <td class="text-danger">
-                                                    36
-                                                </td>
-                                                <td class="text-success">
-                                                    20
-                                                </td>
-                                                <td class="text-right">
-                                                    <span class="text-success text-uppercase">kes 120,000</span>
-                                                </td>
+                                                    </td>
+                                                </tr>
 
 
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-home-variant me-3"></i>Units</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                            </tbody>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">2</td>
-                                                <td class="text-capitalize">
-                                                    <a href="property-details.html" title="View Details">SKy cape</a>
-                                                </td>
-                                                <td>
-                                                    30%
-                                                </td>
-                                                <td>
-                                                    Management
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1">Commercial building</span>
-                                                </td>
-                                                <td>56</td>
-                                                <td class="text-danger">
-                                                    36
-                                                </td>
-                                                <td class="text-success">
-                                                    20
-                                                </td>
-                                                <td class="text-right">
-                                                    <span class="text-success text-uppercase">kes 120,000</span>
-                                                </td>
-
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-home-variant me-3"></i>Units</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">3</td>
-                                                <td class="text-capitalize">
-                                                    <a href="property-details.html" title="View Details">The Ground</a>
-                                                </td>
-                                                <td>
-                                                    40%
-                                                </td>
-                                                <td>
-                                                    Management
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1">Commercial building</span>
-                                                </td>
-                                                <td>56</td>
-                                                <td class="text-danger">
-                                                    36
-                                                </td>
-                                                <td class="text-success">
-                                                    20
-                                                </td>
-                                                <td class="text-right">
-                                                    <span class="text-success text-uppercase">kes 120,000</span>
-                                                </td>
-
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-home-variant me-3"></i>Units</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">4</td>
-                                                <td class="text-capitalize">
-                                                    <a href="property-details.html" title="View Details">The place</a>
-                                                </td>
-                                                <td>
-                                                    30%
-                                                </td>
-                                                <td>
-                                                    Management
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1">Commercial building</span>
-                                                </td>
-                                                <td>56</td>
-                                                <td class="text-danger">
-                                                    36
-                                                </td>
-                                                <td class="text-success">
-                                                    20
-                                                </td>
-                                                <td class="text-right">
-                                                    <span class="text-success text-uppercase">kes 120,000</span>
-                                                </td>
-
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="property-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-home-variant me-3"></i>Units</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-home-edit me-3"></i>Edit property</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Message All Tenants</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  dripicons-wrong me-3 text-danger"></i>Deactivate property</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                        <tfoot>
-                                            <tr class="table-light">
-
-                                                <td>
-
-                                                </td>
-                                                <th class="text-capitalize" colspan="5">4 Properties</th>
-
-                                                <th>156</th>
-                                                <th class="text-danger">
-                                                    96
-                                                </th>
-                                                <th class="text-success">
-                                                    200
-                                                </th>
-                                                <th class="text-right">
-                                                    <span class="text-success text-uppercase">kes 220,000</span>
-                                                </th>
-
-
-                                                <td>
-
-                                                </td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
