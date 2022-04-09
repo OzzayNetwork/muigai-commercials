@@ -395,16 +395,18 @@
                                         </button>
                                         <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                                             <div class="navbar-nav">
-                                                <a class="nav-item nav-link" href="property-details.html">Property Details<span class="sr-only">(current)</span></a>
-                                                <a class="nav-item nav-link" href="property-units.html">Property Units</a>
+                                                <a class="nav-item nav-link" href="property-details.html">Premises Details<span class="sr-only">(current)</span></a>
+                                                <a class="nav-item nav-link" href="property-units.html">Units</a>
+                                                <a class="nav-item nav-link" href="property-unit-type.html">Unit types</a>
+                                                <a class="nav-item nav-link" href="property-charges.html">Payable Charges</a>
                                                 <a class="nav-item nav-link" href="property-tenants.html">Tenants</a>
                                                 <a class="nav-item nav-link" href="property-statements.html">Statements</a>
-                                                <a class="nav-item nav-link" href="property-utility.html">Utility balances</a>
-                                                <a class="nav-item nav-link" href="property-unit-type.html">Units/Hse types</a>
+                                                <a class="nav-item nav-link" href="property-utility.html">Utility Bills</a>
+
                                             </div>
                                             <div class="navbar-nav">
                                                 <a href="collector-new.html" type="button" class="btn btn-outline-danger waves-effect waves-light">
-                                                    <i class="bx dripicons-wrong font-size-16 align-middle me-2"></i> Deactivate Property
+                                                    <i class="bx dripicons-wrong font-size-16 align-middle me-2"></i> Deactivate Premises
                                                 </a>
                                             </div>
 
@@ -471,319 +473,340 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
-                                            <tr>
 
-                                                <th scope="col">
-                                                    <div class="the-mail-checkbox pr-4">
-                                                        <label for="selectAll" class="d-none">Select All</label>
-                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle table-nowrap table-hover  contacts-table" id="datatable-buttons">
+                                            <thead class="table-light">
+                                                <tr>
 
-                                                    </div>
-                                                </th>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Tenant</th>
-                                                <th scope="col">Contacts</th>
-                                                <th scope="col">Hse No.</th>
-                                                <th scope="col">Since</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col" class="text-right">Utility Balances</th>
-                                                <th scope="col" class="text-right">Arrears</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot class="table-light">
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th colspan="2">61 Tenants</th>
-                                                <th>23 Units</th>
-                                                <th colspan="3" class="text-right text-uppercase"><span class="text-success">+KES 11,350</span></th>
-                                                <th class="text-right text-uppercase"><span class="text-danger">-KES 138,700</span></th>
-                                                <th></th>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
+                                                    <th scope="col">
                                                         <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">1</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Njuguna</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    410
-                                                </td>
-
-                                                <td>
-                                                    3 Mar 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">+KES 12,000</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+                                                            <label for="selectAll" class="d-none">Select All</label>
+                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                    </th>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Tenant</th>
+                                                    <th scope="col">Contacts</th>
+                                                    <th scope="col">Hse No.</th>
+                                                    <th scope="col">Since</th>
+                                                    <th scope="col">Renewal date</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col" class="text-right">Utility Balances</th>
+                                                    <th scope="col" class="text-right">Arrears</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot class="table-light">
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th colspan="2">61 Tenants</th>
+                                                    <th>23 Units</th>
+                                                    <th colspan="4" class="text-right text-uppercase"><span class="text-success">+KES 11,350</span></th>
+                                                    <th class="text-right text-uppercase"><span class="text-danger">-KES 138,700</span></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">2</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Brian Kioko</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    311
-                                                </td>
-
-                                                <td>
-                                                    30 May 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">+KES 50</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">+KES 12,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td class="text-capitalize">1</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">Kelvin Njuguna</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        410
+                                                    </td>
 
-                                            <tr>
+                                                    <td>
+                                                        3 Mar 2022
+                                                    </td>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <td>
+                                                        3 Aug 2024
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">+KES 12,000</span></td>
+
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                                <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+
+                                                            </div>
                                                         </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
 
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">3</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Mtu Mwingine</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    312
-                                                </td>
-
-                                                <td>
-                                                    30 May 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">Uncompliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 500</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">4</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Will Smith</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    313
-                                                </td>
-
-                                                <td>
-                                                    30 May 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-warning font-size-11 m-1 text-uppercase">Reported to auctioneers</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 150,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                    </td>
+                                                    <td class="text-capitalize">2</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">Brian Kioko</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        311
+                                                    </td>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <td>
+                                                        30 May 2022
+                                                    </td>
+                                                    <td>
+                                                        13 Mar 2023
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">+KES 50</span></td>
+
+                                                    <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">+KES 12,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                                <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+
+                                                            </div>
                                                         </div>
+                                                    </td>
+                                                </tr>
 
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">5</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Jimmy Kimmel</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    315
-                                                </td>
+                                                <tr>
 
-                                                <td>
-                                                    30 May 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-dark font-size-11 m-1 text-uppercase">Serving Notice</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="fw-semibold">KES 0.00</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td class="text-capitalize">3</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">Mtu Mwingine</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        312
+                                                    </td>
 
-                                        </tbody>
-                                    </table>
+                                                    <td>
+                                                        30 May 2022
+                                                    </td>
+                                                    <td>
+                                                        3 May 2024
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">Uncompliant</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
+
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 500</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                                <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize">4</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">Will Smith</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        313
+                                                    </td>
+
+                                                    <td>
+                                                        30 May 2022
+                                                    </td>
+                                                    <td>
+                                                        30 Mar 2024
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-warning font-size-11 m-1 text-uppercase">Reported to auctioneers</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
+
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 150,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                                <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize">5</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">Jimmy Kimmel</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        315
+                                                    </td>
+
+                                                    <td>
+                                                        30 May 2022
+                                                    </td>
+                                                    <td>
+                                                        15 Mar 2023
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-dark font-size-11 m-1 text-uppercase">Serving Notice</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">-KES 200</span></td>
+
+                                                    <td class="text-black text-uppercase text-right"><span class="fw-semibold">KES 0.00</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                                <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
