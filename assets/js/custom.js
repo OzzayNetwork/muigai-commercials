@@ -1,6 +1,6 @@
 $(window).on('load', function() {
     setTimeout(function() {
-        $("#subscribeModal").modal("show")
+        //$("#subscribeModal").modal("show")
     }, 0);
 
     $('body').on('click', '.upload-the-contacts', function() {
@@ -65,17 +65,112 @@ $(window).on('load', function() {
             });
         }
     })
-    $("body").on('change', '[name="agreement-type"]', function() {
+    $("body").on('change', '[name="letting-nature"]', function() {
         var theVal = $(this).val();
         if (theVal != 1) {
             // alert('checked');
             $('.per-commision').removeClass('d-none')
         }
-        if (theVal == 1) {
+        if (theVal == 2) {
             $('.per-commision').addClass('d-none')
         }
 
+    });
+
+    $("body").on('change', '[name="roomamte"]', function() {
+        var theVal = $(this).val();
+        if (theVal == "yes") {
+            // alert('checked');
+            $('.has-roomate').slideDown().removeClass('d-none');
+        } else {
+            $('.has-roomate').slideUp().addClass('d-none');
+        }
+
+    });
+
+    showDayInput();
+    chargeNatureInput()
+
+    function showDayInput() {
+        var theVal = $('[name="invoice-period"]').val();
+        if (theVal != 'random-day') {
+            // alert('checked');
+            $('.invoicing-day').removeClass('d-none')
+        } else {
+            $('.invoicing-day').addClass('d-none')
+        }
+    }
+
+    function chargeNatureInput() {
+        var theVal1 = $('[name="fee-nature"]').val();
+        //alert(theVal1)
+        if (theVal1 != 'random-fee') {
+            // alert('checked');
+            $('.charge-determiner').slideDown();
+        } else {
+            $('.charge-determiner').slideUp();
+        }
+
+
+    }
+    $('body').on('change', '[name="check-constant"]', function() {
+        var theVal = $(this).val();
+        if (theVal == "constant-yes") {
+            $('.amount-entries').slideDown();
+
+        } else {
+            $('.amount-entries').slideUp();
+        }
     })
+
+    $("body").on('change', '[name="fee-nature"]', function() {
+        var theVal1 = $(this).val();
+        if (theVal1 != 'random-fee') {
+            $('.charge-determiner').slideDown();
+        } else {
+            $('.charge-determiner').slideUp();
+
+        }
+
+        if (theVal1 == "per-on-rent") {
+            $('.percentage-fee-input').slideDown().siblings().slideUp();
+        }
+        if (theVal1 == "multiple-on-rent") {
+            $('.multiplier-fee-input').slideDown().siblings().slideUp();
+        }
+        if (theVal1 == "fixed-amount") {
+            $('.fixed-fee-input').slideDown().siblings().slideUp();
+        }
+
+        if (theVal1 == "fixed-amount") {
+            $('.constant-checker').slideUp();
+            $('[name="check-constant"]').val('constant-yes');
+        } else {
+            $('.constant-checker').slideDown();
+        }
+    });
+
+    $('body').on('change', '#tenant-type', function() {
+        var theVal = $(this).val();
+        if (theVal == "individual") {
+            $('.tenant-indidual-type').removeClass('d-none').siblings('.tenant-company-type').addClass('d-none')
+
+        } else {
+            $('.tenant-company-type').removeClass('d-none').siblings('.tenant-indidual-type').addClass('d-none')
+        }
+    })
+
+    $("body").on('change', '[name="invoice-period"]', function() {
+        var theVal = $(this).val();
+        if (theVal != 'random-day') {
+            // alert('checked');
+            $('.invoicing-day').slideDown();
+        } else {
+            $('.invoicing-day').slideUp()
+        }
+
+    })
+
     $('body').on('click', '.clone-fileds', function() {
 
         $('.selectpicker').each(function(index) {
@@ -219,6 +314,88 @@ $(window).on('load', function() {
             $('.phone-num').addClass('d-none');
         }
     });
+
+    $('#agreement-type').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+        var theVal = $(this).val();
+        // alert(theVal);
+        if (theVal == "Unit Letting") {
+            $('.unit-letting-option').removeClass('d-none');
+            //alert("it is unt letting")
+
+        } else {
+            $('.unit-letting-option').addClass('d-none')
+        }
+    });
+
+    $('.occupation-type').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+        var theVal = $(this).val();
+        // alert(theVal);
+        if (theVal == "employed") {
+            $('.employed').removeClass('d-none')
+            $('.employed').slideDown().siblings().slideUp();
+            //alert("we are here")
+
+        }
+        if (theVal == "student") {
+            $('.parents').removeClass('d-none').slideDown().siblings().slideUp()
+
+        }
+        if (theVal == "self employed") {
+            $('.self-employed').removeClass('d-none').slideDown().siblings().slideUp()
+
+        }
+        if (theVal == "pension") {
+            $('.self-employed').slideUp().siblings().slideUp()
+
+        }
+        if (theVal == "unemployed") {
+            $('.self-employed').slideUp().siblings().slideUp()
+
+        }
+    });
+
+    $('.water-servicing').on('change', function(e) {
+        var theVal = $(this).val();
+        // alert(theVal);
+        if (theVal == "3") {
+            $('.rate-perunit-water').removeClass('d-none');
+            //alert("it is unt letting")
+            $('.rate-per-unit').attr("focus", true)
+
+        } else {
+            $('.rate-perunit-water').addClass('d-none')
+        }
+    });
+
+    $('#landlord-type').on('change', function() {
+        var theSeledtedValue = $(this).val();
+        if (theSeledtedValue == "company") {
+            $('.individual-landlord').removeClass('d-none').next().addClass('d-none');
+
+        } else {
+            $('.individual-landlord').addClass('d-none').next().removeClass('d-none');
+
+        }
+    });
+
+
+
+    function find_max(nums) {
+
+        let max_num = Number.NEGATIVE_INFINITY; // smaller than all other numbers
+
+        for (let num of nums) {
+
+            if (num > max_num) {
+                // (Fill in the missing line here)
+
+            }
+
+        }
+
+        return max_num;
+
+    }
 
 
     $('.selectpicker').selectpicker();

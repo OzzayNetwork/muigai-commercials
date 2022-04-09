@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>RevenueSure | Muigai Commercial</title>
+    <title>RevenueSure | Muigai Commercial applicable charges</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -374,7 +374,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Applicable charges</h4>
+                                <h4 class="mb-sm-0 font-size-18">Invoice items</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -420,9 +420,9 @@
                                             <thead>
                                                 <tr class="text-uppercase table-dark">
                                                     <th class="vertical-align-middle">#</th>
-                                                    <th class="vertical-align-middle">Invoice item</th>
-                                                    <th class="vertical-align-middle">Item type</th>
-                                                    <th class="vertical-align-middle">When To Invoice</th>
+                                                    <th class="vertical-align-middle">Item name</th>
+                                                    <th class="vertical-align-middle">Fee Accounts</th>
+                                                    <th class="vertical-align-middle">Invoiced On</th>
                                                     <th class="vertical-align-middle">Description</th>
                                                     <th class="text-nowrap vertical-align-middle">Charge Nature</th>
                                                     <th class="text-center vertical-align-middle">Every month</th>
@@ -485,7 +485,7 @@
                                                     <td>Security Deposit</td>
                                                     <td>Day 1 of the First Month</td>
                                                     <td>Security on the renting facility</td>
-                                                    <td class=""><strong class="text-uppercase">x2</strong> the rent</td>
+                                                    <td class="">Amount varries</td>
                                                     <td class="text-center">
                                                         <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
                                                     </td>
@@ -548,7 +548,7 @@
                                                     <td>Other</td>
                                                     <td>random date</td>
                                                     <td>To be charged if the tenant has been reported to auctioneers</td>
-                                                    <td class="">Vary</td>
+                                                    <td class="">Amount varies</td>
                                                     <td class="text-center">
                                                         <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
                                                     </td>
@@ -598,12 +598,13 @@
                                 </div>
                                 <div class="col-5">
                                     <div class="form-group mb-4">
-                                        <label for="">Invoice item type</label>
+                                        <label for="">Invoice Item account</label>
                                         <select class="selectpicker form-control" data-live-search="true" title="Select Invoice Item type">
-                                            <option>Security Deposit</option>
-                                            <option>Penalty</option>
-                                            <option>Premises Utility</option>
-                                            <option>Rent</option>
+                                            <option>Security Deposit Account</option>
+                                            <option>Monthly Rent account</option>
+                                            <option>Utility Bills Account</option>
+                                            <option>Penalty Account</option>
+                                            <option>Premises Utility</option>                                         
                                             <option>Tax</option>
                                             <option>Other</option>                                            
                                             </select>
@@ -620,19 +621,19 @@
                                             <label for="">When should this Invoice item be added?</label>
                                             <div class="d-flex">
                                                 <div class="form-check mb-3 me-3">
-                                                    <input class="form-check-input" type="radio" name="invoice-period" id="each-month" checked="">
+                                                    <input class="form-check-input" type="radio" name="invoice-period" id="each-month" value="each-month" checked="">
                                                     <label class="form-check-label" for="each-month">
                                                         Every Month
                                                     </label>
                                                 </div>
                                                 <div class="form-check me-3">
-                                                    <input class="form-check-input" type="radio" name="invoice-period" id="month-1">
+                                                    <input class="form-check-input" type="radio" name="invoice-period" id="month-1" value="month-1">
                                                     <label class="form-check-label" for="month-1">
                                                         1st Month only
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="invoice-period" id="random-day">
+                                                    <input class="form-check-input" type="radio" name="invoice-period" id="random-day" value="random-day">
                                                     <label class="form-check-label" for="random-day">
                                                         Random Date (To be added manually)
                                                     </label>
@@ -642,9 +643,9 @@
 
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 d-none invoicing-day">
                                     <div class="form-group mb-4">
-                                        <label for="">On what day should this invoice item be added?</label>
+                                        <label for="">On what day should this item be invoiced?</label>
                                         <select class="selectpicker form-control" data-live-search="true" title="Select the specific Day">
                                         <option>Day 1</option>
                                         <option>Day 2</option>
@@ -683,46 +684,92 @@
                                     <div class="form-group">
                                         <div class="">
                                             <label for="">What's the nature of this new invoice item</label>
-                                            <div class="d-flex">
-                                                <div class="form-check mb-3 me-3">
-                                                    <input class="form-check-input" type="radio" name="fee-nature" id="fixed-amount" checked="">
-                                                    <label class="form-check-label" for="fixed-amount">
-                                                        Fixed amount
-                                                    </label>
-                                                </div>
+                                            <div class="d-flex flex-wrap">
                                                 <div class="form-check me-3">
-                                                    <input class="form-check-input" type="radio" name="fee-nature" id="per-on-rent">
-                                                    <label class="form-check-label" for="per-on-rent">
-                                                        Percentage on rent
-                                                    </label>
-                                                </div>
-                                                <div class="form-check me-3">
-                                                    <input class="form-check-input" type="radio" name="fee-nature" id="multiple-on-rent">
-                                                    <label class="form-check-label" for="multiple-on-rent">
-                                                        Multiple on the rent
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="fee-nature" id="random-fee">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" id="random-fee" value="random-fee" checked="">
                                                     <label class="form-check-label" for="random-fee">
                                                         Amount varies
                                                     </label>
                                                 </div>
+
+                                                <div class="form-check me-3">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" id="per-on-rent" value="per-on-rent">
+                                                    <label class="form-check-label" for="per-on-rent">
+                                                        Percentage on rent
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check mb-3 me-3">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" value="fixed-amount" id="fixed-amount">
+                                                    <label class="form-check-label" for="fixed-amount">
+                                                        Fixed amount
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check me-3">
+                                                    <input class="form-check-input" type="radio" name="fee-nature" value="multiple-on-rent" id="multiple-on-rent">
+                                                    <label class="form-check-label" for="multiple-on-rent">
+                                                        Multiple on the rent
+                                                    </label>
+                                                </div>
+
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label for="">Fee Amount</label>
-                                        <input type="text" class="form-control" placeholder="Enter amount applicable">
+                                <div class="col-12 charge-determiner">
+
+
+
+                                    <div class="row">
+                                        <div class="col-auto mb-3 constant-checker">
+                                            <div class="form-group">
+                                                <div class="">
+                                                    <label for="">Is this figure constant for all?</label>
+                                                    <div class="d-flex flex-wrap">
+                                                        <div class="form-check me-3">
+                                                            <input class="form-check-input" type="radio" name="check-constant" id="constant-yes" value="constant-yes" checked="">
+                                                            <label class="form-check-label" for="constant-yes">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="form-check me-3">
+                                                            <input class="form-check-input" type="radio" name="check-constant" id="constant-no" value="constant-no">
+                                                            <label class="form-check-label" for="constant-no">
+                                                               No
+                                                            </label>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto flex-grow-1 amount-entries">
+                                            <div class="form-group mb-4 fixed-fee-input">
+                                                <label for="">Fee Amount</label>
+                                                <input type="text" class="form-control " placeholder="Enter amount applicable">
+                                            </div>
+
+                                            <div class="form-group mb-4 percentage-fee-input">
+                                                <label for="">Fee percentage</label>
+                                                <input type="text" class="form-control " placeholder="Enter the percentage value">
+                                            </div>
+
+                                            <div class="form-group mb-4 multiplier-fee-input">
+                                                <label for=" ">Fee Multiplier</label>
+                                                <input type="text " class="form-control " placeholder="Enter multiplier value ">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label for="">Invoice item description</label>
-                                        <textarea name="" class="form-control" id="" rows="2" placeholder="Enter a description">
+                                <div class="col-12 ">
+                                    <div class="form-group mb-4 ">
+                                        <label for=" ">Invoice item description</label>
+                                        <textarea name=" " class="form-control " id=" " rows="2 " placeholder="Enter a description ">
 
                                         </textarea>
 
@@ -731,9 +778,9 @@
 
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save</button>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-light " data-bs-dismiss="modal ">Close</button>
+                            <button type="button " class="btn btn-primary ">Save</button>
                         </div>
                     </div>
                 </div>
@@ -741,16 +788,16 @@
             <!-- modals end -->
 
 
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
                             <script>
                                 document.write(new Date().getFullYear())
                             </script> © RevenueSure.
                         </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-sm-block">
+                        <div class="col-sm-6 ">
+                            <div class="text-sm-end d-sm-block ">
                                 Developed by Nouveta LTD.
                             </div>
                         </div>
@@ -766,37 +813,38 @@
 
 
     <!-- Right bar overlay-->
-    <div class="rightbar-overlay"></div>
+    <div class="rightbar-overlay "></div>
 
     <!-- JAVASCRIPT -->
-    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/jquery/jquery.min.js "></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
 
     <!-- Bootstrap select -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
 
     <!-- Table Editable plugin -->
-    <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
-    <script src="assets/js/pages/table-editable.int.js"></script>
+    <script src="assets/libs/table-edits/build/table-edits.min.js "></script>
+    <script src="assets/js/pages/table-editable.int.js "></script>
 
     <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/libs/apexcharts/apexcharts.min.js "></script>
 
     <!-- dashboard init -->
-    <script src="assets/js/pages/dashboard.init.js"></script>
+    <script src="assets/js/pages/dashboard.init.js "></script>
 
     <!-- numerals number formater -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js "></script>
 
 
     <!-- App js -->
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
 </body>
 
 

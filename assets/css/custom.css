@@ -1026,7 +1026,12 @@ body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hov
     width: 220px !important;
 }
 
-#basic-example .table-responsive,
+.border-right-1 {
+    border-right: 1px solid #d4dbf9;
+}
+
+#basic-example .table-responsive {}
+
 .overflow-visible {
     overflow: visible;
 }

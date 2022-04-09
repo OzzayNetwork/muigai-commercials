@@ -372,13 +372,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Property Registration</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Premises Registration</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="landlord.html">All Properties</a></li>
-                                        <li class="breadcrumb-item active">Add a Property</li>
+                                        <li class="breadcrumb-item"><a href="property-list.html">All Premies</a></li>
+                                        <li class="breadcrumb-item active">Premises registration</li>
                                     </ol>
                                 </div>
 
@@ -401,7 +401,81 @@
                                         <h3>Landlord details</h3>
                                         <section>
                                             <form>
-                                                <div class="row ">
+                                                <!-- landolord type selection -->
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label for="landlord-type" class="form-label">Landlord type</label>
+                                                        <select id="landlord-type" class="form-select">
+                                                            <option value="individual" selected="">Individual</option>
+                                                            <option value="company">Company</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <!-- company details -->
+                                                <div class="row individual-landlord d-none">
+                                                    <div class="col-12">
+                                                        <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Company Details</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Company's Name</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter company's name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">KRA pin</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter KRA pin Number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Certificate of incorporation</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter certificate No.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Contact Person</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter full name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Phone</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter phone No.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Email</label>
+                                                            <input type="email" class="form-control " id=" " placeholder="Enter email Address">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-address-input ">Postal Address</label>
+                                                            <textarea id="basicpill-address-input " class="form-control " rows="5 " placeholder="Enter Your Address "></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-4 ">
+                                                            <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
+                                                            <div class="input-group " id="datepicker1 ">
+                                                                <input type="text " class="form-control mouse-pointer " placeholder="dd M, yyyy " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
+                                                                " data-date-autoclose="true ">
+
+                                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!-- personal details -->
+                                                <div class="row personal-landlord ">
                                                     <div class="col-12">
                                                         <div class="bg-primary border-2 bg-soft p-3 mb-4">
                                                             <p class="fw-semibold mb-0 pb-0 text-uppercase">Personal details</p>
@@ -410,29 +484,6 @@
                                                     </div>
 
 
-                                                    <div class="col-12 d-none ">
-                                                        <div class="row ">
-                                                            <div class="col-12 ">
-                                                                <div class="bg-primary border-2 bg-soft p-4 mb-4 ">
-                                                                    <p class="fw-semibold ">Is this a new landlord or an already existing land lord? If yes Check the correct button below.</p>
-                                                                    <div class="d-flex ">
-                                                                        <div class="form-check mb-3 pr-15px ">
-                                                                            <input class="form-check-input " type="radio " name="landlord-reg " id="landlord-not-existing " checked>
-                                                                            <label class="form-check-label mb-0 " for="landlord-not-existing ">
-                                                                                 Yes, Its a new Landlord
-                                                                             </label>
-                                                                        </div>
-                                                                        <div class="form-check ">
-                                                                            <input class="form-check-input " type="radio " name="landlord-reg " id="landlord-not-new ">
-                                                                            <label class="form-check-label mb-0 " for="landlord-not-new ">
-                                                                                 No, its an already existing landlord
-                                                                             </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
                                                     <div class="col-lg-3 col-md-6 ">
                                                         <div class="mb-4 ">
@@ -458,73 +509,76 @@
                                                             <input type="text " class="form-control " id=" " placeholder="Enter Your Last Name ">
                                                         </div>
                                                     </div>
-                                                </div>
-
-                                                <div class="row ">
-                                                    <div class="col-lg-4 ">
+                                                    <div class="col-12">
                                                         <div class="row ">
-                                                            <div class="col-12 ">
-                                                                <div class="mb-4 ">
-                                                                    <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
-                                                                    <div class="input-group " id="datepicker1 ">
-                                                                        <input type="text " class="form-control mouse-pointer " placeholder="dd M, yyyy " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
-                                                                        " data-date-autoclose="true ">
-
-                                                                        <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 ">
+                                                            <div class="col-lg-4 ">
                                                                 <div class="row ">
-                                                                    <label for=" " class=" ">Gender: <strong class="text-danger ">*</strong></label>
-                                                                    <div class="d-flex ">
+                                                                    <div class="col-12 ">
+                                                                        <div class="mb-4 ">
+                                                                            <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
+                                                                            <div class="input-group " id="datepicker1 ">
+                                                                                <input type="text " class="form-control mouse-pointer " placeholder="dd M, yyyy " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
+                                                                                " data-date-autoclose="true ">
 
-                                                                        <div class="form-check me-3">
-                                                                            <input class="form-check-input" type="radio" name="gender" id="gender-male">
-                                                                            <label class="form-check-label" for="gender-male">
-                                                                                Male
-                                                                            </label>
+                                                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 ">
+                                                                        <div class="row ">
+                                                                            <label for=" " class=" ">Gender: <strong class="text-danger ">*</strong></label>
+                                                                            <div class="d-flex ">
+
+                                                                                <div class="form-check me-3">
+                                                                                    <input class="form-check-input" type="radio" name="gender" id="gender-male">
+                                                                                    <label class="form-check-label" for="gender-male">
+                                                                                        Male
+                                                                                    </label>
+                                                                                </div>
+
+                                                                                <div class="form-check me-3">
+                                                                                    <input class="form-check-input" type="radio" name="gender" id="gender-female">
+                                                                                    <label class="form-check-label" for="gender-female">
+                                                                                        Female
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
 
-                                                                        <div class="form-check me-3">
-                                                                            <input class="form-check-input" type="radio" name="gender" id="gender-female">
-                                                                            <label class="form-check-label" for="gender-female">
-                                                                                Female
-                                                                            </label>
+                                                                    </div>
+
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-lg-4 ">
+                                                                <div class="row ">
+                                                                    <div class="col-lg-12 ">
+                                                                        <div class="mb-4 ">
+                                                                            <label for="basicpill-phoneno-input ">Phone <strong class="text-danger ">*</strong></label>
+                                                                            <input type="text " class="form-control " id="basicpill-phoneno-input " placeholder="Enter Your Phone No. ">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-12 ">
+                                                                        <div class="mb-4 ">
+                                                                            <label for="basicpill-email-input ">Email <strong class="text-danger ">*</strong></label>
+                                                                            <input type="email " class="form-control " id="basicpill-email-input " placeholder="Enter Your Email ID ">
                                                                         </div>
                                                                     </div>
                                                                 </div>
 
                                                             </div>
-
-
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-lg-4 ">
-                                                        <div class="row ">
-                                                            <div class="col-lg-12 ">
+                                                            <div class="col-lg-4 ">
                                                                 <div class="mb-4 ">
-                                                                    <label for="basicpill-phoneno-input ">Phone <strong class="text-danger ">*</strong></label>
-                                                                    <input type="text " class="form-control " id="basicpill-phoneno-input " placeholder="Enter Your Phone No. ">
+                                                                    <label for="basicpill-address-input ">Postal Address</label>
+                                                                    <textarea id="basicpill-address-input " class="form-control " rows="5 " placeholder="Enter Your Address "></textarea>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-12 ">
-                                                                <div class="mb-4 ">
-                                                                    <label for="basicpill-email-input ">Email <strong class="text-danger ">*</strong></label>
-                                                                    <input type="email " class="form-control " id="basicpill-email-input " placeholder="Enter Your Email ID ">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-lg-4 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-address-input ">Postal Address</label>
-                                                            <textarea id="basicpill-address-input " class="form-control " rows="5 " placeholder="Enter Your Address "></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
+
+
                                                 <div class="col-12">
                                                     <div class="bg-primary border-2 bg-soft p-3 mb-4">
                                                         <p class="fw-semibold mb-0 pb-0 text-uppercase">Banking details and Landlord MCA Property agreement</p>
@@ -547,23 +601,24 @@
                                                     </div>
                                                     <div class="col-lg-4 col-md-6 ">
                                                         <div class="mb-4 ">
-                                                            <label for="basicpill-lastname-input ">Agreement Type<strong class="text-danger ">*</strong></label>
-                                                            <select class="form-control selectpicker " title="Landlord MCA agreement type">
-                                                                <option value=" ">Property Management</option>
-                                                                <option value=" ">Unit Letting</option>
+                                                            <label for="agreement-type">Agreement Type<strong class="text-danger ">*</strong></label>
+                                                            <select class="form-control selectpicker " id="agreement-type" title="Landlord MCA agreement type">
+                                                                <option value="Property Management">Property Management</option>
+                                                                <option value="Unit Letting">Unit Letting</option>
+                                                                <option value="Service charge collection only">Service charge collection only</option>
                                                           </select>
                                                         </div>
                                                     </div>
 
 
-                                                    <div class="col-lg-12 ">
+                                                    <div class="col-lg-12 d-none unit-letting-option">
                                                         <div class="row ">
                                                             <label for=" " class=" ">Nature of letting commission<strong class="text-danger ">*</strong></label>
                                                             <div class="col-12 ">
                                                                 <div class="d-flex w-100 ">
 
                                                                     <div class="form-check pr-15px ">
-                                                                        <input class="form-check-input " type="radio" value="1" name="agreement-type" id="formRadios2" checked>
+                                                                        <input class="form-check-input " type="radio" value="1" name="letting-nature" id="formRadios2" checked>
                                                                         <label class="form-check-label " for="formRadios2">
                                                                         Specified % Cut on rent
                                                                     </label>
@@ -571,14 +626,14 @@
 
 
                                                                     <div class="form-check mb-3 pr-15px ">
-                                                                        <input class="form-check-input " type="radio" value="2" name="agreement-type" id="formRadios1">
+                                                                        <input class="form-check-input " type="radio" value="2" name="letting-nature" id="formRadios1">
                                                                         <label class="form-check-label " for="formRadios1">
                                                                         100% 1st Month Rent
                                                                     </label>
                                                                     </div>
 
                                                                     <div class="form-check ">
-                                                                        <input class="form-check-input " type="radio" value="3" name="agreement-type" id="formRadios3">
+                                                                        <input class="form-check-input " type="radio" value="3" name="letting-nature" id="formRadios3">
                                                                         <label class="form-check-label" for="formRadios3">
                                                                         Specified  % Cut on total rent collection
                                                                     </label>
@@ -587,7 +642,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-md-4 col-sm-12 per-commision d-none ">
+                                                    <div class="col-lg-3 col-md-4 col-sm-12 per-commision">
                                                         <div class="mb-4 ">
                                                             <label for="basicpill-lastname-input ">Percentage commission<strong class="text-danger ">*</strong></label>
                                                             <input type="text " class="form-control " placeholder="Percentage Commision % ">
@@ -598,24 +653,37 @@
 
                                             </form>
                                         </section>
-                                        <!-- Property details -->
-                                        <h3>Property details</h3>
+                                        <!-- Premises details -->
+                                        <h3>Premises details</h3>
                                         <section>
                                             <form>
-                                                <div class="row ">
+                                                <div class="col-12">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">General Information about the Premises</p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-2">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-firstname-input ">File No.<strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter file No.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-firstname-input ">Plot No. <strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Plot No.">
+                                                        </div>
+                                                    </div>
                                                     <div class="col-lg-4 col-md-6 ">
                                                         <div class="mb-4 ">
-                                                            <label for="basicpill-firstname-input ">Property Name <strong class="text-danger ">*</strong></label>
+                                                            <label for="basicpill-firstname-input ">Premises Name <strong class="text-danger ">*</strong></label>
                                                             <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter Your First Name ">
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-firstname-input ">Plot No. <strong class="text-danger ">*</strong></label>
-                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter property plot No. ">
-                                                        </div>
-                                                    </div>
+
 
                                                     <div class="col-lg-4 col-md-6 ">
                                                         <div class="mb-4 ">
@@ -631,7 +699,7 @@
 
                                                     <div class="col-lg-4 col-md-6 ">
                                                         <div class="mb-4 ">
-                                                            <label for="basicpill-lastname-input ">Building type <strong class="text-danger ">*</strong></label>
+                                                            <label for="basicpill-lastname-input ">Premises Type <strong class="text-danger ">*</strong></label>
                                                             <select class="form-control selectpicker " title="Select Building type " data-live-search="true ">
                                                                 <option value=" ">Apartment</option>
                                                                 <option value=" ">Mansionate</option>
@@ -652,21 +720,7 @@
                                                           </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-lastname-input ">Unit/House types<strong class="text-danger ">*</strong></label>
-                                                            <select class="form-control selectpicker " data-live-search="true " multiple title="You can select several types ">
-                                                                <option value=" ">Bed sitter</option>
-                                                                <option value=" ">One bedroom</option>
-                                                                <option value=" ">Two bedroom</option>
-                                                                <option value=" ">Single room</option> 
-                                                                <option value=" ">Three bedroom</option>  
-                                                                <option value=" ">Town house</option>    
-                                                                <option value=" ">Meeting hall</option>                                                         
-                                                          </select>
-                                                            <small>Select the unit type(s) Available for renting</small>
-                                                        </div>
-                                                    </div>
+
                                                     <div class="col-md-6 col-lg-4 col-sm-12 ">
                                                         <div class="mb-4 ">
                                                             <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
@@ -678,26 +732,75 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-lg-4">
+                                                        <div class="row ">
+                                                            <label for=" " class=" ">Is renting payable on <strong>Prorater Basis?</strong><strong class="text-danger ">*</strong></label>
+                                                            <div class="col-12 ">
+                                                                <div class="d-flex w-100 ">
+
+                                                                    <div class="form-check pr-15px ">
+                                                                        <input class="form-check-input " type="radio" value="yes-prorater" name="prorater" id="yes-prorater" checked>
+                                                                        <label class="form-check-label " for="yes-prorater">
+                                                                        Yes, it's Prorater
+                                                                    </label>
+                                                                    </div>
+
+
+                                                                    <div class="form-check mb-3 pr-15px ">
+                                                                        <input class="form-check-input" type="radio" value="no-prorater" name="prorater" id="no-prorater">
+                                                                        <label class="form-check-label " for="no-prorater">
+                                                                       No, its not
+                                                                    </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <div class="col-lg-4 col-md-6 ">
                                                         <div class="mb-4 ">
-                                                            <label for="basicpill-firstname-input ">File No.<strong class="text-danger ">*</strong></label>
-                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter property plot No. ">
+                                                            <label for="water-servicing">How is water serviced to the units <strong class="text-danger ">*</strong></label>
+                                                            <select class="form-select water-servicing" title="Select from options provided" data-live-search="true " id="water-servicing">
+                                                                <option value="1">Each unit has its own unique meter No. provided by NAWASCO</option>
+                                                                <option value="2">Each unit has its own unique meter No. provided by NAWASCO</option>
+                                                                <option value="3">Each unit has its own unique meter No. and water is provided from a borehole</option>
+                                                                <option value="4">The premises has one meter and the bill is to be shared equally amongst the Tenants</option>
+                                                                <option value="5">Not applicable for this premises</option>
+                                                          </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-4 d-none rate-perunit-water">
+                                                        <div class="mb-4 ">
+                                                            <label for="rate-per-unit">Rate per unit for water<strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control rate-per-unit" id="rate-per-unit" placeholder="KES">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="water-servicing">How is Electricity serviced to the units <strong class="text-danger ">*</strong></label>
+                                                            <select class="form-select" title="Select from options provided" data-live-search="true " id="water-servicing">
+                                                                <option value=" ">Each unit has its own unique KPLC meter</option>
+                                                                <option value=" ">The premises has only one KPLC meter number and the monthly bill is to be shared equaly amongest all tenants</option>
+                                                                <option value=" ">The units are on Pre Pay</option>
+                                                                <option value=" ">Not applicable for this premises</option>
+                                                          </select>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                            </form>
-                                        </section>
 
 
-                                        <!-- Payment Details -->
-                                        <!-- Landlord details -->
-                                        <h3>Unit/Hse Types Registration</h3>
-                                        <section>
-                                            <form>
-                                                <h6>Enter details on the different types of units on offer for this property</h6>
-                                                <div class="table-responsive table-responsive-md">
-                                                    <table class="table table-editable align-middle table-edits">
+                                                <div class="col-12">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Units/ Hse Types on offer At the premises</p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive table-responsive-md mb-5">
+                                                    <table class="table table-editable-2 align-middle table-edits ">
                                                         <thead class="table-light">
                                                             <tr class="text-uppercase table-dark">
                                                                 <th class="vertical-align-middle">#</th>
@@ -752,7 +855,7 @@
                                                                   </select>
                                                                 </td>
                                                                 <td class="">
-                                                                    <input type="number" class="form-control " placeholder="Rooms" spellcheck="false" data-ms-editor="true">
+                                                                    <input type="number" class="form-control " placeholder="No. of Rooms" spellcheck="false" data-ms-editor="true">
                                                                 </td>
                                                                 <td class="" title="Select number of months after which the tenancy agreement should be renewed">
                                                                     <input type="number" class="form-control " placeholder="Size (MSQ)" spellcheck="false" data-ms-editor="true">
@@ -777,24 +880,138 @@
                                                         </tbody>
                                                         <tfoot>
                                                             <tr>
-                                                                <td colspan="7" class="bg-light add-field ">
+                                                                <td colspan="7" class="bg-light add-field-2 cursor-pointer">
                                                                     <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Unit</span></span>
                                                                 </td>
                                                             </tr>
                                                         </tfoot>
                                                     </table>
                                                 </div>
+
+                                                <div class="col-12">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Applicable charges for this premises</p>
+
+                                                    </div>
+                                                    <p><strong>Check the correct charges that may be charged from tenants at this premises</strong></p>
+                                                </div>
+                                                <div class="col-12 mb-5">
+                                                    <div class="row">
+                                                        <div class="col-4 col-md-5 col-sm-12 h-100">
+                                                            <p class="text-decoration-underline"><i>Applicable Monthly Charges</i></p>
+                                                            <div class="row border-right-1">
+                                                                <div class="col-6">
+                                                                    <div class="form-check form-check-primary mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="monthlyRent" checked="">
+                                                                        <label class="form-check-label" for="monthlyRent">
+                                                                            Monthly Rent
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-check form-check-primary mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="rentTax" checked="">
+                                                                        <label class="form-check-label" for="rentTax">
+                                                                            18% Rent Tax
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-check form-check-primary mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="waterBill" checked="">
+                                                                        <label class="form-check-label" for="waterBill">
+                                                                            Water Bills
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-check form-check-primary mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="electricityBill" checked="">
+                                                                        <label class="form-check-label" for="electricityBill">
+                                                                            Electricity Bills
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-check form-check-primary mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="garbageCollection" checked="">
+                                                                        <label class="form-check-label" for="garbageCollection">
+                                                                            Garbage collection
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-4 col-md-4 col-sm-12 h-100">
+                                                            <p class="text-decoration-underline"><i>Applicable monthly deposits</i></p>
+                                                            <div class="row border-right-1">
+                                                                <div class="col-6">
+                                                                    <div class="form-check form-check-secondary mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="rentDeposit" checked="">
+                                                                        <label class="form-check-label" for="rentDeposit">
+                                                                            Rent deposit
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-check form-check-secondary mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="agencyDeposit">
+                                                                        <label class="form-check-label" for="agencyDeposit">
+                                                                            Agency deposit
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-6 col-md-6 col-sm-12">
+                                                            <p class="text-decoration-underline"><i>Other charges</i></p>
+                                                            <div class="row">
+                                                                <div class="col-5">
+                                                                    <div class="form-check form-check-success mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="auctioneerFee" checked="">
+                                                                        <label class="form-check-label" for="auctioneerFee">
+                                                                            Auctioneer fees
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <div class="form-check form-check-success mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="visitationFees" checked="">
+                                                                        <label class="form-check-label" for="visitationFees">
+                                                                            Visitation fees
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <div class="form-check form-check-success mb-3">
+                                                                        <input class="form-check-input" type="checkbox" id="rentPenalty" checked="">
+                                                                        <label class="form-check-label" for="rentPenalty">
+                                                                            Searcharge
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+
                                             </form>
                                         </section>
 
-
-                                        <!-- Confirm Details -->
+                                        <!-- premises invoice breakdown -->
                                         <h3>Invoices breakdown</h3>
                                         <section>
                                             <div class="row justify-content-center">
                                                 <div class="col-12">
-                                                    <div class="table-responsive table-responsive-md">
-                                                        <table class="table align-middle table-edits rent-invoicing">
+                                                    <div class="table-responsive">
+                                                        <table class="table align-middle table-edits rent-invoicing dt-responsive" id="data-table">
                                                             <thead>
                                                                 <tr class="text-uppercase table-light">
                                                                     <th>#</th>
@@ -803,10 +1020,7 @@
                                                                     <th>Charge description</th>
                                                                     <th>Bed sitter</th>
                                                                     <th>one Bedroom</th>
-                                                                    <th>Two bedroom</th>
-                                                                    <th>Two bedroom</th>
-                                                                    <th>Two bedroom</th>
-
+                                                                    <th>Two Bedroom</th>
                                                                 </tr>
                                                             </thead>
 
@@ -911,6 +1125,172 @@
 
                                                 </div>
                                             </div>
+                                        </section>
+                                        <!-- Invoice end for premises -->
+                                        <!-- Document attachments -->
+                                        <h3>Document Attachments</h3>
+                                        <section>
+                                            <form>
+                                                <h6>Upload document and don't forget to specify whose the document is for. ie <strong>Landlord or Premises</strong></h6>
+                                                <div class="table-responsive table-responsive-md">
+                                                    <table class="table table-editable-file align-middle table-edits">
+                                                        <thead class="table-light">
+                                                            <tr class="text-uppercase table-dark">
+                                                                <th class="vertical-align-middle">#</th>
+                                                                <th class="vertical-align-middle">Document Name</th>
+                                                                <th class="vertical-align-middle">Document For</th>
+                                                                <th class="vertical-align-middle">Document Number</th>
+                                                                <th class="vertical-align-middle">Attach the file</th>
+                                                                <th class="text-right"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr data-id="1">
+                                                                <td style="width: 80px">1.</td>
+
+                                                                <td class="">
+                                                                    Certificate of incorporation
+                                                                </td>
+                                                                <td class="">
+                                                                    The premises
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <div class="input-group mb-0">
+                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
+                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
+                                                                        </label>
+                                                                        <input type="file" class="form-control" id="document1-1">
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr data-id="2">
+                                                                <td style="width: 80px">2.</td>
+
+                                                                <td class="">
+                                                                    KRA Pin
+                                                                </td>
+                                                                <td class="">
+                                                                    The Landlord
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <div class="input-group mb-0">
+                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
+                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
+                                                                        </label>
+                                                                        <input type="file" class="form-control" id="document1-1">
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr data-id="3">
+                                                                <td style="width: 80px">3.</td>
+
+                                                                <td class="">
+                                                                    Landlord & MCA agreement
+                                                                </td>
+                                                                <td class="">
+                                                                    The Premises
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <div class="input-group mb-0">
+                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
+                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
+                                                                        </label>
+                                                                        <input type="file" class="form-control" id="document1-1">
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+
+                                                            </tr>
+                                                            <tr data-id="3">
+                                                                <td style="width: 80px">4.</td>
+
+                                                                <td class="">
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select the Document">
+                                                                        <option value="">ID Card</option>
+                                                                        <option value="">Certificate of incorporation</option>   
+                                                                        <option value="">KRA Pin</option>
+                                                                  </select>
+                                                                </td>
+                                                                <td class="">
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="The document is for?">
+                                                                        <option value="">The premises</option>
+                                                                        <option value="">The landlord</option>   
+                                                                  </select>
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <div class="input-group mb-0">
+                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
+                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
+                                                                        </label>
+                                                                        <input type="file" class="form-control" id="document1-1">
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+
+                                                            </tr>
+
+                                                            <tr class="cloneCharges d-none">
+                                                                <td style="width: 80px " class="categoryIndex ">#</td>
+
+                                                                <td>
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select the Document">
+                                                                        <option value="">ID Card</option>
+                                                                        <option value="">Certificate of incorporation</option>   
+                                                                        <option value="">KRA Pin</option>
+                                                                  </select>
+                                                                </td>
+                                                                <td class="">
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="The document is for?">
+                                                                        <option value="">The premises</option>
+                                                                        <option value="">The landlord</option>   
+                                                                  </select>
+                                                                </td>
+                                                                <td class="">
+                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
+                                                                </td>
+                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
+                                                                    <div class="input-group mb-0">
+                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document">
+                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
+                                                                        </label>
+                                                                        <input type="file" class="form-control the-document" id="document">
+                                                                    </div>
+                                                                </td>
+
+
+                                                                <td class="text-right d-flex align-items-center justify-content-end">
+                                                                    <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-file " title="Cancel "><i class="bx bx-x "></i></a>
+                                                                </td>
+                                                            </tr>
+
+
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td colspan="7" class="bg-light add-field-file cursor-pointer">
+                                                                    <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Unit</span></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </form>
                                         </section>
 
                                     </div>
@@ -1064,25 +1444,34 @@
 
                                 <div class="row justify-content-center ">
                                     <div class="col-xl-10 ">
-                                        <h4 class="text-primary ">Landlord's ID num</h4>
+                                        <h4 class="text-primary ">Landlord's File No.</h4>
                                         <p class="text-muted font-size-14 mb-4 ">
-                                            Enter landlord's ID number. This step is necessary so as to check whether the landlord existst in the system
+                                            Enter the landlords file number if the landlord is already registered in the system. If this is a new landlord, click cancel.
                                         </p>
 
                                         <form>
                                             <div class="row ">
-                                                <div class="col-12 ">
+                                                <div class="col-9">
                                                     <div class="mb-3 ">
-                                                        <label for="digit1-input " class="visually-hidden ">ID Number</label>
-                                                        <input type="text " class="form-control form-control-lg text-center two-step " placeholder="ID / PPT No. ">
+                                                        <label for="digit1-input " class="visually-hidden ">File No.</label>
+                                                        <input type="text " class="form-control form-control-lg text-center two-step " placeholder="Enter file No.">
                                                     </div>
                                                 </div>
+                                                <div class="col-3 ">
+                                                    <button class="btn btn-primary btn-block w-100 btn-lg">
+                                                        <i class="bx bx-search-alt-2 font-size-16 align-middle me-2 "></i>
+                                                    <div class="d-none">Search</div>
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <button class="btn btn-primary btn-block w-100 ">
-                                                    <i class="bx bx-search-alt-2 font-size-16 align-middle me-2 "></i>
-                                                Search
+                                            <button class="btn btn-secondary btn-block mt-3 text-center w-100">
+                                                <i class="mdi mdi-account-multiple-plus font-size-16 align-middle me-2 "></i>
+                                                Its a new landlord
                                             </button>
+
+
                                         </form>
+
 
                                     </div>
                                 </div>
