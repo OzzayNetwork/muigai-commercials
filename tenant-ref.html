@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Muigai Commercials | List of tenants</title>
+    <title>RevenueSure | Muigai Commercial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -368,15 +368,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">90 Degrees Hse No. 410 Unit history</h4>
+                                <h4 class="mb-sm-0 font-size-18">Next of kins for kelvin</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="property-list.html">All properties</a></li>
-                                        <li class="breadcrumb-item"><a href="property-details.html">90 Degrees</a></li>
-                                        <li class="breadcrumb-item"><a href="property-units.html">All units</a></li>
-                                        <li class="breadcrumb-item active">410</li>
+                                        <li class="breadcrumb-item"><a href="tenant-list.html">All Tenants</a></li>
+                                        <li class="breadcrumb-item"><a href="tenant-details.html">Kelvin Njuguna</a></li>
+                                        <li class="breadcrumb-item active">Next of kin</li>
                                     </ol>
                                 </div>
 
@@ -396,18 +395,17 @@
                                         </button>
                                         <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                                             <div class="navbar-nav">
-                                                <a class="nav-item nav-link" href="property-details.html">Premises Details<span class="sr-only">(current)</span></a>
-                                                <a class="nav-item nav-link" href="property-units.html">All Units</a>
-                                                <a class="nav-item nav-link" href="property-unit-type.html">Charges & Unit types</a>
-                                                <a class="nav-item nav-link" href="property-tenants.html">Tenants</a>
-                                                <a class="nav-item nav-link" href="property-statements.html">Statements</a>
-                                                <a class="nav-item nav-link" href="property-utility.html">Utility Bills</a>
-                                                <a class="nav-item nav-link" href="property-documents.html">Premises Documents</a>
+                                                <a class="nav-item nav-link" href="tenant-details.html">Tenants Profile</a>
+                                                <a class="nav-item nav-link" href="tenant-rent.html">Rented Properties</a>
+                                                <a class="nav-item nav-link" href="tenant-kin.html">Next of Kin</a>
+                                                <a class="nav-item nav-link" href="tenant-dependants.html">Dependents</a>
+                                                <a class="nav-item nav-link" href="tenant-rent-statemtnts.html">Rent Statements</a>
+                                                <a class="nav-item nav-link" href="tenant-utility-bill.html">Utility Bills Statements</a>
 
                                             </div>
                                             <div class="navbar-nav">
-                                                <a href="collector-new.html" type="button" class="btn btn-outline-danger waves-effect waves-light">
-                                                    <i class="bx dripicons-wrong font-size-16 align-middle me-2"></i> Deactivate Premises
+                                                <a href="tenant-new.html" type="button" class="btn btn-primary waves-effect waves-light text-white">
+                                                    <i class="mdi mdi-account-edit font-size-16 align-middle me-2"></i> Edit Details
                                                 </a>
                                             </div>
 
@@ -418,221 +416,135 @@
 
                         </div>
                     </div>
+
                     <!-- end of tool bar -->
 
-
-
                     <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-
+                        <div class="col-xl-12">
+                            <div class="card calc-h-3px">
                                 <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
+
+                                    <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 ">
+                                        <thead class="table-dark">
                                             <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Tenant</th>
-                                                <th scope="col">Contacts</th>
-                                                <th scope="col">From</th>
-                                                <th scope="col">Till</th>
-                                                <th scope="col">Duration</th>
-                                                <th scope="col" class="">Reason for living</th>
+                                                <th>#</th>
+                                                <th>Names</th>
+                                                <th>ID No.</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Relationship</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tfoot class="table-light">
                                             <tr>
-                                                <td class="text-capitalize">1</td>
+                                                <th colspan="5">3 Next of Kins</th>
+                                                <th colspan="2" class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-account-multiple-plus font-size-16 align-middle me-2"></i> Add Kin
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </tfoot>
+
+
+                                        <tbody class="table-striped">
+
+                                            <tr>
+                                                <td>1.</td>
                                                 <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Njuguna</a>
+                                                    Cleophas Ndungu
                                                 </td>
                                                 <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0">
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    1 Mar 2019
-                                                </td>
-
-                                                <td>
-                                                    3 Mar 2022
+                                                    312325622
                                                 </td>
                                                 <td>
-                                                    22 Months
+                                                    <a href="tel:0704549859">0704549859</a>
                                                 </td>
-                                                <td class="text-black">
-                                                    Left on free will
-                                                </td>
-
                                                 <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View account details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document me-3"></i>View full Statements</a>
-
-
-                                                        </div>
-                                                    </div>
+                                                    <a href="mailto:email@email.com">email@email.com</a>
+                                                </td>
+                                                <td class="">
+                                                    Brother
+                                                </td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-danger btn-sm waves-effect waves-light">
+                                                        <i class="bx bx-block font-size-16 align-middle me-2"></i> Remove Kin
+                                                    </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="text-capitalize">2</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Njuguna</a>
+                                                <td class="text-capitalize">2.</td>
+                                                <td>
+                                                    Alex wanjala
                                                 </td>
                                                 <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0">
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    1 Mar 2019
-                                                </td>
-
-                                                <td>
-                                                    3 Mar 2022
+                                                    312325622
                                                 </td>
                                                 <td>
-                                                    22 Months
+                                                    <a href="tel:0704549859">0704549859</a>
                                                 </td>
-                                                <td class="text-black">
-                                                    Left on free will
-                                                </td>
-
                                                 <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View account details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document me-3"></i>View full Statements</a>
-
-
-                                                        </div>
-                                                    </div>
+                                                    <a href="mailto:email@email.com">email@email.com</a>
+                                                </td>
+                                                <td class="">
+                                                    Brother
+                                                </td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-danger btn-sm waves-effect waves-light">
+                                                        <i class="bx bx-block font-size-16 align-middle me-2"></i> Remove Kin
+                                                    </button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="text-capitalize">3</td>
+                                                <td>3.</td>
                                                 <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Njuguna</a>
+                                                    Edwin kiploman
                                                 </td>
                                                 <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0">
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    1 Mar 2019
-                                                </td>
-
-                                                <td>
-                                                    3 Mar 2022
+                                                    312325622
                                                 </td>
                                                 <td>
-                                                    22 Months
+                                                    <a href="tel:0704549859">0704549859</a>
                                                 </td>
-                                                <td class="text-black">
-                                                    Left on free will
-                                                </td>
-
                                                 <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View account details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document me-3"></i>View full Statements</a>
-
-
-                                                        </div>
-                                                    </div>
+                                                    <a href="mailto:email@email.com">email@email.com</a>
+                                                </td>
+                                                <td class="">
+                                                    Brother
+                                                </td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-danger btn-sm waves-effect waves-light">
+                                                        <i class="bx bx-block font-size-16 align-middle me-2"></i> Remove Kin
+                                                    </button>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td class="text-capitalize">4</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Njuguna</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0">
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    1 Mar 2019
-                                                </td>
 
-                                                <td>
-                                                    3 Mar 2022
-                                                </td>
-                                                <td>
-                                                    22 Months
-                                                </td>
-                                                <td class="text-black">
-                                                    Left on free will
-                                                </td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View account details</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document me-3"></i>View full Statements</a>
-
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
 
                                         </tbody>
                                     </table>
                                 </div>
+
+
+
                             </div>
                         </div>
-                        <!-- end col -->
                     </div>
-
                     <!-- end row -->
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
 
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
                             <script>
                                 document.write(new Date().getFullYear())
                             </script> © RevenueSure
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 ">
                             <div class="text-sm-end d-sm-block ">
                                 Developed by Nouveta LTD.
                             </div>
@@ -649,46 +561,46 @@
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
 
+    <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
     <script src="assets/libs/metismenu/metisMenu.min.js "></script>
     <script src="assets/libs/simplebar/simplebar.min.js "></script>
     <script src="assets/libs/node-waves/waves.min.js "></script>
 
 
-
     <!-- Required datatable js -->
-    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
     <!-- Buttons examples -->
-    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-    <script src="assets/libs/jszip/jszip.min.js"></script>
-    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
-    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+    <script src="assets/libs/jszip/jszip.min.js "></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
     <!-- numerals number formater -->
     <script src="assets/libs/numeral/numeral.js "></script>
 
     <!-- Responsive examples -->
-    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
 
     <!-- Bootstrap select -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
     <!-- Plugins js -->
-    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+    <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
     <!-- Datatable init js -->
-    <script src="assets/js/pages/datatables.init.js"></script>
+    <script src="assets/js/pages/datatables.init.js "></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
 </body>
 
 

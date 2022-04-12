@@ -401,6 +401,7 @@
                                                 <a class="nav-item nav-link" href="property-tenants.html">Tenants</a>
                                                 <a class="nav-item nav-link" href="property-statements.html">Statements</a>
                                                 <a class="nav-item nav-link" href="property-utility.html">Utility Bills</a>
+                                                <a class="nav-item nav-link" href="property-documents.html">Premises Documents</a>
 
                                             </div>
                                             <div class="navbar-nav">
@@ -423,8 +424,9 @@
                                 <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <div class="d-flex align-items-center flex-grow-1">
+                                        <div class="d-flex align-items- flex-grow-1 flex-column">
                                             <h4 class="mb-0 m-0 bg-transparent">Utility bills Balances 90 Degrees</h4>
+                                            <p class="m-0 p-0 text-muted">Water is provded by <strong class="fw-semibold">NAWASCO</strong> & each unit has a KPLC postpay meter</p>
 
                                         </div>
                                         <div class="d-flex">
@@ -433,6 +435,9 @@
                                                 <option value="">410</option>
                                                 <option value="">310</option>
                                           </select>
+                                            <button type="button" class="btn btn-info dropdown-toggle option-selector text-capitalize me-3">
+                                                <i class="bx bx-receipt font-size-16"></i> <span class="pl-1 d-md-inline">Update Bills</span>
+                                            </button>
 
                                             <button type="button" class="btn btn-primary dropdown-toggle option-selector text-capitalize">
                                                 <i class="mdi mdi-chat-processing-outline font-size-16"></i> <span class="pl-1 d-md-inline">Send Reminder</span>
@@ -453,9 +458,10 @@
                                     <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 ">
                                         <thead class="table-dark">
                                             <tr>
-                                                <td class="">#</td>
+                                                <td class="">Hse No.</td>
+                                                <th>Tenant</th>
                                                 <th>Utility</th>
-                                                <th>Total Number</th>
+                                                <th>Unique No.</th>
                                                 <th>Updated By</th>
                                                 <th class="text-right">Current Balance</th>
                                                 <th></th>
@@ -463,8 +469,8 @@
                                         </thead>
                                         <tfoot class="table-light">
                                             <tr>
-                                                <th colspan="2" class="text-capitalize">Totals</th>
-                                                <th colspan="2" class="text-capitalize">72</th>
+                                                <th colspan="3" class="text-capitalize">Totals</th>
+                                                <th colspan="2" class="text-capitalize">72 Utilities</th>
                                                 <th class="text-right text-uppercase">kes 84,900 </th>
                                                 <th></th>
 
@@ -475,10 +481,13 @@
                                         <tbody class="table-striped">
 
                                             <tr>
-                                                <td class="">1</td>
+                                                <td class="">410</td>
+                                                <td>
+                                                    <a href="tenant-details.html">Kelvin Njuguna</a>
+                                                </td>
                                                 <td class="text-capitalize">Water</td>
                                                 <td class="">
-                                                    36
+                                                    12345
                                                 </td>
                                                 <td class="text-capitalize">
                                                     <p class="mb-0 pb-0">
@@ -487,7 +496,7 @@
                                                     <p class="text-muted pb-0">23 Jan 2022</p>
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    KES 12,560
+                                                    KES 1,000
                                                 </td>
 
                                                 <td class="text-right">
@@ -497,10 +506,13 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="">2</td>
+                                                <td class="">410</td>
+                                                <td>
+                                                    <a href="tenant-details.html">Kelvin Njuguna</a>
+                                                </td>
                                                 <td class="text-capitalize">Electricity KPLC post Pay</td>
                                                 <td class="">
-                                                    36
+                                                    32326
                                                 </td>
                                                 <td class="text-capitalize">
                                                     <p class="mb-0 pb-0">
@@ -509,7 +521,82 @@
                                                     <p class="text-muted pb-0">23 Feb 2022</p>
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    KES 365,236
+                                                    KES 100
+                                                </td>
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-chat-processing-outline font-size-16 align-middle me-2"></i> Send Remider
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">410</td>
+                                                <td>
+                                                    <a href="tenant-details.html">Kelvin Njuguna</a>
+                                                </td>
+                                                <td class="text-capitalize">Electricity KPLC post Pay</td>
+                                                <td class="">
+                                                    12536
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    <p class="mb-0 pb-0">
+                                                        <a href="#">Hezron muriuki</a>
+                                                    </p>
+                                                    <p class="text-muted pb-0">23 Feb 2022</p>
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    KES 0.00
+                                                </td>
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-chat-processing-outline font-size-16 align-middle me-2"></i> Send Remider
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">410</td>
+                                                <td>
+                                                    <a href="tenant-details.html">Kelvin Njuguna</a>
+                                                </td>
+                                                <td class="text-capitalize">Electricity KPLC post Pay</td>
+                                                <td class="">
+                                                    233636
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    <p class="mb-0 pb-0">
+                                                        <a href="#">Hezron muriuki</a>
+                                                    </p>
+                                                    <p class="text-muted pb-0">23 Feb 2022</p>
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    KES 0.00
+                                                </td>
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-chat-processing-outline font-size-16 align-middle me-2"></i> Send Remider
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="">410</td>
+                                                <td>
+                                                    <a href="tenant-details.html">Kelvin Njuguna</a>
+                                                </td>
+                                                <td class="text-capitalize">Electricity KPLC post Pay</td>
+                                                <td class="">
+                                                    362356
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    <p class="mb-0 pb-0">
+                                                        <a href="#">Hezron muriuki</a>
+                                                    </p>
+                                                    <p class="text-muted pb-0">23 Feb 2022</p>
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    KES 200
                                                 </td>
 
                                                 <td class="text-right">

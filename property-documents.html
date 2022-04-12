@@ -400,7 +400,7 @@
                                                 <a class="nav-item nav-link" href="property-tenants.html">Tenants</a>
                                                 <a class="nav-item nav-link" href="property-statements.html">Statements</a>
                                                 <a class="nav-item nav-link" href="property-utility.html">Utility Bills</a>
-                                                <a class="nav-item nav-link" href="property-documents.html">Property Documents</a>
+                                                <a class="nav-item nav-link" href="property-documents.html">Premises Documents</a>
 
                                             </div>
                                             <div class="navbar-nav">
@@ -658,68 +658,72 @@
                         </div>
 
                         <div class="col-xl-8">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="text-muted mb-4 d-flex align-items-center">
-                                                <i class="mdi mdi-home-account h2 text-success align-middle mb-0 me-3 font-size-30"></i>
-                                                <div class="d-flex flex-column">
-                                                    <span>Rent Balances</span>
-                                                </div>
-                                            </div>
-                                            <div class="text-success mt-4">
-                                                <h4 class="text-danger">KES 302,000<i class="mdi mdi-chevron-up ms-1 text-success d-none"></i></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="text-muted mb-4 d-flex align-items-center">
-                                                <i class="mdi mdi-home-currency-usd h2 text-info align-middle mb-0 me-3 font-size-30"></i>
-                                                <div class="d-flex flex-column">
-                                                    <span>Utility Bills</span>
 
-                                                </div>
-                                            </div>
-
-                                            <div class="text-muted mt-4 text-uppercase">
-                                                <h4>kes 20,326<i class="mdi mdi-currency-usd-off ms-1 text-success d-none"></i></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="text-muted mb-4 d-flex align-items-center">
-                                                <i class="mdi mdi-currency-usd-off h2 text-danger align-middle mb-0 me-3 font-size-30"></i>
-                                                <div class="d-flex flex-column ">
-                                                    <span>Accumulated penalties</span>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="text-muted mt-4 text-uppercase">
-                                                <h4>kes 5,500<i class="mdi mdi-chevron-up ms-1 text-success d-none"></i></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
+                            <div class="card calc-h-3px">
                                 <div>
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="p-4">
-                                                <h5 class="text-primary mb-0 pb-0">Rent collection summary</h5>
-                                                <span>Rent collection summary for the last 12 Months</span>
+                                                <h5 class="mb-0 pb-0">Premises Documents</h5>
+                                                <span class="d-none">Rent collection summary for tenant </span>
                                                 <div class="row">
 
                                                     <div class="col-12">
-                                                        <div id="property-chart"></div>
+                                                        <div class="table-responsive">
+                                                            <table class="table align-middle table-nowrap table-hover mb-0">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">File</th>
+                                                                        <th scope="col">Date added</th>
+                                                                        <th scope="col" colspan="2">Size</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-image font-size-16 align-middle text-success me-2"></i> Certificate of occupation</a></td>
+                                                                        <td>12-10-2020, 09:45</td>
+                                                                        <td>09 KB</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-file-pdf font-size-16 align-middle text-danger me-2"></i> Land certificate</a></td>
+                                                                        <td>11-10-2020, 17:05</td>
+                                                                        <td>115 KB</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-file-pdf font-size-16 align-middle text-danger me-2"></i> MCA Landlord agreement</a></td>
+                                                                        <td>11-10-2020, 13:26</td>
+                                                                        <td>86 KB</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><a href="javascript: void(0);" class="text-dark fw-medium"><i class="mdi mdi-file-pdf font-size-16 align-middle text-danger me-2"></i> Bank statements</a></td>
+                                                                        <td>10-10-2020, 11:32</td>
+                                                                        <td>08 KB</td>
+                                                                        <td>
+                                                                            <a type="button" class="btn btn-primary waves-effect waves-light me-2 btn-sm w-md">
+                                                                                <i class="mdi mdi-eye-outline  font-size-16 align-middle me-2"></i> View File
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -729,12 +733,12 @@
 
                                     </div>
                                 </div>
-                                <div class="card-body border-top d-flex">
-                                    <h6 class="text-muted fw-lighter me-3">Rent Revenue <span class="fw-semibold">KES 58,956,360 (92%)</span></h6>
-                                    <h6 class="text-muted fw-lighter">Penalty Revenue <span class="fw-semibold">KES 122,659 (8%)</span></h6>
+                                <div class="p-2 border-top d-grid mt-3">
+                                    <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                        <i class="bx bx-plus me-1 font-18px"></i> <span key="t-view-more">Add A file</span>
+                                    </a>
                                 </div>
                             </div>
-
 
 
                         </div>
