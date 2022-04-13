@@ -286,9 +286,9 @@
                                 <span>Action Center</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Flagged payments</a></li>
-                                <li><a href="#">Tenancy agreements to be renewed</a></li>
-                                <li><a href="#">Tenants on notice</a></li>
+                                <li><a href="action-payments.html">Flagged payments</a></li>
+                                <li><a href="action-agreements.html">Tenancy agreements to be renewed</a></li>
+                                <li><a href="action-notice.html">Tenants on notice</a></li>
                             </ul>
                         </li>
 
@@ -304,12 +304,7 @@
                                 <li><a href="#">Add a Contact</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="messages.html" class="waves-effect">
-                                <i class="bx bx-chat"></i>
-                                <span>Messenger</span>
-                            </a>
-                        </li>
+
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="bx bx-receipt"></i>
@@ -397,13 +392,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Premises Registration</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Distribute flagged Payments</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="property-list.html">All Premies</a></li>
-                                        <li class="breadcrumb-item active">Premises registration</li>
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Action Center</a></li>
+                                        <li class="breadcrumb-item"><a href="action-payments.html">Flagged Payments</a></li>
+                                        <li class="breadcrumb-item active">Distribute flagged payments</li>
                                     </ol>
                                 </div>
 
@@ -420,149 +416,25 @@
                                 <div class="card-body">
                                     <p>Fill in the form correctly. Fields with an Asterisk <strong class="text-danger">*</strong> are mandatory fields.</p>
                                     <div id="basic-example" class="create-property">
+
                                         <!-- Premises details -->
                                         <h3>Assign Payment to Unit(s)</h3>
                                         <section>
                                             <form>
                                                 <div class="col-12">
-                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">General Information about the Premises</p>
-
-                                                    </div>
+                                                    <address>
+                                                        <strong>Payed By:</strong><br>
+                                                        Kelvin Njuguna<br>
+                                                        Through Co-operative Bank<br>                                   
+                                                       Phone No. 0704549859
+                                                        <br><br>
+                                                        1 Mar 2022, 10:20 AM
+                                                    </address>
                                                 </div>
-                                                <div class="row mb-4">
-                                                    <div class="col-2">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-firstname-input ">File No.<strong class="text-danger ">*</strong></label>
-                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter file No.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2 col-md-2">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-firstname-input ">Plot No. <strong class="text-danger ">*</strong></label>
-                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Plot No.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-firstname-input ">Premises Name <strong class="text-danger ">*</strong></label>
-                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter Your First Name ">
-                                                        </div>
-                                                    </div>
-
-
-
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-lastname-input ">Estate <strong class="text-danger ">*</strong></label>
-                                                            <select class=" selectpicker form-control " data-live-search="true " title="Select estate ">
-                                                                <option value=" ">Bahati</option>
-                                                                <option value=" ">KITI</option>
-                                                                <option value=" ">London</option>
-                                                                <option value=" ">Area 58</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-lastname-input ">Premises Type <strong class="text-danger ">*</strong></label>
-                                                            <select class="form-control selectpicker " title="Select Building type " data-live-search="true ">
-                                                                <option value=" ">Apartment</option>
-                                                                <option value=" ">Mansionate</option>
-                                                                <option value=" ">Town House</option>
-                                                                <option value=" ">Discover</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="basicpill-lastname-input ">Property Use type<strong class="text-danger ">*</strong></label>
-                                                            <select class="form-control selectpicker " title="Select Property use type " data-live-search="true ">
-                                                                <option value=" ">Commercial property</option>
-                                                                <option value=" ">Residential Property</option>
-                                                                <option value=" ">Residential/Commercial</option>
-                                                                
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 col-lg-4 col-sm-12 ">
-                                                        <div class="mb-4 ">
-                                                            <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
-                                                            <div class="input-group " id="datepicker1 ">
-                                                                <input type="text " class="form-control mouse-pointer " placeholder="Select registration date " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
-                                                                        " data-date-autoclose="true ">
-
-                                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4">
-                                                        <div class="row ">
-                                                            <label for=" " class=" ">Is renting payable on <strong>Prorater Basis?</strong><strong class="text-danger ">*</strong></label>
-                                                            <div class="col-12 ">
-                                                                <div class="d-flex w-100 ">
-
-                                                                    <div class="form-check pr-15px ">
-                                                                        <input class="form-check-input " type="radio" value="yes-prorater" name="prorater" id="yes-prorater" checked>
-                                                                        <label class="form-check-label " for="yes-prorater">
-                                                                        Yes, it's Prorater
-                                                                    </label>
-                                                                    </div>
-
-
-                                                                    <div class="form-check mb-3 pr-15px ">
-                                                                        <input class="form-check-input" type="radio" value="no-prorater" name="prorater" id="no-prorater">
-                                                                        <label class="form-check-label " for="no-prorater">
-                                                                       No, its not
-                                                                    </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="water-servicing">How is water serviced to the units <strong class="text-danger ">*</strong></label>
-                                                            <select class="form-select water-servicing" title="Select from options provided" data-live-search="true " id="water-servicing">
-                                                                <option value="1">Each unit has its own unique meter No. provided by NAWASCO</option>
-                                                                <option value="2">Each unit has its own unique meter No. provided by NAWASCO</option>
-                                                                <option value="3">Each unit has its own unique meter No. and water is provided from a borehole</option>
-                                                                <option value="4">The premises has one meter and the bill is to be shared equally amongst the Tenants</option>
-                                                                <option value="5">Not applicable for this premises</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-4 d-none rate-perunit-water">
-                                                        <div class="mb-4 ">
-                                                            <label for="rate-per-unit">Rate per unit for water<strong class="text-danger ">*</strong></label>
-                                                            <input type="text " class="form-control rate-per-unit" id="rate-per-unit" placeholder="KES">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-4 col-md-6 ">
-                                                        <div class="mb-4 ">
-                                                            <label for="water-servicing">How is Electricity serviced to the units <strong class="text-danger ">*</strong></label>
-                                                            <select class="form-select" title="Select from options provided" data-live-search="true " id="water-servicing">
-                                                                <option value=" ">Each unit has its own unique KPLC meter</option>
-                                                                <option value=" ">The premises has only one KPLC meter number and the monthly bill is to be shared equaly amongest all tenants</option>
-                                                                <option value=" ">The units are on Pre Pay</option>
-                                                                <option value=" ">Not applicable for this premises</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
                                                 <div class="col-12">
                                                     <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Units/ Hse Types on offer At the premises</p>
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Amount to be distributed</p>
+                                                        <h1 class="display-6 mb-0">KES 63,000</h1>
 
                                                     </div>
                                                 </div>
@@ -571,12 +443,11 @@
                                                         <thead class="table-light">
                                                             <tr class="text-uppercase table-dark">
                                                                 <th class="vertical-align-middle">#</th>
-                                                                <th class="vertical-align-middle">House type</th>
-                                                                <th class="vertical-align-middle">No. of rooms</th>
-                                                                <th class="vertical-align-middle">Unit size M <sup>2</sup></th>
-                                                                <th class="vertical-align-middle">Unit purpose</th>
-                                                                <th style="width: 295px;">Tenancy Renewal
-                                                                    <button type="button" data-toggle="modal" data-target=".tenancy-renewal-help" class="btn btn-link btn-rounded waves-effect font-16px "><span class="mdi mdi-help-circle text-white"></span></button></th>
+                                                                <th class="vertical-align-middle">Premises</th>
+                                                                <th class="vertical-align-middle">Hse/ Unit No.</th>
+                                                                <th class="vertical-align-middle">Tenant</th>
+                                                                <th class="text-right vertical-align-middle">Current Balance</th>
+                                                                <th class="vertical-align-middle">Amount</th>
                                                                 <th class="text-right"></th>
                                                             </tr>
                                                         </thead>
@@ -584,29 +455,31 @@
                                                             <tr data-id="1">
                                                                 <td style="width: 80px">1.</td>
                                                                 <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select hse/unit type">
-                                                                        <option value="">Bed sitter</option>
-                                                                        <option value="">Two bedroom</option>   
-                                                                        <option value="">three bedroom</option>
-                                                                        <option value="">Four bedroom</option>                                                                
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Premises">
+                                                                        <option value="">90 Degrees</option>
+                                                                        <option value="">Tulip House</option>   
+                                                                        <option value="">Airport View</option>
+                                                                        <option value="">Milimani Apartments</option>                                                                
                                                                   </select>
                                                                 </td>
                                                                 <td class="">
-                                                                    <input type="number" class="form-control " placeholder="Rooms" spellcheck="false" data-ms-editor="true">
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Unit">
+                                                                        <option value="">410</option>
+                                                                        <option value="">411</option>   
+                                                                        <option value="">412</option>
+                                                                        <option value="">413</option>                                                                
+                                                                  </select>
+                                                                </td>
+                                                                <td>-</td>
+                                                                <td class="text-right">
+                                                                    <span class="text-right text-uppercase">kes 0.00</span>
+
                                                                 </td>
                                                                 <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <input type="number" class="form-control " placeholder="Size (MSQ)" spellcheck="false" data-ms-editor="true">
+                                                                    <input type="number" class="form-control text-right" placeholder="Enter amount" spellcheck="false" data-ms-editor="true">
                                                                 </td>
 
-                                                                <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select unit purpose">
-                                                                        <option value="">Residential</option>
-                                                                        <option value="">Commercial</option>   
-                                                                  </select>
-                                                                </td>
-                                                                <td class="">
-                                                                    <input type="number" class="form-control " placeholder="No. of months for agreement Renewal" spellcheck="false" data-ms-editor="true">
-                                                                </td>
+
                                                                 <td></td>
 
                                                             </tr>
@@ -614,28 +487,28 @@
                                                                 <td style="width: 80px " class="categoryIndex ">#</td>
 
                                                                 <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select hse/unit type">
-                                                                        <option value="">Bed sitter</option>
-                                                                        <option value="">Two bedroom</option>   
-                                                                        <option value="">three bedroom</option>
-                                                                        <option value="">Four bedroom</option>                                                                
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Premises">
+                                                                        <option value="">90 Degrees</option>
+                                                                        <option value="">Tulip House</option>   
+                                                                        <option value="">Airport View</option>
+                                                                        <option value="">Milimani Apartments</option>                                                                
                                                                   </select>
                                                                 </td>
                                                                 <td class="">
-                                                                    <input type="number" class="form-control " placeholder="No. of Rooms" spellcheck="false" data-ms-editor="true">
+                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select Unit">
+                                                                        <option value="">410</option>
+                                                                        <option value="">411</option>   
+                                                                        <option value="">412</option>
+                                                                        <option value="">413</option>                                                                
+                                                                  </select>
+                                                                </td>
+                                                                <td>-</td>
+                                                                <td class="text-right">
+                                                                    <span class="text-right text-uppercase">kes 0.00</span>
+
                                                                 </td>
                                                                 <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <input type="number" class="form-control " placeholder="Size (MSQ)" spellcheck="false" data-ms-editor="true">
-                                                                </td>
-
-                                                                <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select unit purpose">
-                                                                        <option value="">Residential</option>
-                                                                        <option value="">Commercial</option>   
-                                                                  </select>
-                                                                </td>
-                                                                <td class="">
-                                                                    <input type="number" class="form-control " placeholder="No. of months for agreement Renewal" spellcheck="false" data-ms-editor="true">
+                                                                    <input type="number" class="form-control text-right" placeholder="Enter amount" spellcheck="false" data-ms-editor="true">
                                                                 </td>
 
                                                                 <td class="text-right d-flex align-items-center justify-content-end">
@@ -654,411 +527,251 @@
                                                         </tfoot>
                                                     </table>
                                                 </div>
-
-                                                <div class="col-12">
-                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Applicable charges for this premises</p>
-
-                                                    </div>
-                                                    <p><strong>Check the correct charges that may be charged from tenants at this premises</strong></p>
-                                                </div>
-                                                <div class="col-12 mb-5">
-                                                    <div class="row">
-                                                        <div class="col-4 col-md-5 col-sm-12 h-100">
-                                                            <p class="text-decoration-underline"><i>Applicable Monthly Charges</i></p>
-                                                            <div class="row border-right-1">
-                                                                <div class="col-6">
-                                                                    <div class="form-check form-check-primary mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="monthlyRent" checked="">
-                                                                        <label class="form-check-label" for="monthlyRent">
-                                                                            Monthly Rent
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="form-check form-check-primary mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="rentTax" checked="">
-                                                                        <label class="form-check-label" for="rentTax">
-                                                                            18% Rent Tax
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="form-check form-check-primary mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="waterBill" checked="">
-                                                                        <label class="form-check-label" for="waterBill">
-                                                                            Water Bills
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="form-check form-check-primary mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="electricityBill" checked="">
-                                                                        <label class="form-check-label" for="electricityBill">
-                                                                            Electricity Bills
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="form-check form-check-primary mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="garbageCollection" checked="">
-                                                                        <label class="form-check-label" for="garbageCollection">
-                                                                            Garbage collection
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-4 col-md-4 col-sm-12 h-100">
-                                                            <p class="text-decoration-underline"><i>Applicable monthly deposits</i></p>
-                                                            <div class="row border-right-1">
-                                                                <div class="col-6">
-                                                                    <div class="form-check form-check-secondary mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="rentDeposit" checked="">
-                                                                        <label class="form-check-label" for="rentDeposit">
-                                                                            Rent deposit
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-6">
-                                                                    <div class="form-check form-check-secondary mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="agencyDeposit">
-                                                                        <label class="form-check-label" for="agencyDeposit">
-                                                                            Agency deposit
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                        <div class="col-6 col-md-6 col-sm-12">
-                                                            <p class="text-decoration-underline"><i>Other charges</i></p>
-                                                            <div class="row">
-                                                                <div class="col-5">
-                                                                    <div class="form-check form-check-success mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="auctioneerFee" checked="">
-                                                                        <label class="form-check-label" for="auctioneerFee">
-                                                                            Auctioneer fees
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-5">
-                                                                    <div class="form-check form-check-success mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="visitationFees" checked="">
-                                                                        <label class="form-check-label" for="visitationFees">
-                                                                            Visitation fees
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-5">
-                                                                    <div class="form-check form-check-success mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="rentPenalty" checked="">
-                                                                        <label class="form-check-label" for="rentPenalty">
-                                                                            Searcharge
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-
-
-                                                </div>
-
                                             </form>
                                         </section>
 
                                         <!-- premises invoice breakdown -->
-                                        <h3>Invoices breakdown</h3>
+                                        <h3>Payment Breakdown for each unit</h3>
                                         <section>
                                             <div class="row justify-content-center">
                                                 <div class="col-12">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">90 degrees Hse No. 410</p>
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <address>
+                                                        <strong>Payment For:</strong><br>
+                                                        Kelvin Njuguna<br>
+                                                        email@mail.com, 0704 549 859<br>                                   
+                                                        Hse No. 410, 90 Degrees By Tsavo
+                                                        <br><br>
+                                                        1 Mar 2022, 10:20 AM
+                                                    </address>
+                                                </div>
+                                                <div class="col-12">
                                                     <div class="table-responsive">
-                                                        <table class="table align-middle table-edits rent-invoicing dt-responsive" id="data-table">
+                                                        <table class="table table-nowrap">
                                                             <thead>
-                                                                <tr class="text-uppercase table-light">
-                                                                    <th>#</th>
-                                                                    <th>Item type</th>
-                                                                    <th>Period</th>
-                                                                    <th>Charge description</th>
-                                                                    <th>Bed sitter</th>
-                                                                    <th>one Bedroom</th>
-                                                                    <th>Two Bedroom</th>
+                                                                <tr>
+                                                                    <th style="width: 70px;">No.</th>
+                                                                    <th>Item</th>
+                                                                    <th class="text-end">Amount</th>
+                                                                    <th class="" style="width: 150px;">Assign Amount</th>
                                                                 </tr>
                                                             </thead>
-
-                                                            <tfoot class="table-light">
-                                                                <tr class="text-capitalize deposit-fee boarder-bottom">
-                                                                    <th></th>
-                                                                    <th colspan="2">Total security Deposit</th>
-                                                                    <th class="d-none"></th>
-                                                                    <th>First Month only</th>
-                                                                    <th class="deposit-fee">-</th>
-                                                                    <th class="deposit-fee">-</th>
-                                                                    <th class="deposit-fee">-</th>
-                                                                </tr>
-                                                                <tr class="text-capitalize monthly-fee">
-                                                                    <th></th>
-                                                                    <th colspan="2">Least Monthly Invoice Amount</th>
-                                                                    <th class="d-none"></th>
-                                                                    <th>Monthly</th>
-                                                                    <th class="monthly-fee">-</th>
-                                                                    <th class="monthly-fee">-</th>
-                                                                    <th class="monthly-fee">-</th>
-
-                                                                </tr>
-                                                            </tfoot>
                                                             <tbody>
-                                                                <tr data-id="1">
-                                                                    <td>1.</td>
-                                                                    <td>Monthly Rent</td>
-                                                                    <td>Rent fee</td>
-                                                                    <td>Monthly</td>
-                                                                    <td invoice-permonth=true deposit-amount="true" invoice-item-name="rent">
-                                                                        <input type="text " class="form-control " placeholder="Enter Amount" spellcheck="false" data-ms-editor="true">
+                                                                <tr>
+                                                                    <td>01</td>
+                                                                    <td class="text-capitalize">Monthly Rent</td>
+                                                                    <td class="text-end">KES 12,000</td>
+                                                                    <td>
+                                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
                                                                     </td>
-                                                                    <td invoice-permonth=true deposit-amount="true" invoice-item-name="rent">
-                                                                        <input type="text " class="form-control " placeholder="Enter Amount" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-                                                                    <td invoice-permonth=true deposit-amount="true" invoice-item-name="rent">
-                                                                        <input type="text " class="form-control " placeholder="Enter Amount" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
-
                                                                 </tr>
-                                                                <tr data-id="1">
-                                                                    <td style="width: 80px">2</td>
-                                                                    <td>Rent VAT</td>
-                                                                    <td>TAX</td>
-                                                                    <td>Monthly</td>
-                                                                    <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
-                                                                    <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
-                                                                    <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
 
-                                                                </tr>
-                                                                <tr data-id=" 1 ">
-                                                                    <td style="width: 80px ">3</td>
-                                                                    <td>Rent Deposit</td>
-                                                                    <td>Security Deposit</td>
-                                                                    <td>First Month only</td>
-                                                                    <td invoice-permonth="false" deposit-amount="true">
-                                                                        <input type="text " class="form-control " placeholder="Enter Amount " spellcheck="false " data-ms-editor="true ">
+                                                                <tr>
+                                                                    <td>02</td>
+                                                                    <td class="text-capitalize">Surcharge Fee</td>
+                                                                    <td class="text-end">KES 500</td>
+                                                                    <td>
+                                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
                                                                     </td>
-                                                                    <td invoice-permonth="false" deposit-amount="true">
-                                                                        <input type="text " class="form-control " placeholder="Enter Amount " spellcheck="false " data-ms-editor="true ">
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>03</td>
+                                                                    <td>TAX (18%)</td>
+                                                                    <td class="text-end">KES 250</td>
+                                                                    <td>
+                                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
                                                                     </td>
-                                                                    <td invoice-permonth="false" deposit-amount="true">
-                                                                        <input type="text " class="form-control " placeholder="Enter Amount " spellcheck="false " data-ms-editor="true ">
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2" class="text-end">Total</td>
+                                                                    <td class="text-end fw-bold">KES 12,750</td>
+                                                                    <td class="text-end fw-bold">KES 0.00</td>
+                                                                </tr>
+
+
+                                                                <tr>
+                                                                    <td colspan="2" class="border-0 text-end">
+                                                                        <strong>Balance</strong></td>
+                                                                    <td class="border-0 text-end">
+                                                                        <h5 class="m-0 text-uppercase fw-bold">KES 12,750</h5>
                                                                     </td>
-
-                                                                </tr>
-                                                                <tr data-id="1 ">
-                                                                    <td style="width: 80px ">4</td>
-                                                                    <td>Rent Penalty</td>
-                                                                    <td>Penalty</td>
-                                                                    <td>Day 10 of each month</td>
-                                                                    <td invoice-permonth="false" the-val=500 deposit-amount=false>KES 500</td>
-                                                                    <td invoice-permonth="false" the-val=500 deposit-amount=false>KES 500</td>
-                                                                    <td invoice-permonth="false" the-val=500 deposit-amount=false class=" ">KES 500</td>
-
-                                                                </tr>
-                                                                <tr data-id="1 ">
-                                                                    <td style="width: 80px ">5</td>
-                                                                    <td>Utility Deposit</td>
-                                                                    <td>Security deposit</td>
-                                                                    <td>First month only</td>
-                                                                    <td invoice-permonth="false" value="200" deposit-amount="true" the-val=5000>KES 5,000</td>
-                                                                    <td invoice-permonth="false" deposit-amount="true" the-val=5000>KES 5,000</td>
-                                                                    <td invoice-permonth="false" deposit-amount="true" the-val=5000 class=" ">KES 5,000</td>
-
-                                                                </tr>
-                                                                <tr data-id="1 ">
-                                                                    <td style="width: 80px ">6</td>
-                                                                    <td>Auctioneer Fees</td>
-                                                                    <td>Other</td>
-                                                                    <td>Random date</td>
-                                                                    <td the-val=20>Manually added</td>
-                                                                    <td the-val=20>Manually added</td>
-                                                                    <td class=" " the-val=20>Manually added</td>
-
                                                                 </tr>
                                                             </tbody>
-
                                                         </table>
+                                                    </div>
+                                                    <hr class="text-black border-4 h-5 opacity-100">
+
+                                                </div>
+
+                                                <div class="col-12 mt-5">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">90 degrees Hse No. 320</p>
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <address>
+                                                        <strong>Payment For:</strong><br>
+                                                        Muhamed Ali<br>
+                                                        muhamed@ali.com, 0704 549 859<br>                                   
+                                                        Hse No. 300, 90 Degrees By Tsavo
+                                                        <br><br>
+                                                        1 Mar 2022, 10:20 AM
+                                                    </address>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="width: 70px;">No.</th>
+                                                                    <th>Item</th>
+                                                                    <th class="text-end">Amount</th>
+                                                                    <th class="" style="width: 150px;">Assign Amount</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>01</td>
+                                                                    <td class="text-capitalize">Monthly Rent</td>
+                                                                    <td class="text-end">KES 17,000</td>
+                                                                    <td>
+                                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>02</td>
+                                                                    <td class="text-capitalize">Surcharge Fee</td>
+                                                                    <td class="text-end">KES 1,000</td>
+                                                                    <td>
+                                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>03</td>
+                                                                    <td>TAX (18%)</td>
+                                                                    <td class="text-end">KES 300</td>
+                                                                    <td>
+                                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2" class="text-end">Total</td>
+                                                                    <td class="text-end fw-bold">KES 18,300</td>
+                                                                    <td class="text-end fw-bold">KES 0.00</td>
+                                                                </tr>
+
+
+                                                                <tr>
+                                                                    <td colspan="2" class="border-0 text-end">
+                                                                        <strong>Balance</strong></td>
+                                                                    <td class="border-0 text-end">
+                                                                        <h5 class="m-0 text-uppercase fw-bold">KES 18,300</h5>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <hr class="text-black border-4 h-5 opacity-100">
                                                     </div>
 
                                                 </div>
+
+
                                             </div>
                                         </section>
                                         <!-- Invoice end for premises -->
-                                        <!-- Document attachments -->
-                                        <h3>Document Attachments</h3>
+
+                                        <!-- Payment summary -->
+                                        <h3>Actioned summary</h3>
                                         <section>
                                             <form>
-                                                <h6>Upload document and don't forget to specify whose the document is for. ie <strong>Landlord or Premises</strong></h6>
-                                                <div class="table-responsive table-responsive-md">
-                                                    <table class="table table-editable-file align-middle table-edits">
-                                                        <thead class="table-light">
-                                                            <tr class="text-uppercase table-dark">
-                                                                <th class="vertical-align-middle">#</th>
-                                                                <th class="vertical-align-middle">Document Name</th>
-                                                                <th class="vertical-align-middle">Document For</th>
-                                                                <th class="vertical-align-middle">Document Number</th>
-                                                                <th class="vertical-align-middle">Attach the file</th>
-                                                                <th class="text-right"></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr data-id="1">
-                                                                <td style="width: 80px">1.</td>
 
-                                                                <td class="">
-                                                                    Certificate of incorporation
-                                                                </td>
-                                                                <td class="">
-                                                                    The premises
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <div class="input-group mb-0">
-                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
-                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
-                                                                        </label>
-                                                                        <input type="file" class="form-control" id="document1-1">
-                                                                    </div>
-                                                                </td>
-                                                                <td></td>
+                                                <div class="col-12">
+                                                    <address>
+                                                         <strong>Paid By:</strong><br>
+                                                         Muhamed Ali<br>
+                                                         Co-operative Bank, CBD Branch, Phone 074549859<br>                                   
+                                                         <br><br>
+                                                         1 Mar 2022, 10:20 AM
+                                                     </address>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="width: 70px;">No.</th>
+                                                                    <th>Premises</th>
+                                                                    <th>Unit/Hse No.</th>
+                                                                    <th class="text-end">Assigned Amount</th>
+                                                                    <th class="text-end">Remaining Balance</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>01</td>
+                                                                    <td class="text-capitalize">90 Degrees</td>
+                                                                    <td class="text-capitalize">410</td>
+                                                                    <td class="text-end">KES 12,750</td>
+                                                                    <td class="text-end">KES 0.00</td>
 
-                                                            </tr>
-                                                            <tr data-id="2">
-                                                                <td style="width: 80px">2.</td>
+                                                                </tr>
 
-                                                                <td class="">
-                                                                    KRA Pin
-                                                                </td>
-                                                                <td class="">
-                                                                    The Landlord
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <div class="input-group mb-0">
-                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
-                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
-                                                                        </label>
-                                                                        <input type="file" class="form-control" id="document1-1">
-                                                                    </div>
-                                                                </td>
-                                                                <td></td>
+                                                                <tr>
+                                                                    <td>02</td>
+                                                                    <td class="text-capitalize">90 Degrees</td>
+                                                                    <td class="text-capitalize">300</td>
+                                                                    <td class="text-end">KES 18,300</td>
+                                                                    <td class="text-end">KES 0.00</td>
 
-                                                            </tr>
-                                                            <tr data-id="3">
-                                                                <td style="width: 80px">3.</td>
-
-                                                                <td class="">
-                                                                    Landlord & MCA agreement
-                                                                </td>
-                                                                <td class="">
-                                                                    The Premises
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <div class="input-group mb-0">
-                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
-                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
-                                                                        </label>
-                                                                        <input type="file" class="form-control" id="document1-1">
-                                                                    </div>
-                                                                </td>
-                                                                <td></td>
-
-                                                            </tr>
-                                                            <tr data-id="3">
-                                                                <td style="width: 80px">4.</td>
-
-                                                                <td class="">
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select the Document">
-                                                                        <option value="">ID Card</option>
-                                                                        <option value="">Certificate of incorporation</option>   
-                                                                        <option value="">KRA Pin</option>
-                                                                  </select>
-                                                                </td>
-                                                                <td class="">
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="The document is for?">
-                                                                        <option value="">The premises</option>
-                                                                        <option value="">The landlord</option>   
-                                                                  </select>
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <div class="input-group mb-0">
-                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
-                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
-                                                                        </label>
-                                                                        <input type="file" class="form-control" id="document1-1">
-                                                                    </div>
-                                                                </td>
-                                                                <td></td>
-
-                                                            </tr>
-
-                                                            <tr class="cloneCharges d-none">
-                                                                <td style="width: 80px " class="categoryIndex ">#</td>
-
-                                                                <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select the Document">
-                                                                        <option value="">ID Card</option>
-                                                                        <option value="">Certificate of incorporation</option>   
-                                                                        <option value="">KRA Pin</option>
-                                                                  </select>
-                                                                </td>
-                                                                <td class="">
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="The document is for?">
-                                                                        <option value="">The premises</option>
-                                                                        <option value="">The landlord</option>   
-                                                                  </select>
-                                                                </td>
-                                                                <td class="">
-                                                                    <input type="text" class="form-control " placeholder="Document's Unique No." spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <div class="input-group mb-0">
-                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document">
-                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
-                                                                        </label>
-                                                                        <input type="file" class="form-control the-document" id="document">
-                                                                    </div>
-                                                                </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2" class=" fw-bold">Totals</td>
+                                                                    <td>2 Houses</td>
+                                                                    <td class="text-end fw-bold">KES 31,050</td>
+                                                                    <td class="text-end fw-bold">KES 0.00</td>
+                                                                </tr>
 
 
-                                                                <td class="text-right d-flex align-items-center justify-content-end">
-                                                                    <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-file " title="Cancel "><i class="bx bx-x "></i></a>
-                                                                </td>
-                                                            </tr>
+                                                            </tbody>
+                                                            <tfoot class="table-light">
+                                                                <tr>
+                                                                    <td colspan="3" class="border-0 text-end">
+                                                                        <strong>Amount Paid</strong></td>
+                                                                    <td colspan="" class="border-0 text-end">
+                                                                        <h5 class="m-0 text-uppercase fw-bold">KES 63,000</h5>
+                                                                    </td>
+                                                                    <td></td>
+                                                                </tr>
 
 
-                                                        </tbody>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <td colspan="7" class="bg-light add-field-file cursor-pointer">
-                                                                    <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Unit</span></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tfoot>
-                                                    </table>
+                                                                <tr>
+                                                                    <td colspan="3" class="border-0 text-end">
+                                                                        <strong>Remaining Amount</strong></td>
+                                                                    <td class="border-0 text-end">
+                                                                        <h5 class="m-0 text-uppercase fw-bold">KES 18,300</h5>
+                                                                    </td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                        <hr class="text-black border-4 h-5 opacity-100">
+                                                    </div>
+
                                                 </div>
                                             </form>
                                         </section>
+
 
                                     </div>
 
