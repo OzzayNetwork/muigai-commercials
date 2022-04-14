@@ -1,24 +1,27 @@
 <!doctype html>
 <html lang="en">
 
-
-<!-- index.html   13:53:02 GMT -->
-
 <head>
 
     <meta charset="utf-8" />
-    <title>Muigai Commercials | Transaction Receipts</title>
+    <title>RevenueSure | Muigai Commercial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
+    <meta content="Rental management system by Nouveta LTD" name="description" />
+    <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
-    <!-- droping file -->
+    <!-- Plugins css -->
     <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- DataTables -->
-    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -30,6 +33,7 @@
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -388,12 +392,15 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Transaction Receipts</h4>
+                                <h4 class="mb-sm-0 font-size-18">Tenancy agreements almost due for renewal</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item text-capitalize"><a href="#">All receipts</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Action center</a></li>
+                                        <li class="breadcrumb-item">
+                                            <a href="#">Tenancy agreements</a>
+                                        </li>
                                     </ol>
                                 </div>
 
@@ -404,70 +411,28 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
-                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <h4 class="card-title text-capitalize mb-0 ">
-                                            All receipts for March 2022
-                                        </h4>
-
-                                        <div class="d-flex">
-                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
-                                                <option value="" selected>Mar 2022</option>
-                                                <option value="">Feb 2022</option>
-                                                <option value="">Jan 2022</option>
-                                                <option value="">Dec 2021</option>
-                                                <option value="">Nov 2021</option>
-                                                <option value="">Sep 2021</option>
-                                                <option value="">Oct 2021</option>
-                                          </select>
-
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
-                                    </div>
-                                </div>
                                 <div class="card-body">
-                                    <div class="table-responsive overflow-visible">
+                                    <div class="table-responsive">
 
                                         <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-
-                                                    <th scope="col">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <label for="selectAll" class="d-none">Select All</label>
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
-
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col">NO.</th>
+                                                    <th scope="col">#</th>
                                                     <th scope="col">Tenant</th>
                                                     <th scope="col">Hse/Unit</th>
-                                                    <th scope="col">Invoice</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col" class="text-nowrap">Served By</th>
-                                                    <th scope="col" class="text-nowrap">Mode</th>
-                                                    <th scope="col" class="text-right text-nowrap">Amount</th>
+                                                    <th scope="col">Joined On</th>
+                                                    <th scope="col">Last renewed</th>
+                                                    <th scope="col" class="text-nowrap">To be renewed on</th>
+                                                    <th scope="col" class="text-nowrap">Remaining Days</th>
+                                                    <th scope="col" class="text-right text-nowrap">Current Rent</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">1</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
@@ -475,18 +440,18 @@
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize ">
-                                                        Stan Lee
+                                                        01 Mar 2023
                                                     </td>
                                                     <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
+                                                        <span class="fw-semibold">12 Days</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -494,8 +459,8 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                            <div class="dropdown">
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
@@ -514,15 +479,8 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
 
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">2</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
@@ -530,18 +488,18 @@
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize ">
-                                                        Stan Lee
+                                                        01 Mar 2023
                                                     </td>
                                                     <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
+                                                        <span class="fw-semibold">10 Days</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -549,8 +507,8 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                            <div class="dropdown">
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
@@ -569,15 +527,8 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
 
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">3</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
@@ -585,18 +536,18 @@
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize ">
-                                                        Stan Lee
+                                                        01 Mar 2023
                                                     </td>
                                                     <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
+                                                        <span class="fw-semibold">10 Days</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -604,8 +555,8 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                            <div class="dropdown">
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
@@ -624,15 +575,8 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
 
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">4</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
@@ -640,18 +584,18 @@
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize ">
-                                                        Stan Lee
+                                                        01 Mar 2023
                                                     </td>
                                                     <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
+                                                        <span class="fw-semibold">10 Days</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -659,8 +603,8 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                            <div class="dropdown">
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
@@ -679,15 +623,8 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
 
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">5</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
@@ -695,18 +632,18 @@
                                                         <a href="property-details.html">90 Degrees. NO.410</a>
                                                     </td>
                                                     <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
+                                                        01 Mar 2022
                                                     </td>
 
                                                     <td class="text-capitalize ">
-                                                        Stan Lee
+                                                        01 Mar 2023
                                                     </td>
                                                     <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
+                                                        <span class="fw-semibold">10 Days</span>
                                                     </td>
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
@@ -714,8 +651,8 @@
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                            <div class="dropdown">
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
@@ -740,17 +677,11 @@
                                                     <td>
 
                                                     </td>
-                                                    <th class="text-capitalize text-nowrap" colspan="2">23 receipts</th>
+                                                    <th class="text-capitalize text-nowrap" colspan="8">23 Tenants</th>
 
-                                                    <th class="text-nowrap">63 Units</th>
 
-                                                    <td class="text-nowrap text-right " colspan="5">
-                                                        <span class="fw-semibold ">KES 25,500</span>
-                                                    </td>
 
-                                                    <td>
 
-                                                    </td>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -769,74 +700,70 @@
 
             <!-- receipting modal -->
             <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog  modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Receipt Invoice</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Agreement Renewal</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-12">
                                     <address>
-                                        <strong class="text-capitalize">Received from:</strong><br>
+                                        <strong class="text-capitalize">Agreement For:</strong><br>
                                         Kelvin Njuguna<br>
                                         email@mail.com, 0704 549 859<br>                                   
                                         Hse No. 410, 90 Degrees By Tsavo
+                                        <br><br>
+                                        <span class="fw-semibold">Effective Date: </span>1st Jan 2022 12:00 AM
                                         
                                     </address>
                                 </div>
-                                <div class="col-sm-6 text-sm-end">
-                                    <address class="mt-2 mt-sm-0">
-                                        <strong>Payment Method</strong><br>
-                                        <span class="fw-medium">MPESA</span><br>
-                                        Phone No. 0704 549 859<br> <br>
-                                        On 1 Mar 2022, 10:20 AM
-                                    </address>
-                                </div>
+
                             </div>
                             <div class="col-12">
-                                <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">ND12368</h3>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-4 ">
+                                            <label for=" ">The New Rental charges</label>
+                                            <input type="text " class="form-control " id=" " placeholder="Enter Amount " spellcheck="false" data-ms-editor="true">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="mb-4 ">
+                                            <label for=" " class=" ">Next Renewal date<strong class="text-danger ">*</strong></label>
+                                            <div class="input-group " id="datepicker1 ">
+                                                <input type="text " class="form-control mouse-pointer " placeholder="Select registration date " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
+                                                        " data-date-autoclose="true ">
+
+                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div action="#" class="dropzone">
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple="multiple">
+                                    </div>
+                                    <div class="dz-message needsclick">
+                                        <div class="mb-3">
+                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                        </div>
+
+                                        <h4>Drop the new Signed Agreement Here</h4>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap">
-                                        <thead class="table-dark">
-                                            <tr>
-                                                <th>Receipt Invoice</th>
-                                                <th>Payment Description</th>
-                                                <th class="text-end">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>IN12345</td>
-                                                <td>Rent plus deposit for hse Num 410, 90 degrees</td>
-                                                <td class="text-end">KES 24,500</td>
-                                            </tr>
 
-
-
-                                            <tr>
-                                                <td colspan="2" class="border-0 text-end">
-                                                    <strong>Total</strong></td>
-                                                <td class="border-0 text-end">
-                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-secondary waves-effect waves-light">
-                                <i class="mdi mdi-backup-restore font-size-16 align-middle me-2"></i> Reverse Transaction
-                            </button>
+
                             <button type="button" class="btn btn-primary waves-effect waves-light">
-                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print receipt
+                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Submit
                             </button>
                         </div>
                     </div>
@@ -995,7 +922,7 @@
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
-
+    <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js "></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
@@ -1005,6 +932,13 @@
     <script src="assets/libs/simplebar/simplebar.min.js "></script>
     <script src="assets/libs/node-waves/waves.min.js "></script>
 
+    <script src="assets/libs/select2/js/select2.min.js "></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js "></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js "></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
 
 
     <!-- Required datatable js -->
@@ -1030,6 +964,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
     <!-- Plugins js -->
     <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
+
+    <!-- form wizard init -->
+    <script src="assets/js/pages/form-wizard.init.js"></script>
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js "></script>
 
@@ -1037,10 +974,5 @@
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
 </body>
-
-
-<!-- index.html   13:55:49 GMT -->
-
-</html>dex.html 13:55:49 GMT -->
 
 </html>
