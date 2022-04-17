@@ -300,10 +300,9 @@
                                 <span>Messenger</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Compose messages</a></li>
+                                <li><a href="messages.html">Compose messages</a></li>
                                 <li><a href="messages.html">Sent messages</a></li>
-                                <li><a href="#">Contacts</a></li>
-                                <li><a href="#">Add a Contact</a></li>
+                                <li><a href="messages-contacts.html">Contacts</a></li>
                             </ul>
                         </li>
 
@@ -441,13 +440,11 @@
                                                 <tr class="text-uppercase table-dark">
                                                     <th class="vertical-align-middle">#</th>
                                                     <th class="vertical-align-middle">Item name</th>
-                                                    <th class="vertical-align-middle">Fee Accounts</th>
                                                     <th class="vertical-align-middle">Invoiced On</th>
                                                     <th class="vertical-align-middle">Description</th>
                                                     <th class="text-nowrap vertical-align-middle">Charge Nature</th>
-                                                    <th class="text-center vertical-align-middle">Every month</th>
+                                                    <th class="text-center vertical-align-middle">Shared</th>
                                                     <th class="vertical-align-middle">Deposit</th>
-                                                    <th class="vertical-align-middle">Automatic</th>
                                                     <th class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
@@ -459,8 +456,7 @@
                                             <tbody>
                                                 <tr data-id="1">
                                                     <td style="width: 80px">1</td>
-                                                    <td>Rent</td>
-                                                    <td>Rent</td>
+                                                    <td>Monthly Rent</td>
                                                     <td>Day 1 of Every Month</td>
                                                     <td>Monthly rent for the Unit</td>
                                                     <td class="">
@@ -470,31 +466,26 @@
                                                         <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
                                                     </td>
                                                     <td class="text-center">
-                                                        <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
-                                                    </td>
+
                                                     <td class="text-right cell-change">
                                                         <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
                                                 <tr data-id="1">
                                                     <td style="width: 80px">2</td>
-                                                    <td>Rent VAT</td>
-                                                    <td>TAX</td>
+                                                    <td>Surcharge</td>
                                                     <td>Day 1 of Every Month</td>
                                                     <td>Imposed by the Government of Kenya</td>
-                                                    <td class="">18% of Rent</td>
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
-                                                    </td>
+                                                    <td class="">10% of Rent</td>
                                                     <td class="text-center">
                                                         <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
                                                     </td>
                                                     <td class="text-center">
-                                                        <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
                                                     </td>
+
                                                     <td class="text-right cell-change">
                                                         <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
@@ -502,7 +493,6 @@
                                                 <tr data-id="1">
                                                     <td style="width: 80px">3</td>
                                                     <td>Rent Deposit</td>
-                                                    <td>Security Deposit</td>
                                                     <td>Day 1 of the First Month</td>
                                                     <td>Security on the renting facility</td>
                                                     <td class="">Amount varries</td>
@@ -513,30 +503,6 @@
                                                         <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
                                                     </td>
 
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
-                                                    </td>
-                                                    <td class="text-right cell-change">
-                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
-                                                    </td>
-                                                </tr>
-                                                <tr data-id="1">
-                                                    <td style="width: 80px">4</td>
-                                                    <td>Rent Penalty</td>
-                                                    <td>Penalty</td>
-                                                    <td>Day 10 of the month if rent is not paid</td>
-                                                    <td>Applicable on delayed rent payments</td>
-                                                    <td class="">KES 500</td>
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
-                                                    </td>
                                                     <td class="text-right cell-change">
                                                         <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
@@ -544,7 +510,6 @@
                                                 <tr data-id="1">
                                                     <td style="width: 80px">5</td>
                                                     <td>Utility Deposit</td>
-                                                    <td>Security deposit</td>
                                                     <td>Day 1 of The first Month</td>
                                                     <td>Security on the utilities</td>
                                                     <td class="">KES 5,000</td>
@@ -555,17 +520,33 @@
                                                         <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
                                                     </td>
 
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-check-bold font-21 text-center text-success"></span>
-                                                    </td>
+
                                                     <td class="text-right cell-change">
                                                         <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
                                                 <tr data-id="1">
+                                                    <td style="width: 80px">4</td>
+                                                    <td>Visitation Fee</td>
+                                                    <td>Day 10 of the month if rent is not paid</td>
+                                                    <td>Applicable on delayed rent payments</td>
+                                                    <td class="">KES 500</td>
+                                                    <td class="text-center">
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
+                                                    </td>
+
+
+                                                    <td class="text-right cell-change">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
+                                                    </td>
+                                                </tr>
+
+                                                <tr data-id="1">
                                                     <td style="width: 80px">6</td>
                                                     <td>Auctioneer Fees</td>
-                                                    <td>Other</td>
                                                     <td>random date</td>
                                                     <td>To be charged if the tenant has been reported to auctioneers</td>
                                                     <td class="">Amount varies</td>
@@ -575,13 +556,46 @@
                                                     <td class="text-center">
                                                         <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
                                                     </td>
-                                                    <td class="text-center">
-                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
-                                                    </td>
+
                                                     <td class="text-right cell-change">
                                                         <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
                                                     </td>
                                                 </tr>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">7</td>
+                                                    <td>Agency Fees</td>
+                                                    <td>random date</td>
+                                                    <td>To be charged if the tenant has been reported to auctioneers</td>
+                                                    <td class="">Amount varies</td>
+                                                    <td class="text-center">
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
+                                                    </td>
+
+                                                    <td class="text-right cell-change">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
+                                                    </td>
+                                                </tr>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">8</td>
+                                                    <td>Bank Charges</td>
+                                                    <td>random date</td>
+                                                    <td>To be charged if the tenant has been reported to auctioneers</td>
+                                                    <td class="">Amount varies</td>
+                                                    <td class="text-center">
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="mdi mdi-close-thick font-21 text-center text-danger"></span>
+                                                    </td>
+
+                                                    <td class="text-right cell-change">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn ml-3" title="save">Edit</button>
+                                                    </td>
+                                                </tr>
+
                                             </tbody>
 
                                         </table>

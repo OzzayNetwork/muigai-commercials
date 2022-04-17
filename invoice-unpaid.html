@@ -294,10 +294,9 @@
                                 <span>Messenger</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Compose messages</a></li>
+                                <li><a href="messages.html">Compose messages</a></li>
                                 <li><a href="messages.html">Sent messages</a></li>
-                                <li><a href="#">Contacts</a></li>
-                                <li><a href="#">Add a Contact</a></li>
+                                <li><a href="messages-contacts.html">Contacts</a></li>
                             </ul>
                         </li>
 
@@ -736,7 +735,7 @@
             <!-- End Page-content -->
 
             <!-- receipting modal -->
-            <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade receipting-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -756,17 +755,18 @@
                             </div>
                             <div class="col-12">
                                 <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
+                                    <h3 class="font-size-15 fw-bold">Balances Breakdown ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="table-responsive">
-                                    <table class="table table-nowrap">
+                                    <table class="table table-nowrap invoice-table">
                                         <thead>
                                             <tr>
                                                 <th style="width: 70px;">No.</th>
                                                 <th>Item</th>
                                                 <th class="text-end">Amount</th>
+                                                <th class="" style="width: 150px;">Assign Amount</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -774,25 +774,40 @@
                                                 <td>01</td>
                                                 <td>Rent Deposit</td>
                                                 <td class="text-end">KES 24,500</td>
+                                                <td>
+                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                </td>
                                             </tr>
 
                                             <tr>
                                                 <td>02</td>
                                                 <td>Monthly Rent</td>
                                                 <td class="text-end">KES 12,000</td>
+                                                <td>
+                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                </td>
                                             </tr>
 
                                             <tr>
                                                 <td>03</td>
                                                 <td>TAX (18%)</td>
                                                 <td class="text-end">KES 250</td>
+                                                <td>
+                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                </td>
                                             </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-end">Total</td>
+                                                <td class="text-end fw-bold">KES 36,750</td>
+                                                <td class="text-end fw-bold">KES 25,500</td>
+                                            </tr>
+
 
                                             <tr>
                                                 <td colspan="2" class="border-0 text-end">
-                                                    <strong>Total</strong></td>
+                                                    <strong>Balance</strong></td>
                                                 <td class="border-0 text-end">
-                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
+                                                    <h5 class="m-0 text-uppercase fw-bold">KES 11,250</h5>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -821,8 +836,8 @@
 
                                                 </td>
                                                 <td class="px-3">
-                                                    <label for="">Amount To Be Paid</label>
-                                                    <input type="text " class="form-control w-100 d-flex" placeholder="KES" spellcheck="false" data-ms-editor="true">
+                                                    <label for="">Total Amount To Be Paid</label>
+                                                    <input type="text " class="form-control w-100 d-flex invoiceTotalPay" readonly placeholder="KES" spellcheck="false" data-ms-editor="true">
 
                                                 </td>
                                                 <td class="text-right float-right">
@@ -869,7 +884,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
+                                    <h3 class="font-size-15 fw-bold">Balances Breakdown ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -942,7 +957,7 @@
 
                                                 </td>
                                                 <td class="px-3">
-                                                    <label for="">Amount To Be Paid</label>
+                                                    <label for="">Total amount to be paid</label>
                                                     <input type="text " class="form-control w-100 d-flex" placeholder="KES" spellcheck="false" data-ms-editor="true">
 
                                                 </td>

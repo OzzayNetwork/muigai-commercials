@@ -378,6 +378,28 @@ $(window).on('load', function() {
         }
     });
 
+    $('.invoice-table').on('keyup', 'input', function() {
+        var theAdditionalValue;
+        var total = 0;
+        var theTable = $(this).parent().parent().parent().parent();
+        console.log(theTable)
+        $(theTable).children('tbody').find('input').each(function(index) {
+
+            var theVal = $(this).val();
+            if ($(this).val() == "") {
+                theVal = 0;
+            }
+            total = parseInt(theVal) + total;
+            console.log(total);
+
+            //alert("hhghj")
+        })
+
+
+        $('.invoiceTotalPay').val("KES " + numeral(total).format('0,0'))
+
+    })
+
 
 
     function find_max(nums) {

@@ -298,10 +298,9 @@
                                 <span>Messenger</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Compose messages</a></li>
+                                <li><a href="messages.html">Compose messages</a></li>
                                 <li><a href="messages.html">Sent messages</a></li>
-                                <li><a href="#">Contacts</a></li>
-                                <li><a href="#">Add a Contact</a></li>
+                                <li><a href="messages-contacts.html">Contacts</a></li>
                             </ul>
                         </li>
 
@@ -392,14 +391,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Tenancy agreements almost due for renewal</h4>
+                                <h4 class="mb-sm-0 font-size-18">Tenants on Notice</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Action center</a></li>
                                         <li class="breadcrumb-item">
-                                            <a href="#">Tenancy agreements</a>
+                                            <a href="#">Tenants on Notice</a>
                                         </li>
                                     </ol>
                                 </div>
@@ -423,11 +422,12 @@
                                                     <th scope="col">#</th>
                                                     <th scope="col">Tenant</th>
                                                     <th scope="col">Hse/Unit</th>
-                                                    <th scope="col">Joined On</th>
-                                                    <th scope="col">Last renewed</th>
-                                                    <th scope="col" class="text-nowrap">To be renewed on</th>
+                                                    <th scope="col">Moved In On</th>
+                                                    <th scope="col">Moving Out on</th>
+                                                    <th scope="col" class="text-nowrap">Notice created On</th>
                                                     <th scope="col" class="text-nowrap">Remaining Days</th>
-                                                    <th scope="col" class="text-right text-nowrap">Current Rent</th>
+                                                    <th scope="col" class="text-right text-nowrap">Outstanding Bal.</th>
+                                                    <th scope="col" class="text-right text-nowrap">Rent deposit</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -458,10 +458,16 @@
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
                                                     </td>
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 55,600</span>
+                                                    </td>
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">
+                                                                <span class="me-2">Checkout</span>
+                                                                <i class="bx bx-right-arrow-alt"></i>
+                                                            </button>
                                                             <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -506,10 +512,16 @@
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
                                                     </td>
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 55,600</span>
+                                                    </td>
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">
+                                                                <span class="me-2">Checkout</span>
+                                                                <i class="bx bx-right-arrow-alt"></i>
+                                                            </button>
                                                             <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -554,10 +566,16 @@
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
                                                     </td>
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 55,600</span>
+                                                    </td>
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">
+                                                                <span class="me-2">Checkout</span>
+                                                                <i class="bx bx-right-arrow-alt"></i>
+                                                            </button>
                                                             <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -602,10 +620,16 @@
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
                                                     </td>
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 55,600</span>
+                                                    </td>
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">
+                                                                <span class="me-2">Checkout</span>
+                                                                <i class="bx bx-right-arrow-alt"></i>
+                                                            </button>
                                                             <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -650,10 +674,16 @@
                                                     <td class="text-nowrap text-right ">
                                                         <span class="fw-semibold ">KES 25,500</span>
                                                     </td>
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 55,600</span>
+                                                    </td>
 
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Renew</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">
+                                                                <span class="me-2">Checkout</span>
+                                                                <i class="bx bx-right-arrow-alt"></i>
+                                                            </button>
                                                             <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -675,15 +705,9 @@
                                             </tbody>
                                             <tfoot class="table-dark">
                                                 <tr>
-
                                                     <td>
-
                                                     </td>
-                                                    <th class="text-capitalize text-nowrap" colspan="8">23 Tenants</th>
-
-
-
-
+                                                    <th class="text-capitalize text-nowrap" colspan="9">12 Tenants</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -705,20 +729,20 @@
                 <div class="modal-dialog  modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Agreement Renewal</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Kelvin Njuguna</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-12">
                                     <address>
-                                        <strong class="text-capitalize">Agreement For:</strong><br>
+                                        <strong class="text-capitalize">Vacation Notice For:</strong><br>
                                         Kelvin Njuguna<br>
                                         email@mail.com, 0704 549 859<br>                                   
                                         Hse No. 410, 90 Degrees By Tsavo
                                         <br><br>
-                                        <span class="fw-semibold">Effective Date: </span>1st Jan 2022 12:00 AM
-                                        <br><br><br>
+                                        <span class="fw-semibold">Moving Out On: </span>30Th May 2022
+                                        <br>
                                         
                                     </address>
                                 </div>
@@ -726,36 +750,35 @@
                             </div>
                             <div class="col-12">
                                 <div class="row">
-                                    <div class="col-12">
-                                        <div class="mb-4 ">
-                                            <label for=" ">The New Rental charges<strong class="text-danger ">*</strong></label>
-                                            <input type="text " class="form-control " id=" " placeholder="New Amount" spellcheck="false" data-ms-editor="true">
+                                    <div class="col-6">
+                                        <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Total Security Deposit</p>
+                                            <h1 class="display-7 mb-0">KES 55,600</h1>
+
                                         </div>
                                     </div>
+                                    <div class="col-6">
+                                        <div class="bg-danger border-2 bg-soft p-3 mb-4">
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Outstanding balances</p>
+                                            <h1 class="display-7 mb-0">KES 25,500</h1>
 
+                                        </div>
+                                    </div>
                                     <div class="col-12">
                                         <div class="mb-4 ">
-                                            <label for=" " class=" ">Next Renewal date<strong class="text-danger ">*</strong></label>
-                                            <div class="input-group" id="datepicker1">
-                                                <input type="text" class="form-control" placeholder="Select Date" data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                            </div>
+                                            <label for=" ">Condition of the unit<strong class="text-danger ">*</strong></label>
+                                            <textarea name="" class="form-control" placeholder="Enter a summary on the current condition of the unit" id="" cols="20" rows="3"></textarea>
+                                            <input type="text " class="form-control d-none " id=" " placeholder="Amount to Be Deducted" spellcheck="false" data-ms-editor="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-4 ">
+                                            <label for=" ">Amount to be Deducted<strong class="text-danger ">*</strong></label>
+                                            <input type="text " class="form-control " id=" " placeholder="Amount to Be Deducted" spellcheck="false" data-ms-editor="true">
                                         </div>
                                     </div>
                                 </div>
-                                <div action="#" class="dropzone">
-                                    <div class="fallback">
-                                        <input name="file" type="file" multiple="multiple">
-                                    </div>
-                                    <div class="dz-message needsclick">
-                                        <div class="mb-3">
-                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
-                                        </div>
 
-                                        <h4>Drop the new Signed Agreement Here</h4>
-                                    </div>
-                                </div>
 
                             </div>
                             <div class="col-12">
