@@ -1065,6 +1065,14 @@ body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hov
     height: 5px !important;
 }
 
+.auth-full-bg {
+    background-color: rgb(85 110 230) !important;
+}
+
+.table-contacts-modal .dt-buttons {
+    display: none;
+}
+
 @media (min-width: 576px) {
     #new-invoice-item-modal .modal-dialog {
         max-width: 617px;
