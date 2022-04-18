@@ -1073,6 +1073,11 @@ body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hov
     display: none;
 }
 
+.mail-list a.active {
+    color: #556ee6;
+    font-weight: 500;
+}
+
 @media (min-width: 576px) {
     #new-invoice-item-modal .modal-dialog {
         max-width: 617px;
