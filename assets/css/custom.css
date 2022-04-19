@@ -1164,3 +1164,9 @@ body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hov
         width: auto;
     }
 }
+
+@media screen and (min-width: 767px) {
+    .calc-h-3px-md {
+        height: calc(100% - 23px);
+    }
+}

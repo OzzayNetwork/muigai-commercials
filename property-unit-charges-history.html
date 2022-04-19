@@ -441,8 +441,8 @@
                     <div class="row">
                         <div class="col-12">
                             <!-- Left sidebar -->
-                            <div class="email-leftbar card calc-h-3px">
-                                <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#composemodal">
+                            <div class="email-leftbar card calc-h-3px-md">
+                                <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".issue-modal">
                                     Report An Issues
                                 </button>
 
@@ -665,6 +665,55 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- issue modal -->
+            <div class="modal fade issue-modal pb-5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Report an Issue for Hse No. 410</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Unit Details:</strong><br>
+                                    <span class="fw-semibold">Current Tenant:</span> Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Reported By </span> Alex Wanjala<br>
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="basicpill-firstname-input ">Issue description <strong class="text-danger ">*</strong></label>
+                                    <textarea name="" class="form-control " placeholder="Enter details on the issue" id="" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Issue critical level<strong class="text-danger ">*</strong></label>
+                                    <select class="form-control selectpicker " id="agreement-type" title="Select critical level">
+                                        <option value="low" data-content="<span class='badge bg-primary'>LOW</span>">LOW</option>
+                                        <option value="moderate" data-content="<span class='badge bg-black'>MODERATE</span>">Moderate</option>
+                                        <option value="high" data-content="<span class='badge bg-warning'>HIGH</span>">High</option>
+                                        <option value="Critical" data-content="<span class='badge bg-danger'>CRITICAL</span>">Critical</option>
+                                  </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
 
             <footer class="footer">
                 <div class="container-fluid">
