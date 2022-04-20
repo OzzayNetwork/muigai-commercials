@@ -260,7 +260,10 @@
                                 <span>Tenants</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tenant-list.html">Tenants Register</a></li>
+                                <li><a href="tenant-list.html">All Tenants</a></li>
+                                <li><a href="tenant-compliant.html">Compliant tenants</a></li>
+                                <li><a href="tenant-uncompliant.html">Uncompliant tenants</a></li>
+                                <li><a href="tenant-distress.html">Tenants under distress</a></li>
                                 <li><a href="tenant-new.html">Add a tenant</a></li>
                             </ul>
                         </li>
@@ -471,7 +474,7 @@
                                             <i class="mdi mdi-home-export-outline  font-size-16 align-middle me-2"></i> Vacate Tenant
                                         </a>
 
-                                        <a type="button" class="btn btn-primary waves-effect waves-light me-2 w-md">
+                                        <a href="#" type="button" data-bs-toggle="modal" data-bs-target=".notice-modal" class="btn btn-primary waves-effect waves-light me-2 w-md">
                                             <i class="mdi mdi-file-clock-outline  font-size-16 align-middle me-2"></i> Prepare Notice
                                         </a>
                                     </div>
@@ -707,6 +710,66 @@
                 </div>
             </div>
             <!-- adding a new contact -->
+            <!-- Notice Modal -->
+            <div class="modal fade issue-modal pb-5 notice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Vacation Notice for Kelvin Njuguna</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Unit Details:</strong><br>
+                                    <span class="fw-semibold">Tenant:</span> Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Total Accumulated Balances</p>
+                                    <h4 class=" mb-0 fw-light">KES 12,560</h4>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for=" " class=" ">Date moving Out<strong class="text-danger ">*</strong></label>
+                                    <div class="input-group cursor-pinter" id="datepickertbl">
+                                        <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepickertbl' data-provide="datepicker" data-date-autoclose="true">
+
+                                        <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Reason for moving out</label>
+                                    <textarea name="" placeholder="Enter tenant's reason for moving out" id="" cols="30" rows="5" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> A message notification will be sent to the tenant to remind them t ensure that they have cleared their balancesand rent arrears. Remember to checkif their utility balances
+                                    are up to date and any existing balances are cleared before the due date.
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Create Notice</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
 
 
 

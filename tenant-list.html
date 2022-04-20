@@ -16,6 +16,12 @@
     <!-- droping file -->
     <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
     <!-- DataTables -->
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
@@ -260,7 +266,10 @@
                                 <span>Tenants</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tenant-list.html">Tenants Register</a></li>
+                                <li><a href="tenant-list.html">All Tenants</a></li>
+                                <li><a href="tenant-compliant.html">Compliant tenants</a></li>
+                                <li><a href="tenant-uncompliant.html">Uncompliant tenants</a></li>
+                                <li><a href="tenant-distress.html">Tenants under distress</a></li>
                                 <li><a href="tenant-new.html">Add a tenant</a></li>
                             </ul>
                         </li>
@@ -496,7 +505,7 @@
                                                                                 <i class="mdi mdi-account-cancel text-white"></i>
                                                                             </span>
                                                                     </div>
-                                                                    <p class="text-muted text-truncate mb-2">Reported to auctioneers</p>
+                                                                    <p class="text-muted text-truncate mb-2">Under Distress</p>
                                                                     <h5 class="mb-0">12</h5>
 
                                                                 </div>
@@ -558,7 +567,7 @@
                                                 <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-whatsApp"><i class="mdi mdi-account-clock font-size-16"></i> <span class="pl-1 d-none d-lg-inline d-md-inline">On Notice</span></label>
 
                                                 <input type="radio" class="btn-check" value="WhatsApp" name="msg-type-filter" id="btn-whatsApp" autocomplete="off">
-                                                <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-whatsApp"><i class="mdi mdi-account-cancel font-size-16"></i> <span class="pl-1 d-none d-lg-inline d-md-inline text-capitalize text-capitalize">With auctioneers</span></label>
+                                                <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-whatsApp"><i class="mdi mdi-account-cancel font-size-16"></i> <span class="pl-1 d-none d-lg-inline d-md-inline text-capitalize text-capitalize">Under Distress</span></label>
 
                                             </div>
 
@@ -584,7 +593,7 @@
                                     <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
 
                                         <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="bx  bx-trash label-icon"></i> Delete Properties</button>
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Message property Tenants</button>
+                                        <button type="button" class="btn btn-secondary waves-effect btn-label waves-light me-3 write-msg-btn"><i class="mdi mdi-pencil align-middle me-2 label-icon"></i> Message Selected Tenant(s)</button>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -653,14 +662,14 @@
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
                                                             <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="property-units.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Report to auctioneers</a>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
 
                                                         </div>
                                                     </div>
@@ -678,6 +687,671 @@
                     <!-- end row -->
                 </div>
                 <!-- container-fluid -->
+            </div>
+            <!-- the message composer -->
+            <div class="email-overlay d-none">
+                <div class="card the-message-maker">
+                    <div class="card-header bg-primary text-white py-0">
+                        <div class="d-flex justify-content-between align-items-center text-white">
+                            <h4 class="mb-0 p-0 m-0">New message</h4>
+                            <div class="control-btns">
+                                <div class="dropdownd-lg-inline-block ms-1">
+                                    <button type="button" class="btn header-item noti-icon waves-effect minimize">
+                                        <i class="mdi mdi-window-minimize"></i>
+                                    </button>
+                                    <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                        <i class="bx bx-fullscreen"></i>
+                                    </button>
+
+                                    <button type="button" class="btn header-item noti-icon waves-effect close-message-maker">
+                                        <i class="mdi mdi-close"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 d-non selected-contacts-message mb-2">
+                                <div class="row flex-nowrap">
+                                    <div class="col-1 mr-0  w-auto d-flex ">
+                                        <span class=" ">
+                                            <strong>To:</strong>
+                                        </span>
+                                    </div>
+                                    <div class=" col-11 ml-0 pl-0 flex-wrap d-flex align-items-start">
+                                        <span class="the-selected-contacts text-capitalize">Alex wanjala, juliet kemboi, tesfa ozem, moureen akinyi, salome aringo,kelvin kamau, william njuguna</span>
+                                        <span data-bs-toggle="modal" data-bs-target="#selected-contacts" class="btn-link waves-effect float-left ">+23 Others</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+                                <div class="pb-3">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#upload-contacts" class="btn btn-success waves-effect btn-label waves-light"><i class="mdi-account-multiple-plus font-16px mdi label-icon"></i> Upload Contacts</button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#composemodal" class="btn btn-secondary waves-effect btn-label waves-light"><i class="mdi mdi-account-details font-16px label-icon"></i> Select from Saved contacts</button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-check-success mb-3">
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" id="vistationCheck">
+                                        <label class="form-check-label" for="vistationCheck">
+                                            Include  Visitation Fees
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" placeholder="Subject" class="form-control mb-3">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="" placeholder="Write your message" id="" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <label for="">Send as?</label>
+                                <div class="d-flex">
+
+                                    <div class="form-check form-check-primary  mr-15px">
+                                        <input class="form-check-input" type="checkbox" id="check-email" checked>
+                                        <label class="form-check-label" for="check-email">
+                                            Email
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-primary  pl-4  mr-15px">
+                                        <input class="form-check-input" type="checkbox" id="check-sms" checked>
+                                        <label class="form-check-label" for="check-sms">
+                                            SMS
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-end">
+                                <button type="button" class="btn btn-light waves-effect waves-light mr-15px btn-rounded" title="Delete the message">
+                                    <i class="bx bx-trash font-size-16 align-middle"></i>
+                                </button>
+                                <button type="submit" class="btn btn-outline-primary btn-rounded chat-send w-md waves-effect waves-light mr-15px" title="Set a time and date for when to send this message"><span class="d-none d-sm-inline-block me-2">Schedule Time</span> <i class="mdi mdi-clock-time-four-outline"></i></button>
+                                <button type="submit" class="btn btn-primary btn-rounded chat-send w-md waves-effect waves-light"><span class="d-none d-sm-inline-block me-2">Send</span> <i class="mdi mdi-send"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- message composer end -->
+            <!-- the selected contacts -->
+            <div class="modal fade selected-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="selected-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">My uploaded contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="">
+                                    <div class="row ">
+
+                                        <div class="col-12">
+                                            <div class="table-responsive">
+                                                <table class="table align-middle table-nowrap table-hover mb-0">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th scope="col" style="width: 70px;">#</th>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Email</th>
+                                                            <th scope="col">Phone</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        A
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        J
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Juliet Kemboi</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        T
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tesfa Oze</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        M
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Moureen Akinyi</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        S
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Salome Aringo</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end of the selected contacts -->
+            <!-- known contacts modal Modal -->
+            <div class="modal fade" id="composemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="composemodalTitle">Select contacts</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="table-responsive table-contacts-modal">
+                                <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table w-100" id="datatable-buttons">
+                                    <thead class="table-light d-none">
+                                        <tr>
+
+                                            <th scope="col" style="width: 40px;">
+
+                                            </th>
+                                            <th scope="col">Name</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <td>
+                                                <div class="d-flex  align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle">
+                                                                AW
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
+                                                <p class="text-muted mb-0">Nouveta Developer</p>
+                                            </td>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle">
+                                                                AT
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">All Tenants</a></h5>
+                                                <p class="text-muted mb-0">32 Contacts</p>
+                                            </td>
+
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle">
+                                                                AL
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">All Landlords</a></h5>
+                                                <p class="text-muted mb-0">23 Contacts</p>
+                                            </td>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle">
+                                                                SM
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Staff Members</a></h5>
+                                                <p class="text-muted mb-0">12 Contacts</p>
+                                            </td>
+
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle">
+                                                                SP
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Service Providers</a></h5>
+                                                <p class="text-muted mb-0">12 Contacts</p>
+                                            </td>
+
+
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle">
+                                                                TW
+                                                            </span>
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tenants with Unpaid Balances</a></h5>
+                                                <p class="text-muted mb-0">32 Contacts</p>
+                                            </td>
+
+
+
+
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Continue <i class="fab fa-telegram-plane ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+
+            <!-- predeterminde uploading of contacts -->
+            <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Select contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
+                                    <label for="" class="mb-0 text-uppercase"><strong>Upload new contacts</strong></label>
+                                    <p>
+                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample before you continue</a>
+                                    </p>
+                                    <div class="p-4 bg-light">
+                                        <div class="row ">
+
+                                            <div class="col-12">
+                                                <form action="#" class="dropzone">
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" class="mb-3">
+                                                    </div>
+                                                    <div class="dz-message needsclick">
+                                                        <div class="mb-3">
+                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                        </div>
+
+                                                        <h6>Contacts excell file</h6>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Upload contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of predetermined -->
+
+            <!-- Notice Modal -->
+            <div class="modal fade issue-modal pb-5 notice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Vacation Notice for Kelvin Njuguna</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Unit Details:</strong><br>
+                                    <span class="fw-semibold">Current Tenant:</span> Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Total Accumulated Balances</p>
+                                    <h4 class=" mb-0 fw-light">KES 12,560</h4>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for=" " class=" ">Date moving Out<strong class="text-danger ">*</strong></label>
+                                    <div class="input-group cursor-pinter" id="datepickertbl">
+                                        <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepickertbl' data-provide="datepicker" data-date-autoclose="true">
+
+                                        <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Reason for moving out</label>
+                                    <textarea name="" placeholder="Enter tenant's reason for moving out" id="" cols="30" rows="5" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> A message notification will be sent to the tenant to remind them t ensure that they have cleared their balancesand rent arrears. Remember to checkif their utility balances
+                                    are up to date and any existing balances are cleared before the due date.
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Create Notice</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+            <!-- statements modal -->
+            <div class="modal fade issue-modal pb-5 statements-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Statements for Kelvin Njuguna</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Unit Details:</strong><br>
+                                    <span class="fw-semibold">Tenant:</span> Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                </address>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for=" " class=" ">Start Date<strong class="text-danger ">*</strong></label>
+                                    <div class="input-group cursor-pinter" id="statement-start-date">
+                                        <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#statement-start-date' data-provide="datepicker" data-date-autoclose="true">
+
+                                        <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for=" " class=" ">End Date<strong class="text-danger ">*</strong></label>
+                                    <div class="input-group cursor-pinter" id="statement-end-date">
+                                        <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#statement-end-date' data-provide="datepicker" data-date-autoclose="true">
+
+                                        <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <a href="tenant-rent-statemtnts-for-a-period.html" class="btn btn-primary">Get statements</a>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+            <!-- auctionering modal -->
+            <div class="modal fade  pb-5 distress-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Initiate distress process for Kelvin Njuguna</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Unit Details:</strong><br>
+                                    <span class="fw-semibold">Tenant:</span> Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Initated By </span> Alex Wanjala<br>
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="py-2 mt-3">
+                                    <h3 class="font-size-15 fw-bold text-capitalize">Fee balances breakdown for the Tenant</h3>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 70px;">No.</th>
+                                                <th>Item</th>
+                                                <th>Months</th>
+                                                <th class="text-end">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Rent</td>
+                                                <td>2</td>
+                                                <td class="text-end">KES 24,500</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Visitation Fees</td>
+                                                <td>2</td>
+                                                <td class="text-end">KES 1,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Electricity Bills</td>
+                                                <td>2</td>
+                                                <td class="text-end">KES 750</td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td>04</td>
+                                                <td>Water Bills</td>
+                                                <td>2</td>
+                                                <td class="text-end">KES 750</td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td colspan="3" class="text-end">Total</td>
+                                                <td class="text-end fw-bold">KES 27,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Auctioneers Fees</label>
+                                    <input type="text" class="form-control" placeholder="Enter Auctioneer's Fees">
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> A message notification will be sent to the tenant to update them on the distress that you are initiating.
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Initiate Distress</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
             </div>
             <!-- End Page-content -->
 
@@ -699,6 +1373,88 @@
             </footer>
         </div>
         <!-- end main content-->
+        <!-- filter right of canvus -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Filter Transactions</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="col-12 mb-4">
+                    <div class="alert alert-info alert-border" role="alert">
+                        Use this section to filter the table to the way of your liking. Remember to submit your selection so as to submit the selections
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mb-4">
+                        <label class="text-capitalize">Tenant joining Date</label>
+
+                        <div class="input-daterange input-group" id="datepicker6" data-date-format="dd M, yyyy" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker6'>
+                            <input type="text" class="form-control date-drop-input" name="start" placeholder="Start Date" readonly />
+                            <input type="text" class="form-control date-drop-input" name="end" placeholder="End Date" readonly />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="mb-4">
+                        <label class="text-capitalize">Balance Range</label>
+
+                        <div class="input-daterange input-group">
+                            <input type=" text " class="form-control " name="" placeholder="Min Amount" />
+                            <input type="text " class="form-control " name="" placeholder="Max Amount" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="mb-4">
+                        <label class="text-capitalize">Tenant type</label>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="form-check form-check-primary mb-3">
+                                    <input class="form-check-input" type="checkbox" id="allTollTakers" checked>
+                                    <label class="form-check-label text-capitalize" for="allTollTakers">
+                                        All tenants
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-6">
+                                <div class="form-check form-check-primary mb-3">
+                                    <input class="form-check-input" type="checkbox" id="tollTaker1">
+                                    <label class="form-check-label text-capitalize" for="tollTaker1">
+                                        Individuals
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-6">
+                                <div class="form-check form-check-primary mb-3">
+                                    <input class="form-check-input" type="checkbox" id="tollTaker3">
+                                    <label class="form-check-label text-capitalize" for="tollTaker3">
+                                        Company
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="mb-4">
+                        <button type="button" class="btn btn-primary waves-effect waves-light w-100">
+                            <i class="mdi mdi-filter-variant font-size-16 align-middle me-2"></i> Filter Table
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- of canvus -->
 
     </div>
     <!-- END layout-wrapper -->
@@ -714,6 +1470,14 @@
     <script src="assets/libs/metismenu/metisMenu.min.js "></script>
     <script src="assets/libs/simplebar/simplebar.min.js "></script>
     <script src="assets/libs/node-waves/waves.min.js "></script>
+
+    <script src="assets/libs/select2/js/select2.min.js "></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js "></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js "></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
 
 
 
