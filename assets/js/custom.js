@@ -1,6 +1,6 @@
 $(window).on('load', function() {
     setTimeout(function() {
-        //$("#subscribeModal").modal("show")
+        $("#subscribeModal").modal("show")
     }, 0);
 
     $('body').on('click', '.upload-the-contacts', function() {
