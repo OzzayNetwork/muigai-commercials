@@ -389,14 +389,14 @@ $(window).on('load', function() {
             if ($(this).val() == "") {
                 theVal = 0;
             }
-            total = parseInt(theVal) + total;
+            total = parseFloat(theVal) + parseFloat(total);
             console.log(total);
-
             //alert("hhghj")
         })
 
 
         $('.invoiceTotalPay').val("KES " + numeral(total).format('0,0'))
+        $('.text-total').text("KES " + numeral(total).format('0,0'));
 
     })
 
