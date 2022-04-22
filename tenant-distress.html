@@ -270,6 +270,7 @@
                                 <li><a href="tenant-compliant.html">Compliant tenants</a></li>
                                 <li><a href="tenant-uncompliant.html">Uncompliant tenants</a></li>
                                 <li><a href="tenant-distress.html">Tenants under distress</a></li>
+                                <li><a href="tenant-new-month.html">New tenants report</a></li>
                                 <li><a href="tenant-new.html">Add a tenant</a></li>
                             </ul>
                         </li>
@@ -294,6 +295,8 @@
                                 <li><a href="action-payments.html">Flagged payments</a></li>
                                 <li><a href="action-agreements.html">Tenancy agreements to be renewed</a></li>
                                 <li><a href="action-notice.html">Tenants on notice</a></li>
+                                <li><a href="action-distress-timelines.html">Distress timelines</a></li>
+                                <li><a href="action-auction-payment.html">Auction invoices</a></li>
                             </ul>
                         </li>
 
@@ -648,7 +651,127 @@
                                                                 <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
                                                                 <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-clipboard-alert   me-3"></i>View Distress letter</a>
 
-                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".auction-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Declare items as auctioned</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".auctioning-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Declare for auctioning</a>
+                                                                <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize">4</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">William Saliba</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p class="mb-0">
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">The Universe</a></h5>
+                                                        <p class="text-muted mb-0">
+                                                            <span class="fw-semibold">Hse No. :</span>25P
+                                                        </p>
+                                                    </td>
+
+                                                    <td>
+                                                        23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">To be auctioned</span>
+                                                        <p class="m-0 p-0 ml-1">Invoice No. <span class="fw-semibold">123456</span></p>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold">-</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 22,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-home-account me-3"></i>Tenant details</a>
+                                                                <a class="dropdown-item" href="tenant-distress-process.html"><i class="font-size-15 mdi mdi-account-cancel me-3"></i>Detailed Distress view</a>
+                                                                <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-cash me-3"></i>Receive payment</a>
+                                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-cancel me-3"></i>Distress Notice</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-clipboard-alert   me-3"></i>View Distress letter</a>
+
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".auction-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Distribute the collected auction amount</a>
+                                                                <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize">5</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">William Saliba</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p class="mb-0">
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">The Universe</a></h5>
+                                                        <p class="text-muted mb-0">
+                                                            <span class="fw-semibold">Hse No. :</span>25P
+                                                        </p>
+                                                    </td>
+
+                                                    <td>
+                                                        23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">Auctioned</span>
+                                                        <p class="m-0 p-0 ml-1">Amt Received. <span class="fw-semibold">KES 12,526</span></p>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold">0</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 22,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-home-account me-3"></i>Tenant details</a>
+                                                                <a class="dropdown-item" href="tenant-distress-process.html"><i class="font-size-15 mdi mdi-account-cancel me-3"></i>Detailed Distress view</a>
+                                                                <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-cash me-3"></i>Receive payment</a>
+                                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-cancel me-3"></i>Distress Notice</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-clipboard-alert   me-3"></i>View Distress letter</a>
+
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".auction-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Distribute payments</a>
                                                                 <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
                                                             </div>
                                                         </div>
@@ -1174,7 +1297,7 @@
             </div>
 
             <!-- tenant distress -->
-            <div class="modal fade  pb-5 distress-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade  pb-5 distress-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered mb-5 ">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -1296,7 +1419,7 @@
             </div>
 
             <!-- tenant attachment stage -->
-            <div class="modal fade  pb-5 attachment-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade  pb-5 attachment-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered mb-5 ">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -1463,8 +1586,114 @@
                 <!-- /.modal-dialog -->
             </div>
 
+            <!-- Items declared for auctioning -->
+            <div class="modal fade  pb-5 auctioning-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Declare items for auctioning</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <address>
+                                    <strong>Tenant Details:</strong><br>
+                                    <span class="fw-semibold">Tenant:</span> Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Prepared By </span> Alex Wanjala<br>
+                                </address>
+                                </div>
+                                <div class="col-sm-6 text-sm-end">
+                                    <address class="mt-2 mt-sm-0">
+                                    <strong>Auctioneer Details</strong><br>
+                                    <span class="fw-medium text-capitalize">Lifewood traders auctioneers</span><br>
+                                    Interlink House<br> 
+                                    1st FL, Room 12A<br>
+                                    P.O. Box 1622-NAKURU <br>
+                                    Tel:051-2211645/6 Fax:227379
+                                   
+                                </address>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 70px;">No.</th>
+                                            <th>Item</th>
+                                            <th>Months</th>
+                                            <th class="text-end">Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>Rent</td>
+                                            <td>2</td>
+                                            <td class="text-end">KES 24,500</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>02</td>
+                                            <td>Visitation Fees</td>
+                                            <td>2</td>
+                                            <td class="text-end">KES 1,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td>Electricity Bills</td>
+                                            <td>2</td>
+                                            <td class="text-end">KES 750</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>04</td>
+                                            <td>Water Bills</td>
+                                            <td>2</td>
+                                            <td class="text-end">KES 750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05</td>
+                                            <td>Surge Charges</td>
+                                            <td>2</td>
+                                            <td class="text-end">KES 2,400</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td colspan="3" class="text-end">Total</td>
+                                            <td class="text-end fw-bold">KES 29,400</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> The seized assets have been declared for auctioning and an invoice for this process has been generated <strong>Acc No. 123456</strong>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Next</button>
+                        </div>
+
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
             <!-- Items auctioned -->
-            <div class="modal fade  pb-5 auction-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade  pb-5 auction-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered mb-5 ">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -1498,39 +1727,17 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-12 p-4 mb-3">
-                                    <div class="row bg-secondary bg-soft p-4">
-                                        <div class="col-7 mb-4">
-                                            <div action="#" class="dropzone p-0">
-                                                <div class="fallback">
-                                                    <input name="auction-receipts" type="file" multiple="multiple">
-                                                </div>
-                                                <div class="dz-message needsclick">
-                                                    <div class="mb-3">
-                                                        <i class="display-4 text-muted bx bx-file"></i>
-                                                    </div>
-
-                                                    <h6>Drop the receipt(s) for the auctioned items</h6>
-                                                </div>
-                                            </div>
+                                <div class="col-12 mb-5">
+                                    <div action="#" class="dropzone p-0">
+                                        <div class="fallback">
+                                            <input name="auction-receipts" type="file" multiple="multiple">
                                         </div>
-                                        <div class="col-5">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mb-4 ">
-                                                        <label for=" ">Amount Collected</label>
-                                                        <input type="text " class="form-control " id=" " placeholder="Enter amount collected from the auction" spellcheck="false" data-ms-editor="true">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="mb-4 ">
-                                                        <label for=" ">Amount paid to auctioneers</label>
-                                                        <input type="text " class="form-control " id=" " placeholder="Enter amount given to auctioneer" spellcheck="false" data-ms-editor="true">
-                                                    </div>
-                                                </div>
-
-
+                                        <div class="dz-message needsclick">
+                                            <div class="mb-3">
+                                                <i class="display-4 text-muted bx bx-file"></i>
                                             </div>
+
+                                            <h6>Drop the receipt(s) for the auctioned items received from the auctioneer</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -1538,18 +1745,19 @@
                             <div class="row d-none">
                                 <div class="col-12">
                                     <div class="py-2 mt-3">
-                                        <h3 class="font-size-15 fw-bold text-capitalize">Arrears Breadown</h3>
+                                        <h3 class="font-size-15 fw-bold text-capitalize">Arrears Breakdown</h3>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="table-responsive">
-                                        <table class="table table-nowrap">
+                                        <table class="table table-nowrap invoice-table">
                                             <thead>
                                                 <tr>
                                                     <th style="width: 70px;">No.</th>
                                                     <th>Item</th>
                                                     <th>Months</th>
                                                     <th class="text-end">Amount</th>
+                                                    <th class="text-right" style="width: 150px;">Assign Amount</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -1558,6 +1766,9 @@
                                                     <td>Rent</td>
                                                     <td>2</td>
                                                     <td class="text-end">KES 24,500</td>
+                                                    <td>
+                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                    </td>
                                                 </tr>
 
                                                 <tr>
@@ -1565,12 +1776,18 @@
                                                     <td>Visitation Fees</td>
                                                     <td>2</td>
                                                     <td class="text-end">KES 1,000</td>
+                                                    <td>
+                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>03</td>
                                                     <td>Electricity Bills</td>
                                                     <td>2</td>
                                                     <td class="text-end">KES 750</td>
+                                                    <td>
+                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                    </td>
                                                 </tr>
 
 
@@ -1579,24 +1796,36 @@
                                                     <td>Water Bills</td>
                                                     <td>2</td>
                                                     <td class="text-end">KES 750</td>
+                                                    <td>
+                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>05</td>
                                                     <td>Surge Charges</td>
                                                     <td>2</td>
                                                     <td class="text-end">KES 2,400</td>
+                                                    <td>
+                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>06</td>
                                                     <td>Auctioneer Fees</td>
                                                     <td>2</td>
                                                     <td class="text-end">KES 3,000</td>
+                                                    <td>
+                                                        <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                    </td>
                                                 </tr>
 
 
                                                 <tr>
                                                     <td colspan="3" class="text-end">Total</td>
                                                     <td class="text-end fw-bold">KES 22,400</td>
+                                                    <td class="text-end">
+                                                        <span class="text-right fw-semibold text-total"> KES 0.00</span>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1606,7 +1835,7 @@
 
                             <div class="col-12">
                                 <div class="alert alert-warning" role="alert">
-                                    <i class="mdi mdi-alert-outline me-2 "></i> The items were attached <strong>10 Days ago</strong>(23 Feb 2022)
+                                    <i class="mdi mdi-alert-outline me-2 "></i> The items were declared to be auctioned <strong>17 Days ago</strong>(2 Feb 2022)
                                 </div>
                             </div>
 
@@ -1614,6 +1843,7 @@
                         <div class="modal-footer">
                             <button class="btn btn-primary">Next</button>
                         </div>
+
 
                     </div>
                     <!-- /.modal-content -->
