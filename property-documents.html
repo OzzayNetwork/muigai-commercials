@@ -260,8 +260,22 @@
                                 <span>Tenants</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tenant-list.html">Tenants Register</a></li>
+                                <li><a href="tenant-list.html">All Tenants</a></li>
+                                <li><a href="tenant-compliant.html">Compliant tenants</a></li>
+                                <li><a href="tenant-uncompliant.html">Uncompliant tenants</a></li>
+                                <li><a href="tenant-distress.html">Tenants under distress</a></li>
+                                <li><a href="tenant-new-month.html">New tenants report</a></li>
                                 <li><a href="tenant-new.html">Add a tenant</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bxs-lock-alt"></i>
+                                <span>Auctioneers</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="auctioneers-list.html">All Auctioneers</a></li>
+                                <li><a href="auctioneers-new.html">Add an auctioneer</a></li>
                             </ul>
                         </li>
                         <li>
@@ -276,11 +290,32 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="messages.html" class="waves-effect">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="dripicons-flag"></i>
+                                <span class="badge rounded-pill bg-danger float-end">10</span>
+                                <span>Action Center</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="action-payments.html">Flagged payments</a></li>
+                                <li><a href="action-agreements.html">Tenancy agreements to be renewed</a></li>
+                                <li><a href="action-notice.html">Tenants on notice</a></li>
+                                <li><a href="action-distress-timelines.html">Distress timelines</a></li>
+                                <li><a href="action-auction-payment.html">Auction invoices</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="bx bx-chat"></i>
                                 <span>Messenger</span>
                             </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li class="d-none"><a href="messages.html">Compose messages</a></li>
+                                <li><a href="messages.html">Messages</a></li>
+                                <li><a href="messages-contacts.html">Contacts</a></li>
+                            </ul>
                         </li>
+
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="bx bx-receipt"></i>
@@ -295,6 +330,18 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-cash-remove"></i>
+                                <span>Credit & Debit Notes</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="credit-note-new.html">Create Credit Note</a></li>
+                                <li><a href="debit-note-new.html">Create Debit Note</a></li>
+                                <li><a href="credit-notes.html">All Credit Notes</a></li>
+                                <li><a href="debit-notes.html">All Debit Notes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-receipt"></i>
                                 <span>Receipts</span>
                             </a>
@@ -303,6 +350,12 @@
                                 <li class="d-none"><a href="receipts-reverse.html">Reverse Transaction</a></li>
                                 <li><a href="receipts-reversed-table.html">reversed transactions</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-cash-multiple"></i>
+                                <span>Transactions</span>
+                            </a>
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
@@ -315,14 +368,10 @@
                             </ul>
                         </li>
 
-                        <li class="menu-title" key="t-apps">Reports</li>
-                        <li>
-                            <a href="#" class="waves-effect">
-                                <i class="mdi mdi-cash-multiple"></i>
-                                <span>Transactions</span>
-                            </a>
-                        </li>
-                        <li>
+
+                        <li class="menu-title d-none" key="t-apps">Reports</li>
+
+                        <li class="d-none">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-account-cash-outline"></i>
                                 <span>Tenants Reports</span>
@@ -335,10 +384,10 @@
                             </ul>
                         </li>
 
-                        <li>
+                        <li class="d-none">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-home-city-outline"></i>
-                                <span>Premises Reports</span>
+                                <span>Property Reports</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="#">Vacant Units</a></li>

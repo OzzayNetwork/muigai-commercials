@@ -323,6 +323,18 @@
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-cash-remove"></i>
+                                <span>Credit & Debit Notes</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="credit-note-new.html">Create Credit Note</a></li>
+                                <li><a href="debit-note-new.html">Create Debit Note</a></li>
+                                <li><a href="credit-notes.html">All Credit Notes</a></li>
+                                <li><a href="debit-notes.html">All Debit Notes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-receipt"></i>
                                 <span>Receipts</span>
                             </a>
@@ -331,6 +343,12 @@
                                 <li class="d-none"><a href="receipts-reverse.html">Reverse Transaction</a></li>
                                 <li><a href="receipts-reversed-table.html">reversed transactions</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-cash-multiple"></i>
+                                <span>Transactions</span>
+                            </a>
                         </li>
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
@@ -343,14 +361,10 @@
                             </ul>
                         </li>
 
-                        <li class="menu-title" key="t-apps">Reports</li>
-                        <li>
-                            <a href="#" class="waves-effect">
-                                <i class="mdi mdi-cash-multiple"></i>
-                                <span>Transactions</span>
-                            </a>
-                        </li>
-                        <li>
+
+                        <li class="menu-title d-none" key="t-apps">Reports</li>
+
+                        <li class="d-none">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-account-cash-outline"></i>
                                 <span>Tenants Reports</span>
@@ -363,7 +377,7 @@
                             </ul>
                         </li>
 
-                        <li>
+                        <li class="d-none">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi mdi-home-city-outline"></i>
                                 <span>Property Reports</span>
@@ -410,29 +424,29 @@
                     </div>
                     <!-- end page title -->
 
-                    </div>
-                    
+                </div>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
-                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <div class="d-flex align-items-center flex-grow-1">
-                                           
-                                            
-                                                <h4 class="mb-0 card-header bg-transparent  p-0 m-0">New Tenants for March 2022</h4>
-                                    
-                                           
-                                        </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
+                                <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                    <div class="d-flex align-items-center flex-grow-1">
+
+
+                                        <h4 class="mb-0 card-header bg-transparent  p-0 m-0">New Tenants for March 2022</h4>
+
+
+                                    </div>
+
+                                    <div class="d-flex">
+                                        <a href="tenant-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3">
+                                            <i class="mdi  mdi-account-multiple-plus  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Tenants</span>
+                                        </a>
                                         <div class="d-flex">
-                                            <a href="tenant-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3">
-                                                <i class="mdi  mdi-account-multiple-plus  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Tenants</span>
-                                            </a>
-                                            <div class="d-flex">
-                                                <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
+                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
                                                     <option value="" selected>Mar 2022</option>
                                                     <option value="">Feb 2022</option>
                                                     <option value="">Jan 2022</option>
@@ -441,874 +455,43 @@
                                                     <option value="">Sep 2021</option>
                                                     <option value="">Oct 2021</option>
                                               </select>
-        
-        
-                                            </div>
 
-                                        </div>
-
-
-                                    </div>
-                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
-
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="bx  bx-trash label-icon"></i> Delete Properties</button>
-                                        <button type="button" class="btn btn-secondary waves-effect btn-label waves-light me-3 write-msg-btn"><i class="mdi mdi-pencil align-middle me-2 label-icon"></i> Message Selected Tenant(s)</button>
-                                    </div>
-                                    
-                                    
-                                </div>
-                                
-                                <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
-                                            <tr>
-
-                                                <th scope="col">
-                                                    <div class="the-mail-checkbox pr-4">
-                                                        <label for="selectAll" class="d-none">Select All</label>
-                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
-
-                                                    </div>
-                                                </th>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Tenant</th>
-                                                <th scope="col">Contacts</th>
-                                                <th scope="col">House</th>
-                                                <th scope="col">Join</th>
-                                                <th scope="col" class="text-right">Deposite</th>
-                                                <th scope="col" class="text-right">Rent</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">1</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Kimeu</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Kelvinkimeu244@gmail.com">Kelvinkimeu244@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">90 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>410
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    4 Mar 2022
-                                                </td>
-                                                
-                                                    <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 19,219</span></td>
-
-                                                
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 41,826</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">2</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Jackson Karanja</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0799549098">0799549098</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Jacksonkaranja150@gmail.com">Jacksonkaranja150@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">55 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>411
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    1 Jan 2019
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 13,112</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 45,600</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">3</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Sharon Wanjiku</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0794795345">0794795345</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:sharonwanjiku34@gmail.com">sharonwanjiku34@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">66 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>412
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    15 Mar 2019
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 22,000</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 52,790</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">4</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Daniel Mwangi</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0725737892">0725737892</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Danielmwas12@gmail.com">Danielmwas12@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">75 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>413
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    12 Mar 2022
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 22,324</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 55,450</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">5</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Phillip Mbuthia</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0723576532">0723576532</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Phillipmbuthia55@gmail.com">Phillipmbuthia55@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">63 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>414
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    22 April 2019
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 18,200</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 44,360</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">6</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Rose Wanjau</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0734627223">0734627223</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Rosewanja22@gmail.com">Rosewanja22@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">93 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>415
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    21 Mar 2022
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 20,432</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 46,270</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">7</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Pauline Waithaka</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0711123364">0711123364</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Paulinewaithaka245@gmail.com">Paulinewaithaka245@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">76 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>416
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    10 Feb 2020
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 14,214</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 36,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">8</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Martha Kimani</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0789653411">0789653411</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Marykimani356@gmail.com">Marthakimani356@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">90 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>417
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    9 Aug 2020
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 14,321</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 32,210</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">9</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Samson Kirago</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0747863521">0747863521</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Kelvinkirago366@gmail.com">Kelvinkirago366@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">80 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>418
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    19 Sept 2021
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 45,040</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 66,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">10</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Purity Nanzala</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0700657429">0700657429</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Catherinenanzala24@gmail.com">Puritynanzala24@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">60 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>419
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    4 May 2022
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 10,250</span></td>
-
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 52,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-                    </div>
-
-                    <!-- end row -->
-                </div>
-                <!-- container-fluid -->
-            </div>
-            <!-- the message composer -->
-            <div class="email-overlay d-none">
-                <div class="card the-message-maker">
-                    <div class="card-header bg-primary text-white py-0">
-                        <div class="d-flex justify-content-between align-items-center text-white">
-                            <h4 class="mb-0 p-0 m-0">New message</h4>
-                            <div class="control-btns">
-                                <div class="dropdownd-lg-inline-block ms-1">
-                                    <button type="button" class="btn header-item noti-icon waves-effect minimize">
-                                        <i class="mdi mdi-window-minimize"></i>
-                                    </button>
-                                    <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
-                                        <i class="bx bx-fullscreen"></i>
-                                    </button>
-
-                                    <button type="button" class="btn header-item noti-icon waves-effect close-message-maker">
-                                        <i class="mdi mdi-close"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12 d-non selected-contacts-message mb-2">
-                                <div class="row flex-nowrap">
-                                    <div class="col-1 mr-0  w-auto d-flex ">
-                                        <span class=" ">
-                                            <strong>To:</strong>
-                                        </span>
-                                    </div>
-                                    <div class=" col-11 ml-0 pl-0 flex-wrap d-flex align-items-start">
-                                        <span class="the-selected-contacts text-capitalize">Alex wanjala, juliet kemboi, tesfa ozem, moureen akinyi, salome aringo,kelvin kamau, william njuguna</span>
-                                        <span data-bs-toggle="modal" data-bs-target="#selected-contacts" class="btn-link waves-effect float-left ">+23 Others</span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col-12">
-                                <div class="pb-3">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#upload-contacts" class="btn btn-success waves-effect btn-label waves-light"><i class="mdi-account-multiple-plus font-16px mdi label-icon"></i> Upload Contacts</button>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#composemodal" class="btn btn-secondary waves-effect btn-label waves-light"><i class="mdi mdi-account-details font-16px label-icon"></i> Select from Saved contacts</button>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-check form-check-success mb-3">
-                                    <div>
-                                        <input class="form-check-input" type="checkbox" id="vistationCheck">
-                                        <label class="form-check-label" for="vistationCheck">
-                                            Include  Visitation Fees
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <input type="text" placeholder="Subject" class="form-control mb-3">
-                            </div>
-                            <div class="col-12">
-                                <textarea name="" placeholder="Write your message" id="" cols="30" rows="10" class="form-control"></textarea>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="card-footer">
-
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <label for="">Send as?</label>
-                                <div class="d-flex">
-
-                                    <div class="form-check form-check-primary  mr-15px">
-                                        <input class="form-check-input" type="checkbox" id="check-email" checked>
-                                        <label class="form-check-label" for="check-email">
-                                            Email
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check form-check-primary  pl-4  mr-15px">
-                                        <input class="form-check-input" type="checkbox" id="check-sms" checked>
-                                        <label class="form-check-label" for="check-sms">
-                                            SMS
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-end">
-                                <button type="button" class="btn btn-light waves-effect waves-light mr-15px btn-rounded" title="Delete the message">
-                                    <i class="bx bx-trash font-size-16 align-middle"></i>
-                                </button>
-                                <button type="submit" class="btn btn-outline-primary btn-rounded chat-send w-md waves-effect waves-light mr-15px" title="Set a time and date for when to send this message"><span class="d-none d-sm-inline-block me-2">Schedule Time</span> <i class="mdi mdi-clock-time-four-outline"></i></button>
-                                <button type="submit" class="btn btn-primary btn-rounded chat-send w-md waves-effect waves-light"><span class="d-none d-sm-inline-block me-2">Send</span> <i class="mdi mdi-send"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
-
-                
-
-                </div>
-                
-
-                    </div>
-                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
-                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
-                    </div>
-                </div>
-                <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
-                    <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
-                </div>
-            </div>
-            
-            </div>
-            <!-- message composer end -->
-            <!-- the selected contacts -->
-            <div class="modal fade selected-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="selected-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-primary text-white">
-                            <h5 class="modal-title text-white" id="composemodalTitle">My uploaded contacts</h5>
-                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div>
-                                <div class="">
-                                    <div class="row ">
-
-                                        <div class="col-12">
-                                            <div class="table-responsive">
-                                                <table class="table align-middle table-nowrap table-hover mb-0">
-                                                    <thead class="table-light">
-                                                        <tr>
-                                                            <th scope="col" style="width: 70px;">#</th>
-                                                            <th scope="col">Name</th>
-                                                            <th scope="col">Email</th>
-                                                            <th scope="col">Phone</th>
-
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="avatar-xs">
-                                                                    <span class="avatar-title rounded-circle">
-                                                                        A
-                                                                    </span>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
-
-                                                            </td>
-                                                            <td>david@skote.com</td>
-                                                            <td>0704549859</td>
-
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>
-                                                                <div class="avatar-xs">
-                                                                    <span class="avatar-title rounded-circle">
-                                                                        J
-                                                                    </span>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Juliet Kemboi</a></h5>
-
-                                                            </td>
-                                                            <td>david@skote.com</td>
-                                                            <td>0704549859</td>
-
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>
-                                                                <div class="avatar-xs">
-                                                                    <span class="avatar-title rounded-circle">
-                                                                        T
-                                                                    </span>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tesfa Oze</a></h5>
-
-                                                            </td>
-                                                            <td>david@skote.com</td>
-                                                            <td>0704549859</td>
-
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>
-                                                                <div class="avatar-xs">
-                                                                    <span class="avatar-title rounded-circle">
-                                                                        M
-                                                                    </span>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Moureen Akinyi</a></h5>
-
-                                                            </td>
-                                                            <td>david@skote.com</td>
-                                                            <td>0704549859</td>
-
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>
-                                                                <div class="avatar-xs">
-                                                                    <span class="avatar-title rounded-circle">
-                                                                        S
-                                                                    </span>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Salome Aringo</a></h5>
-
-                                                            </td>
-                                                            <td>david@skote.com</td>
-                                                            <td>0704549859</td>
-
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
 
                                         </div>
 
                                     </div>
+
+
+                                </div>
+                                <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+
+                                    <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="bx  bx-trash label-icon"></i> Delete Properties</button>
+                                    <button type="button" class="btn btn-secondary waves-effect btn-label waves-light me-3 write-msg-btn"><i class="mdi mdi-pencil align-middle me-2 label-icon"></i> Message Selected Tenant(s)</button>
                                 </div>
 
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-            <!-- end of the selected contacts -->
-            <!-- known contacts modal Modal -->
-            <div class="modal fade" id="composemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="composemodalTitle">Select contacts</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="table-responsive table-contacts-modal">
-                                <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table w-100" id="datatable-buttons">
-                                    <thead class="table-light d-none">
+                            </div>
+
+                            <div class="card-body">
+                                <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
+                                    <thead class="table-light">
                                         <tr>
 
-                                            <th scope="col" style="width: 40px;">
+                                            <th scope="col">
+                                                <div class="the-mail-checkbox pr-4">
+                                                    <label for="selectAll" class="d-none">Select All</label>
+                                                    <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
 
+                                                </div>
                                             </th>
-                                            <th scope="col">Name</th>
-
+                                            <th scope="col">#</th>
+                                            <th scope="col">Tenant</th>
+                                            <th scope="col">Contacts</th>
+                                            <th scope="col">House</th>
+                                            <th scope="col">Join</th>
+                                            <th scope="col" class="text-right">Deposite</th>
+                                            <th scope="col" class="text-right">Rent</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1320,211 +503,1042 @@
                                                         <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
                                                     </div>
 
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle">
-                                                                AW
-                                                            </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">1</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Kelvin Kimeu</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0704549859">0704549859</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Kelvinkimeu244@gmail.com">Kelvinkimeu244@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">90 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>410
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                4 Mar 2022
+                                            </td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 19,219</span></td>
+
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 41,826</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
-                                                <p class="text-muted mb-0">Nouveta Developer</p>
-                                            </td>
-
-
-
                                         </tr>
                                         <tr>
+
                                             <td>
-                                                <div class="d-flex align-items-center">
+                                                <div class="d-flex  align-items-center">
                                                     <div class="the-mail-checkbox pr-4">
                                                         <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
                                                     </div>
 
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle">
-                                                                AT
-                                                            </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">2</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Jackson Karanja</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0799549098">0799549098</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Jacksonkaranja150@gmail.com">Jacksonkaranja150@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">55 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>411
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                1 Jan 2019
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 13,112</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 45,600</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">All Tenants</a></h5>
-                                                <p class="text-muted mb-0">32 Contacts</p>
-                                            </td>
-
-
-
-
                                         </tr>
                                         <tr>
+
                                             <td>
-                                                <div class="d-flex align-items-center">
+                                                <div class="d-flex  align-items-center">
                                                     <div class="the-mail-checkbox pr-4">
                                                         <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
                                                     </div>
 
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle">
-                                                                AL
-                                                            </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">3</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Sharon Wanjiku</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0794795345">0794795345</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:sharonwanjiku34@gmail.com">sharonwanjiku34@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">66 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>412
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                15 Mar 2019
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 22,000</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 52,790</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">All Landlords</a></h5>
-                                                <p class="text-muted mb-0">23 Contacts</p>
-                                            </td>
-
-
-
                                         </tr>
                                         <tr>
+
                                             <td>
-                                                <div class="d-flex align-items-center">
+                                                <div class="d-flex  align-items-center">
                                                     <div class="the-mail-checkbox pr-4">
                                                         <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
                                                     </div>
 
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle">
-                                                                SM
-                                                            </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">4</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Daniel Mwangi</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0725737892">0725737892</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Danielmwas12@gmail.com">Danielmwas12@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">75 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>413
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                12 Mar 2022
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 22,324</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 55,450</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Staff Members</a></h5>
-                                                <p class="text-muted mb-0">12 Contacts</p>
-                                            </td>
-
-
-
-
                                         </tr>
                                         <tr>
+
                                             <td>
-                                                <div class="d-flex align-items-center">
+                                                <div class="d-flex  align-items-center">
                                                     <div class="the-mail-checkbox pr-4">
                                                         <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
                                                     </div>
 
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle">
-                                                                SP
-                                                            </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">5</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Phillip Mbuthia</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0723576532">0723576532</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Phillipmbuthia55@gmail.com">Phillipmbuthia55@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">63 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>414
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                22 April 2019
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 18,200</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 44,360</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Service Providers</a></h5>
-                                                <p class="text-muted mb-0">12 Contacts</p>
-                                            </td>
-
-
-
                                         </tr>
-
                                         <tr>
+
                                             <td>
-                                                <div class="d-flex align-items-center">
+                                                <div class="d-flex  align-items-center">
                                                     <div class="the-mail-checkbox pr-4">
                                                         <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
                                                     </div>
 
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle">
-                                                                TW
-                                                            </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">6</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Rose Wanjau</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0734627223">0734627223</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Rosewanja22@gmail.com">Rosewanja22@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">93 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>415
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                21 Mar 2022
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 20,432</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 46,270</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                <div class="d-flex  align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
                                                     </div>
 
                                                 </div>
                                             </td>
+                                            <td class="text-capitalize">7</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Pauline Waithaka</a>
+                                            </td>
                                             <td>
-                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tenants with Unpaid Balances</a></h5>
-                                                <p class="text-muted mb-0">32 Contacts</p>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0711123364">0711123364</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Paulinewaithaka245@gmail.com">Paulinewaithaka245@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">76 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>416
+                                                </p>
                                             </td>
 
+                                            <td>
+                                                10 Feb 2020
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 14,214</span></td>
 
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 36,000</span></td>
 
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
 
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
+                                        <tr>
 
+                                            <td>
+                                                <div class="d-flex  align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
 
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">8</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Martha Kimani</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0789653411">0789653411</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Marykimani356@gmail.com">Marthakimani356@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">90 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>417
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                9 Aug 2020
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 14,321</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 32,210</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                <div class="d-flex  align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">9</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Samson Kirago</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0747863521">0747863521</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Kelvinkirago366@gmail.com">Kelvinkirago366@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">80 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>418
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                19 Sept 2021
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 45,040</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 66,000</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                <div class="d-flex  align-items-center">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">10</td>
+                                            <td class="text-capitalize">
+                                                <a href="tenant-details.html" title="View Details">Purity Nanzala</a>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tell:0700657429">0700657429</a>
+                                                </p>
+                                                <p>
+                                                    <a href="mailto:Catherinenanzala24@gmail.com">Puritynanzala24@gmail.com</a>
+                                                </p>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <h5 class="font-size-14 mb-1"><a href="property-details.html" class="text-black" title="View Details">60 Degrees By Tsavo</a></h5>
+                                                <p class="text-muted mb-0">
+                                                    <span class="fw-semibold">Hse No. :</span>419
+                                                </p>
+                                            </td>
+
+                                            <td>
+                                                4 May 2022
+                                            </td>
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 10,250</span></td>
+
+                                            <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES 52,000</span></td>
+
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                        <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                        <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
+                                                        <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
+                                                        <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                        <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
 
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Continue <i class="fab fa-telegram-plane ms-1"></i></button>
+                    </div>
+                    <!-- end col -->
+                </div>
+
+                <!-- end row -->
+            </div>
+            <!-- container-fluid -->
+        </div>
+        <!-- the message composer -->
+        <div class="email-overlay d-none">
+            <div class="card the-message-maker">
+                <div class="card-header bg-primary text-white py-0">
+                    <div class="d-flex justify-content-between align-items-center text-white">
+                        <h4 class="mb-0 p-0 m-0">New message</h4>
+                        <div class="control-btns">
+                            <div class="dropdownd-lg-inline-block ms-1">
+                                <button type="button" class="btn header-item noti-icon waves-effect minimize">
+                                        <i class="mdi mdi-window-minimize"></i>
+                                    </button>
+                                <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                        <i class="bx bx-fullscreen"></i>
+                                    </button>
+
+                                <button type="button" class="btn header-item noti-icon waves-effect close-message-maker">
+                                        <i class="mdi mdi-close"></i>
+                                    </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- end modal -->
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 d-non selected-contacts-message mb-2">
+                            <div class="row flex-nowrap">
+                                <div class="col-1 mr-0  w-auto d-flex ">
+                                    <span class=" ">
+                                            <strong>To:</strong>
+                                        </span>
+                                </div>
+                                <div class=" col-11 ml-0 pl-0 flex-wrap d-flex align-items-start">
+                                    <span class="the-selected-contacts text-capitalize">Alex wanjala, juliet kemboi, tesfa ozem, moureen akinyi, salome aringo,kelvin kamau, william njuguna</span>
+                                    <span data-bs-toggle="modal" data-bs-target="#selected-contacts" class="btn-link waves-effect float-left ">+23 Others</span>
+                                </div>
+                            </div>
 
-            <!-- predeterminde uploading of contacts -->
-            <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header bg-primary text-white">
-                            <h5 class="modal-title text-white" id="composemodalTitle">Select contacts</h5>
-                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
-                            <div>
-                                <div class="mb-5">
-                                    <label for="" class="mb-0 text-uppercase"><strong>Upload new contacts</strong></label>
-                                    <p>
-                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample before you continue</a>
-                                    </p>
-                                    <div class="p-4 bg-light">
-                                        <div class="row ">
 
-                                            <div class="col-12">
-                                                <form action="#" class="dropzone">
-                                                    <div class="fallback">
-                                                        <input name="file" type="file" class="mb-3">
-                                                    </div>
-                                                    <div class="dz-message needsclick">
-                                                        <div class="mb-3">
-                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
-                                                        </div>
+                        <div class="col-12">
+                            <div class="pb-3">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#upload-contacts" class="btn btn-success waves-effect btn-label waves-light"><i class="mdi-account-multiple-plus font-16px mdi label-icon"></i> Upload Contacts</button>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#composemodal" class="btn btn-secondary waves-effect btn-label waves-light"><i class="mdi mdi-account-details font-16px label-icon"></i> Select from Saved contacts</button>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check form-check-success mb-3">
+                                <div>
+                                    <input class="form-check-input" type="checkbox" id="vistationCheck">
+                                    <label class="form-check-label" for="vistationCheck">
+                                            Include  Visitation Fees
+                                        </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" placeholder="Subject" class="form-control mb-3">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="" placeholder="Write your message" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
 
-                                                        <h6>Contacts excell file</h6>
-                                                    </div>
-                                                </form>
-                                            </div>
+                    </div>
+                </div>
+                <div class="card-footer">
 
-                                        </div>
-                                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <label for="">Send as?</label>
+                            <div class="d-flex">
+
+                                <div class="form-check form-check-primary  mr-15px">
+                                    <input class="form-check-input" type="checkbox" id="check-email" checked>
+                                    <label class="form-check-label" for="check-email">
+                                            Email
+                                        </label>
+                                </div>
+
+                                <div class="form-check form-check-primary  pl-4  mr-15px">
+                                    <input class="form-check-input" type="checkbox" id="check-sms" checked>
+                                    <label class="form-check-label" for="check-sms">
+                                            SMS
+                                        </label>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success upload-the-contacts">Upload contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        <div class="d-flex align-items-end">
+                            <button type="button" class="btn btn-light waves-effect waves-light mr-15px btn-rounded" title="Delete the message">
+                                    <i class="bx bx-trash font-size-16 align-middle"></i>
+                                </button>
+                            <button type="submit" class="btn btn-outline-primary btn-rounded chat-send w-md waves-effect waves-light mr-15px" title="Set a time and date for when to send this message"><span class="d-none d-sm-inline-block me-2">Schedule Time</span> <i class="mdi mdi-clock-time-four-outline"></i></button>
+                            <button type="submit" class="btn btn-primary btn-rounded chat-send w-md waves-effect waves-light"><span class="d-none d-sm-inline-block me-2">Send</span> <i class="mdi mdi-send"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end of predetermined -->
 
-            <!-- Notice Modal -->
-            <div class="modal fade issue-modal pb-5 notice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Vacation Notice for Kelvin Njuguna</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+
+
+
+        </div>
+
+
+    </div>
+    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
+    </div>
+    </div>
+    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
+    </div>
+    </div>
+
+    </div>
+    <!-- message composer end -->
+    <!-- the selected contacts -->
+    <div class="modal fade selected-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="selected-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title text-white" id="composemodalTitle">My uploaded contacts</h5>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="">
+                            <div class="row ">
+
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle table-nowrap table-hover mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 70px;">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Phone</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="avatar-xs">
+                                                            <span class="avatar-title rounded-circle">
+                                                                        A
+                                                                    </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
+
+                                                    </td>
+                                                    <td>david@skote.com</td>
+                                                    <td>0704549859</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="avatar-xs">
+                                                            <span class="avatar-title rounded-circle">
+                                                                        J
+                                                                    </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Juliet Kemboi</a></h5>
+
+                                                    </td>
+                                                    <td>david@skote.com</td>
+                                                    <td>0704549859</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="avatar-xs">
+                                                            <span class="avatar-title rounded-circle">
+                                                                        T
+                                                                    </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tesfa Oze</a></h5>
+
+                                                    </td>
+                                                    <td>david@skote.com</td>
+                                                    <td>0704549859</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="avatar-xs">
+                                                            <span class="avatar-title rounded-circle">
+                                                                        M
+                                                                    </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Moureen Akinyi</a></h5>
+
+                                                    </td>
+                                                    <td>david@skote.com</td>
+                                                    <td>0704549859</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="avatar-xs">
+                                                            <span class="avatar-title rounded-circle">
+                                                                        S
+                                                                    </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Salome Aringo</a></h5>
+
+                                                    </td>
+                                                    <td>david@skote.com</td>
+                                                    <td>0704549859</td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <div class="col-12">
-                                <address>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end of the selected contacts -->
+    <!-- known contacts modal Modal -->
+    <div class="modal fade" id="composemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="composemodalTitle">Select contacts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive table-contacts-modal">
+                        <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table w-100" id="datatable-buttons">
+                            <thead class="table-light d-none">
+                                <tr>
+
+                                    <th scope="col" style="width: 40px;">
+
+                                    </th>
+                                    <th scope="col">Name</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>
+                                        <div class="d-flex  align-items-center">
+                                            <div class="the-mail-checkbox pr-4">
+                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                            </div>
+
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle">
+                                                                AW
+                                                            </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
+                                        <p class="text-muted mb-0">Nouveta Developer</p>
+                                    </td>
+
+
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="the-mail-checkbox pr-4">
+                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                            </div>
+
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle">
+                                                                AT
+                                                            </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">All Tenants</a></h5>
+                                        <p class="text-muted mb-0">32 Contacts</p>
+                                    </td>
+
+
+
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="the-mail-checkbox pr-4">
+                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                            </div>
+
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle">
+                                                                AL
+                                                            </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">All Landlords</a></h5>
+                                        <p class="text-muted mb-0">23 Contacts</p>
+                                    </td>
+
+
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="the-mail-checkbox pr-4">
+                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                            </div>
+
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle">
+                                                                SM
+                                                            </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Staff Members</a></h5>
+                                        <p class="text-muted mb-0">12 Contacts</p>
+                                    </td>
+
+
+
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="the-mail-checkbox pr-4">
+                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                            </div>
+
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle">
+                                                                SP
+                                                            </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Service Providers</a></h5>
+                                        <p class="text-muted mb-0">12 Contacts</p>
+                                    </td>
+
+
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="the-mail-checkbox pr-4">
+                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                            </div>
+
+                                            <div class="avatar-xs">
+                                                <span class="avatar-title rounded-circle">
+                                                                TW
+                                                            </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tenants with Unpaid Balances</a></h5>
+                                        <p class="text-muted mb-0">32 Contacts</p>
+                                    </td>
+
+
+
+
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Continue <i class="fab fa-telegram-plane ms-1"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- predeterminde uploading of contacts -->
+    <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title text-white" id="composemodalTitle">Select contacts</h5>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-5">
+                            <label for="" class="mb-0 text-uppercase"><strong>Upload new contacts</strong></label>
+                            <p>
+                                <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample before you continue</a>
+                            </p>
+                            <div class="p-4 bg-light">
+                                <div class="row ">
+
+                                    <div class="col-12">
+                                        <form action="#" class="dropzone">
+                                            <div class="fallback">
+                                                <input name="file" type="file" class="mb-3">
+                                            </div>
+                                            <div class="dz-message needsclick">
+                                                <div class="mb-3">
+                                                    <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                </div>
+
+                                                <h6>Contacts excell file</h6>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success upload-the-contacts">Upload contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of predetermined -->
+
+    <!-- Notice Modal -->
+    <div class="modal fade issue-modal pb-5 notice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myLargeModalLabel">Vacation Notice for Kelvin Njuguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <address>
                                     <strong>Unit Details:</strong><br>
                                     <span class="fw-semibold">Current Tenant:</span> Kelvin Njuguna<br>
                                     email@mail.com, 0704 549 859<br>                                   
@@ -1533,61 +1547,61 @@
                                     <span class="today-date">1 Mar 2022</span><br>
                                     <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
                                 </address>
-                            </div>
-                            <div class="col-12">
-                                <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Total Accumulated Balances</p>
-                                    <h4 class=" mb-0 fw-light">KES 12,560</h4>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mb-4 ">
-                                    <label for=" " class=" ">Date moving Out<strong class="text-danger ">*</strong></label>
-                                    <div class="input-group cursor-pinter" id="datepickertbl">
-                                        <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepickertbl' data-provide="datepicker" data-date-autoclose="true">
-
-                                        <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mb-4 ">
-                                    <label for="agreement-type">Reason for moving out</label>
-                                    <textarea name="" placeholder="Enter tenant's reason for moving out" id="" cols="30" rows="5" class="form-control"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="alert alert-warning" role="alert">
-                                    <i class="mdi mdi-alert-outline me-2 "></i> A message notification will be sent to the tenant to remind them t ensure that they have cleared their balancesand rent arrears. Remember to checkif their utility balances
-                                    are up to date and any existing balances are cleared before the due date.
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                        <div class="modal-footer">
-                            <button class="btn btn-primary">Create Notice</button>
-                        </div>
-
                     </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-             
-
-            <!-- statements modal -->
-            <div class="modal fade issue-modal pb-5 statements-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Statements for Kelvin Njuguna</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="col-12">
+                        <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Total Accumulated Balances</p>
+                            <h4 class=" mb-0 fw-light">KES 12,560</h4>
                         </div>
-                        <div class="modal-body">
-                            <div class="col-12">
-                                <address>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-4 ">
+                            <label for=" " class=" ">Date moving Out<strong class="text-danger ">*</strong></label>
+                            <div class="input-group cursor-pinter" id="datepickertbl">
+                                <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepickertbl' data-provide="datepicker" data-date-autoclose="true">
+
+                                <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-4 ">
+                            <label for="agreement-type">Reason for moving out</label>
+                            <textarea name="" placeholder="Enter tenant's reason for moving out" id="" cols="30" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="alert alert-warning" role="alert">
+                            <i class="mdi mdi-alert-outline me-2 "></i> A message notification will be sent to the tenant to remind them t ensure that they have cleared their balancesand rent arrears. Remember to checkif their utility balances are up
+                            to date and any existing balances are cleared before the due date.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Create Notice</button>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+    <!-- statements modal -->
+    <div class="modal fade issue-modal pb-5 statements-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myLargeModalLabel">Statements for Kelvin Njuguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <address>
                                     <strong>Unit Details:</strong><br>
                                     <span class="fw-semibold">Tenant:</span> Kelvin Njuguna<br>
                                     email@mail.com, 0704 549 859<br>                                   
@@ -1596,52 +1610,52 @@
                                     <span class="today-date">1 Mar 2022</span><br>
                                     <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
                                 </address>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="mb-4 ">
-                                    <label for=" " class=" ">Start Date<strong class="text-danger ">*</strong></label>
-                                    <div class="input-group cursor-pinter" id="statement-start-date">
-                                        <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#statement-start-date' data-provide="datepicker" data-date-autoclose="true">
-
-                                        <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="mb-4 ">
-                                    <label for=" " class=" ">End Date<strong class="text-danger ">*</strong></label>
-                                    <div class="input-group cursor-pinter" id="statement-end-date">
-                                        <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#statement-end-date' data-provide="datepicker" data-date-autoclose="true">
-
-                                        <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <a href="tenant-rent-statemtnts-for-a-period.html" class="btn btn-primary">Get statements</a>
-                        </div>
-
                     </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
 
-            <!-- auctionering modal -->
-            <div class="modal fade  pb-5 distress-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered mb-5 ">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Initiate distress process for Kelvin Njuguna</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="col-12">
+                        <div class="mb-4 ">
+                            <label for=" " class=" ">Start Date<strong class="text-danger ">*</strong></label>
+                            <div class="input-group cursor-pinter" id="statement-start-date">
+                                <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#statement-start-date' data-provide="datepicker" data-date-autoclose="true">
+
+                                <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <div class="col-12">
-                                <address>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4 ">
+                            <label for=" " class=" ">End Date<strong class="text-danger ">*</strong></label>
+                            <div class="input-group cursor-pinter" id="statement-end-date">
+                                <input type="text" class="form-control cursor-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#statement-end-date' data-provide="datepicker" data-date-autoclose="true">
+
+                                <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="tenant-rent-statemtnts-for-a-period.html" class="btn btn-primary">Get statements</a>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <!-- auctionering modal -->
+    <div class="modal fade  pb-5 distress-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered mb-5 ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myLargeModalLabel">Initiate distress process for Kelvin Njuguna</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <address>
                                     <strong>Unit Details:</strong><br>
                                     <span class="fw-semibold">Tenant:</span> Kelvin Njuguna<br>
                                     email@mail.com, 0704 549 859<br>                                   
@@ -1650,180 +1664,180 @@
                                     <span class="today-date">1 Mar 2022</span><br>
                                     <span class="fw-semibold">Being Initated By </span> Alex Wanjala<br>
                                 </address>
-                            </div>
-                            <div class="col-12">
-                                <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold text-capitalize">Fee balances breakdown for the Tenant</h3>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 70px;">No.</th>
-                                                <th>Item</th>
-                                                <th>Months</th>
-                                                <th class="text-end">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>01</td>
-                                                <td>Rent</td>
-                                                <td>2</td>
-                                                <td class="text-end">KES 24,500</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>02</td>
-                                                <td>Visitation Fees</td>
-                                                <td>2</td>
-                                                <td class="text-end">KES 1,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>03</td>
-                                                <td>Electricity Bills</td>
-                                                <td>2</td>
-                                                <td class="text-end">KES 750</td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td>04</td>
-                                                <td>Water Bills</td>
-                                                <td>2</td>
-                                                <td class="text-end">KES 750</td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td colspan="3" class="text-end">Total</td>
-                                                <td class="text-end fw-bold">KES 27,000</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="alert alert-warning" role="alert">
-                                    <i class="mdi mdi-alert-outline me-2 "></i> A message notification will be sent to the tenant to update them on the distress that you are initiating.
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary">Initiate Distress</button>
-                        </div>
-
                     </div>
-                    <!-- /.modal-content -->
+                    <div class="col-12">
+                        <div class="py-2 mt-3">
+                            <h3 class="font-size-15 fw-bold text-capitalize">Fee balances breakdown for the Tenant</h3>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 70px;">No.</th>
+                                        <th>Item</th>
+                                        <th>Months</th>
+                                        <th class="text-end">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Rent</td>
+                                        <td>2</td>
+                                        <td class="text-end">KES 24,500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Visitation Fees</td>
+                                        <td>2</td>
+                                        <td class="text-end">KES 1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Electricity Bills</td>
+                                        <td>2</td>
+                                        <td class="text-end">KES 750</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Water Bills</td>
+                                        <td>2</td>
+                                        <td class="text-end">KES 750</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td colspan="3" class="text-end">Total</td>
+                                        <td class="text-end fw-bold">KES 27,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="alert alert-warning" role="alert">
+                            <i class="mdi mdi-alert-outline me-2 "></i> A message notification will be sent to the tenant to update them on the distress that you are initiating.
+                        </div>
+                    </div>
+
                 </div>
-                <!-- /.modal-dialog -->
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Initiate Distress</button>
+                </div>
+
             </div>
-            <!-- End Page-content -->
-
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> © RevenueSure
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-sm-block ">
-                                Developed by Nouveta LTD.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <!-- /.modal-content -->
         </div>
-        <!-- end main content-->
-        <!-- filter right of canvus -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 id="offcanvasRightLabel">Filter Transactions</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- End Page-content -->
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script> © RevenueSure
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end d-sm-block ">
+                        Developed by Nouveta LTD.
+                    </div>
+                </div>
             </div>
-            <div class="offcanvas-body">
-                <div class="col-12 mb-4">
-                    <div class="alert alert-info alert-border" role="alert">
-                        Use this section to filter the table to the way of your liking. Remember to submit your selection so as to submit the selections
+        </div>
+    </footer>
+    </div>
+    <!-- end main content-->
+    <!-- filter right of canvus -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Filter Transactions</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="col-12 mb-4">
+                <div class="alert alert-info alert-border" role="alert">
+                    Use this section to filter the table to the way of your liking. Remember to submit your selection so as to submit the selections
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mb-4">
+                    <label class="text-capitalize">Tenant joining Date</label>
+
+                    <div class="input-daterange input-group" id="datepicker6" data-date-format="dd M, yyyy" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker6'>
+                        <input type="text" class="form-control date-drop-input" name="start" placeholder="Start Date" readonly />
+                        <input type="text" class="form-control date-drop-input" name="end" placeholder="End Date" readonly />
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="mb-4">
-                        <label class="text-capitalize">Tenant joining Date</label>
+            </div>
 
-                        <div class="input-daterange input-group" id="datepicker6" data-date-format="dd M, yyyy" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker6'>
-                            <input type="text" class="form-control date-drop-input" name="start" placeholder="Start Date" readonly />
-                            <input type="text" class="form-control date-drop-input" name="end" placeholder="End Date" readonly />
-                        </div>
+            <div class="col-12">
+                <div class="mb-4">
+                    <label class="text-capitalize">Balance Range</label>
+
+                    <div class="input-daterange input-group">
+                        <input type=" text " class="form-control " name="" placeholder="Min Amount" />
+                        <input type="text " class="form-control " name="" placeholder="Max Amount" />
                     </div>
                 </div>
+            </div>
 
-                <div class="col-12">
-                    <div class="mb-4">
-                        <label class="text-capitalize">Balance Range</label>
-
-                        <div class="input-daterange input-group">
-                            <input type=" text " class="form-control " name="" placeholder="Min Amount" />
-                            <input type="text " class="form-control " name="" placeholder="Max Amount" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="mb-4">
-                        <label class="text-capitalize">Tenant type</label>
-                        <div class="row">
-                            <div class="col-md-12 col-lg-6">
-                                <div class="form-check form-check-primary mb-3">
-                                    <input class="form-check-input" type="checkbox" id="allTollTakers" checked>
-                                    <label class="form-check-label text-capitalize" for="allTollTakers">
+            <div class="col-12">
+                <div class="mb-4">
+                    <label class="text-capitalize">Tenant type</label>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-check form-check-primary mb-3">
+                                <input class="form-check-input" type="checkbox" id="allTollTakers" checked>
+                                <label class="form-check-label text-capitalize" for="allTollTakers">
                                         All tenants
                                     </label>
-                                </div>
                             </div>
+                        </div>
 
-                            <div class="col-md-12 col-lg-6">
-                                <div class="form-check form-check-primary mb-3">
-                                    <input class="form-check-input" type="checkbox" id="tollTaker1">
-                                    <label class="form-check-label text-capitalize" for="tollTaker1">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-check form-check-primary mb-3">
+                                <input class="form-check-input" type="checkbox" id="tollTaker1">
+                                <label class="form-check-label text-capitalize" for="tollTaker1">
                                         Individuals
                                     </label>
-                                </div>
                             </div>
+                        </div>
 
-                            <div class="col-md-12 col-lg-6">
-                                <div class="form-check form-check-primary mb-3">
-                                    <input class="form-check-input" type="checkbox" id="tollTaker3">
-                                    <label class="form-check-label text-capitalize" for="tollTaker3">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-check form-check-primary mb-3">
+                                <input class="form-check-input" type="checkbox" id="tollTaker3">
+                                <label class="form-check-label text-capitalize" for="tollTaker3">
                                         Company
                                     </label>
-                                </div>
                             </div>
-
-
                         </div>
 
 
                     </div>
-                </div>
 
-                <div class="col-12">
-                    <div class="mb-4">
-                        <button type="button" class="btn btn-primary waves-effect waves-light w-100">
+
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="mb-4">
+                    <button type="button" class="btn btn-primary waves-effect waves-light w-100">
                             <i class="mdi mdi-filter-variant font-size-16 align-middle me-2"></i> Filter Table
                         </button>
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- of canvus -->
+    </div>
+    <!-- of canvus -->
 
     </div>
     <!-- END layout-wrapper -->
