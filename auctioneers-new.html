@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- index.html   13:53:02 GMT -->
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Muigai Commercial | New auctioneer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Rental management system by Nouveta LTD" name="description" />
+    <meta content="Kelvin Njuguna" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-chase">
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Begin page -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-light.png" alt="" height="30">
+                                </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+                    <!-- App Search-->
+                    <form class="app-search d-none d-lg-block">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="bx bx-search-alt"></span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                <i class="bx bx-fullscreen"></i>
+                            </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <!-- notifications, i will come to this later -->
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-bell bx-tada"></i>
+                                <span class="badge bg-danger rounded-pill">3</span>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                                    <i class="mdi mdi-file-document-edit-outline  "></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Tenancy Agreement Renewal</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">Aex Wanjala's agreement due in days</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                                    <i class="mdi mdi-file-document-edit-outline  "></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Tenancy Agreement Renewal</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">Aex Wanjala's agreement due in days</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-danger rounded-circle font-size-16">
+                                                    <i class="mdi mdi-home-export-outline  "></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Tenant on Notice</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">Kibor will be moving out in the next 7 Days</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-henry">Adroa Balinda</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="myprofile.html"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">My Profile</span></a>
+                            <a class="dropdown-item" href="my-logs.html"><i class="bx bx-time font-size-16 align-middle me-1"></i> <span key="t-profile">My Logs</span></a>
+                            <a class="dropdown-item" href="auth-lock-screen.html"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title d-none" key="t-menu">Muigai Commercial Agencies</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="bx bx-home-circle"></i><span>Dashboards</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-shield-home"></i>
+                                <span>Landlord</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="landlord.html">Landlord Register</a></li>
+                                <li><a href="landlord-new.html">Add a Landlord</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-office-building-outline"></i>
+                                <span>Premises</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="property-list.html">Premises Register</a></li>
+                                <li><a href="property-new.html">Add a premises</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-account-key"></i>
+                                <span>Tenants</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="tenant-list.html">All Tenants</a></li>
+                                <li><a href="tenant-compliant.html">Compliant tenants</a></li>
+                                <li><a href="tenant-uncompliant.html">Uncompliant tenants</a></li>
+                                <li><a href="tenant-distress.html">Tenants under distress</a></li>
+                                <li><a href="tenant-new-month.html">New tenants report</a></li>
+                                <li><a href="tenant-new.html">Add a tenant</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bxs-lock-alt"></i>
+                                <span>Auctioneers</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="auctioneers-list.html">All Auctioneers</a></li>
+                                <li><a href="auctioneers-new.html">Add an auctioneer</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-cog-outline"></i>
+                                <span>Set ups</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="applicable-charges.html">Applicable Charges</a></li>
+                                <li><a href="estates.htm">Estate</a></li>
+                                <li><a href="house-types.html">House types</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="dripicons-flag"></i>
+                                <span class="badge rounded-pill bg-danger float-end">10</span>
+                                <span>Action Center</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="action-payments.html">Flagged payments</a></li>
+                                <li><a href="action-agreements.html">Tenancy agreements to be renewed</a></li>
+                                <li><a href="action-notice.html">Tenants on notice</a></li>
+                                <li><a href="action-distress-timelines.html">Distress timelines</a></li>
+                                <li><a href="action-auction-payment.html">Auction invoices</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-chat"></i>
+                                <span>Messenger</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li class="d-none"><a href="messages.html">Compose messages</a></li>
+                                <li><a href="messages.html">Messages</a></li>
+                                <li><a href="messages-contacts.html">Contacts</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-receipt"></i>
+                                <span>Invoices</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="invoice-new.html">Create an invoice</a></li>
+                                <li><a href="invoice-unpaid.html">Unpaid invoices</a></li>
+                                <li><a href="invoice-partial.html">Partially paid</a></li>
+                                <li><a href="invoice-paid.html">Cleared Invoices</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-cash-remove"></i>
+                                <span>Credit & Debit Notes</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="credit-note-new.html">Create Credit Note</a></li>
+                                <li><a href="debit-note-new.html">Create Debit Note</a></li>
+                                <li><a href="credit-notes.html">All Credit Notes</a></li>
+                                <li><a href="debit-notes.html">All Debit Notes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-receipt"></i>
+                                <span>Receipts</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="receipts.html">All receipts</a></li>
+                                <li class="d-none"><a href="receipts-reverse.html">Reverse Transaction</a></li>
+                                <li><a href="receipts-reversed-table.html">reversed transactions</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="mdi mdi-cash-multiple"></i>
+                                <span>Transactions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-shield-account-outline"></i>
+                                <span>System Users</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="admin-list.html">Admins list</a></li>
+                                <li><a href="admin-new.html">Add an admin</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="menu-title d-none" key="t-apps">Reports</li>
+
+                        <li class="d-none">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-account-cash-outline"></i>
+                                <span>Tenants Reports</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="#">Compliant Tenants</a></li>
+                                <li><a href="#">Tenants on Notice</a></li>
+                                <li><a href="#">With arrears</a></li>
+                                <li><a href="#">Reported to auctioneers</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="d-none">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-home-city-outline"></i>
+                                <span>Property Reports</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="#">Vacant Units</a></li>
+                                <li><a href="#">Occupancy report</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Add an auctioneer</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
+                                        <li class="breadcrumb-item active">Add an auctioneer</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <!-- eTransactions table -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+
+
+                                        <div class="col-7">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Auctioneer's Name <strong class="text-danger">*</strong></label>
+                                                        <input type="text" class="form-control" id="" placeholder="Enter the auctioneering company name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Email <strong class="text-danger">*</strong></label>
+                                                        <input type="email" class="form-control" id="" placeholder="email@email.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Telephone Number <strong class="text-danger">*</strong></label>
+                                                        <input type="email" class="form-control" id="" placeholder="Phone number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Contact person <strong class="text-danger">*</strong></label>
+                                                        <input type="email" class="form-control" id="" placeholder="Enter Your First Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb-4">
+                                                        <label for="basicpill-firstname-input">Location <strong class="text-danger">*</strong></label>
+                                                        <input type="text" class="form-control" id="" placeholder="Enter the auctioneer's Address">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class=" mb-4 ">
+                                                <label class="text-capitalize " for="basicpill-firstname-input ">Postal address<strong class="text-danger ">*</strong></label>
+                                                <textarea name=" " class="form-control " id=" " cols="30 " rows="10" placeholder="Enter the postal Address "></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <button type="button " class="btn btn-primary waves-effect waves-light ">
+                                                <i class="bx bx-smile font-size-16 align-middle me-2 "></i> Add Auctioneer
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <!-- end row -->
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <!-- Transaction Modal -->
+            <div class="modal fade transaction-detailModal " tabindex="-1 " role="dialog " aria-labelledby="transaction-detailModalLabel " aria-hidden="true ">
+                <div class="modal-dialog modal-dialog-centered " role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <h5 class="modal-title " id="transaction-detailModalLabel ">Transactions Details</h5>
+                            <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
+                        </div>
+                        <div class="modal-body ">
+
+
+                            <div class="table-responsive mt-4 ">
+                                <table class="table align-middle table-nowrap ">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 30% ">
+                                                <p class="mb-0 ">Car Plate Number</p>
+                                            </td>
+                                            <td style="width: 25% ">
+                                                <h5 class="mb-0 text-uppercase ">UAG 1235p</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0 ">Vehicle Category</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0 ">Salon Car</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0 ">Payment Date</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0 ">22 Apr 2022 06:54PM</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0 ">San Diego</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0 ">1,026</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2 ">
+                                                <p class="mb-0 pb-0 ">Amount Paid</p>
+                                                <h3>UGX 2,000</h3>
+                                            </td>
+                                        </tr>
+                                        <TR>
+                                            <td col-span="2 ">
+                                                <p class="mb-2 ">Attended By<span class="text-primary "> Alex Sebeye</span></p>
+                                                <p class="mb-4 ">Toll taker's No. <span class="text-primary ">0704549859</span></p>
+                                            </td>
+                                        </TR>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+
+
+
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © RevenueSure.
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="text-sm-end d-sm-block ">
+                                Developed by Nouveta LTD.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay "></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
+
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+    <script src="assets/libs/jszip/jszip.min.js "></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
+
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js "></script>
+
+    <!-- form mask -->
+    <script src="assets/libs/inputmask/min/jquery.inputmask.bundle.min.js "></script>
+
+    <!-- form mask init -->
+    <script src="assets/js/pages/form-mask.init.js "></script>
+
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js "></script>
+</body>
+
+
+<!-- index.html   13:55:49 GMT -->
+
+</html>
