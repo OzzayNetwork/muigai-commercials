@@ -398,7 +398,18 @@ $(window).on('load', function() {
         $('.invoiceTotalPay').val("KES " + numeral(total).format('0,0'))
         $('.text-total').text("KES " + numeral(total).format('0,0'));
 
-    })
+    });
+
+    $("body").on('change', '[name="debit-this"]', function() {
+        var theVal = $(this).val();
+        if (theVal == "yes") {
+            // alert('checked');
+            $('.debit-tenant-list').removeClass('d-none')
+        } else {
+            $('.debit-tenant-list').addClass('d-none')
+        }
+
+    });
 
 
 

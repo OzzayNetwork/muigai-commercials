@@ -500,6 +500,7 @@
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Block landlord</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Landlord</a>
+                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".credit-modal"><i class="font-size-15  mdi mdi-cash-remove me-3 "></i>Create Credit Note</a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -518,6 +519,103 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- credit modal -->
+            <div class="modal fade issue-modal pb-5 credit-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Credit Note for Kelvin Njuguna</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Landlord's Details</strong><br>
+                                     Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Lion Rock Apartments
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Debit Amount</label>
+                                    <input type="text" class="form-control" placeholder="Enter amount">
+                                </div>
+                            </div>
+
+
+                            <div class=" col-12 ">
+                                <div class="mb-4 ">
+                                    <label class="text-capitalize ">Debit this amount to a Tenant</label>
+                                    <div class="row ">
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="yes" type="radio" name="debit-this" id="debit-yes">
+                                                <label class="form-check-label" for="debit-yes">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="no" type="radio" name="debit-this" id="debit-no">
+                                                <label class="form-check-label" for="debit-no">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-12 d-non debit-tenant-list d-none">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Select the Tenant</label>
+                                    <select class="form-control selectpicker" title="Select tenant" data-live-search="true">
+                                        <option value="001" data-content="<span class='d-none'>001</span> Amos were">Amos were</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-non'>002</span>Philip Mutua">Philip Mutua</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Sharon Wambui">Sharon Wambui</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Rita Kanana">Rita Kanana</option>
+                                        <option value="" data-content="<span class='badge badge-success file-nod-none'>005</span>Ernest Mburu">Ernest Mburu</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Latasha Tasha">Latasha Tasha</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Alex Wanjala">Alex Wanjala</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Sam Ochieng">Sam Ochieng</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type ">Reason for creating the credit Note</label>
+                                    <textarea name=" " placeholder="Enter tenant 's reason for moving out" id="" cols="30" rows="3" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> A message will be sent to the landlord on the followingCredit Note
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Submit Details</button>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end of credit modal -->
 
             <footer class="footer">
                 <div class="container-fluid">
