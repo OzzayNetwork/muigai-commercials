@@ -7,30 +7,29 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Muigai Commercial | New auctioneer</title>
+    <title>Muigai Commercials | List of tenants</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Rental management system by Nouveta LTD" name="description" />
     <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- droping file -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-
-
+    <!-- DataTables -->
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
-
-
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
-
 
 </head>
 
@@ -91,10 +90,12 @@
                             <span class="bx bx-search-alt"></span>
                         </div>
                     </form>
+
+
                 </div>
 
                 <div class="d-flex">
-
+                    <!-- small search -->
                     <div class="dropdown d-inline-block d-lg-none ms-2">
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
@@ -113,8 +114,6 @@
                             </form>
                         </div>
                     </div>
-
-
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="bx bx-fullscreen"></i>
@@ -215,8 +214,6 @@
                             <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </header>
@@ -420,12 +417,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Add an auctioneer</h4>
+                                <h4 class="mb-sm-0 font-size-18">Auctioneers</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Add an auctioneer</li>
+                                        <li class="breadcrumb-item active">All auctioneers</li>
                                     </ol>
                                 </div>
 
@@ -433,72 +430,110 @@
                         </div>
                     </div>
                     <!-- end page title -->
-
-                    <!-- eTransactions table -->
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <h4 class="card-title text-capitalize mb-0 ">
+                                            Auctioneers Register
+                                        </h4>
 
-                                        <div class="col-7">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Auctioneer's Name <strong class="text-danger">*</strong></label>
-                                                        <input type="text" class="form-control" id="" placeholder="Enter the auctioneering company name">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Email <strong class="text-danger">*</strong></label>
-                                                        <input type="email" class="form-control" id="" placeholder="email@email.com">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Telephone Number <strong class="text-danger">*</strong></label>
-                                                        <input type="email" class="form-control" id="" placeholder="Phone number">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Contact person <strong class="text-danger">*</strong></label>
-                                                        <input type="email" class="form-control" id="" placeholder="Enter Your First Name">
-                                                    </div>
-                                                </div>
-                                                <div class="col-8">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Postal Address <strong class="text-danger">*</strong></label>
-                                                        <input type="text" class="form-control" id="" placeholder="Enter the personal address">
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="mb-4">
-                                                        <label for="basicpill-firstname-input">Town <strong class="text-danger">*</strong></label>
-                                                        <input type="text" class="form-control" id="" placeholder="Enter town name">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="d-flex">
+                                            <a href="auctioneers-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                                <i class="mdi  mdi-folder-plus  font-size-16"></i> <span class="pl-1 d-md-inline">Add an Auctioneer</span>
+                                            </a>
+
                                         </div>
-                                        <div class="col-5">
-                                            <div class=" mb-4 ">
-                                                <label class="text-capitalize " for="basicpill-firstname-input ">Location<strong class="text-danger ">*</strong></label>
-                                                <textarea name=" " class="form-control " id=" " cols="30 " rows="10" placeholder="Enter the physical address"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 ">
-                                            <button type="button " class="btn btn-primary waves-effect waves-light ">
-                                                <i class="mdi mdi-check-all font-size-16 align-middle me-2 "></i> Add Auctioneer
-                                            </button>
-                                        </div>
+
 
                                     </div>
-
+                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+                                        <button type="button" class="btn btn-danger waves-effect btn-label waves-light me-3 d-none"><i class="bx  bx-trash label-icon"></i> Block</button>
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Message Auctioneer(s)</button>
+                                    </div>
                                 </div>
+                                <div class="card-body">
+                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
+                                        <thead class="table-light">
+                                            <tr>
 
+                                                <th scope="col">
+                                                    <div class="the-mail-checkbox pr-4">
+                                                        <label for="selectAll" class="d-none">Select All</label>
+                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
+
+                                                    </div>
+                                                </th>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Auctioneer</th>
+                                                <th scope="col">Contacts</th>
+                                                <th scope="col">Physical address</th>
+                                                <th scope="col">No. of Distress</th>
+                                                <th scope="col">Active distress</th>
+                                                <th scope="col" class="text-right">Total paid</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>
+                                                    <div class="d-flex  align-items-center">
+                                                        <div class="the-mail-checkbox pr-4">
+                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                                <td class="text-capitalize">1</td>
+                                                <td class="text-capitalize">
+                                                    <p class="mb-0"><a href="#" title="View Details">Kelvin Njuguna</a></p>
+
+                                                </td>
+                                                <td>
+                                                    <p class="text-muted mb-0">
+                                                        <a href="tell:0704549859">0704549859</a>
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <a href="mailto:email@email.com">email@email.com</a>
+                                                    </p>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    Tulip house, opposite sammer park
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    23
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td class="text-black text-uppercase text-right">
+                                                    KES 3,000
+                                                </td>
+
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="auctioneers-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Deactivate Auctioneer</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-printer me-3"></i>Print Statements</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Auctioneer</a>
+                                                            <a class="dropdown-item d-none" href="#" data-bs-toggle="modal" data-bs-target=".credit-modal"><i class="font-size-15  mdi mdi-cash-remove me-3 "></i>Create Credit Note</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <!-- end col -->
@@ -510,91 +545,112 @@
             </div>
             <!-- End Page-content -->
 
-            <!-- Transaction Modal -->
-            <div class="modal fade transaction-detailModal " tabindex="-1 " role="dialog " aria-labelledby="transaction-detailModalLabel " aria-hidden="true ">
-                <div class="modal-dialog modal-dialog-centered " role="document ">
-                    <div class="modal-content ">
-                        <div class="modal-header ">
-                            <h5 class="modal-title " id="transaction-detailModalLabel ">Transactions Details</h5>
-                            <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
+            <!-- credit modal -->
+            <div class="modal fade issue-modal pb-5 credit-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered mb-5 ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Credit Note for Kelvin Njuguna</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body ">
-
-
-                            <div class="table-responsive mt-4 ">
-                                <table class="table align-middle table-nowrap ">
-                                    <tbody>
-                                        <tr>
-                                            <td style="width: 30% ">
-                                                <p class="mb-0 ">Car Plate Number</p>
-                                            </td>
-                                            <td style="width: 25% ">
-                                                <h5 class="mb-0 text-uppercase ">UAG 1235p</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p class="mb-0 ">Vehicle Category</p>
-                                            </td>
-                                            <td>
-                                                <h5 class="mb-0 ">Salon Car</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p class="mb-0 ">Payment Date</p>
-                                            </td>
-                                            <td>
-                                                <h5 class="mb-0 ">22 Apr 2022 06:54PM</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p class="mb-0 ">San Diego</p>
-                                            </td>
-                                            <td>
-                                                <h5 class="mb-0 ">1,026</h5>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2 ">
-                                                <p class="mb-0 pb-0 ">Amount Paid</p>
-                                                <h3>UGX 2,000</h3>
-                                            </td>
-                                        </tr>
-                                        <TR>
-                                            <td col-span="2 ">
-                                                <p class="mb-2 ">Attended By<span class="text-primary "> Alex Sebeye</span></p>
-                                                <p class="mb-4 ">Toll taker's No. <span class="text-primary ">0704549859</span></p>
-                                            </td>
-                                        </TR>
-                                    </tbody>
-                                </table>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Landlord's Details</strong><br>
+                                     Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Lion Rock Apartments
+                                    <br><br>
+                                    <span class="today-date">1 Mar 2022</span><br>
+                                    <span class="fw-semibold">Being Created By </span> Alex Wanjala<br>
+                                </address>
                             </div>
+                            <div class="col-12">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Debit Amount</label>
+                                    <input type="text" class="form-control" placeholder="Enter amount">
+                                </div>
+                            </div>
+
+
+                            <div class=" col-12 ">
+                                <div class="mb-4 ">
+                                    <label class="text-capitalize ">Debit this amount to a Tenant</label>
+                                    <div class="row ">
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="yes" type="radio" name="debit-this" id="debit-yes">
+                                                <label class="form-check-label" for="debit-yes">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-auto ">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" value="no" type="radio" name="debit-this" id="debit-no">
+                                                <label class="form-check-label" for="debit-no">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-12 d-non debit-tenant-list d-none">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type">Select the Tenant</label>
+                                    <select class="form-control selectpicker" title="Select tenant" data-live-search="true">
+                                        <option value="001" data-content="<span class='d-none'>001</span> Amos were">Amos were</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-non'>002</span>Philip Mutua">Philip Mutua</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Sharon Wambui">Sharon Wambui</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Rita Kanana">Rita Kanana</option>
+                                        <option value="" data-content="<span class='badge badge-success file-nod-none'>005</span>Ernest Mburu">Ernest Mburu</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Latasha Tasha">Latasha Tasha</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Alex Wanjala">Alex Wanjala</option>
+                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Sam Ochieng">Sam Ochieng</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="mb-4 ">
+                                    <label for="agreement-type ">Reason for creating the credit Note</label>
+                                    <textarea name=" " placeholder="Enter tenant 's reason for moving out" id="" cols="30" rows="3" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2 "></i> A message will be sent to the landlord on the followingCredit Note
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="modal-footer ">
-                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Submit Details</button>
                         </div>
+
                     </div>
+                    <!-- /.modal-content -->
                 </div>
+                <!-- /.modal-dialog -->
             </div>
-            <!-- end modal -->
+            <!-- end of credit modal -->
 
-
-
-            <footer class="footer ">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-sm-6 ">
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © RevenueSure.
+                            </script> © RevenueSure
                         </div>
-                        <div class="col-sm-6 ">
+                        <div class="col-sm-6">
                             <div class="text-sm-end d-sm-block ">
                                 Developed by Nouveta LTD.
                             </div>
@@ -608,49 +664,49 @@
     </div>
     <!-- END layout-wrapper -->
 
-
-
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
 
-    <!-- JAVASCRIPT -->
-    <script src="assets/libs/jquery/jquery.min.js "></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/libs/metismenu/metisMenu.min.js "></script>
     <script src="assets/libs/simplebar/simplebar.min.js "></script>
     <script src="assets/libs/node-waves/waves.min.js "></script>
 
 
+
     <!-- Required datatable js -->
-    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
-    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
     <!-- Buttons examples -->
-    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
-    <script src="assets/libs/jszip/jszip.min.js "></script>
-    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
-    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
 
     <!-- Responsive examples -->
-    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
-    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
     <!-- Datatable init js -->
-    <script src="assets/js/pages/datatables.init.js "></script>
-
-    <!-- form mask -->
-    <script src="assets/libs/inputmask/min/jquery.inputmask.bundle.min.js "></script>
-
-    <!-- form mask init -->
-    <script src="assets/js/pages/form-mask.init.js "></script>
-
-
+    <script src="assets/js/pages/datatables.init.js"></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js "></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 
 
