@@ -327,9 +327,32 @@ $(window).on('load', function() {
         }
     });
 
+    $('.premises-name-select').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue, dataContent) {
+        var theVal = e.target.value;
+        //alert(theVal)
+        $('.prem-name').text(theVal)
+
+    })
+
+
+    $('.house-num').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue, dataContent) {
+        var theVal = e.target.value;
+        var dataTypeAttribute = $('option:selected', this).attr("data-content");
+        console.log(dataTypeAttribute);
+
+        var url = '/Controller/Action?id=11112&value=4444';
+        //alert(dataTypeAttribute.split('</span>')[1]);
+        dataTypeAttribute = dataTypeAttribute.split("tenant d-none'>")[1];
+        dataTypeAttribute = dataTypeAttribute.split("</span>")[0];
+        $('.the-tenant-is').text(dataTypeAttribute).parent().removeClass('d-none')
+        $('.hse-num').text(theVal)
+
+    })
+
     $('.occupation-type').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
         var theVal = $(this).val();
-        // alert(theVal);
+
+
         if (theVal == "employed") {
             $('.employed').removeClass('d-none')
             $('.employed').slideDown().siblings().slideUp();
@@ -415,7 +438,7 @@ $(window).on('load', function() {
 
     $("body").on('change', '[name="credit-for"]', function() {
         var theVal = $(this).val();
-        if (theVal == "landlord") {
+        if (theVal == "tenant") {
             // alert('checked');
             $('.landlord-credit-colection').removeClass('d-none').siblings('.credit-options').addClass('d-none');
         }
@@ -454,6 +477,20 @@ $(window).on('load', function() {
 
 
 
+    });
+
+    // closing the creditnote details modal
+    $('.submit-credit-details').on('click', function() {
+        $('.debit-tenant-modal').modal('hide');
+        setTimeout(function() {
+            $("#creditNoteModalLoad").modal("show")
+        }, 100);
+
+        setTimeout(function() {
+            $('#creditNoteModalLoad .loading-cont').addClass('d-none')
+            $('#creditNoteModalLoad .loading-cont').next().removeClass('d-none')
+                //$("#creditNoteModalLoad").modal("show")
+        }, 2000);
     })
 
 

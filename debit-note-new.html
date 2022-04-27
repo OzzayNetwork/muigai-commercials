@@ -424,13 +424,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Credit Note</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Debit Note</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                         <li class="breadcrumb-item"><a href="invoice-unpaid.html">Credit & Debit Notes</a></li>
-                                        <li class="breadcrumb-item active">Create Credit note</li>
+                                        <li class="breadcrumb-item active">Create Debit Note</li>
                                     </ol>
                                 </div>
 
@@ -449,13 +449,13 @@
                                         <div class="col-sm-12 col-md-7 col-lg-6">
                                             <div class="d-flex justify-items-center align-items-center">
                                                 <div class="card-body border-1 invoice-form credit-form p-5">
-                                                    <h4 class="card-title mb-4">Enter the details below</h4>
+                                                    <h4 class="card-title mb-4 text-capitalize">Enter debit note details</h4>
 
                                                     <form>
                                                         <div class="row">
                                                             <div class=" col-12 ">
-                                                                <div class="mb-4 ">
-                                                                    <label class="text-capitalize ">Whats this credit note for?</label>
+                                                                <div class="mb-4 d-none">
+                                                                    <label class="text-capitalize ">who's debit note is this meant for?</label>
                                                                     <div class="row ">
                                                                         <div class="col-auto ">
                                                                             <div class="form-check mb-3">
@@ -511,7 +511,7 @@
                                                             </div>
                                                             <div class=" col-12 ">
                                                                 <div class="mb-4 ">
-                                                                    <label class="text-capitalize ">Debit this amount to a Tenant</label>
+                                                                    <label class="text-capitalize ">Credit this amount to a Tenant</label>
                                                                     <div class="row ">
                                                                         <div class="col-auto ">
                                                                             <div class="form-check mb-3">
@@ -537,18 +537,39 @@
 
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 d-non debit-tenant-list d-none">
+                                                            <div class="col-7 d-non debit-tenant-list d-none">
                                                                 <div class="mb-4 ">
-                                                                    <label for="agreement-type">Select the Tenant</label>
-                                                                    <select class="form-control selectpicker" title="Select tenant" data-live-search="true">
-                                                                        <option value="001" data-content="<span class='d-none'>001</span> Amos were">Isaac Mwakido</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Sharon Wambui">Sharon Wambui</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Rita Kanana">Rita Kanana</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>005</span>Ernest Mburu">Ernest Mburu</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Latasha Tasha">Latasha Tasha</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Alex Wanjala">Alex Wanjala</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Sam Ochieng">Sam Ochieng</option>
+                                                                    <label for="agreement-type">Select tenant's premises</label>
+                                                                    <select class="form-control selectpicker premises-name-select" title="Select Premises" data-live-search="true">
+                                                                        <option value="Sone Plaza" data-content="<span class='d-none'>001</span> Stone Plaza">Stone Plaza</option>
+
+                                                                        <option value="Makuti House" data-content="<span class='badge badge-success file-no d-none'>003</span>Makuti House">Makuti House</option>
+                                                                        <option value="Milimani Apartments" data-content="<span class='badge badge-success file-no d-none'>004</span>Milimani Apartment">Milimani Apartment</option>
+                                                                        <option value="Tulip House" data-content="<span class='badge badge-success file-no d-none'>005</span>Tulip house">Tulip house</option>
+                                                                        <option value="Twin towers" data-content="<span class='badge badge-success file-no d-none'>006</span>Twin Towers">Twin Towers</option>
+                                                                        <option value="Network plaza" data-content="<span class='badge badge-success file-no d-none'>007</span>Network Plaza">Network plaza</option>
+                                                                        <option value="Highway Towers" data-content="<span class='badge badge-success file-no d-none'>008</span>Highway Towers">Highway Towers</option>
                                                                   </select>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-5 d-non debit-tenant-list d-none">
+                                                                <div class="mb-4 ">
+                                                                    <label for="agreement-type">Hse/Unit No.</label>
+                                                                    <select class="form-control selectpicker house-num" title="Select hse No." data-live-search="true">
+                                                                        <option value="400" data-content="<span class='badge badge-success tenant d-none'>Sharon Wambui</span>400">400</option>
+                                                                        <option value="101" data-content="<span class='badge badge-success tenant d-none'>Rita Kanana</span>101">101</option>
+                                                                        <option value="402" data-content="<span class='badge badge-success tenant d-none'>Ernest Mburu</span>402">402</option>
+                                                                        <option value="403" data-content="<span class='badge badge-success tenant d-none'>Latasha Tasha</span>403">403</option>
+                                                                        <option value="404" data-content="<span class='badge badge-success tenant d-none'>Alex Wanjala</span>404">404</option>
+                                                                        <option value="405" data-content="<span class='badge badge-success tenant d-none'>Sam Ochieng</span>405">405</option>
+                                                                  </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 debit-tenant-list d-none">
+                                                                <div class="alert alert-warning badge-soft-info the-tenant-is" role="alert">
+                                                                    <i class="mdi mdi-alert-outline me-2 "></i> Tenant not selected
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -572,7 +593,7 @@
                                                         <div class="row">
                                                             <div class="col-12 ">
                                                                 <div class="mb-4 ">
-                                                                    <label for="agreement-type " class="text-capitalize">Reason for creating the credit Note</label>
+                                                                    <label for="agreement-type " class="text-capitalize">Reason for creating the Debit Note</label>
                                                                     <textarea name=" " placeholder="Enter the reason" id="" cols="30" rows="3" class="form-control"></textarea>
                                                                 </div>
                                                             </div>
@@ -598,9 +619,9 @@
                                                         </div>
                                                         <div class="col-12">
                                                             <div>
-                                                                <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                                                <button type="button" class="btn btn-primary w-md submit-credit-details">Submit</button>
                                                             </div>
-                                                            <div class="d-none debit-tenant-button">
+                                                            <div class="d-none debit-tenant-button ">
                                                                 <button type="button" data-bs-toggle="modal" data-bs-target=".debit-tenant-modal" class="btn btn-success w-md">Next</button>
                                                             </div>
                                                         </div>
@@ -629,16 +650,17 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Distribute the Debited amount to the correct invoice accounts</h5>
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Distribute the credited amount correctly to the tenant</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="col-12">
                                 <address>
-                                    <strong>Debit to:</strong><br>
-                                    Kelvin Njuguna<br>
+                                    <strong>Debit to:</strong><br> 
+                                    <span class="the-tenant-is">-</span>
+                                    <br>
                                     email@mail.com, 0704 549 859<br>                                   
-                                    Hse No. 410, 90 Degrees By Tsavo
+                                    Hse No. <span class="hse-num">410</span>, <span class="prem-name">90 Degrees By Tsavo</span>
                                     <br><br>
                                    <span class="date-today"> 1 Mar 2022, 10:20 AM</span>
                                 </address>
@@ -712,7 +734,7 @@
                         </div>
                         <div class="modal-footer">
                             <div class="float-end">
-                                <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light">Submit Details</a>
+                                <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light submit-credit-details">Submit Details</a>
                             </div>
                         </div>
 
@@ -722,6 +744,62 @@
                 <!-- /.modal-dialog -->
             </div>
             <!-- debiting amoun to tenant -->
+            <!-- loader -->
+            <div class="modal fade" id="creditNoteModalLoad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0 d-none">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body loading-cont">
+                            <div class="row">
+                                <div class="col-12 mt-5 mb-5">
+                                    <div class="d-flex justify-content-center align-items-center justify-content-center flex-column">
+                                        <div class="spinner-border text-info m-1 mb-4" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <h4 class="text-uppercase text-info">loading</h4>
+                                            <p>Please wait as your request is being processed</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body d-none">
+                            <div class="text-center mt-5 mb-5">
+                                <div class="avatar-md mx-auto mb-4 ">
+                                    <div class="avatar-title bg-light rounded-circle text-success h1 ">
+                                        <i class="mdi mdi-check-bold "></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center ">
+                                    <div class="col-xl-10 ">
+                                        <h4 class="text-success text-uppercase">Created successfully</h4>
+                                        <p class="text-muted  mb-4 ">
+                                            The credit note has been created successfully
+                                        </p>
+
+                                    </div>
+                                    <div class="col-10">
+                                        <a href="#" type="button" class="btn btn-primary waves-effect waves-light w-100 text-capitalize">
+                                            <i class="mdi mdi-printer font-size-18 align-middle me-2"></i> Print Credit Note
+                                        </a>
+                                        <a href="#" type="button" class="btn btn-primary waves-effect waves-light w-100 text-capitalize mt-3">
+                                            <i class="mdi mdi-printer font-size-18 align-middle me-2"></i> Print Debit Note
+                                        </a>
+
+                                        <button type="button" class="btn btn-outline-secondary waves-effect waves-light w-100 mt-3 text-capitalize stay-on-page">
+                                            <i class="mdi mdi-window-close font-size-18 align-middle me-2"></i> Close this section
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
