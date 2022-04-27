@@ -404,12 +404,57 @@ $(window).on('load', function() {
         var theVal = $(this).val();
         if (theVal == "yes") {
             // alert('checked');
-            $('.debit-tenant-list').removeClass('d-none')
+            $('.debit-tenant-list').removeClass('d-none');
+            $('.debit-tenant-button').removeClass('d-none').siblings().addClass('d-none');
         } else {
             $('.debit-tenant-list').addClass('d-none')
+            $('.debit-tenant-button').addClass('d-none').siblings().removeClass('d-none');
         }
 
     });
+
+    $("body").on('change', '[name="credit-for"]', function() {
+        var theVal = $(this).val();
+        if (theVal == "landlord") {
+            // alert('checked');
+            $('.landlord-credit-colection').removeClass('d-none').siblings('.credit-options').addClass('d-none');
+        }
+        if (theVal == "invoice") {
+            $('.invoice-credit-colection').removeClass('d-none').siblings('.credit-options').addClass('d-none');
+            $('#debit-no').prop("checked", true);
+            $('.debit-tenant-list').addClass('d-none')
+            $('.debit-tenant-button').addClass('d-none').siblings().removeClass('d-none');
+
+        }
+    });
+
+    // creating invoices
+    $("body").on('change', '[name="invoice-for"]', function() {
+        var theVal = $(this).val();
+        if (theVal == "tenant") {
+            // alert('checked');
+            $('.tenant-invoice-container').removeClass('d-none').siblings('.invoice-options').addClass('d-none');
+        }
+        if (theVal == "other") {
+            $('.others-invoice-container').removeClass('d-none').siblings('.invoice-options').addClass('d-none');
+        }
+    });
+
+
+    $('body').on('keyup', '.credit-amount', function() {
+        var theAmount = $(this).val();
+        theAmount = parseFloat(theAmount);
+        $('.debited-amount').text("KES " + numeral(theAmount).format('0,0'));
+
+        var remainingBal = $('.the-total').text();
+        remainingBal = remainingBal.replace(/[^0-9]/g, '');
+        remainingBal = parseFloat(remainingBal);
+        var NewBal = remainingBal - theAmount;
+        $('.the-debit-balance').text("KES " + numeral(NewBal).format('0,0'));
+
+
+
+    })
 
 
 
