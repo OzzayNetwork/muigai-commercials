@@ -415,7 +415,13 @@ $(window).on('load', function() {
             total = parseFloat(theVal) + parseFloat(total);
             console.log(total);
             //alert("hhghj")
-        })
+        });
+
+        var remainingBal = $('.the-balance').text();
+        remainingBal = parseFloat(remainingBal.replace(/[^0-9]/g, ''));
+        remainingBal = remainingBal - total;
+        $('.the-balance').text("KES " + numeral(remainingBal).format('0,0'));
+
 
 
         $('.invoiceTotalPay').val("KES " + numeral(total).format('0,0'))
