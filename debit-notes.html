@@ -7,22 +7,18 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>RevenueSure | Muigai Commercial</title>
+    <title>Muigai Commercials | Partially paid invoices</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Rental management system by Nouveta LTD" name="description" />
     <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- droping file -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-
-    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
-
-
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -34,7 +30,6 @@
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
-
 
 </head>
 
@@ -424,13 +419,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Debit Note</h4>
+                                <h4 class="mb-sm-0 font-size-18">Debit Notes</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="invoice-unpaid.html">Credit & Debit Notes</a></li>
-                                        <li class="breadcrumb-item active">Create Debit Note</li>
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Credit & Debit notes</a></li>
+                                        <li class="breadcrumb-item active">All Debit Notes</li>
                                     </ol>
                                 </div>
 
@@ -438,203 +433,286 @@
                         </div>
                     </div>
                     <!-- end page title -->
-
-                    <!-- eTransactions table -->
-
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card p-5">
-                                <div class="card-body ">
-                                    <div class="row d-flex align-items-center justify-content-center ">
-                                        <div class="col-sm-12 col-md-7 col-lg-6">
-                                            <div class="d-flex justify-items-center align-items-center">
-                                                <div class="card-body border-1 invoice-form debit-form p-5">
-                                                    <h4 class="card-title mb-4 text-capitalize">Enter debit note details</h4>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
-                                                    <form>
-                                                        <div class="row">
-                                                            <div class=" col-12 ">
-                                                                <div class="mb-4 d-none">
-                                                                    <label class="text-capitalize ">who's debit note is this meant for?</label>
-                                                                    <div class="row ">
-                                                                        <div class="col-auto ">
-                                                                            <div class="form-check mb-3">
-                                                                                <input class="form-check-input" value="landlord" type="radio" name="credit-for" id="landlord-credit" checked>
-                                                                                <label class="form-check-label" for="landlord-credit">
-                                                                                    A Landlord
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <h4 class="card-title text-capitalize mb-0 ">
+                                            Credit Notes fot <span class="today-month">March 2022</span>
+                                        </h4>
 
-                                                                        <div class="col-auto d-none">
-                                                                            <div class="form-check mb-3">
-                                                                                <input class="form-check-input" value="tenant" type="radio" name="credit-for" id="tenant-credit">
-                                                                                <label class="form-check-label" for="tenant-credit">
-                                                                                    A Tenant
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
+                                        <div class="d-flex">
+                                            <a href="credit-note-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3">
+                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create A Credit Note</span>
+                                            </a>
+                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker font-size-16" data-live-search="true" title="Select the property">
+                                                <option value="" selected>Mar 2022</option>
+                                                <option value="">Feb 2022</option>
+                                                <option value="">Jan 2022</option>
+                                                <option value="">Dec 2021</option>
+                                                <option value="">Nov 2021</option>
+                                                <option value="">Sep 2021</option>
+                                                <option value="">Oct 2021</option>
+                                          </select>
 
-                                                                        <div class="col-auto ">
-                                                                            <div class="form-check mb-3">
-                                                                                <input class="form-check-input" value="invoice" type="radio" name="credit-for" id="invoice-credit">
-                                                                                <label class="form-check-label" for="invoice-credit">
-                                                                                    An Existing invoice
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                    </div>
-
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- landlord's credit note -->
-                                                        <div class="row landlord-credit-colection credit-options">
-                                                            <div class="col-12">
-                                                                <div class="mb-4">
-                                                                    <label for="formrow-firstname-input" class="form-label text-capitalize">landlord</label>
-                                                                    <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select a tenant">
-                                                                            <option value="001" data-content="<span class='d-none'>001</span> Amos were">Amos were</option>
-                                                                            <option value="" data-content="<span class='badge badge-success file-no d-none'>002</span>Philip Mutua">Kelvin Njuguna</option>
-                                                                            <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Sharon Wambui">Mary Akinyi</option>
-                                                                            <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Rita Kanana">Kevin Otati</option>
-                                                                            <option value="" data-content="<span class='badge badge-success file-no d-none'>005</span>Ernest Mburu">Mwana Wefwe</option>
-                                                                            <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Latasha Tasha">Kinoti Noti</option>
-                                                                            <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Alex Wanjala">Fwego Fwego</option>
-                                                                            <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Sam Ochieng">One Two</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class=" col-12 ">
-                                                                <div class="mb-4 ">
-                                                                    <label class="text-capitalize ">Credit this amount to a Tenant</label>
-                                                                    <div class="row ">
-                                                                        <div class="col-auto ">
-                                                                            <div class="form-check mb-3">
-                                                                                <input class="form-check-input" value="yes" type="radio" name="debit-this" id="debit-yes">
-                                                                                <label class="form-check-label" for="debit-yes">
-                                                                                    Yes
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="col-auto ">
-                                                                            <div class="form-check mb-3">
-                                                                                <input class="form-check-input" value="no" type="radio" name="debit-this" id="debit-no" checked>
-                                                                                <label class="form-check-label" for="debit-no">
-                                                                                    No
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                    </div>
-
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-7 d-non debit-tenant-list d-none">
-                                                                <div class="mb-4 ">
-                                                                    <label for="agreement-type">Select tenant's premises</label>
-                                                                    <select class="form-control selectpicker premises-name-select" title="Select Premises" data-live-search="true">
-                                                                        <option value="Sone Plaza" data-content="<span class='d-none'>001</span> Stone Plaza">Stone Plaza</option>
-
-                                                                        <option value="Makuti House" data-content="<span class='badge badge-success file-no d-none'>003</span>Makuti House">Makuti House</option>
-                                                                        <option value="Milimani Apartments" data-content="<span class='badge badge-success file-no d-none'>004</span>Milimani Apartment">Milimani Apartment</option>
-                                                                        <option value="Tulip House" data-content="<span class='badge badge-success file-no d-none'>005</span>Tulip house">Tulip house</option>
-                                                                        <option value="Twin towers" data-content="<span class='badge badge-success file-no d-none'>006</span>Twin Towers">Twin Towers</option>
-                                                                        <option value="Network plaza" data-content="<span class='badge badge-success file-no d-none'>007</span>Network Plaza">Network plaza</option>
-                                                                        <option value="Highway Towers" data-content="<span class='badge badge-success file-no d-none'>008</span>Highway Towers">Highway Towers</option>
-                                                                  </select>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-5 d-non debit-tenant-list d-none">
-                                                                <div class="mb-4 ">
-                                                                    <label for="agreement-type">Hse/Unit No.</label>
-                                                                    <select class="form-control selectpicker house-num" title="Select hse No." data-live-search="true">
-                                                                        <option value="400" data-content="<span class='badge badge-success tenant d-none'>Sharon Wambui</span>400">400</option>
-                                                                        <option value="101" data-content="<span class='badge badge-success tenant d-none'>Rita Kanana</span>101">101</option>
-                                                                        <option value="402" data-content="<span class='badge badge-success tenant d-none'>Ernest Mburu</span>402">402</option>
-                                                                        <option value="403" data-content="<span class='badge badge-success tenant d-none'>Latasha Tasha</span>403">403</option>
-                                                                        <option value="404" data-content="<span class='badge badge-success tenant d-none'>Alex Wanjala</span>404">404</option>
-                                                                        <option value="405" data-content="<span class='badge badge-success tenant d-none'>Sam Ochieng</span>405">405</option>
-                                                                  </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 debit-tenant-list d-none">
-                                                                <div class="alert alert-warning badge-soft-info the-tenant-is" role="alert">
-                                                                    <i class="mdi mdi-alert-outline me-2 "></i> Tenant not selected
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- invoices credit note -->
-                                                        <div class="row invoice-credit-colection credit-options d-none">
-                                                            <div class="mb-4">
-                                                                <label for="formrow-firstname-input" class="form-label text-capitalize">Invoice Number</label>
-                                                                <select class="form-control selectpicker bg-white" title="Select an invoice" data-live-search="true" title="Select an invoice">
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>002</span>Eric Muthii">INV 1236</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>003</span>Mutembei Mbei">INV 1237</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>004</span>Ken Kennedy">INV 1238</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>005</span>Hezron Muriuki">INV 1239</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>006</span>Ivan Vanta">INV 1210</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>007</span>Reno Kioti">INV 1211</option>
-                                                                        <option value="" data-content="<span class='badge badge-success file-no d-none'>008</span>Alex wanjala">INV 12312</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-12 ">
-                                                                <div class="mb-4 ">
-                                                                    <label for="agreement-type " class="text-capitalize">Reason for creating the Debit Note</label>
-                                                                    <textarea name=" " placeholder="Enter the reason" id="" cols="30" rows="3" class="form-control"></textarea>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">Amount To Credit</label>
-                                                                    <input type="number" class="form-control credit-amount" id="" placeholder="KES">
-                                                                </div>
-                                                            </div>
-
-
-                                                        </div>
-
-                                                        <div class="mb-3 d-none">
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                                <label class="form-check-label" for="gridCheck">
-                                                                  Check me out
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div>
-                                                                <button type="button" class="btn btn-primary w-md submit-credit-details">Submit</button>
-                                                            </div>
-                                                            <div class="d-none debit-tenant-button ">
-                                                                <button type="button" data-bs-toggle="modal" data-bs-target=".debit-tenant-modal" class="btn btn-success w-md">Next</button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
                                         </div>
-                                    </div>
 
+
+                                    </div>
+                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
+                                    </div>
                                 </div>
-                                <!-- end card body -->
+                                <div class="card-body">
+                                    <div class="table-responsive overflow-visible">
+
+                                        <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
+                                            <thead class="table-light">
+                                                <tr class="table-dark">
+
+                                                    <th scope="col">NO.</th>
+                                                    <th scope="col">For</th>
+                                                    <th scope="col">Created on</th>
+                                                    <th scope="col">Original Invoice</th>
+                                                    <th scope="col">Debited To</th>
+                                                    <th scope="col">Credit Reason</th>
+                                                    <th scope="col" class="text-right">Credit Amount</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                    </td>
+                                                    <td>
+                                                        01 Mar2022 10:23 Am
+                                                    </td>
+                                                    <td>
+                                                        90 Degrees Hse no. 410
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        D-00005
+                                                    </td>
+
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                    </td>
+                                                    <td>
+                                                        01 Mar2022 10:23 Am
+                                                    </td>
+                                                    <td>
+                                                        90 Degrees Hse no. 410
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        D-00005
+                                                    </td>
+
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                    </td>
+                                                    <td>
+                                                        01 Mar2022 10:23 Am
+                                                    </td>
+                                                    <td>
+                                                        90 Degrees Hse no. 410
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        D-00005
+                                                    </td>
+
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                    </td>
+                                                    <td>
+                                                        01 Mar2022 10:23 Am
+                                                    </td>
+                                                    <td>
+                                                        INV-00123
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        D-00005
+                                                    </td>
+
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                    </td>
+                                                    <td>
+                                                        01 Mar2022 10:23 Am
+                                                    </td>
+                                                    <td>
+                                                        90 Degrees Hse no. 410
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        D-00005
+                                                    </td>
+
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex">
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+
+
+
+
+                                            </tbody>
+                                            <tfoot class="table-dark">
+                                                <tr>
+
+                                                    <th class="text-capitalize text-nowrap" colspan="3">6 Credit Notes</th>
+                                                    <td class="text-nowrap text-right " colspan="4">
+                                                        <span class="fw-semibold ">KES 25,500</span>
+                                                    </td>
+
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- end card -->
                         </div>
                         <!-- end col -->
                     </div>
@@ -643,98 +721,122 @@
                 </div>
                 <!-- container-fluid -->
             </div>
-            <!-- End Page-content -->
 
-            <!-- Debiting amount to the tenant -->
-            <div class="modal fade debit-tenant-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <!-- invoice details -->
+            <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Distribute the credited amount correctly to the tenant</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Receipt Invoice</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="col-12">
                                 <address>
-                                    <strong>Debit to:</strong><br> 
-                                    <span class="the-tenant-is">-</span>
-                                    <br>
+                                    <strong>Billed To:</strong><br>
+                                    Kelvin Njuguna<br>
                                     email@mail.com, 0704 549 859<br>                                   
-                                    Hse No. <span class="hse-num">410</span>, <span class="prem-name">90 Degrees By Tsavo</span>
+                                    Hse No. 410, 90 Degrees By Tsavo
                                     <br><br>
-                                   <span class="date-today"> 1 Mar 2022, 10:20 AM</span>
+                                    1 Mar 2022, 10:20 AM
                                 </address>
                             </div>
                             <div class="col-12">
                                 <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Balances Breakdown</h3>
+                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="table-responsive">
-                                    <table class="table table-nowrap invoice-table">
+                                    <table class="table table-nowrap">
                                         <thead>
                                             <tr>
                                                 <th style="width: 70px;">No.</th>
                                                 <th>Item</th>
                                                 <th class="text-end">Amount</th>
-                                                <th class="" style="width: 150px;">Assign Amount</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>01</td>
-                                                <td>Monthly Rent</td>
+                                                <td>Rent Deposit</td>
                                                 <td class="text-end">KES 24,500</td>
-                                                <td>
-                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
-                                                </td>
                                             </tr>
 
                                             <tr>
                                                 <td>02</td>
-                                                <td>Surcharge</td>
-                                                <td class="text-end">KES 2,450</td>
-                                                <td>
-                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
-                                                </td>
+                                                <td>Monthly Rent</td>
+                                                <td class="text-end">KES 12,000</td>
                                             </tr>
 
                                             <tr>
                                                 <td>03</td>
-                                                <td>Visitation Fee</td>
-                                                <td class="text-end">KES 500</td>
-                                                <td>
-                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
-                                                </td>
+                                                <td>TAX (18%)</td>
+                                                <td class="text-end">KES 250</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2" class="text-end">Total</td>
-                                                <td class="text-end fw-bold the-total">KES 27,450</td>
-                                                <td class="text-end fw-bold debited-amount">KES 0.00</td>
+                                                <td class="text-end fw-bold">KES 36,750</td>
                                             </tr>
-
+                                            <tr>
+                                                <td colspan="2" class="text-end">Paid</td>
+                                                <td class="text-end  fw-bold">KES 0.00</td>
+                                            </tr>
 
                                             <tr>
                                                 <td colspan="2" class="border-0 text-end">
-                                                    <strong>Remaining Balance</strong></td>
+                                                    <strong>Balance</strong></td>
                                                 <td class="border-0 text-end">
-                                                    <h5 class="m-0 text-uppercase fw-bold the-debit-balance">KES 0.00</h5>
+                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="alert alert-warning" role="alert">
-                                    <i class="mdi mdi-alert-outline me-2 "></i> A debit note with this details will be created and information will be sent to the tenant on the same via SMS
-                                </div>
-                            </div>
                         </div>
                         <div class="modal-footer">
+                            <div class="col-12 d-none">
+                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
+                                    <table class="w-100">
+                                        <tbody>
+                                            <tr data-id="1">
+                                                <td>
+                                                    <label for="" class="">Payment Method</label>
+                                                    <select class="form-control selectpicker w-100 payment-method" data-style="btn-secondary w-100" data-live-search="true" title="Select payment Method">
+                                                        <option value="Mpesa">MPESA</option>
+                                                        <option value="Cash">CASH</option>   
+                                                     </select>
+                                                </td>
+                                                <td class="px-3 ">
+                                                    <div class="phone-num d-none">
+                                                        <label for="">Phone No.</label>
+                                                        <input type="text " class="form-control w-100 d-flex " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
+                                                    </div>
+
+                                                </td>
+                                                <td class="px-3">
+                                                    <label for="">Amount To Be Paid</label>
+                                                    <input type="text " class="form-control w-100 d-flex" placeholder="KES" spellcheck="false" data-ms-editor="true">
+
+                                                </td>
+                                                <td class="text-right float-right">
+                                                    <div class="d-flex flex-column">
+                                                        <label class="opacity-0">Something</label>
+                                                        <a href="#" class="btn btn-primary w-md waves-effect waves-light">Submit</a>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
                             <div class="float-end">
-                                <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light submit-credit-details">Submit Details</a>
+                                <a href="javascript:window.print()" class="btn btn-success waves-effect waves-light me-1"><i class="mdi mdi-printer font-16px"></i></a>
+                                <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light">Receive Payment</a>
                             </div>
                         </div>
 
@@ -743,70 +845,9 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
-            <!-- debiting amoun to tenant -->
-            <!-- loader -->
-            <div class="modal fade" id="creditNoteModalLoad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header border-bottom-0 d-none">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body loading-cont">
-                            <div class="row">
-                                <div class="col-12 mt-5 mb-5">
-                                    <div class="d-flex justify-content-center align-items-center justify-content-center flex-column">
-                                        <div class="spinner-border text-info m-1 mb-4" role="status">
-                                            <span class="sr-only">Loading...</span>
-                                        </div>
-                                        <div class="text-center">
-                                            <h4 class="text-uppercase text-info">loading</h4>
-                                            <p>Please wait as your request is being processed</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-body d-none">
-                            <div class="text-center mt-5 mb-5">
-                                <div class="avatar-md mx-auto mb-4 ">
-                                    <div class="avatar-title bg-light rounded-circle text-success h1 ">
-                                        <i class="mdi mdi-check-bold "></i>
-                                    </div>
-                                </div>
+            <!-- invoice details -->
 
-                                <div class="row justify-content-center ">
-                                    <div class="col-xl-10 ">
-                                        <h4 class="text-success text-uppercase">Created successfully</h4>
-                                        <p class="text-muted  mb-4 ">
-                                            The credit note has been created successfully
-                                        </p>
-
-                                    </div>
-                                    <div class="col-10">
-                                        <a href="#" type="button" class="btn btn-primary waves-effect waves-light w-100 text-capitalize">
-                                            <i class="mdi mdi-printer font-size-18 align-middle me-2"></i> Print Credit Note
-                                        </a>
-                                        <a href="#" type="button" class="btn btn-primary waves-effect waves-light w-100 text-capitalize mt-3">
-                                            <i class="mdi mdi-printer font-size-18 align-middle me-2"></i> Print Debit Note
-                                        </a>
-
-                                        <button type="button" class="btn btn-outline-secondary waves-effect waves-light w-100 mt-3 text-capitalize stay-on-page">
-                                            <i class="mdi mdi-window-close font-size-18 align-middle me-2"></i> Close this section
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
+            <!-- End Page-content -->
 
             <footer class="footer ">
                 <div class="container-fluid ">
@@ -818,7 +859,7 @@
                         </div>
                         <div class="col-sm-6 ">
                             <div class="text-sm-end d-sm-block ">
-                                A product of Nouveta LTD
+                                Developed by Nouveta LTD.
                             </div>
                         </div>
                     </div>
@@ -832,8 +873,6 @@
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
-
-    <!-- JAVASCRIPT -->
 
     <script src="assets/libs/jquery/jquery.min.js "></script>
 
