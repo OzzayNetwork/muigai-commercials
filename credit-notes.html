@@ -440,14 +440,14 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Cleared Invoices for March 2022
+                                            Credit Notes fot <span class="today-month">March 2022</span>
                                         </h4>
 
                                         <div class="d-flex">
-                                            <a href="invoice-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3">
-                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create an invoice</span>
+                                            <a href="credit-note-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3">
+                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create A Credit Note</span>
                                             </a>
-                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
+                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker font-size-16" data-live-search="true" title="Select the property">
                                                 <option value="" selected>Mar 2022</option>
                                                 <option value="">Feb 2022</option>
                                                 <option value="">Jan 2022</option>
@@ -472,61 +472,39 @@
                                             <thead class="table-light">
                                                 <tr class="table-dark">
 
-                                                    <th scope="col">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <label for="selectAll" class="d-none">Select All</label>
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
-
-                                                        </div>
-                                                    </th>
                                                     <th scope="col">NO.</th>
-                                                    <th scope="col">Tenant</th>
-                                                    <th scope="col">Description</th>
-                                                    <th scope="col">Hse/Unit</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col" class="text-nowrap">Created By</th>
-                                                    <th class="text-right">Cleared on</th>
-                                                    <th class="text-right">Method</th>
-                                                    <th scope="col" class="text-right">Amount</th>
+                                                    <th scope="col">For</th>
+                                                    <th scope="col">Created on</th>
+                                                    <th scope="col">Original Invoice</th>
+                                                    <th scope="col">Debited To</th>
+                                                    <th scope="col">Credit Reason</th>
+                                                    <th scope="col" class="text-right">Credit Amount</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        Rent and Deposit invoice
+                                                        01 Mar2022 10:23 Am
                                                     </td>
                                                     <td>
-                                                        <a href="property-details.html">90 Degrees. NO.410</a>
+                                                        90 Degrees Hse no. 410
                                                     </td>
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        D-00005
                                                     </td>
 
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
                                                     </td>
-                                                    <td class="text-nowrap">
-                                                        22 Mar 2022 10:23 AM
-                                                    </td>
-                                                    <td class="text-nowrap">
-                                                        <span class="text-uppercase badge-soft-success badge">Mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 25,500</span>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
                                                     </td>
 
                                                     <td>
@@ -537,9 +515,8 @@
                                                                 </a>
 
                                                                 <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
                                                                     <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
                                                                 </div>
@@ -549,39 +526,26 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        Rent and Deposit invoice
+                                                        01 Mar2022 10:23 Am
                                                     </td>
                                                     <td>
-                                                        <a href="property-details.html">90 Degrees. NO.410</a>
+                                                        90 Degrees Hse no. 410
                                                     </td>
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        D-00005
                                                     </td>
 
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
                                                     </td>
-                                                    <td class="text-nowrap">
-                                                        22 Mar 2022 10:23 AM
-                                                    </td>
-                                                    <td class="text-nowrap">
-                                                        <span class="text-uppercase badge-soft-success badge">Mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 25,500</span>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
                                                     </td>
 
                                                     <td>
@@ -592,9 +556,8 @@
                                                                 </a>
 
                                                                 <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
                                                                     <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
                                                                 </div>
@@ -604,39 +567,26 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        Rent and Deposit invoice
+                                                        01 Mar2022 10:23 Am
                                                     </td>
                                                     <td>
-                                                        <a href="property-details.html">90 Degrees. NO.410</a>
+                                                        90 Degrees Hse no. 410
                                                     </td>
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        D-00005
                                                     </td>
 
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
                                                     </td>
-                                                    <td class="text-nowrap">
-                                                        22 Mar 2022 10:23 AM
-                                                    </td>
-                                                    <td class="text-nowrap">
-                                                        <span class="text-uppercase badge-soft-success badge">Mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 25,500</span>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
                                                     </td>
 
                                                     <td>
@@ -647,9 +597,8 @@
                                                                 </a>
 
                                                                 <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
                                                                     <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
                                                                 </div>
@@ -659,39 +608,26 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        Rent and Deposit invoice
+                                                        01 Mar2022 10:23 Am
                                                     </td>
                                                     <td>
-                                                        <a href="property-details.html">90 Degrees. NO.410</a>
+                                                        INV-00123
                                                     </td>
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        D-00005
                                                     </td>
 
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
                                                     </td>
-                                                    <td class="text-nowrap">
-                                                        22 Mar 2022 10:23 AM
-                                                    </td>
-                                                    <td class="text-nowrap">
-                                                        <span class="text-uppercase badge-soft-success badge">Mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 25,500</span>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
                                                     </td>
 
                                                     <td>
@@ -702,9 +638,8 @@
                                                                 </a>
 
                                                                 <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
                                                                     <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
                                                                 </div>
@@ -714,39 +649,26 @@
                                                 </tr>
                                                 <tr>
 
-                                                    <td>
-                                                        <div class="d-flex  align-items-center">
-                                                            <div class="the-mail-checkbox pr-4">
-                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                            </div>
-
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">INV 12358</td>
+                                                    <td class="text-capitalize text-nowrap">S-C0004</td>
                                                     <td class="text-capitalize text-nowrap">
                                                         <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
                                                     </td>
                                                     <td>
-                                                        Rent and Deposit invoice
+                                                        01 Mar2022 10:23 Am
                                                     </td>
                                                     <td>
-                                                        <a href="property-details.html">90 Degrees. NO.410</a>
+                                                        90 Degrees Hse no. 410
                                                     </td>
                                                     <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022
+                                                        D-00005
                                                     </td>
 
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
+                                                    <td class="">
+                                                        Tenant paid the rent charges directly to the landlord
                                                     </td>
-                                                    <td class="text-nowrap">
-                                                        22 Mar 2022 10:23 AM
-                                                    </td>
-                                                    <td class="text-nowrap">
-                                                        <span class="text-uppercase badge-soft-success badge">Mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 25,500</span>
+
+                                                    <td class="text-nowrap text-right">
+                                                        <span class="text-right fw-semibold text-uppercase">kes 15,360</span>
                                                     </td>
 
                                                     <td>
@@ -757,9 +679,8 @@
                                                                 </a>
 
                                                                 <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".invoice-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Credit Note</a>
+                                                                    <a class="dropdown-item " href="# " target="new"><i class="font-size-15 mdi mdi-email me-3 "></i>Email Credit note</a>
                                                                     <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
 
                                                                 </div>
@@ -767,6 +688,8 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+
+
 
 
 
@@ -775,16 +698,8 @@
                                             <tfoot class="table-dark">
                                                 <tr>
 
-                                                    <td>
-
-                                                    </td>
-                                                    <th class="text-capitalize text-nowrap" colspan="3">23 Invoies</th>
-
-                                                    <th class="text-nowrap">63 Units</th>
-
-
-
-                                                    <td class="text-nowrap text-right " colspan="5">
+                                                    <th class="text-capitalize text-nowrap" colspan="3">6 Credit Notes</th>
+                                                    <td class="text-nowrap text-right " colspan="4">
                                                         <span class="fw-semibold ">KES 25,500</span>
                                                     </td>
 
