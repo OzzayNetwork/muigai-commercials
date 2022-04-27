@@ -421,6 +421,10 @@ $(window).on('load', function() {
         }
         if (theVal == "invoice") {
             $('.invoice-credit-colection').removeClass('d-none').siblings('.credit-options').addClass('d-none');
+            $('#debit-no').prop("checked", true);
+            $('.debit-tenant-list').addClass('d-none')
+            $('.debit-tenant-button').addClass('d-none').siblings().removeClass('d-none');
+
         }
     });
 
