@@ -327,10 +327,12 @@
                                 <span>Invoices</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="invoice-new.html">Create an invoice</a></li>
-                                <li><a href="invoice-unpaid.html">Unpaid invoices</a></li>
-                                <li><a href="invoice-partial.html">Partially paid</a></li>
-                                <li><a href="invoice-paid.html">Cleared Invoices</a></li>
+                                <li><a href="invoice-new.html">Create an Invoice</a></li>
+                                <li><a href="invoice-rent.html">Rent & Bills Invoices</a></li>
+                                <li><a href="invoice-other.html">Other Invoices</a></li>
+                                <li class="d-none"><a href="invoice-unpaid.html">Unpaid invoices</a></li>
+                                <li class="d-none"><a href="invoice-partial.html">Partially paid</a></li>
+                                <li class="d-none"><a href="invoice-paid.html">Cleared Invoices</a></li>
                             </ul>
                         </li>
                         <li>
@@ -450,15 +452,49 @@
                                                     <h4 class="card-title mb-4">Enter the invoice details beow</h4>
 
                                                     <form>
-                                                        <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">Client</label>
-                                                            <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select a tenant">
-                                                                <option value=" ">Kelvin Njuguna</option>
-                                                                <option value=" ">Alex wanjala</option>
-                                                                <option value=" ">Makori</option>
-                                                          </select>
-                                                        </div>
                                                         <div class="row">
+                                                            <div class=" col-12 ">
+                                                                <div class="mb-4 ">
+                                                                    <label class="text-capitalize ">Whose is this invoice for?</label>
+                                                                    <div class="row ">
+                                                                        <div class="col-auto ">
+                                                                            <div class="form-check mb-3">
+                                                                                <input class="form-check-input" value="tenant" type="radio" name="invoice-for" id="tenant-invoice" checked>
+                                                                                <label class="form-check-label" for="tenant-invoice">
+                                                                                    A Tenant
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="col-auto ">
+                                                                            <div class="form-check mb-3">
+                                                                                <input class="form-check-input" value="other" type="radio" name="invoice-for" id="invoice-other">
+                                                                                <label class="form-check-label" for="invoice-other">
+                                                                                    Other
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row tenant-invoice-container invoice-options">
+                                                            <div class="col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-firstname-input" class="form-label">Tenant</label>
+                                                                    <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select a tenant">
+                                                                        <option value=" ">Kelvin Njuguna</option>
+                                                                        <option value=" ">Alex wanjala</option>
+                                                                        <option value=" ">Makori</option>
+                                                                  </select>
+                                                                </div>
+                                                            </div>
 
                                                             <div class="col-md-6">
                                                                 <div class="mb-3">
@@ -473,12 +509,35 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                        <div class="row others-invoice-container invoice-options d-none">
+                                                            <div class="col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-firstname-input" class="form-label">Full Names</label>
+                                                                    <input class="form-control" placeholder="Enter the full Names">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-email-input" class="form-label">Email address</label>
+                                                                    <input type="email" class="form-control" id="formrow-email-input" placeholder="Enter the email address">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-password-input" class="form-label">Phone number</label>
+                                                                    <input type="text" class="form-control" id="formrow-password-input" placeholder="Enter the phone number">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                         <div class="mb-3">
                                                             <label for="formrow-firstname-input" class="form-label">Invoice title</label>
                                                             <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select the invoice type">
-                                                                <option value=" ">Auctioneers fees</option>
                                                                 <option value=" ">Damage of property</option>
                                                                 <option value=" ">Service charge</option>
+                                                                <option value=" ">Others</option>
                                                           </select>
                                                         </div>
 
