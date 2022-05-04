@@ -506,11 +506,10 @@
                                                     <div class="col-lg-4">
                                                         <div class="mb-4 ">
                                                             <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
-                                                            <div class="input-group " id="datepicker1 ">
-                                                                <input type="text " class="form-control mouse-pointer " placeholder="dd M, yyyy " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
-                                                                " data-date-autoclose="true ">
+                                                            <div class="input-group" id="datepicker202">
+                                                                <input type="text" class="form-control" placeholder="Select date" data-date-format="dd M, yyyy" data-date-container='#datepicker202' data-provide="datepicker" data-date-autoclose="true">
 
-                                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
+                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -558,11 +557,10 @@
                                                                     <div class="col-12 ">
                                                                         <div class="mb-4 ">
                                                                             <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
-                                                                            <div class="input-group " id="datepicker1 ">
-                                                                                <input type="text " class="form-control mouse-pointer " placeholder="dd M, yyyy " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
-                                                                                " data-date-autoclose="true ">
+                                                                            <div class="input-group" id="datepicker22">
+                                                                                <input type="text" class="form-control" placeholder="Select date" data-date-format="dd M, yyyy" data-date-container='#datepicker22' data-provide="datepicker" data-date-autoclose="true">
 
-                                                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
+                                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -627,7 +625,128 @@
 
                                                     </div>
                                                 </div>
+
                                                 <div class="row">
+                                                    <div class="col-lg-4 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="agreement-type">Agreement Type<strong class="text-danger ">*</strong></label>
+                                                            <select class="form-control selectpicker " id="agreement-type" title="Landlord MCA agreement type">
+                                                                <option value="Property Management">Property Management</option>
+                                                                <option value="Unit Letting">Unit Letting</option>
+                                                                <option value="Service charge collection only">Service charge collection only</option>
+                                                          </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-4 col-sm-12 per-commision">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Percentage commission<strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " placeholder="Percentage Commision % ">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-lg-12 d-none unit-letting-option">
+                                                        <div class="row ">
+                                                            <label for=" " class=" ">Nature of letting commission<strong class="text-danger ">*</strong></label>
+                                                            <div class="col-12 ">
+                                                                <div class="d-flex w-100 ">
+
+                                                                    <div class="form-check pr-15px ">
+                                                                        <input class="form-check-input " type="radio" value="1" name="letting-nature" id="formRadios2" checked>
+                                                                        <label class="form-check-label " for="formRadios2">
+                                                                        Specified % Cut on rent
+                                                                    </label>
+                                                                    </div>
+
+
+                                                                    <div class="form-check mb-3 pr-15px ">
+                                                                        <input class="form-check-input " type="radio" value="2" name="letting-nature" id="formRadios1">
+                                                                        <label class="form-check-label " for="formRadios1">
+                                                                        100% 1st Month Rent
+                                                                    </label>
+                                                                    </div>
+
+                                                                    <div class="form-check ">
+                                                                        <input class="form-check-input " type="radio" value="3" name="letting-nature" id="formRadios3">
+                                                                        <label class="form-check-label" for="formRadios3">
+                                                                        Specified  % Cut on total rent collection
+                                                                    </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="table-responsive table-responsive-md">
+                                                            <table class="table table-editable-1 align-middle table-edits">
+                                                                <thead class="table-light">
+                                                                    <tr class="text-uppercase table-dark">
+                                                                        <th>#</th>
+                                                                        <th>Bank</th>
+                                                                        <th class="">Bank Acc</th>
+                                                                        <th class="">Percentage Remuneration</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr data-id="1">
+                                                                        <td style="width: 80px">1.</td>
+                                                                        <td>
+                                                                            <select class="form-control selectpicker" data-live-search="true" title="Select the bank">
+                                                                                <option value="">Equity</option>
+                                                                                <option value="">KCB</option>   
+                                                                                <option value="">National Bank</option>                                                                
+                                                                        </select>
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text " class="form-control " placeholder="Acc No." spellcheck="false" data-ms-editor="true">
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text " class="form-control " placeholder="Percentage" spellcheck="false" data-ms-editor="true">
+                                                                        </td>
+
+                                                                        <td></td>
+
+                                                                    </tr>
+
+                                                                    <tr class="cloneCharges d-none">
+                                                                        <td style="width: 80px " class="categoryIndex ">#</td>
+
+                                                                        <td>
+                                                                            <select class="form-control selectpicker" data-live-search="true" title="Select the bank">
+                                                                                <option value="">Equity</option>
+                                                                                <option value="">KCB</option>   
+                                                                                <option value="">National Bank</option>                                                                
+                                                                        </select>
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text " class="form-control " placeholder="Acc No." spellcheck="false" data-ms-editor="true">
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text " class="form-control " placeholder="Percentage" spellcheck="false" data-ms-editor="true">
+                                                                        </td>
+
+
+                                                                        <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="7" class="bg-light add-field-1 cursor-pointer">
+                                                                            <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Bank</span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row d-none">
                                                     <div class="col-lg-4 col-md-6 ">
                                                         <div class="mb-4 ">
                                                             <label for="basicpill-pancard-input ">Bank</label>
@@ -766,25 +885,24 @@
                                                     <div class="col-md-6 col-lg-4 col-sm-12 ">
                                                         <div class="mb-4 ">
                                                             <label for=" " class=" ">Registration Date<strong class="text-danger ">*</strong></label>
-                                                            <div class="input-group " id="datepicker1 ">
-                                                                <input type="text " class="form-control mouse-pointer " placeholder="Select registration date " readonly data-date-format="dd M, yyyy " data-date-container='#datepicker1' data-provide="datepicker
-                                                                        " data-date-autoclose="true ">
+                                                            <div class="input-group" id="datepicker2">
+                                                                <input type="text" class="form-control" placeholder="Select date" data-date-format="dd M, yyyy" data-date-container='#datepicker2' data-provide="datepicker" data-date-autoclose="true">
 
-                                                                <span class="input-group-text "><i class="mdi mdi-calendar "></i></span>
+                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-4">
                                                         <div class="row ">
-                                                            <label for=" " class=" ">Is renting payable on <strong>Prorater Basis?</strong><strong class="text-danger ">*</strong></label>
+                                                            <label for=" " class=" ">Is renting payable on <strong>Pro Rata Basis?</strong><strong class="text-danger ">*</strong></label>
                                                             <div class="col-12 ">
                                                                 <div class="d-flex w-100 ">
 
                                                                     <div class="form-check pr-15px ">
                                                                         <input class="form-check-input " type="radio" value="yes-prorater" name="prorater" id="yes-prorater" checked>
                                                                         <label class="form-check-label " for="yes-prorater">
-                                                                        Yes, it's Prorater
+                                                                        Yes, it's Pro Rata
                                                                     </label>
                                                                     </div>
 
@@ -832,6 +950,103 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="col-12">
+                                                    <div class="bg-primary border-2 bg-soft p-3 mb-4">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Caretaker details</p>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- caretaker details -->
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">ID/PP Num.</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter ID or PP Num. ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-firstname-input ">First name <strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-firstname-input " placeholder="Enter Your First Name ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for="basicpill-lastname-input ">Last Name <strong class="text-danger ">*</strong></label>
+                                                            <input type="text " class="form-control " id="basicpill-lastname-input " placeholder="Enter Your Last Name ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 ">
+                                                        <div class="mb-4 ">
+                                                            <label for=" ">Other Name(s)</label>
+                                                            <input type="text " class="form-control " id=" " placeholder="Enter Your Last Name ">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row ">
+                                                            <div class="col-lg-4 ">
+                                                                <div class="row ">
+                                                                    <div class="col-12 ">
+                                                                        <div class="mb-4 ">
+                                                                            <label for=" " class=" ">Caretaker type<strong class="text-danger ">*</strong></label>
+                                                                            <select class="form-control selectpicker" data-live-search="true" title="Select caretaker type">
+                                                                                <option value="Commissioned by MCA">Commissioned by MCA</option>
+                                                                                <option value="Brought by the landlord">Brought by the landlord</option>   
+                                                                                                                                        
+                                                                          </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 ">
+                                                                        <div class="row mb-3">
+                                                                            <label for=" " class=" ">Gender: <strong class="text-danger ">*</strong></label>
+                                                                            <div class="d-flex ">
+
+                                                                                <div class="form-check me-3">
+                                                                                    <input class="form-check-input" type="radio" name="caretaker-gender" id="caretaker-male">
+                                                                                    <label class="form-check-label" for="caretaker-male">
+                                                                                        Male
+                                                                                    </label>
+                                                                                </div>
+
+                                                                                <div class="form-check me-3">
+                                                                                    <input class="form-check-input" type="radio" name="caretaker-gender" id="caretaker-female">
+                                                                                    <label class="form-check-label" for="caretaker-female">
+                                                                                        Female
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <div class="row ">
+                                                                    <div class="col-lg-6 ">
+                                                                        <div class="mb-4 ">
+                                                                            <label for="basicpill-phoneno-input ">Phone <strong class="text-danger ">*</strong></label>
+                                                                            <input type="text " class="form-control " id="basicpill-phoneno-input " placeholder="Enter Your Phone No. ">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 ">
+                                                                        <div class="mb-4 ">
+                                                                            <label for="basicpill-email-input ">Email <strong class="text-danger ">*</strong></label>
+                                                                            <input type="email " class="form-control " id="basicpill-email-input " placeholder="Enter Your Email ID ">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- caretaker details end -->
 
 
 
@@ -935,12 +1150,12 @@
                                                         <p class="fw-semibold mb-0 pb-0 text-uppercase">Applicable charges for this premises</p>
 
                                                     </div>
-                                                    <p><strong>Check the correct charges that may be charged from tenants at this premises</strong></p>
+                                                    <p class="d-none"><strong>Check the correct charges that may be charged from tenants at this premises</strong></p>
                                                 </div>
                                                 <div class="col-12 mb-5">
                                                     <div class="row">
                                                         <div class="col-4 col-md-5 col-sm-12 h-100">
-                                                            <p class="text-decoration-underline"><i>Applicable Monthly Charges</i></p>
+                                                            <p class="text-decoration-underline"><i>Applicable Charges</i></p>
                                                             <div class="row border-right-1">
                                                                 <div class="col-6">
                                                                     <div class="form-check form-check-primary mb-3">
@@ -986,7 +1201,7 @@
 
                                                         </div>
                                                         <div class="col-4 col-md-4 col-sm-12 h-100">
-                                                            <p class="text-decoration-underline"><i>Applicable monthly deposits</i></p>
+                                                            <p class="text-decoration-underline"><i>Deposits</i></p>
                                                             <div class="row border-right-1">
                                                                 <div class="col-6">
                                                                     <div class="form-check form-check-secondary mb-3">
@@ -1000,44 +1215,14 @@
                                                                     <div class="form-check form-check-secondary mb-3">
                                                                         <input class="form-check-input" type="checkbox" id="agencyDeposit">
                                                                         <label class="form-check-label" for="agencyDeposit">
-                                                                            Agency deposit
+                                                                            Utility deposit
                                                                         </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
 
                                                         </div>
-                                                        <div class="col-6 col-md-6 col-sm-12">
-                                                            <p class="text-decoration-underline"><i>Other charges</i></p>
-                                                            <div class="row">
-                                                                <div class="col-5">
-                                                                    <div class="form-check form-check-success mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="auctioneerFee" checked="">
-                                                                        <label class="form-check-label" for="auctioneerFee">
-                                                                            Auctioneer fees
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-5">
-                                                                    <div class="form-check form-check-success mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="visitationFees" checked="">
-                                                                        <label class="form-check-label" for="visitationFees">
-                                                                            Visitation fees
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-5">
-                                                                    <div class="form-check form-check-success mb-3">
-                                                                        <input class="form-check-input" type="checkbox" id="rentPenalty" checked="">
-                                                                        <label class="form-check-label" for="rentPenalty">
-                                                                            Searcharge
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
 
-                                                            </div>
-
-                                                        </div>
                                                     </div>
 
 
@@ -1058,8 +1243,7 @@
                                                                 <tr class="text-uppercase table-light">
                                                                     <th>#</th>
                                                                     <th>Item type</th>
-                                                                    <th>Period</th>
-                                                                    <th>Charge description</th>
+                                                                    <th>When to Charge</th>
                                                                     <th>Bed sitter</th>
                                                                     <th>one Bedroom</th>
                                                                     <th>Two Bedroom</th>
@@ -1069,8 +1253,8 @@
                                                             <tfoot class="table-light">
                                                                 <tr class="text-capitalize deposit-fee boarder-bottom">
                                                                     <th></th>
-                                                                    <th colspan="2">Total security Deposit</th>
-                                                                    <th class="d-none"></th>
+                                                                    <th>Total security Deposit</th>
+
                                                                     <th>First Month only</th>
                                                                     <th class="deposit-fee">-</th>
                                                                     <th class="deposit-fee">-</th>
@@ -1078,8 +1262,8 @@
                                                                 </tr>
                                                                 <tr class="text-capitalize monthly-fee">
                                                                     <th></th>
-                                                                    <th colspan="2">Least Monthly Invoice Amount</th>
-                                                                    <th class="d-none"></th>
+                                                                    <th>Least Monthly Invoice Amount</th>
+
                                                                     <th>Monthly</th>
                                                                     <th class="monthly-fee">-</th>
                                                                     <th class="monthly-fee">-</th>
@@ -1091,7 +1275,6 @@
                                                                 <tr data-id="1">
                                                                     <td>1.</td>
                                                                     <td>Monthly Rent</td>
-                                                                    <td>Rent fee</td>
                                                                     <td>Monthly</td>
                                                                     <td invoice-permonth=true deposit-amount="true" invoice-item-name="rent">
                                                                         <input type="text " class="form-control " placeholder="Enter Amount" spellcheck="false" data-ms-editor="true">
@@ -1107,7 +1290,6 @@
                                                                 <tr data-id="1">
                                                                     <td style="width: 80px">2</td>
                                                                     <td>Rent VAT</td>
-                                                                    <td>TAX</td>
                                                                     <td>Monthly</td>
                                                                     <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
                                                                     <td invoice-permonth=true invoice-item-name="rent VAT" deposit-amount=false per-of="rent" the-val=18>18% of rent</td>
@@ -1117,7 +1299,6 @@
                                                                 <tr data-id=" 1 ">
                                                                     <td style="width: 80px ">3</td>
                                                                     <td>Rent Deposit</td>
-                                                                    <td>Security Deposit</td>
                                                                     <td>First Month only</td>
                                                                     <td invoice-permonth="false" deposit-amount="true">
                                                                         <input type="text " class="form-control " placeholder="Enter Amount " spellcheck="false " data-ms-editor="true ">
@@ -1132,8 +1313,7 @@
                                                                 </tr>
                                                                 <tr data-id="1 ">
                                                                     <td style="width: 80px ">4</td>
-                                                                    <td>Rent Penalty</td>
-                                                                    <td>Penalty</td>
+                                                                    <td>Surcharge</td>
                                                                     <td>Day 10 of each month</td>
                                                                     <td invoice-permonth="false" the-val=500 deposit-amount=false>KES 500</td>
                                                                     <td invoice-permonth="false" the-val=500 deposit-amount=false>KES 500</td>
@@ -1143,7 +1323,6 @@
                                                                 <tr data-id="1 ">
                                                                     <td style="width: 80px ">5</td>
                                                                     <td>Utility Deposit</td>
-                                                                    <td>Security deposit</td>
                                                                     <td>First month only</td>
                                                                     <td invoice-permonth="false" value="200" deposit-amount="true" the-val=5000>KES 5,000</td>
                                                                     <td invoice-permonth="false" deposit-amount="true" the-val=5000>KES 5,000</td>
@@ -1153,7 +1332,6 @@
                                                                 <tr data-id="1 ">
                                                                     <td style="width: 80px ">6</td>
                                                                     <td>Auctioneer Fees</td>
-                                                                    <td>Other</td>
                                                                     <td>Random date</td>
                                                                     <td the-val=20>Manually added</td>
                                                                     <td the-val=20>Manually added</td>
