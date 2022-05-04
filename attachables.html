@@ -7,18 +7,21 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Muigai Commercials | List of tenants</title>
+    <title>RevenueSure | MCA Registered Estates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Rental management system by Nouveta LTD" name="description" />
     <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
-    <!-- droping file -->
-    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- DataTables -->
-    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -30,6 +33,7 @@
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -90,12 +94,10 @@
                             <span class="bx bx-search-alt"></span>
                         </div>
                     </form>
-
-
                 </div>
 
                 <div class="d-flex">
-                    <!-- small search -->
+
                     <div class="dropdown d-inline-block d-lg-none ms-2">
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
@@ -114,6 +116,8 @@
                             </form>
                         </div>
                     </div>
+
+
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="bx bx-fullscreen"></i>
@@ -214,6 +218,8 @@
                             <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </header>
@@ -411,15 +417,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">90 Degrees Hse No. 410 rent charges History</h4>
+                                <h4 class="mb-sm-0 font-size-18">Attachable documents</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="property-list.html">All properties</a></li>
-                                        <li class="breadcrumb-item"><a href="property-details.html">90 Degrees</a></li>
-                                        <li class="breadcrumb-item"><a href="property-units.html">All units</a></li>
-                                        <li class="breadcrumb-item active">410</li>
+                                        <li class="breadcrumb-item"><a href="#">Set Ups</a></li>
+                                        <li class="breadcrumb-item active">Attachable documents</li>
                                     </ol>
                                 </div>
 
@@ -427,301 +431,173 @@
                         </div>
                     </div>
                     <!-- end page title -->
-
-                    <!-- tool bar -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-body pt-2 pb-3">
-                                    <nav class="navbar navbar-expand-md navbar-white bg-white py-2">
-                                        <button class="navbar-toggler btn btn-sm px-3 font-size-16 header-item waves-effect h-auto text-primary" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                          <span class="mdi mdi-menu"></span>
-                                        </button>
-                                        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-                                            <div class="navbar-nav">
-                                                <a class="nav-item nav-link" href="property-details.html">Premises Details<span class="sr-only">(current)</span></a>
-                                                <a class="nav-item nav-link active" href="property-units.html">Units</a>
-                                                <a class="nav-item nav-link" href="property-unit-type.html">Charges & Unit types</a>
-                                                <a class="nav-item nav-link" href="property-tenants.html">Tenants</a>
-                                                <a class="nav-item nav-link" href="property-statements.html">Statements</a>
-                                                <a class="nav-item nav-link" href="property-utility.html">Utility Bills</a>
-                                                <a class="nav-item nav-link" href="property-documents.html">Premises Documents</a>
 
-                                            </div>
-                                            <div class="navbar-nav">
-                                                <a href="collector-new.html" type="button" class="btn btn-outline-danger waves-effect waves-light">
-                                                    <i class="bx dripicons-wrong font-size-16 align-middle me-2"></i> Deactivate Premises
-                                                </a>
-                                            </div>
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <div class="d-flex align-items-center flex-grow-1">
+                                            <h4 class="mb-0  bg-transparent  p-0 m-0">Document attachable during different stages of registrations</h4>
+                                        </div>
+                                        <div class="d-flex">
+
+                                            <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3 d-none" data-bs-toggle="modal" data-bs-target="#add-new-zone">
+                                                <i class="mdi mdi-plus label-icon"></i> Add an attachable document
+                                            </button>
 
                                         </div>
-                                    </nav>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
-                    <!-- end of tool bar -->
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Left sidebar -->
-                            <div class="email-leftbar card calc-h-3px-md">
-                                <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".issue-modal">
-                                    Report An Issues
-                                </button>
-
-                                <div class="mail-list mt-4">
-                                    <a href="property-unit-details.html"><i class="mdi mdi-home-outline me-2"></i> Unit Details</a>
-                                    <a href="property-unit-history.html"><i class="mdi mdi-account-clock me-2"></i>Occupation History</a>
-                                    <a href="property-unit-charges-history.html"><i class="mdi mdi-cash-refund me-2"></i>Charges History</a>
-                                    <a href="property-unit-issues.html"><i class="mdi mdi-tools me-2"></i>Reported Issues</a>
-                                    <a href="property-unit-logs.html" class="active"><i class="mdi mdi-calendar-clock me-2"></i>Unit Logs</a>
-                                </div>
-                            </div>
-                            <!-- End Left sidebar -->
-
-
-                            <!-- Right Sidebar -->
-                            <div class="email-rightbar mb-3">
-
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table align-middle  table-hover contacts-table" id="datatable-buttons">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th scope="col">Date</th>
-                                                        <th scope="col">Time</th>
-                                                        <th scope="col">Activity</th>
-                                                        <th scope="col">By</th>
-
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            1 Feb 2019
-                                                        </td>
-                                                        <td>7:30Am</td>
-                                                        <td>
-                                                            Reported an issue
-                                                        </td>
-                                                        <td>
-                                                            Alex Wanjala
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            26 Aug 2016
-                                                        </td>
-                                                        <td>9:00Am</td>
-                                                        <td>
-                                                            New tenant (Kelvin Njuguna) assigned to theunit
-                                                        </td>
-                                                        <td>
-                                                            Gina Ngeta
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            13 Mar 2016
-                                                        </td>
-                                                        <td>6:00Am</td>
-                                                        <td>
-                                                            Unit got registered
-                                                        </td>
-                                                        <td>
-                                                            Kelvin Kamau
-                                                        </td>
-
-
-                                                    </tr>
-
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            1 Dec 2016
-                                                        </td>
-                                                        <td>7:30Am</td>
-                                                        <td>
-                                                            Unit got registered
-                                                        </td>
-                                                        <td>
-                                                            Jane Kariuki
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            22 May 2017
-                                                        </td>
-                                                        <td>8:15Am</td>
-                                                        <td>
-                                                            reported an issue
-                                                        </td>
-                                                        <td>
-                                                            Victor Ndambeli
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            2 Sept 2017
-                                                        </td>
-                                                        <td>11:00Am</td>
-                                                        <td>
-                                                            Unit got registered
-                                                        </td>
-                                                        <td>
-                                                            Janet Omanyala
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            2 Nov 2017
-                                                        </td>
-                                                        <td>2:00PM</td>
-                                                        <td>
-                                                            reported an issue
-                                                        </td>
-                                                        <td>
-                                                            Oscar Wamaitha
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            5 Jan 2018
-                                                        </td>
-                                                        <td>10:22AM</td>
-                                                        <td>
-                                                            Unit got registered
-                                                        </td>
-                                                        <td>
-                                                            Joyce Wambui
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            2 Feb 2018
-                                                        </td>
-                                                        <td>1:00PM</td>
-                                                        <td>
-                                                            Unit got registered
-                                                        </td>
-                                                        <td>
-                                                            Alex Wangai
-                                                        </td>
-
-
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td class="text-capitalize">
-                                                            4 Oct 2019
-                                                        </td>
-                                                        <td>9:29AM</td>
-                                                        <td>
-                                                            reported an issue
-                                                        </td>
-                                                        <td>
-                                                            Martin Bunyalo
-                                                        </td>
-
-
-                                                    </tr>
-
-
-                                                </tbody>
-                                            </table>
-                                        </div>
                                     </div>
+
                                 </div>
-                                <!-- card -->
+                                <div class="card-body">
+                                    <div class="table-responsive table-responsive-md">
+                                        <table class="table table-editable align-middle table-edits">
+                                            <thead class="table-light">
+                                                <tr class="text-uppercase table-dark">
+                                                    <th>#</th>
+                                                    <th>Document name</th>
+                                                    <th>Where applicable</th>
+                                                    <th class="text-right">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">1.</td>
+                                                    <td data-field="estate">National ID Card Front Side</td>
+                                                    <td>Tenant Registration, Landlord registration</td>
+                                                    <td class="text-right cell-change ">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr data-id="2">
+                                                    <td style="width: 80px">2.</td>
+                                                    <td data-field="estate">National ID Card Back Side</td>
+                                                    <td>Tenant Registration, Landlord registration</td>
+                                                    <td class="text-right cell-change ">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr data-id="3">
+                                                    <td style="width: 80px">3.</td>
+                                                    <td data-field="estate">Tenancy Agreement</td>
+                                                    <td>Tenant Registration</td>
+                                                    <td class="text-right cell-change ">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
+                                                        <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
+                                                    </td>
+                                                </tr>
 
 
+
+
+                                                <tr class="cloneCharges d-none">
+                                                    <td style="width: 80px " class="categoryIndex ">#</td>
+                                                    <td>
+                                                        <input type="text " class="form-control " placeholder="Enter document title">
+                                                    </td>
+
+                                                    <td>
+                                                        <select class="selectpicker form-control" title="Select where this document ca be attached">
+                                                            <option value="1">Tenant Registration</option>
+                                                            <option value="2">Premises Registration</option>
+                                                            <option value="3">System user registration</option>
+                                                      </select>
+                                                    </td>
+
+
+                                                    <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-new-btn mx-3 " title="save ">Save</button>
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category " title="Cancel "><i class="bx bx-x "></i></a>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="7" class="bg-light add-field ">
+                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 text-capitalize">Add an estate</span></span>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+
+                                </div>
                             </div>
-                            <!-- end Col-9 -->
-
                         </div>
-
+                        <!-- end col -->
                     </div>
-
-
-
-
                     <!-- end row -->
+
+
                 </div>
                 <!-- container-fluid -->
             </div>
-            <!-- issue modal -->
-            <div class="modal fade issue-modal pb-5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-md modal-dialog-centered mb-5">
+            <!-- End Page-content -->
+
+            <!-- modals -->
+            <div class="modal fade" id="add-new-zone" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Report an Issue for Hse No. 410</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">New Zone</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="col-12">
-                                <address>
-                                    <strong>Unit Details:</strong><br>
-                                    <span class="fw-semibold">Current Tenant:</span> Kelvin Njuguna<br>
-                                    email@mail.com, 0704 549 859<br>                                   
-                                    Hse No. 410, 90 Degrees By Tsavo
-                                    <br><br>
-                                    <span class="today-date">1 Mar 2022</span><br>
-                                    <span class="fw-semibold">Being Reported By </span> Alex Wanjala<br>
-                                </address>
-                            </div>
-                            <div class="col-12">
-                                <div class="mb-4 ">
-                                    <label for="basicpill-firstname-input ">Issue description <strong class="text-danger ">*</strong></label>
-                                    <textarea name="" class="form-control " placeholder="Enter details on the issue" id="" cols="30" rows="5"></textarea>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">Zone Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter zone name">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">County</label>
+                                        <select class="selectpicker form-control" data-live-search="true" title="Select country where the zone is">
+                                            <option>Nairobi</option>
+                                            <option>Nakuru</option>
+                                            <option>Baringo</option>
+                                            <option>Uasin Gishu</option>
+                                            <option>Kisumu</option>
+                                            <option>Mombasa</option>                                            
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">Estate agent in charge</label>
+                                        <select class="selectpicker form-control" data-live-search="true" title="Select country where the zone is">
+                                            <option>Kelvin Mburu</option>
+                                            <option>Naledi Mkhize</option>
+                                            <option>Molly Njogu</option>
+                                            <option>Zaweriah Azizi</option>
+                                            <option>Sharon Varitin</option>
+                                            <option>Joanne Njuguna</option>                                            
+                                            </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="mb-4 ">
-                                    <label for="agreement-type">Issue critical level<strong class="text-danger ">*</strong></label>
-                                    <select class="form-control selectpicker " id="agreement-type" title="Select critical level">
-                                        <option value="low" data-content="<span class='badge bg-primary'>LOW</span>">LOW</option>
-                                        <option value="moderate" data-content="<span class='badge bg-black'>MODERATE</span>">Moderate</option>
-                                        <option value="high" data-content="<span class='badge bg-warning'>HIGH</span>">High</option>
-                                        <option value="Critical" data-content="<span class='badge bg-danger'>CRITICAL</span>">Critical</option>
-                                  </select>
-                                </div>
-                            </div>
-
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save</button>
                         </div>
-
                     </div>
-                    <!-- /.modal-content -->
                 </div>
-                <!-- /.modal-dialog -->
             </div>
-            <!-- End Page-content -->
+            <!-- modals end -->
+
 
             <footer class="footer">
                 <div class="container-fluid">
@@ -729,10 +605,10 @@
                         <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © RevenueSure
+                            </script> © RevenueSure.
                         </div>
                         <div class="col-sm-6">
-                            <div class="text-sm-end d-sm-block ">
+                            <div class="text-sm-end d-sm-block">
                                 Developed by Nouveta LTD.
                             </div>
                         </div>
@@ -745,52 +621,38 @@
     </div>
     <!-- END layout-wrapper -->
 
-    <!-- Right bar overlay-->
-    <div class="rightbar-overlay "></div>
 
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
-    <script src="assets/libs/simplebar/simplebar.min.js "></script>
-    <script src="assets/libs/node-waves/waves.min.js "></script>
-
-
-
-    <!-- Required datatable js -->
-    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <!-- Buttons examples -->
-    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-    <script src="assets/libs/jszip/jszip.min.js"></script>
-    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
-    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
-    <!-- numerals number formater -->
-    <script src="assets/libs/numeral/numeral.js "></script>
-
-    <!-- Responsive examples -->
-    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
 
     <!-- Bootstrap select -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-    <!-- Plugins js -->
-    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
-    <!-- Datatable init js -->
-    <script src="assets/js/pages/datatables.init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+
+    <!-- Table Editable plugin -->
+    <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
+    <script src="assets/js/pages/table-editable.int.js"></script>
+
+
+
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/custom.js"></script>
 </body>
 
 
 <!-- index.html   13:55:49 GMT -->
+
+</html>dex.html 13:55:49 GMT -->
 
 </html>
