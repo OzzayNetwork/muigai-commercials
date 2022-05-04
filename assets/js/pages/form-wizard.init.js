@@ -1,4 +1,4 @@
-Dropzone.autoDiscover = false;
+//Dropzone.autoDiscover = false;
 $(function() {
     $("#basic-example").steps({
             headerTag: "h3",
@@ -12,7 +12,7 @@ $(function() {
             stepsOrientation: "vertical"
         })
 });
-var newDropZone = new Dropzone(".dropzone");
+//var newDropZone = new Dropzone(".dropzone");
 
 // $(document).ready(function() {
 //     $("#wizard").steps();
