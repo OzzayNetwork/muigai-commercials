@@ -7,18 +7,21 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>RevenueSure | Muigai Commercial</title>
+    <title>RevenueSure | MCA Registered Estates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Rental management system by Nouveta LTD" name="description" />
     <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
-    <!-- droping file -->
-    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- DataTables -->
-    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -30,6 +33,7 @@
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -90,12 +94,10 @@
                             <span class="bx bx-search-alt"></span>
                         </div>
                     </form>
-
-
                 </div>
 
                 <div class="d-flex">
-                    <!-- small search -->
+
                     <div class="dropdown d-inline-block d-lg-none ms-2">
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
@@ -114,6 +116,8 @@
                             </form>
                         </div>
                     </div>
+
+
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="bx bx-fullscreen"></i>
@@ -214,6 +218,8 @@
                             <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </header>
@@ -410,14 +416,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Kelvin's Utility bills statements</h4>
+                                <h4 class="mb-sm-0 font-size-18">Registered Zones</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="tenant-list.html">All Tenants</a></li>
-                                        <li class="breadcrumb-item"><a href="tenant-details.html">Kelvin Njuguna</a></li>
-                                        <li class="breadcrumb-item active">Utility bills statements</li>
+                                        <li class="breadcrumb-item"><a href="#">Set Ups</a></li>
+                                        <li class="breadcrumb-item active">Registered Zones</li>
                                     </ol>
                                 </div>
 
@@ -425,156 +430,217 @@
                         </div>
                     </div>
                     <!-- end page title -->
-
-                    <!-- tool bar -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-body pt-2 pb-3">
-                                    <nav class="navbar navbar-expand-md navbar-white bg-white py-2">
-                                        <button class="navbar-toggler btn btn-sm px-3 font-size-16 header-item waves-effect h-auto text-primary" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                          <span class="mdi mdi-menu"></span>
-                                        </button>
-                                        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-                                            <div class="navbar-nav">
-                                                <a class="nav-item nav-link" href="tenant-details.html">Tenants Profile</a>
-                                                <a class="nav-item nav-link" href="tenant-rent.html">Rented Units</a>
-                                                <a class="nav-item nav-link" href="tenant-kin.html">Next of Kin</a>
-                                                <a class="nav-item nav-link" href="tenant-dependants.html">Dependents</a>
-                                                <a class="nav-item nav-link" href="tenant-ref.html">Referees</a>
-                                                <a class="nav-item nav-link" href="tenant-rent-statemtnts.html">Rent Statements</a>
-                                                <a class="nav-item nav-link" href="tenant-utility-bill.html">Utility Bills Statements</a>
-                                                <a class="nav-item nav-link" href="tenant-docs.html">Tenant Documents</a>
 
-                                            </div>
-                                            <div class="navbar-nav">
-                                                <a href="#" type="button" class="btn btn-outline-danger waves-effect waves-light me-2">
-                                                    <i class="mdi mdi-home-alert  font-size-16 align-middle me-2"></i>Report for Auction
-                                                </a>
-                                                <a href="tenant-new.html" type="button" class="btn btn-primary waves-effect waves-light text-white">
-                                                    <i class="mdi mdi-account-edit font-size-16 align-middle me-2"></i> Edit Details
-                                                </a>
-                                            </div>
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <div class="d-flex align-items-center flex-grow-1">
+                                            <h4 class="mb-0  bg-transparent  p-0 m-0">Zones Register</h4>
+                                        </div>
+                                        <div class="d-flex">
+
+                                            <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3" data-bs-toggle="modal" data-bs-target="#add-new-zone">
+                                                <i class="mdi mdi-plus label-icon"></i> Add Zone
+                                            </button>
 
                                         </div>
-                                    </nav>
+
+                                    </div>
+
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- end of tool bar -->
-
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="card calc-h-3px">
                                 <div class="card-body">
-
-                                    <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 ">
-                                        <thead class="table-dark">
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Building</th>
-                                                <th>Hse No.</th>
-                                                <th>Assigned On</th>
-                                                <th>Renewal Date</th>
-                                                <th class="text-right">water arrears</th>
-                                                <th class="text-right">KPLC arrears</th>
-                                                <th class="text-right">Rent</th>
-                                                <th class="text-right">Deposit</th>
-                                                <th class="text-right">Rent arrears</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot class="table-light">
-                                            <tr>
-                                                <th colspan="5">1 House</th>
-                                                <th class="text-right text-uppercase">-</th>
-                                                <th class="text-right text-uppercase">-</th>
-                                                <th class="text-right text-uppercase">kes 12,000</th>
-                                                <th class="text-right text-uppercase">kes 24,000</th>
-                                                <th class="text-right text-uppercase"><span class="text-success">+kes 24,000</span></th>
-                                                <th></th>
-                                            </tr>
-                                        </tfoot>
-
-
-                                        <tbody class="table-striped">
-
-                                            <tr>
-                                                <td>1.</td>
-                                                <td>
-                                                    90 Degrees
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 b-0 text-muted"><span>410</span></p>
-                                                    <span>Bed Sitter</span>
-                                                </td>
-                                                <td>
-                                                    20 Feb 2021
-                                                </td>
-                                                <td>
-                                                    20 Feb 2023
-                                                </td>
-                                                <td class="text-right">
-                                                    -
-                                                </td>
-                                                <td class="text-right">
-                                                    -
-                                                </td>
-                                                <td class="text-right">
-                                                    KES 12,000
-                                                </td>
-                                                <td class="text-right">
-                                                    KES 24,000
-                                                </td>
-                                                <td class="text-right">
-                                                    <strong class="text-success">+ KES 12,000</strong>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate tenant</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-update me-3"></i>Update rent renewal date</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print premises statement</a>
+                                    <div class="table-responsive table-responsive-md">
+                                        <table class="table table-editable align-middle table-edits">
+                                            <thead class="table-light">
+                                                <tr class="text-uppercase table-dark">
+                                                    <th>#</th>
+                                                    <th>Zone Name</th>
+                                                    <th>County</th>
+                                                    <th>Tot. Estates</th>
+                                                    <th>Agent In charge</th>
+                                                    <th class="text-nowrap">Total Premises</th>
+                                                    <th class="text-right">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">1.</td>
+                                                    <td data-field="estate">Zone A</td>
+                                                    <td data-field="unit-num ">Nakuru</td>
+                                                    <td data-field="unit-num ">22</td>
+                                                    <td data-field="unit-num ">Alex Kibicho</td>
+                                                    <td class="">22</td>
+                                                    <td class="text-right cell-change text-nowrap ">
+                                                        <div class="d-flex">
+                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
+                                                            <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
+                                                            <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
+                                                            <button class="btn btn-success btn-sm text-uppercase px-3 mx-3" title="save ">Change Estate agent</button>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+
+                                                    </td>
+                                                </tr>
+                                                <tr data-id="2">
+                                                    <td style="width: 80px">2.</td>
+                                                    <td data-field="estate">Zone A</td>
+                                                    <td data-field="unit-num ">Nakuru</td>
+                                                    <td data-field="unit-num ">22</td>
+                                                    <td data-field="unit-num ">Alex Kibicho</td>
+                                                    <td class="">22</td>
+                                                    <td class="text-right cell-change text-nowrap ">
+                                                        <div class="d-flex">
+                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
+                                                            <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
+                                                            <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
+                                                            <button class="btn btn-success btn-sm text-uppercase px-3 mx-3" title="save ">Change Estate agent</button>
+
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                                <tr data-id="3">
+                                                    <td style="width: 80px">3.</td>
+                                                    <td data-field="estate">Zone A</td>
+                                                    <td data-field="unit-num ">Nakuru</td>
+                                                    <td data-field="unit-num ">22</td>
+                                                    <td data-field="unit-num ">Alex Kibicho</td>
+                                                    <td class="">22</td>
+                                                    <td class="text-right cell-change text-nowrap ">
+                                                        <div class="d-flex">
+                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent edit " title="Edit "><i class="bx bx-edit-alt "></i></a>
+                                                            <button class="btn btn-primary btn-sm text-uppercase px-3 save-tbl-btn mx-3 d-none " title="save ">Save</button>
+                                                            <a class="btn btn-light btn-circle waves-effect font-18px btn-transparent cancel-changes d-none " title="Cancel "><i class="bx bx-x "></i></a>
+                                                            <button class="btn btn-success btn-sm text-uppercase px-3 mx-3" title="save ">Change Estate agent</button>
+
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
 
 
-                                        </tbody>
-                                    </table>
+                                                <tr class="cloneCharges d-none">
+                                                    <td style="width: 80px " class="categoryIndex ">#</td>
+                                                    <td>
+                                                        <input type="text " class="form-control " placeholder="estate Name">
+                                                    </td>
+
+                                                    <td>
+                                                        <select class="form-select" style="width:130px">
+                                                            <option value="">Nairobi</option>
+                                                            <option value="">Mombasa</option>
+                                                            <option value="">Nakuru</option>
+                                                      </select>
+                                                    </td>
+                                                    <td>
+                                                        -
+                                                    </td>
+                                                    <td>
+                                                        -
+                                                    </td>
+                                                    <td>
+                                                        -
+                                                    </td>
+
+                                                    <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                        <button class="btn btn-primary btn-sm text-uppercase px-3 save-new-btn mx-3 " title="save ">Save</button>
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category " title="Cancel "><i class="bx bx-x "></i></a>
+
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                            <tfoot class="d-none">
+                                                <tr>
+                                                    <td colspan="7" class="bg-light add-field ">
+                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 text-capitalize">Add A zone</span></span>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+
                                 </div>
-
-
-
                             </div>
                         </div>
+                        <!-- end col -->
                     </div>
                     <!-- end row -->
+
+
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
 
-            <footer class="footer ">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-sm-6 ">
+            <!-- modals -->
+            <div class="modal fade" id="add-new-zone" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">New Zone</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">Zone Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter zone name">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">County</label>
+                                        <select class="selectpicker form-control" data-live-search="true" title="Select country where the zone is">
+                                            <option>Nairobi</option>
+                                            <option>Nakuru</option>
+                                            <option>Baringo</option>
+                                            <option>Uasin Gishu</option>
+                                            <option>Kisumu</option>
+                                            <option>Mombasa</option>                                            
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group mb-4">
+                                        <label for="">Estate agent in charge</label>
+                                        <select class="selectpicker form-control" data-live-search="true" title="Select country where the zone is">
+                                            <option>Kelvin Mburu</option>
+                                            <option>Naledi Mkhize</option>
+                                            <option>Molly Njogu</option>
+                                            <option>Zaweriah Azizi</option>
+                                            <option>Sharon Varitin</option>
+                                            <option>Joanne Njuguna</option>                                            
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modals end -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © RevenueSure
+                            </script> © RevenueSure.
                         </div>
-                        <div class="col-sm-6 ">
-                            <div class="text-sm-end d-sm-block ">
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-sm-block">
                                 Developed by Nouveta LTD.
                             </div>
                         </div>
@@ -587,52 +653,38 @@
     </div>
     <!-- END layout-wrapper -->
 
+
+
     <!-- Right bar overlay-->
-    <div class="rightbar-overlay "></div>
+    <div class="rightbar-overlay"></div>
 
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
-    <script src="assets/libs/simplebar/simplebar.min.js "></script>
-    <script src="assets/libs/node-waves/waves.min.js "></script>
-
-
-    <!-- Required datatable js -->
-    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
-    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
-    <!-- Buttons examples -->
-    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
-    <script src="assets/libs/jszip/jszip.min.js "></script>
-    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
-    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
-    <!-- numerals number formater -->
-    <script src="assets/libs/numeral/numeral.js "></script>
-
-    <!-- Responsive examples -->
-    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
-    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
 
     <!-- Bootstrap select -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
-    <!-- Plugins js -->
-    <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
-    <!-- Datatable init js -->
-    <script src="assets/js/pages/datatables.init.js "></script>
+
+    <!-- Table Editable plugin -->
+    <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
+    <script src="assets/js/pages/table-editable.int.js"></script>
+
+
+
 
     <!-- App js -->
-    <script src="assets/js/app.js "></script>
-    <script src="assets/js/custom.js "></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 
 <!-- index.html   13:55:49 GMT -->
+
+</html>dex.html 13:55:49 GMT -->
 
 </html>

@@ -1086,6 +1086,10 @@ padding: 0px;
         border: 2px solid #4caf5066 !important;
     }
     
+    .id-card-uploader {
+        height: 360px;
+    }
+    
     @media (min-width: 576px) {
         #new-invoice-item-modal .modal-dialog {
             max-width: 617px;

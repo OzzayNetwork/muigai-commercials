@@ -13,8 +13,12 @@
     <meta content="Kelvin Njuguna" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- Plugins css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 
     <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+
 
     <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
@@ -287,6 +291,7 @@
                                 <li><a href="applicable-charges.html">Applicable Charges</a></li>
                                 <li><a href="estates.htm">Estate</a></li>
                                 <li><a href="house-types.html">House types</a></li>
+                                <li><a href="zones.html">Zones</a></li>
                             </ul>
                         </li>
                         <li>
@@ -495,6 +500,54 @@
                                                     </div>
                                                 </div>
                                                 <div class="row tenant-indidual-type">
+                                                    <div class="col-12">
+                                                        <div>
+                                                            <div action="#" class="dropzone">
+                                                                <div class="fallback">
+                                                                    <input name="file" type="file" multiple="multiple">
+                                                                </div>
+                                                                <div class="dz-message needsclick">
+                                                                    <div class="mb-3">
+                                                                        <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                                    </div>
+
+                                                                    <h4>Drop files here or click to upload.</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="mb-4">
+                                                                            <label for="basicpill-firstname-input">ID/PPT no.<strong class="text-danger">*</strong></label>
+                                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Id 0r PPT No.">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-12">
+                                                                        <div class="">
+                                                                            <div action="#" class="dropzone">
+                                                                                <div class="fallback">
+                                                                                    <input name="file" type="file">
+                                                                                </div>
+                                                                                <div class="dz-message needsclick">
+                                                                                    <div class="mb-3">
+                                                                                        <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                                                    </div>
+
+                                                                                    <h6>Click or Drag and drop the ID card's front side</h6>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <div class="col-12">
                                                         <div class="row">
                                                             <div class="col-lg-4 col-md-6">
@@ -1375,8 +1428,6 @@
     <script src="assets/libs/simplebar/simplebar.min.js "></script>
     <script src="assets/libs/node-waves/waves.min.js "></script>
 
-
-
     <script src="assets/libs/select2/js/select2.min.js "></script>
     <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
     <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js "></script>
@@ -1392,18 +1443,18 @@
     <script src="assets/libs/table-edits/build/table-edits.min.js "></script>
     <script src="assets/js/pages/table-editable.int.js "></script>
 
+
     <!-- numerals number formater -->
     <script src="assets/libs/numeral/numeral.js "></script>
     <!-- jquery step -->
-    <script src="assets/libs/jquery-steps/build/jquery.steps.min.js "></script>
-
+    <script src="assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
     <!-- form wizard init -->
     <script src="assets/js/pages/form-wizard.init.js "></script>
+
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js "></script>
-
-
-
 
     <!-- App js -->
     <script src="assets/js/app.js "></script>

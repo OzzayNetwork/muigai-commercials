@@ -501,6 +501,7 @@ $(window).on('load', function() {
 
 
 
+
     function find_max(nums) {
 
         let max_num = Number.NEGATIVE_INFINITY; // smaller than all other numbers
