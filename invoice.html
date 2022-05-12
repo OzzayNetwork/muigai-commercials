@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- index.html   13:53:02 GMT -->
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Muigai Commercials | Partially paid invoices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Rental management system by Nouveta LTD" name="description" />
+    <meta content="Kelvin Njuguna" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- droping file -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-chase">
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+                <div class="chase-dot"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Begin page -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                    <img src="assets/images/logo-light.svg" alt="" height="50">
+                                </span>
+                            <span class="logo-lg">
+                                    <img src="assets/images/color-log0.svg" alt="" height="60">
+                                </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                            <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                    <!-- logo small -->
+                    <div class="phone-logo d-md-none d-sm-flex"> <img src="assets/images/color-log0.svg" alt="" class="img"></div>
+
+
+
+                    <!-- App Search-->
+                    <form class="app-search d-none d-lg-block">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="bx bx-search-alt"></span>
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <div class="d-flex">
+                    <!-- small search -->
+                    <div class="dropdown d-inline-block d-lg-none ms-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                                <i class="bx bx-fullscreen"></i>
+                            </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block d-none">
+
+                        <!-- notifications, i will come to this later -->
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-bell bx-tada"></i>
+                                <span class="badge bg-danger rounded-pill">3</span>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#!" class="small" key="t-view-all"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="bx bx-cart"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <div class="avatar-xs me-3">
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="bx bx-badge-check"></i>
+                                                </span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Salena Layfield</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2 border-top d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1" key="t-henry">Adroa Balinda</span>
+                                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="myprofile.html"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">My Profile</span></a>
+                            <a class="dropdown-item" href="my-logs.html"><i class="bx bx-time font-size-16 align-middle me-1"></i> <span key="t-profile">My Logs</span></a>
+                            <a class="dropdown-item" href="auth-lock-screen.html"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled text-capitalize" id="side-menu">
+                        <li class="menu-title" key="t-pages">Hotline Transporters Sacco</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="mdi mdi-chart-line"></i><span>Analytics</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-account-details-outline"></i>
+                                <span>Members </span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="members.html">Members Register</a></li>
+                                <li><a href="members-new.html">Add a Member</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-truck-delivery-outline"></i>
+                                <span>Trucks</span>
+                            </a>
+                            <ul class="sub-menu text-capitalize" aria-expanded="false">
+                                <li><a href="trucks.html">Trucks Register</a></li>
+                                <li class="text-capitalize"><a href="trucks-new.html">Add a Truck</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="drivers.html" class="waves-effect">
+                                <i class="mdi mdi-steering"></i><span>Drivers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-certificate"></i>
+                                <span>Truck Permit</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li class=""><a href="permits-active.html">Active Permits</a></li>
+                                <li>
+                                    <a href="permits-almost.html">Nearing expiry</a>
+                                </li>
+                                <li><a href="permits-exp.html">Expired Permits</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-receipt"></i>
+                                <span>Invoices</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="invoice-new.html">Create an Invoice</a></li>
+                                <li><a href="invoice.html">Permit & Maintenance invoices</a></li>
+                                <li><a href="invoice-other.html">Other Invoices</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="receipts.html" class="waves-effect">
+                                <i class="mdi mdi-receipt"></i><span>Receipts</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-chat"></i>
+                                <span>Messenger</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li class="d-none"><a href="messages.html">Compose messages</a></li>
+                                <li><a href="messages.html">Messages</a></li>
+                                <li><a href="messages-contacts.html">Contacts</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-currency-usd"></i>
+                                <span>Finances</span>
+                            </a>
+                            <ul class="sub-menu text-capitalize" aria-expanded="false">
+                                <li><a href="finance-transactions.html">Transactions</a></li>
+                                <li class="text-capitalize"><a href="finance-statements.html">Member statements</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-monitor-multiple"></i>
+                                <span>System Users</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="user-userlist.html">System Users</a></li>
+                                <li><a href="user-registration.html">Add a system user</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-slider"></i>
+                                <span>Settings & Preferences</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="charges.html">Charges</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Rent & Bills invoices</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Invoices</a></li>
+                                        <li class="breadcrumb-item active">Partially paid</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+
+                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                        <h4 class="card-title text-capitalize mb-0 ">
+                                            All rent and Bills invoices
+                                        </h4>
+
+                                        <div class="d-flex">
+                                            <a href="invoice-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3">
+                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Create an invoice</span>
+                                            </a>
+                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker font-size-16" data-live-search="true" title="Select premises">
+                                                <option value="" selected>All Premises</option>
+                                                <option value="">Savannah Lands</option>
+                                                <option value="">Stone Plaza</option>
+                                                <option value="">Brook House</option>
+                                                <option value="">Airtel</option>
+                                                <option value="">Union Towers</option>
+                                                <option value="">The standard</option>
+                                          </select>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive overflow-visible">
+
+                                        <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
+                                            <thead class="table-light">
+                                                <tr class="table-dark">
+
+                                                    <th scope="col">
+                                                        <div class="the-mail-checkbox pr-4">
+                                                            <label for="selectAll" class="d-none">Select All</label>
+                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
+
+                                                        </div>
+                                                    </th>
+                                                    <th scope="col">Acc NO.</th>
+                                                    <th scope="col">Tenant</th>
+                                                    <th scope="col">Premises</th>
+                                                    <th scope="col">Hse/Unit</th>
+                                                    <th scope="col">Months In arrears</th>
+                                                    <th scope="col" class="text-nowrap">Created By</th>
+                                                    <th scope="col" class="text-right">Total Balance</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">123-410</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Byron Otieno</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Lions</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">401</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        1
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Stanishes Muguche
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 22,500</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">120-402</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Samantha Ngare</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Rocks</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">402</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        1
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Dancan Kamau
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 26,000</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">121-403</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Anthony Maloba</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Adams</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">403</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        2
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Newtone Maloba
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 60,000</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">123-404</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Grace Nekesa</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Ngara</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">404</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        1
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Naomi Tarangei
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 21,500</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">122-405</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Angela Obotu</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Donholm</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">405</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        4
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Jackline Wandenga
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 60,000</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">125-406</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Ernest Njuguna</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Airtel</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">406</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        2
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Patrick Baraka
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 30,000</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">124-407</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Ann Njoroge</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Aquiners</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">407</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        4
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Jacky Mariba
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 50,400</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">122-408</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Faith Awiti</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">TulipHouse</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">408</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        1
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Stanley Kinuthia
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 25,200</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">120-409</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Mary Kimani</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Ngara</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">409</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        1
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Lemmy Mureithi
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 23,500</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap">121-410</td>
+                                                    <td class="text-capitalize text-nowrap">
+                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Martin Karanja</a></p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-details.html">Kagundo</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="property-unit-details.html">410</a>
+                                                    </td>
+                                                    <td class="text-capitalize text-nowrap ">
+                                                        2
+                                                    </td>
+
+                                                    <td class="text-capitalize ">
+                                                        Josephilis Onyango
+                                                    </td>
+
+                                                    <td class="text-nowrap text-right ">
+                                                        <span class="fw-semibold ">KES 20,000</span>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Receive Payment</button>
+                                                            <div class="dropdown">
+                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                                </a>
+
+                                                                <div class="dropdown-menu dropdown-menu-end ">
+                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Tenant</a>
+                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot class="table-dark">
+                                                <tr>
+
+                                                    <td>
+
+                                                    </td>
+                                                    <th class="text-capitalize text-nowrap" colspan="3">23 Invoies</th>
+
+                                                    <th class="text-nowrap">63 Units</th>
+
+                                                    <td class="text-nowrap text-right " colspan="3">
+                                                        <span class="fw-semibold ">KES 25,500</span>
+                                                    </td>
+
+                                                    <td>
+
+                                                    </td>
+                                                </tr>
+
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <!-- end row -->
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <!-- receipting modal -->
+            <div class="modal fade receipting-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Receive Payments</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Billed To:</strong><br>
+                                    Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    1 Mar 2022, 10:20 AM
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="py-2 mt-3">
+                                    <h3 class="font-size-15 fw-bold">Balances Breakdown ( <span class="text-primary fw-medium">No. 123-410</span> )</h3>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-nowrap invoice-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 70px;">No.</th>
+                                                <th>Item</th>
+                                                <th>Months</th>
+                                                <th class="text-end">Amount</th>
+                                                <th class="" style="width: 150px;">Assign Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Monthly Rent</td>
+                                                <td>1</td>
+                                                <td class="text-end">KES 24,500</td>
+                                                <td>
+                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Water Bills</td>
+                                                <td>2</td>
+                                                <td class="text-end">KES 12,000</td>
+                                                <td>
+                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Electricity</td>
+                                                <td>3</td>
+                                                <td class="text-end">KES 200</td>
+                                                <td>
+                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04</td>
+
+                                                <td>Visitation Fees</td>
+                                                <td>1</td>
+                                                <td class="text-end">KES 250</td>
+                                                <td>
+                                                    <input type="number" class="form-control form-control-sm text-right" placeholder="KES">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="text-end">Total</td>
+                                                <td class="text-end fw-bold">KES 36,950</td>
+                                                <td class="text-end fw-bold text-total">KES 0.00</td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td colspan="3" class="border-0 text-end">
+                                                    <strong>Remaining Balance</strong></td>
+                                                <td class="border-0 text-end">
+                                                    <h5 class="m-0 text-uppercase fw-bold the-balance">KES 36,950</h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="col-12">
+                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
+                                    <table class="w-100">
+                                        <tbody>
+                                            <tr data-id="1">
+                                                <td>
+                                                    <label for="" class="">Payment Method</label>
+                                                    <select class="form-control selectpicker w-100 payment-method" data-style="btn-secondary w-100" data-live-search="true" title="Select payment Method">
+                                                        <option value="Mpesa">MPESA</option>
+                                                        <option value="Cash">CASH</option>   
+                                                     </select>
+                                                </td>
+                                                <td class="px-3 ">
+                                                    <div class="phone-num d-none">
+                                                        <label for="">Phone No.</label>
+                                                        <input type="text " class="form-control w-100 d-flex " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
+                                                    </div>
+
+                                                </td>
+                                                <td class="px-3">
+                                                    <label for="">Total Amount To Be Paid</label>
+                                                    <input type="text " class="form-control w-100 d-flex invoiceTotalPay" readonly placeholder="KES" spellcheck="false" data-ms-editor="true">
+
+                                                </td>
+                                                <td class="text-right float-right">
+                                                    <div class="d-flex flex-column">
+                                                        <label class="opacity-0">Something</label>
+                                                        <a href="#" class="btn btn-primary w-md waves-effect waves-light">Submit</a>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end of receipting modal -->
+
+            <!-- invoice details -->
+            <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Invoice Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <address>
+                                    <strong>Billed To:</strong><br>
+                                    Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>                                   
+                                    Hse No. 410, 90 Degrees By Tsavo
+                                    <br><br>
+                                    1 Mar 2022, 10:20 AM
+                                </address>
+                            </div>
+                            <div class="col-12">
+                                <div class="py-2 mt-3">
+                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span class="text-primary fw-medium">No. 1237</span> )</h3>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 70px;">No.</th>
+                                                <th>Item</th>
+                                                <th class="text-end">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Rent Deposit</td>
+                                                <td class="text-end">KES 24,500</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Monthly Rent</td>
+                                                <td class="text-end">KES 12,000</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>03</td>
+                                                <td>TAX (18%)</td>
+                                                <td class="text-end">KES 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-end">Total</td>
+                                                <td class="text-end fw-bold">KES 36,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-end">Paid</td>
+                                                <td class="text-end  fw-bold">KES 0.00</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="border-0 text-end">
+                                                    <strong>Balance</strong></td>
+                                                <td class="border-0 text-end">
+                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="col-12 d-none">
+                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
+                                    <table class="w-100">
+                                        <tbody>
+                                            <tr data-id="1">
+                                                <td>
+                                                    <label for="" class="">Payment Method</label>
+                                                    <select class="form-control selectpicker w-100 payment-method" data-style="btn-secondary w-100" data-live-search="true" title="Select payment Method">
+                                                        <option value="Mpesa">MPESA</option>
+                                                        <option value="Cash">CASH</option>   
+                                                     </select>
+                                                </td>
+                                                <td class="px-3 ">
+                                                    <div class="phone-num d-none">
+                                                        <label for="">Phone No.</label>
+                                                        <input type="text " class="form-control w-100 d-flex " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
+                                                    </div>
+
+                                                </td>
+                                                <td class="px-3">
+                                                    <label for="">Amount To Be Paid</label>
+                                                    <input type="text " class="form-control w-100 d-flex" placeholder="KES" spellcheck="false" data-ms-editor="true">
+
+                                                </td>
+                                                <td class="text-right float-right">
+                                                    <div class="d-flex flex-column">
+                                                        <label class="opacity-0">Something</label>
+                                                        <a href="#" class="btn btn-primary w-md waves-effect waves-light">Submit</a>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <div class="float-end">
+                                <a href="javascript:window.print()" class="btn btn-success waves-effect waves-light me-1"><i class="mdi mdi-printer font-16px"></i></a>
+                                <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light">Receive Payment</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- invoice details -->
+
+            <footer class="footer ">
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © RevenueSure
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="text-sm-end d-sm-block ">
+                                Developed by Nouveta LTD.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay "></div>
+
+    <script src="assets/libs/jquery/jquery.min.js "></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
+
+
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+    <script src="assets/libs/jszip/jszip.min.js "></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
+
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+    <!-- Plugins js -->
+    <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js "></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
+</body>
+
+
+<!-- index.html   13:55:49 GMT -->
+
+</html>

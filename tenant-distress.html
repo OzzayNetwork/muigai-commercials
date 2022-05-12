@@ -457,13 +457,25 @@
                                             <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-whatsApp"><i class="mdi mdi-receipt font-size-16"></i> <span class="pl-1 d-none d-lg-inline d-md-inline text-capitalize text-capitalize">Auctioned</span></label>
 
                                         </div>
-                                        <div class="d-flex align-items-center flex-grow-1">
-                                            <select class="form-control selectpicker w-auto" data-style="btn btn-secondary" data-live-search="true" title="Select the property">
+                                        <div class="d-flex align-items-center flex-grow-1 me-3">
+
+                                            <div class="btn-group mr-15px option-selector-cont me-3">
+                                                <button type="button" class="btn btn-secondary dropdown-toggle option-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="mdi mdi-check-all font-size-16"></i> <span class="pl-1 d-none d-sm-inline">Distress Status</span>  <i class="mdi mdi-chevron-down"></i>
+                                            </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#"><i class="mdi mdi-checkbox-blank text-white"></i><span class="pl-1">All Statuses</span></a>
+                                                    <a class="dropdown-item" href="#"><i class="mdi mdi-checkbox-blank text-success"></i><span class="pl-1">Closed distresses</span></a>
+                                                    <a class="dropdown-item" href="#"><i class="mdi mdi-checkbox-blank text-danger"></i><span class="pl-1">Open distresses</span></a>
+                                                </div>
+                                            </div>
+                                            <select class="form-control selectpicker w-auto me-3" data-style="btn btn-secondary" data-live-search="true" title="Select the property">
                                                 <option value="" selected>All Properties</option>
                                                 <option value="">Tsavo 90 degress</option>
                                                 <option value="">Braka Apartments</option>
                                           </select>
                                         </div>
+
                                         <div class="d-flex">
                                             <a href="#" type="button" class="btn btn-secondary dropdown-toggle option-selector write-msg-btn">
                                                 <i class="mdi  mdi-chat-processing-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Message all tenants</span>
@@ -493,6 +505,7 @@
                                                     <th scope="col">Contacts</th>
                                                     <th scope="col">House</th>
                                                     <th scope="col">Initiated on</th>
+                                                    <th>Distress Status</th>
                                                     <th scope="col">Current stage</th>
                                                     <th scope="col">Days to next stage</th>
                                                     <th scope="col" class="text-right">Total due</th>
@@ -530,6 +543,9 @@
 
                                                     <td>
                                                         3 Mar 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
                                                     </td>
                                                     <td>
                                                         <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">On Notice</span>
@@ -587,6 +603,9 @@
 
                                                     <td>
                                                         23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
                                                     </td>
                                                     <td>
                                                         <span class="badge badge-soft-secondary font-size-11 m-1 text-uppercase">Distress letter</span>
@@ -648,6 +667,9 @@
                                                         23 Feb 2022
                                                     </td>
                                                     <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
+                                                    </td>
+                                                    <td>
                                                         <span class="badge badge-soft-warning font-size-11 m-1 text-uppercase">Attachment</span>
                                                     </td>
                                                     <td>
@@ -705,6 +727,9 @@
 
                                                     <td>
                                                         23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
                                                     </td>
                                                     <td>
                                                         <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">To be auctioned</span>
@@ -765,6 +790,9 @@
 
                                                     <td>
                                                         23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
                                                     </td>
                                                     <td>
                                                         <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">Auctioned</span>

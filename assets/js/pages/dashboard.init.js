@@ -83,6 +83,7 @@ var options = {
             }
         },
 
+
     },
     chart = new ApexCharts(document.querySelector("#stacked-column-chart"), options);
 chart.render();
