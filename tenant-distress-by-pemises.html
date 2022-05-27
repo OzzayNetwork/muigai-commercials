@@ -417,7 +417,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">All tenants for 90 Degrees </h4>
+                                <h4 class="mb-sm-0 font-size-18">90 Degrees</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -574,7 +574,7 @@
                                 <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <div class="d-flex align-items-center flex-grow-1">
+                                        <div class="d-flex align-items-center flex-grow-1 d-none">
                                             <div class="btn-group pr-3" role="group" aria-label="Basic radio toggle button group">
                                                 <input type="radio" class="btn-check" name="msg-type-filter" value="" id="btn-allmsgs" autocomplete="off" checked="">
                                                 <label class="btn btn-primary mb-0 waves-light waves-effect" for="btn-allmsgs"><span class="d-inline">All</span></label>
@@ -602,12 +602,15 @@
 
 
                                         </div>
+                                        <div>
+                                            <h4>Tenants on Distress</h4>
+                                        </div>
 
                                         <div class="d-flex">
-                                            <a href="#" type="button" class="btn btn-secondary dropdown-toggle option-selector write-msg-btn me-3">
+                                            <a href="#" type="button" class="btn btn-secondary dropdown-toggle option-selector write-msg-btn">
                                                 <i class="mdi  mdi-chat-processing-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Message all tenants</span>
                                             </a>
-                                            <a href="tenant-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                            <a href="tenant-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector d-none">
                                                 <i class="mdi  mdi-account-multiple-plus  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Tenant</span>
                                             </a>
 
@@ -622,591 +625,338 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
-                                            <tr>
-
-                                                <th scope="col">
-                                                    <div class="the-mail-checkbox pr-4">
-                                                        <label for="selectAll" class="d-none">Select All</label>
-                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
-
-                                                    </div>
-                                                </th>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Tenant</th>
-                                                <th scope="col">Contacts</th>
-                                                <th scope="col">House</th>
-                                                <th scope="col">Since</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col" class="text-right">Arrears</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle table-nowrap table-hover contacts-table" id="datatable-buttons">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" style="width: 40px;">
                                                         <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            <label for="selectAll" class="d-none">Select All</label>
+                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
                                                         </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">1</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Njuguna</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0704549859">0704549859</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:email@email.com">email@email.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">90 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>410
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    3 Mar 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES +12,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+                                                    </th>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Tenant</th>
+                                                    <th scope="col">Contacts</th>
+                                                    <th scope="col">House</th>
+                                                    <th scope="col">Initiated on</th>
+                                                    <th>Distress Status</th>
+                                                    <th scope="col">Current stage</th>
+                                                    <th scope="col">Days to next stage</th>
+                                                    <th scope="col" class="text-right">Total due</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                    </td>
+                                                    <td class="text-capitalize">1</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">Amos Waswa</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p class="mb-0">
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        <p class="text-muted mb-0">
+                                                            <span class="fw-semibold">Hse No. :</span>410
+                                                        </p>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <td>
+                                                        3 Mar 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">On Notice</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold">7</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 12,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-home-account me-3"></i>Tenant details</a>
+                                                                <a class="dropdown-item" href="tenant-distress-process.html"><i class="font-size-15 mdi mdi-account-cancel me-3"></i>Detailed Distress view</a>
+                                                                <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-cash me-3"></i>Receive payment</a>
+                                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-cancel me-3"></i>Distress Notice</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".distress-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Move to distress Letter stage</a>
+                                                                <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            </div>
                                                         </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">2</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Martin Karanja</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0799549098">0799549098</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:martikaranja150@gmail.com">martikaranja150@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">55 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>411
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    1 Jan 2019
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">UnCompliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 45,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">3</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Sharon Wanjiku</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0794795345">0794795345</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:sharonwanjiku34@gmail.com">sharonwanjiku34@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">66 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>412
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    1 Mar 2019
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES +22,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                    </td>
+                                                    <td class="text-capitalize">2</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">William Saliba</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p class="mb-0">
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        <p class="text-muted mb-0">
+                                                            <span class="fw-semibold">Hse No. :</span>25P
+                                                        </p>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <td>
+                                                        23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-secondary font-size-11 m-1 text-uppercase">Distress letter</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold">14</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 22,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-home-account me-3"></i>Tenant details</a>
+                                                                <a class="dropdown-item" href="tenant-distress-process.html"><i class="font-size-15 mdi mdi-account-cancel me-3"></i>Detailed Distress view</a>
+                                                                <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-cash me-3"></i>Receive payment</a>
+                                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-cancel me-3"></i>Distress Notice</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-clipboard-alert   me-3"></i>View Distress letter</a>
+
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".attachment-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Move to Attachment stage</a>
+                                                                <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            </div>
                                                         </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">4</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Dancan Mwangi</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0725737892">0725737892</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Dancanmwas12@gmail.com">Dancanmwas12@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">75 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>413
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    3 Mar 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES +55,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">5</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Ernest Macharia</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0723576532">0723576532</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Ernestomacha55@gmail.com">Ernestomacha55@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">63 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>414
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    4 April 2019
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">UnCompliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 44,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                    </td>
+                                                    <td class="text-capitalize">3</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">William Saliba</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p class="mb-0">
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        <p class="text-muted mb-0">
+                                                            <span class="fw-semibold">Hse No. :</span>25P
+                                                        </p>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <td>
+                                                        23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-warning font-size-11 m-1 text-uppercase">Attachment</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold">10</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 22,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-home-account me-3"></i>Tenant details</a>
+                                                                <a class="dropdown-item" href="tenant-distress-process.html"><i class="font-size-15 mdi mdi-account-cancel me-3"></i>Detailed Distress view</a>
+                                                                <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-cash me-3"></i>Receive payment</a>
+                                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-cancel me-3"></i>Distress Notice</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-clipboard-alert   me-3"></i>View Distress letter</a>
+
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".auctioning-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Declare for auctioning</a>
+                                                                <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            </div>
                                                         </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">6</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Rose Wanjau</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0734627223">0734627223</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Rosewanja22@gmail.com">Rosewanja22@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">93 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>415
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    3 Mar 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES +12,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">7</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Jackline Waithaka</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0711123364">0711123364</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Jacklinewaithaka245@gmail.com">Jacklinewaithaka245@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">76 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>416
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    3 Feb 2020
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">UnCompliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 16,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                    </td>
+                                                    <td class="text-capitalize">4</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">William Saliba</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p class="mb-0">
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        <p class="text-muted mb-0">
+                                                            <span class="fw-semibold">Hse No. :</span>25P
+                                                        </p>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <td>
+                                                        23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">To be auctioned</span>
+                                                        <p class="m-0 p-0 ml-1">Invoice No. <span class="fw-semibold">123456</span></p>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold">-</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 22,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-home-account me-3"></i>Tenant details</a>
+                                                                <a class="dropdown-item" href="tenant-distress-process.html"><i class="font-size-15 mdi mdi-account-cancel me-3"></i>Detailed Distress view</a>
+                                                                <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-cash me-3"></i>Receive payment</a>
+                                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-cancel me-3"></i>Distress Notice</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-clipboard-alert   me-3"></i>View Distress letter</a>
+
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".auction-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Distribute the collected auction amount</a>
+                                                                <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            </div>
                                                         </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">8</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Mary Kimani</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0789653423">0789653423</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Marykimani356@gmail.com">Marykimani356@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">90 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>417
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    3 Aug 2020
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES +12,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">9</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Kelvin Kirago</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0747863538">0747863538</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Kelvinkirago366@gmail.com">Kelvinkirago366@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">80 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>418
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    14 Sept 2021
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">UnCompliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 66,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex  align-items-center">
+                                                            <div class="the-mail-checkbox pr-4">
+                                                                <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
+                                                    </td>
+                                                    <td class="text-capitalize">5</td>
+                                                    <td class="text-capitalize">
+                                                        <a href="tenant-details.html" title="View Details">William Saliba</a>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-0">
+                                                            <a href="tell:0704549859">0704549859</a>
+                                                        </p>
+                                                        <p class="mb-0">
+                                                            <a href="mailto:email@email.com">email@email.com</a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="text-capitalize">
+                                                        <p class="text-muted mb-0">
+                                                            <span class="fw-semibold">Hse No. :</span>25P
+                                                        </p>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
+                                                    <td>
+                                                        23 Feb 2022
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger text-uppercase">open</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-soft-danger font-size-11 m-1 text-uppercase">Auctioned</span>
+                                                        <p class="m-0 p-0 ml-1">Amt Received. <span class="fw-semibold">KES 12,526</span></p>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold">0</span>
+                                                    </td>
+                                                    <td class="text-black text-uppercase text-right"><span class="text-danger fw-semibold">KES 22,000</span></td>
+
+                                                    <td>
+                                                        <div class="dropdown">
+                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                            </a>
+
+                                                            <div class="dropdown-menu dropdown-menu-end text-capitalize">
+                                                                <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-home-account me-3"></i>Tenant details</a>
+                                                                <a class="dropdown-item" href="tenant-distress-process.html"><i class="font-size-15 mdi mdi-account-cancel me-3"></i>Detailed Distress view</a>
+                                                                <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-cash me-3"></i>Receive payment</a>
+                                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-cancel me-3"></i>Distress Notice</a>
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-cash-multiple me-3"></i>Get Statements</a>
+                                                                <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-clipboard-alert   me-3"></i>View Distress letter</a>
+
+                                                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".auction-modal"><i class="font-size-15 mdi mdi-chevron-double-right me-3"></i>Distribute payments</a>
+                                                                <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
+                                                            </div>
                                                         </div>
+                                                    </td>
+                                                </tr>
 
-                                                    </div>
-                                                </td>
-                                                <td class="text-capitalize">10</td>
-                                                <td class="text-capitalize">
-                                                    <a href="tenant-details.html" title="View Details">Catherine Nanzala</a>
-                                                </td>
-                                                <td>
-                                                    <p class="text-muted mb-0">
-                                                        <a href="tell:0734657429">0734657429</a>
-                                                    </p>
-                                                    <p>
-                                                        <a href="mailto:Catherinenanzala24@gmail.com">Catherinenanzala24@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="text-capitalize">
-                                                    <h5 class="font-size-14 mb-1 d-none"><a href="property-details.html" class="text-black" title="View Details">60 Degrees By Tsavo</a></h5>
-                                                    <p class="text-muted mb-0">
-                                                        <span class="fw-semibold">Hse No. :</span>419
-                                                    </p>
-                                                </td>
-
-                                                <td>
-                                                    9 May 2022
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-soft-success font-size-11 m-1 text-uppercase">Compliant</span>
-                                                </td>
-                                                <td class="text-black text-uppercase text-right"><span class="text-success fw-semibold">KES +52,000</span></td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end text-capitalize">
-                                                            <a class="dropdown-item" href="tenant-details.html"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
-                                                            <a class="dropdown-item" href="tenant-new.html"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".notice-modal" href="#"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Create Notice</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-arrow-right me-3"></i>Vacate from Premises</a>
-                                                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target=".statements-modal"><i class="font-size-15  mdi mdi-printer me-3"></i>Get Statements</a>
-                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15  mdi mdi-chat me-3 "></i>Message Tenant</a>
-                                                            <a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target=".distress-modal" href="#"><i class="font-size-15 mdi  mdi-cancel me-3 text-danger"></i>Initiate distress</a>
-
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

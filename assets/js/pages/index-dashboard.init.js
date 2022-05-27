@@ -198,5 +198,5 @@ var walletOptions = {
     legend: { show: !1 }
 };
 (chart = new ApexCharts(document.querySelector("#unit-types"), walletOptions)).render();
-options = { series: [56, 44], chart: { type: "donut", height: 170 }, labels: ["Lease", "Management"], colors: ["#556ee6", "#34c38f", "#f46a6a"], legend: { show: !1 }, plotOptions: { pie: { donut: { size: "40%" } } } };
+options = { series: [56, 44], chart: { type: "donut", height: 170 }, labels: ["Nairobi", "Nakuru"], colors: ["#556ee6", "#34c38f", "#f46a6a"], legend: { show: !1 }, plotOptions: { pie: { donut: { size: "40%" } } } };
 (chart = new ApexCharts(document.querySelector("#agrement-type"), options)).render();
