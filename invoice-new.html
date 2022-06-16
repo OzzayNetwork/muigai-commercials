@@ -404,6 +404,7 @@
 
 
 
+
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
@@ -434,7 +435,7 @@
                     <!-- eTransactions table -->
 
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 ">
                             <div class="card p-5">
                                 <div class="card-body ">
                                     <div class="row d-flex align-items-center justify-content-center ">
@@ -558,7 +559,6 @@
                                                                 </div>
                                                             </div>
 
-
                                                         </div>
 
                                                         <div class="mb-3 d-none">
@@ -571,7 +571,7 @@
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                                            <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary w-md">Submit</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -590,12 +590,178 @@
                     <!-- end row -->
                 </div>
                 <!-- container-fluid -->
+
+                <!-- the modals -->
+
+                <div class="modal fade debit-tenant-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Created Invoice Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-12">
+                                    <address>
+                                        <strong>Invoice to:</strong><br>
+                                        Kelvin Njuguna<br>
+                                        email@mail.com, 0704 549 859<br>                                   
+                                        Hse No. 410, 90 Degrees By Tsavo
+                                        <br><br>
+                                       <span class="date-today"> 1 Mar 2022, 10:20 AM</span>
+                                    </address>
+                                </div>
+                                <div class="col-12">
+                                    <div class="py-2 mt-3">
+                                        <h3 class="font-size-15 fw-bold">Balances Breakdown</h3>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-nowrap invoice-table">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 70px;">No.</th>
+                                                    <th>Item</th>
+                                                    <th class="text-end">Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>01</td>
+                                                    <td>Monthly Rent</td>
+                                                    <td class="text-end">KES 24,500</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>02</td>
+                                                    <td>Surcharge</td>
+                                                    <td class="text-end">KES 2,450</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>03</td>
+                                                    <td>Visitation Fee</td>
+                                                    <td class="text-end">KES 500</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="text-end">Total</td>
+                                                    <td class="text-end fw-bold the-total">KES 27,450</td>
+                                                    <td class="text-end fw-bold debited-amount">KES 0.00</td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td colspan="2" class="border-0 text-end">
+                                                        <strong>Remaining Balance</strong></td>
+                                                    <td class="border-0 text-end">
+                                                        <h5 class="m-0 text-uppercase fw-bold the-debit-balance">KES 0.00</h5>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="alert alert-warning" role="alert">
+                                        <i class="mdi mdi-alert-outline me-2 "></i> A debit note with this details will be created and information will be sent to the tenant on the same via SMS
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="float-end">
+                                    <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light submit-credit-details">Submit Details</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+
+                <!-- Button trigger modal -->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Created Invoice Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-12">
+                                    <address>
+                                        <strong>Invoice to:</strong><br>
+                                        <span class="tenant-name">Kelvin Njuguna</span><br>
+                                        email@mail.com, 0704 549 859<br>                                   
+                                        Hse No. 410, 90 Degrees By Tsavo
+                                        <br><br>
+                                       <span class="date-today"> 1 Mar 2022, 10:20 AM</span>
+                                    </address>
+                                </div>
+                                <div class="col-12">
+                                    <div class="py-2 mt-3">
+                                        <h3 class="font-size-15 fw-bold">Created Invoice Details
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table  invoice-table">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 70px;">No.</th>
+                                                    <th>Item</th>
+                                                    <th class="text-end">Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>01</td>
+                                                    <td>
+                                                        <span class="invoice-description">Damage of property</span>
+                                                        <br>
+                                                        <small class="the-inv-description">
+                                                            The individual was engaged in a fight within the premises and he was reported to have broken some windows
+                                                        </small>
+                                                    </td>
+                                                    <td class="text-end text-nowrap">KES 24,500</td>
+
+                                                </tr>
+
+
+
+                                                <tr>
+                                                    <td colspan="2" class="border-0 text-end">
+                                                        <strong>Total</strong></td>
+                                                    <td class="border-0 text-end" style="width:150px">
+                                                        <h5 class="m-0 text-uppercase fw-bold the-debit-balance">KES 27,450</h5>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <div class="float-end">
+                                    <a href="javascript: void(0);" class="btn btn-primary w-md waves-effect waves-light submit-credit-details">Submit Details</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                </div>
             </div>
             <!-- End Page-content -->
-
-
-
-
 
 
 
@@ -672,5 +838,7 @@
 
 
 <!-- index.html   13:55:49 GMT -->
+
+</html>
 
 </html>
