@@ -523,6 +523,39 @@ $(window).on('load', function() {
 });
 
 $(document).ready(function() {
+
+    $('.invoice-btn').on('click', function() {
+        var tenantemail
+        var tenantPhone
+
+        var selectedOption = $('[name="invoice-for').val();
+        var tenantName;
+        if (selectedOption == "tenant") {
+            tenantName = $('.tenant-name-option').selectpicker('val');
+            tenantemail = "email@email.com";
+            tenantPhone = "0701234567";
+
+        } else {
+            tenantName = $('.entered-name').val();
+            tenantemail = $('.tenant-email').val();
+            tenantPhone = $('.tenant-phone').val();
+        }
+
+
+        var invoiceItem = $('.invoice-title-val').selectpicker('val');
+        var tenantDescription = $('.tenant-description').val();
+        var invoiceDate = $('.invoice-date').val();
+        var invoiceAmt = $('.invoice-amount').val();
+
+
+        $('.the-debit-balance').text("KES " + numeral(invoiceAmt).format('0,0'));
+        $('.tenant-name').text(tenantName);
+        $('.the-email').text(tenantemail);
+        $('.the-phone').text(tenantPhone);
+        $('.invoice-item').text(invoiceItem);
+        $('.the-inv-description').text(tenantDescription);
+        $('.invoice-item-price').text(invoiceAmt);
+    })
     $('.selectpicker').selectpicker();
     $('.selectpicker').selectpicker('render')
 });

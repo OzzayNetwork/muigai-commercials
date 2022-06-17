@@ -481,10 +481,10 @@
                                                             <div class="col-12">
                                                                 <div class="mb-3">
                                                                     <label for="formrow-firstname-input" class="form-label">Tenant</label>
-                                                                    <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select a tenant">
-                                                                        <option value=" ">Kelvin Njuguna</option>
-                                                                        <option value=" ">Alex wanjala</option>
-                                                                        <option value=" ">Makori</option>
+                                                                    <select class="form-control selectpicker bg-white tenant-name-option" title="Select tenant" data-live-search="true" title="Select a tenant">
+                                                                        <option value="kelvin njuguna">Kelvin Njuguna</option>
+                                                                        <option value="alex wanjala">Alex wanjala</option>
+                                                                        <option value="makori waswa">Makori Waswa</option>
                                                                   </select>
                                                                 </div>
                                                             </div>
@@ -507,35 +507,35 @@
                                                             <div class="col-12">
                                                                 <div class="mb-3">
                                                                     <label for="formrow-firstname-input" class="form-label">Full Names</label>
-                                                                    <input class="form-control" placeholder="Enter the full Names">
+                                                                    <input class="form-control entered-name" placeholder="Enter the full Names">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6">
                                                                 <div class="mb-3">
                                                                     <label for="formrow-email-input" class="form-label">Email address</label>
-                                                                    <input type="email" class="form-control" id="formrow-email-input" placeholder="Enter the email address">
+                                                                    <input type="email" class="form-control tenant-email" id="formrow-email-input" placeholder="Enter the email address">
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <div class="mb-3">
                                                                     <label for="formrow-password-input" class="form-label">Phone number</label>
-                                                                    <input type="text" class="form-control" id="formrow-password-input" placeholder="Enter the phone number">
+                                                                    <input type="text" class="form-control tenant-phone" id="formrow-password-input" placeholder="Enter the phone number">
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         <div class="mb-3">
                                                             <label for="formrow-firstname-input" class="form-label">Invoice title</label>
-                                                            <select class="form-control selectpicker bg-white" title="Select tenant" data-live-search="true" title="Select the invoice type">
-                                                                <option value=" ">Damage of property</option>
-                                                                <option value=" ">Service charge</option>
-                                                                <option value=" ">Others</option>
+                                                            <select class="form-control selectpicker bg-white invoice-title-val" title="Select tenant" data-live-search="true" title="Select the invoice type">
+                                                                <option value="Damage of Property">Damage of property</option>
+                                                                <option value="Service Charge">Service charge</option>
+                                                                <option value="Cheque Bounce penalty">Cheque Bounce penalty</option>
                                                           </select>
                                                         </div>
 
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">Description</label>
+                                                            <label for="formrow-firstname-input tenant-description" class="form-label">Description</label>
                                                             <textarea name="" id="" cols="30" rows="5" placeholder="Enter description" class="form-control"></textarea>
                                                         </div>
 
@@ -546,7 +546,7 @@
                                                                 <div class="mb-3">
                                                                     <label for="formrow-inputCity" class="form-label">Due Date</label>
                                                                     <div class="input-group" id="datepicker2">
-                                                                        <input type="text" class="form-control" placeholder="To be paid By" data-date-format="dd M, yyyy" data-date-container='#datepicker2' data-provide="datepicker" data-date-autoclose="true">
+                                                                        <input type="text" class="form-control invoice-date" placeholder="To be paid By" data-date-format="dd M, yyyy" data-date-container='#datepicker2' data-provide="datepicker" data-date-autoclose="true">
 
                                                                         <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
                                                                     </div>
@@ -555,7 +555,7 @@
                                                             <div class="col-md-6">
                                                                 <div class="mb-3">
                                                                     <label for="formrow-password-input" class="form-label">Invoice amount</label>
-                                                                    <input type="text" class="form-control" id="formrow-password-input" placeholder="KES">
+                                                                    <input type="text" class="form-control invoice-amount" id="formrow-password-input" placeholder="KES">
                                                                 </div>
                                                             </div>
 
@@ -571,7 +571,7 @@
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary w-md">Submit</button>
+                                                            <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary w-md invoice-btn">Submit</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -699,8 +699,8 @@
                                     <address>
                                         <strong>Invoice to:</strong><br>
                                         <span class="tenant-name">Kelvin Njuguna</span><br>
-                                        email@mail.com, 0704 549 859<br>                                   
-                                        Hse No. 410, 90 Degrees By Tsavo
+                                        <span class="the-email">email@mail.com</span>, <span class="the-phone">0704 549 859</span><br>                                   
+                                        Hse No. <span class="hse-num">410</span>, <span class="tenant-apartment">90 Degrees By Tsavo</span>
                                         <br><br>
                                        <span class="date-today"> 1 Mar 2022, 10:20 AM</span>
                                     </address>
@@ -725,13 +725,13 @@
                                                 <tr>
                                                     <td>01</td>
                                                     <td>
-                                                        <span class="invoice-description">Damage of property</span>
+                                                        <span class="invoice-item">Damage of property</span>
                                                         <br>
                                                         <small class="the-inv-description">
                                                             The individual was engaged in a fight within the premises and he was reported to have broken some windows
                                                         </small>
                                                     </td>
-                                                    <td class="text-end text-nowrap">KES 24,500</td>
+                                                    <td class="text-end text-nowrap invoice-item-price">KES 24,500</td>
 
                                                 </tr>
 
