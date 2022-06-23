@@ -822,7 +822,7 @@
                                                 </div>
                                                 <ul class="nav nav-tabs nav-tabs-custom card-header-tabs ms-auto" role="tablist">
                                                     <li class="mr-3 me-3">
-                                                        <select class="form-control selectpicker" data-live-search="true" data-style="btn-primary" title="Select Month">
+                                                        <select class="form-control selectpicker" data-live-search="true" data-style="btn-primary btn-sm" title="Select Month">
                                                                 
                                                             <option value="Jan 2022" selected>Jan 2022</option>
                                                             <option value="Feb 2022">Feb 2022</option>
@@ -1172,27 +1172,114 @@
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title mb-4">Revenue by County</h4>
+                                    <div class="float-end">
+                                        <select class="form-control selectpicker" data-live-search="true" data-style="btn-primary btn-sm" title="Select Month">
+                                                                
+                                            <option value="Jan 2022" selected>Jan 2022</option>
+                                            <option value="Feb 2022">Feb 2022</option>
+                                            <option value="Mar 2022">Mar 2022</option> 
+                                            <option value="Apr 2022">Apr 2022</option>  
+                                            <option value="May 2022">May 2022</option> 
+                                            <option value="Jun 2022">Jun 2022</option> 
+                                            <option value="Jul 2022">Jul 2022</option>                                                               
+                                      </select>
+                                    </div>
+                                    <h4 class="card-title mb-4">Collection By Revenue Type</h4>
 
                                     <div>
-                                        <div id="agrement-type" class="apex-charts"></div>
+                                        <div id="agrement-type" class="apex-charts revenue-type"></div>
                                     </div>
 
                                     <div class="text-center text-muted">
                                         <div class="row">
-                                            <div class="col-6">
+                                            <div class="col-4">
                                                 <div class="mt-4 text-left">
-                                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i>Surcharge</p>
-                                                    <h5>KES 231,763</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="mt-4 text-left">
-                                                    <p class="mb-2 text-truncate text-left"><i class="mdi mdi-circle text-primary me-1"></i>Commission</p>
+                                                    <p class="mb-2 text-truncate text-left"><i class="mdi mdi-circle text-primary me-1"></i>Agreement Fees</p>
                                                     <h5>KES 202,132</h5>
                                                 </div>
                                             </div>
+                                            <div class="col-4">
+                                                <div class="mt-4 text-left">
+                                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-danger me-1"></i>Surcharge</p>
+                                                    <h5>KES 21,763</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="mt-4 text-left">
+                                                    <p class="mb-2 text-truncate text-left"><i class="mdi mdi-circle text-primary me-1"></i>Commission</p>
+                                                    <h5>KES 30,256</h5>
+                                                </div>
+                                            </div>
+
+
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="float-end">
+                                        <select class="form-control selectpicker" data-live-search="true" data-style="btn-primary btn-sm" title="Select Month">
+                                                                
+                                            <option value="Jan 2022" selected>Jan 2022</option>
+                                            <option value="Feb 2022">Feb 2022</option>
+                                            <option value="Mar 2022">Mar 2022</option> 
+                                            <option value="Apr 2022">Apr 2022</option>  
+                                            <option value="May 2022">May 2022</option> 
+                                            <option value="Jun 2022">Jun 2022</option> 
+                                            <option value="Jul 2022">Jul 2022</option>                                                               
+                                      </select>
+                                    </div>
+                                    <h4 class="card-title mb-4">Revenue Transaction Modes comparison</h4>
+
+                                    <div class="table-responsive mt-4">
+                                        <table class="table align-middle mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1">MPESA</h5>
+                                                        <p class="text-muted mb-0">KES 253,630</p>
+                                                    </td>
+
+                                                    <td>
+                                                        <div id="radialchart-1" class="apex-charts"></div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-1">Transactions</p>
+                                                        <h5 class="mb-0">47 %</h5>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1">CASH</h5>
+                                                        <p class="text-muted mb-0">KES 192,360</p>
+                                                    </td>
+
+                                                    <td>
+                                                        <div id="radialchart-2" class="apex-charts"></div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-1">Transactions</p>
+                                                        <h5 class="mb-0">32 %</h5>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h5 class="font-size-14 mb-1">BANK</h5>
+                                                        <p class="text-muted mb-0">KES 100,500</p>
+                                                    </td>
+
+                                                    <td>
+                                                        <div id="radialchart-3" class="apex-charts"></div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-muted mb-1">Transactions</p>
+                                                        <h5 class="mb-0">21 %</h5>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -1258,6 +1345,9 @@
 
     <!-- dashboard init -->
     <script src="assets/js/pages/index-dashboard.init.js "></script>
+
+    <!-- Saas dashboard init -->
+    <script src="assets/js/pages/saas-dashboard.init.js"></script>
 
 
 

@@ -198,5 +198,139 @@ var walletOptions = {
     legend: { show: !1 }
 };
 (chart = new ApexCharts(document.querySelector("#unit-types"), walletOptions)).render();
-options = { series: [56, 44], chart: { type: "donut", height: 170 }, labels: ["Nairobi", "Nakuru"], colors: ["#556ee6", "#34c38f", "#f46a6a"], legend: { show: !1 }, plotOptions: { pie: { donut: { size: "40%" } } } };
+options = {
+    series: [56, 20, 24],
+    chart: { type: "donut", height: 250 },
+    labels: ["Agreement Fee", "Commission", "Surcharge"],
+    colors: ["#556ee6", "#34c38f", "#f46a6a"],
+    legend: { show: !1 },
+    plotOptions: { pie: { donut: { size: "40%" } } }
+};
 (chart = new ApexCharts(document.querySelector("#agrement-type"), options)).render();
+
+
+// revenue collection mode comparisons
+radialchart1 = new ApexCharts(document.querySelector("#radialchart-1"), radialoptions1);
+radialchart1.render();
+var radialoptions2 = {
+    series: [72],
+    chart: {
+        type: "radialBar",
+        width: 60,
+        height: 60,
+        sparkline: {
+            enabled: !0
+        }
+    },
+    dataLabels: {
+        enabled: !1
+    },
+    colors: ["#34c38f"],
+    plotOptions: {
+        radialBar: {
+            hollow: {
+                margin: 0,
+                size: "60%"
+            },
+            track: {
+                margin: 0
+            },
+            dataLabels: {
+                show: !1
+            }
+        }
+    }
+}
+var radialoptions1 = {
+        series: [37],
+        chart: {
+            type: "radialBar",
+            width: 60,
+            height: 60,
+            sparkline: {
+                enabled: !0
+            }
+        },
+        dataLabels: {
+            enabled: !1
+        },
+        colors: ["#556ee6"],
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    margin: 0,
+                    size: "60%"
+                },
+                track: {
+                    margin: 0
+                },
+                dataLabels: {
+                    show: !1
+                }
+            }
+        }
+    },
+    radialchart1 = new ApexCharts(document.querySelector("#radialchart-1"), radialoptions1);
+radialchart1.render();
+var radialoptions2 = {
+        series: [72],
+        chart: {
+            type: "radialBar",
+            width: 60,
+            height: 60,
+            sparkline: {
+                enabled: !0
+            }
+        },
+        dataLabels: {
+            enabled: !1
+        },
+        colors: ["#34c38f"],
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    margin: 0,
+                    size: "60%"
+                },
+                track: {
+                    margin: 0
+                },
+                dataLabels: {
+                    show: !1
+                }
+            }
+        }
+    },
+    radialchart2 = new ApexCharts(document.querySelector("#radialchart-2"), radialoptions2);
+radialchart2.render();
+var radialoptions3 = {
+        series: [54],
+        chart: {
+            type: "radialBar",
+            width: 60,
+            height: 60,
+            sparkline: {
+                enabled: !0
+            }
+        },
+        dataLabels: {
+            enabled: !1
+        },
+        colors: ["#f46a6a"],
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    margin: 0,
+                    size: "60%"
+                },
+                track: {
+                    margin: 0
+                },
+                dataLabels: {
+                    show: !1
+                }
+            }
+        }
+    },
+    radialchart3 = new ApexCharts(document.querySelector("#radialchart-3"), radialoptions3);
+radialchart3.render();
