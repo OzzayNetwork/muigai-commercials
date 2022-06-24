@@ -449,9 +449,86 @@
 
                                             </div>
                                             <div class="navbar-nav">
-                                                <a href="collector-new.html" type="button" class="btn btn-outline-danger waves-effect waves-light">
+                                                <a href="#" data-toggle="modal" data-target="#deactivate-modal" type="button" class="btn btn-outline-danger waves-effect waves-light">
                                                     <i class="bx dripicons-wrong font-size-16 align-middle me-2"></i> Deactivate Premises
                                                 </a>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="deactivate-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content ">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="composemodalTitle">Deactivate the Premises</h5>
+                                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <ul class="no-list-style p-0 mb-3">
+                                                                        <li class="pb-3">
+                                                                            <a href="javascript: void(0);">
+                                                                                <div class="d-flex">
+
+                                                                                    <div class="flex-shrink-0 align-self-center me-3">
+                                                                                        <div class="avatar-xs">
+                                                                                            <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                                                                HM
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                                        <p class="text-truncate mb-1">Landlord</p>
+                                                                                        <h5 class="text-truncate font-size-14 mb-0">Hezron Muriuki</h5>
+
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+
+                                                                        <li class="pb-3">
+                                                                            <a href="javascript: void(0);">
+                                                                                <div class="d-flex">
+
+                                                                                    <div class="flex-shrink-0 align-self-center me-3">
+                                                                                        <div class="avatar-xs">
+                                                                                            <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                            <i class="mdi mdi-office-building-outline font-18px"></i>
+                                                        </span>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                                        <p class="text-truncate mb-1">Premises Name</p>
+                                                                                        <h5 class="text-truncate font-size-14 mb-0 text-capitalize">90 Degrees Apartments</h5>
+
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+
+
+                                                                    <div class="col-12">
+                                                                        <div class="form-group">
+                                                                            <label for="" class="text-capitalize">Reason for deactivation</label>
+                                                                            <textarea class="form-control" placeholder="Enter Reasons" name="" id="" cols="30" rows="7"></textarea>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal" id="send-msg-land"><i class="bx dripicons-wrong me-1"></i> Deactivate </button>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                         </div>
