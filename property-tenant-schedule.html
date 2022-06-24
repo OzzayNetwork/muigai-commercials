@@ -442,7 +442,7 @@
                                                 <a class="nav-item nav-link" href="property-unit-type.html">Charges & Unit types</a>
                                                 <a class="nav-item nav-link" href="property-tenants.html">Tenants</a>
                                                 <a class="nav-item nav-link" href="property-statements.html">Statements</a>
-                                                <a class="nav-item nav-link" href="property-tenant-schedule.html">Tenant Schedule</a>
+                                                <a class="nav-item nav-link" href="property-tenant-schedule.html">Rent Schedule</a>
                                                 <a class="nav-item nav-link" href="property-utility.html">Utility Bills</a>
                                                 <a class="nav-item nav-link" href="property-documents.html">Premises Documents</a>
                                             </div>
@@ -468,9 +468,10 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <div class="d-flex align-items-center flex-grow-1">
-                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">Rents statements for March 2022</h4>
+                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">Rent Schedule for <span class="this-month">March 2022</span></h4>
                                         </div>
                                         <div class="d-flex">
+                                            <button class="btn btn-success waves-effect waves-light me-3" data-toggle="modal" data-target="#send-modal"> <i class="mdi mdi-email-send-outline me-2"></i> Send Schedule to Landlord</button>
                                             <select class="form-control selectpicker w-auto month-picker show-tick me-3" data-style="btn btn-secondary waves-light waves-effect" data-live-search="true" title="Select the property">
                                                 <option value="" selected>All Transactions</option>
                                                 <option value="">Invoices</option>
@@ -478,7 +479,7 @@
                                                 <option value="">Waivers</option>
                                                 <option value="">Penalties</option>
                                                 
-                                          </select>
+                                             </select>
 
                                             <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
                                                 <option value="" selected>Mar 2022</option>
@@ -488,7 +489,7 @@
                                                 <option value="">Nov 2021</option>
                                                 <option value="">Sep 2021</option>
                                                 <option value="">Oct 2021</option>
-                                          </select>
+                                            </select>
 
 
 
@@ -507,23 +508,27 @@
                                     <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 ">
                                         <thead class="table-dark">
                                             <tr>
-                                                <td class="d-none"></td>
-                                                <th>Posting date</th>
-                                                <th>Description</th>
-                                                <th class="text-right">Debit</th>
-                                                <th class="text-right">credit</th>
+
+                                                <th>Tenant Code</th>
+                                                <th>Hse No.</th>
+                                                <th class="">Name</th>
+                                                <th class="text-right">Monthly Rent</th>
+                                                <th class="text-right">Arrears</th>
+                                                <th class="text-right">Total Expected</th>
+                                                <th class="text-right">Amount Paid</th>
                                                 <th class="text-right">Balance</th>
-                                                <th></th>
+
                                             </tr>
                                         </thead>
                                         <tfoot class="table-light">
                                             <tr>
-                                                <th colspan="2" class="text-capitalize">Closing Balance</th>
-                                                <th class="text-right text-uppercase">kes 250,600 </th>
-                                                <th class="text-right text-uppercase">kes 97,400</th>
-                                                <th class="text-right text-uppercase"><span class="text-danger fw-semibold">- kes 153,200</span></th>
-                                                <th></th>
-                                                <th></th>
+                                                <th colspan="3" class="text-capitalize">22 Tenants</th>
+                                                <th class="text-right text-uppercase">kes 51,900 </th>
+                                                <th class="text-right text-uppercase">kes 5,500</th>
+                                                <th class="text-right text-uppercase"><span class="">kes 46,850</span></th>
+                                                <th class="text-right text-uppercase">kes 50,950 </th>
+                                                <th class="text-right text-uppercase">kes -4,180</th>
+
 
                                             </tr>
                                         </tfoot>
@@ -532,250 +537,180 @@
                                         <tbody class="table-striped">
 
                                             <tr>
-                                                <td class="d-none">1</td>
-                                                <td class="text-capitalize">1 Mar 2022 12:00 AM</td>
+
+                                                <td class="text-capitalize">123/123/01</td>
                                                 <td class="">
-                                                    90 Degrees: Rent and arrears Invoices Created
-                                                    <br> <span class="fw-semibold">20 Invoices raised</span>
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 205,400
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    -
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 205,400
+                                                    01
                                                 </td>
 
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
-                                                    </button>
+                                                <td class="text-capitalize">
+                                                    kelvin Njuguna
                                                 </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 1,600
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 10,250
+                                                </td>
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 7,850
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 2,400
+                                                </td>
+
+
                                             </tr>
                                             <tr>
-                                                <td class="d-none">2</td>
-                                                <td class="text-capitalize">1 Mar 2022 12:00 AM</td>
+
+                                                <td class="text-capitalize">123/123/02</td>
                                                 <td class="">
-                                                    90 Degrees: Rent & Deposit Invoices Created
-                                                    <br> <span class="fw-semibold">5 Invoices raised</span>
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 40,200
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    -
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 245,600
+                                                    02
                                                 </td>
 
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
-                                                    </button>
+                                                <td class="text-capitalize">
+                                                    joseph muraya gatheru
                                                 </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 1,500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,350
+                                                </td>
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,300
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes -130
+                                                </td>
+
+
                                             </tr>
                                             <tr>
-                                                <td class="d-none">2</td>
-                                                <td class="text-capitalize">2 Mar 2022 3:26 PM</td>
+
+                                                <td class="text-capitalize">123/123/03</td>
                                                 <td class="">
-                                                    90 Degrees 410:Kelvin Njuguna Rent & Deposit payment March 2020.
-                                                    <br> <span class="fw-semibold">Receipt No. 123456</span>
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    -
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 25,400
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 220,200
+                                                    03
                                                 </td>
 
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
-                                                    </button>
+                                                <td class="text-capitalize">
+                                                    Veronicah Mumbi
                                                 </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 150
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,800
+                                                </td>
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 300
+                                                </td>
+
+
                                             </tr>
                                             <tr>
-                                                <td class="d-none">3</td>
-                                                <td class="text-capitalize">6 Mar 2022 12:01 PM</td>
+
+                                                <td class="text-capitalize">123/123/05</td>
                                                 <td class="">
-                                                    90 degrees 312:Brian Kioko Rent Payment for March 2020 Ninety Degrees
-                                                    <br> <span class="fw-semibold">Receipt No.123456</span>
+                                                    04
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Emmy Chepngeno
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 1,950
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 10,500
                                                 </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    -
+                                                    kes 8,500
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 12,000
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 208,200
+                                                    kes 2,100
                                                 </td>
 
 
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
-                                                    </button>
-                                                </td>
                                             </tr>
                                             <tr>
-                                                <td class="d-none">3</td>
-                                                <td class="text-capitalize">6 Mar 2022 12:01 PM</td>
+
+                                                <td class="text-capitalize">123/123/06</td>
                                                 <td class="">
-                                                    90 degrees 312:Brian Kioko Rent Payment for March 2020 Ninety Degrees
-                                                    <br> <span class="fw-semibold">Receipt No.123456</span>
+                                                    05
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    William Fredrick
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 300
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,950
                                                 </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    -
+                                                    kes 8,650
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 12,000
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 196,200
+                                                    kes 300
                                                 </td>
 
 
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
-                                                    </button>
-                                                </td>
                                             </tr>
                                             <tr>
-                                                <td class="d-none">3</td>
-                                                <td class="text-capitalize">6 Mar 2022 12:01 PM</td>
+
+                                                <td class="text-capitalize">123/123/07</td>
                                                 <td class="">
-                                                    90 degrees 312:Brian Kioko Rent Payment for March 2020 Ninety Degrees
-                                                    <br> <span class="fw-semibold">Receipt No.123456</span>
+                                                    06
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Marvelline Oyoko
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 0.00
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 0.00
                                                 </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    -
+                                                    kes 9,150
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 12,000
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 184,200
+                                                    kes -9,150
                                                 </td>
 
 
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
-                                                    </button>
-                                                </td>
                                             </tr>
-                                            <tr>
-                                                <td class="d-none">3</td>
-                                                <td class="text-capitalize">6 Mar 2022 12:01 PM</td>
-                                                <td class="">
-                                                    90 degrees 312:Brian Kioko Rent Payment for March 2020 Ninety Degrees
-                                                    <br> <span class="fw-semibold">Receipt No.123456</span>
-                                                </td>
 
-                                                <td class="text-right text-uppercase">
-                                                    -
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 12,000
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 172,200
-                                                </td>
-
-
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="d-none">3</td>
-                                                <td class="text-capitalize">6 Mar 2022 12:01 PM</td>
-                                                <td class="">
-                                                    90 degrees 312:Brian Kioko Rent Payment for March 2020 Ninety Degrees
-                                                    <br> <span class="fw-semibold">Receipt No.123456</span>
-                                                </td>
-
-                                                <td class="text-right text-uppercase">
-                                                    -
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 12,000
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 160,200
-                                                </td>
-
-
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="d-none">3</td>
-                                                <td class="text-capitalize">6 Mar 2022 12:01 PM</td>
-                                                <td class="">
-                                                    90 degrees 312:Brian Kioko Rent Payment for March 2020 Ninety Degrees
-                                                    <br> <span class="fw-semibold">Receipt No.123456</span>
-                                                </td>
-
-                                                <td class="text-right text-uppercase">
-                                                    -
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 12,000
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 148,200
-                                                </td>
-
-
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="d-none">3</td>
-                                                <td class="text-capitalize">10 Apr 2022 12:00 AM</td>
-                                                <td class="">
-                                                    Penalty delays penalty for 10 Units
-                                                    <br> <span class="fw-semibold">10 Invoices Raised</span>
-                                                </td>
-
-
-                                                <td class="text-right text-uppercase">
-                                                    kes 5,000
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    -
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 153,200
-                                                </td>
-
-
-                                                <td class="text-right">
-                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
-                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
-                                                    </button>
-                                                </td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -790,6 +725,100 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- modals -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="send-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="composemodalTitle">Send Rent Schedule to Landlord</h5>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <ul class="no-list-style p-0 m-0">
+                                    <li class="pb-3">
+                                        <a href="javascript: void(0);">
+                                            <div class="d-flex">
+
+                                                <div class="flex-shrink-0 align-self-center me-3">
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                            HM
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-truncate mb-1">Landlord</p>
+                                                    <h5 class="text-truncate font-size-14 mb-0">Hezron Muriuki</h5>
+
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="pb-3">
+                                        <a href="javascript: void(0);">
+                                            <div class="d-flex">
+
+                                                <div class="flex-shrink-0 align-self-center me-3">
+                                                    <div class="avatar-xs">
+                                                        <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
+                                                            <i class="mdi mdi-email-outline font-18px"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-grow-1 overflow-hidden">
+                                                    <p class="text-truncate mb-1">Email Address</p>
+                                                    <h5 class="text-truncate font-size-14 mb-0">hez@email.com</h5>
+
+                                                </div>
+
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="p-3 bg-light my-3">
+                                    <p class="m-0 p-0">Rent schedule for <strong>90 Degrees</strong> as from <strong>1st Jun 2022</strong> to <strong>24 Jun 2022</strong> prepared on
+                                        <strong class="text-capitalize">24 jun 2022 at 1:24 PM</strong>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="send-msg-land">Send <i class="fab fa-telegram-plane ms-1"></i></button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- success alert -->
+            <div class="position-fixed top-0 end-0 p-3" style="z-index: 1005">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="mdi mdi-email-check-outline text-info font-16px pr-2"></i>
+                        <strong class="me-auto fw-semibold">Email sent</strong>
+                        <small>1 Sec ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        The email has been sent succesfuly to the landlord
+                    </div>
+                </div>
+            </div>
+            <!-- success alert here -->
+
+            <!-- end of modals -->
 
             <footer class="footer ">
                 <div class="container-fluid ">
@@ -853,6 +882,9 @@
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js "></script>
 
+    <!-- Bootstrap Toasts Js -->
+    <script src="assets/js/pages/bootstrap-toastr.init.js"></script>
+
     <!-- App js -->
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
@@ -860,5 +892,7 @@
 
 
 <!-- index.html   13:55:49 GMT -->
+
+</html>
 
 </html>

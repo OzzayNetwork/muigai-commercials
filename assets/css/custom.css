@@ -1182,3 +1182,7 @@ padding: 0px;
             height: calc(100% - 23px);
         }
     }
+    
+    .no-list-style li {
+        list-style: none;
+    }

@@ -557,5 +557,19 @@ $(document).ready(function() {
         $('.invoice-item-price').text(invoiceAmt);
     })
     $('.selectpicker').selectpicker();
-    $('.selectpicker').selectpicker('render')
+    $('.selectpicker').selectpicker('render');
+
+    $('#send-msg-land').on('click', function() {
+
+        $('#send-modal').modal('hide');
+
+        setTimeout(function() {
+            $('#liveToast').show();
+        }, 1000);
+
+        setTimeout(function() {
+            location.reload();
+        }, 5000);
+
+    })
 });
