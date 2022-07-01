@@ -571,5 +571,15 @@ $(document).ready(function() {
             location.reload();
         }, 5000);
 
-    })
+    });
+
+    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const d = new Date();
+    let name = month[d.getMonth()];
+
+    const mwaka = new Date();
+    let huuMwaka = mwaka.getFullYear()
+
+    $(".this-month").text(name + " " + huuMwaka);
 });
