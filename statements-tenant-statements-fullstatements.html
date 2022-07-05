@@ -427,20 +427,24 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Tenant rent statements for ulip house</h4>
+                                <h4 class="mb-sm-0 font-size-18">Kelvin's Full statement</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Statements</a></li>
-                                        <li class="breadcrumb-item text-capitalize"><a href="statements-tenant-statements.html">Tenat rent statements</a></li>
-                                        <li class="breadcrumb-item active">Tenant Statements</li>
+                                        <li class="breadcrumb-item"><a href="statements-tenant-statements.html">All tenant rent statements</a></li>
+                                        <li class="breadcrumb-item "><a href="statements-tenant-statements-for-premises.html">Tulip House statements</a></li>
+                                        <li class="breadcrumb-item active">Kelvin's Full statements</li>
                                     </ol>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                     <!-- end page title -->
+
+                    <!-- end of tool bar -->
 
                     <div class="row">
                         <div class="col-xl-12">
@@ -449,7 +453,7 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <div class="d-flex align-items-center flex-grow-1">
-                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">All Tenants statements</h4>
+                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">Full statement for Kelvin. Hse No. 410 90 Degrees</h4>
                                         </div>
                                         <div class="d-flex">
 
@@ -481,21 +485,24 @@
                                     <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 ">
                                         <thead class="table-dark">
                                             <tr>
-
-                                                <th>RC No.</th>
-                                                <th>Tenant</th>
-                                                <th class="">Hse No.</th>
-                                                <th class="text-right">Current Balance</th>
+                                                <td class="d-none"></td>
+                                                <th>Posting date</th>
+                                                <th>Description</th>
+                                                <th class="text-right">Debit</th>
+                                                <th class="text-right">credit</th>
+                                                <th class="text-right">Balance</th>
                                                 <th></th>
-
                                             </tr>
                                         </thead>
                                         <tfoot class="table-light">
                                             <tr>
-                                                <th colspan="2" class="text-capitalize">20 Tenants</th>
-                                                <th class="">19 Houses </th>
-                                                <th class="text-right text-uppercase">kes 867,045.00</th>
+                                                <th colspan="2" class="text-capitalize">Closing Balance</th>
+                                                <th class="text-right text-uppercase">kes 84,900 </th>
+                                                <th class="text-right text-uppercase">kes 96,900</th>
+                                                <th class="text-right text-uppercase"><span class="text-success fw-semibold">+ kes 12,000</span></th>
                                                 <th></th>
+                                                <th></th>
+
                                             </tr>
                                         </tfoot>
 
@@ -503,114 +510,256 @@
                                         <tbody class="table-striped">
 
                                             <tr>
-
-                                                <td class="text-uppercase">RC/1794/A</td>
-                                                <td class="text-uppercase">
-                                                    alex Wanjala
+                                                <td class="d-none">1</td>
+                                                <td class="text-capitalize">1 Mar 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 Degrees 410:Kelvin Njuguna Rent March 2020 & Deposit Invoice.
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
                                                 </td>
-                                                <td>
-                                                    410
-                                                </td>
-
                                                 <td class="text-right text-uppercase">
-                                                    kes 180,550.00
+                                                    kes 25,400
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 25,400
                                                 </td>
 
-
-
-                                                <td>
-                                                    <a type="button" href="statements-tenant-statements-fullstatements.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Full Statement</a>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
                                                 </td>
-
-
                                             </tr>
                                             <tr>
-
-                                                <td class="text-uppercase">RC/1794/A</td>
-                                                <td class="text-uppercase">
-                                                    alex Wanjala
+                                                <td class="d-none">2</td>
+                                                <td class="text-capitalize">2 Mar 2022 3:26 PM</td>
+                                                <td class="">
+                                                    90 Degrees 410:Kelvin Njuguna Rent March 2020 & Deposit payment.
+                                                    <br> <span class="fw-semibold">Receipt No. 123456</span>
                                                 </td>
-                                                <td>
-                                                    410
-                                                </td>
-
                                                 <td class="text-right text-uppercase">
-                                                    kes 180,550.00
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 25,400
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 0.00
                                                 </td>
 
-
-
-                                                <td>
-                                                    <a type="button" href="statements-tenant-statements-fullstatements.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Full Statement</a>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
+                                                    </button>
                                                 </td>
-
-
                                             </tr>
                                             <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">1 Apr 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 degrees 410:Kelvin Ndungu Rent For April 2020 Ninety Degrees
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
+                                                </td>
 
-                                                <td class="text-uppercase">RC/1794/A</td>
-                                                <td class="text-uppercase">
-                                                    alex Wanjala
-                                                </td>
-                                                <td>
-                                                    410
-                                                </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    kes 180,550.00
+                                                    kes 12,000
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 12,000
                                                 </td>
 
 
-
-                                                <td>
-                                                    <a type="button" href="statements-tenant-statements-fullstatements.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Full Statement</a>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
                                                 </td>
-
-
                                             </tr>
                                             <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">10 Apr 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 degrees 410:Kelvin Ndungu Delayed rent penalty
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
+                                                </td>
 
-                                                <td class="text-uppercase">RC/1794/A</td>
-                                                <td class="text-uppercase">
-                                                    alex Wanjala
-                                                </td>
-                                                <td>
-                                                    410
-                                                </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    kes 180,550.00
+                                                    kes 500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 12,500
                                                 </td>
 
 
-
-                                                <td>
-                                                    <a type="button" href="statements-tenant-statements-fullstatements.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Full Statement</a>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
                                                 </td>
-
-
                                             </tr>
                                             <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">1 May 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 degrees 410:Kelvin Ndungu Rent For April 2020 Ninety Degrees
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
+                                                </td>
 
-                                                <td class="text-uppercase">RC/1794/A</td>
-                                                <td class="text-uppercase">
-                                                    alex Wanjala
-                                                </td>
-                                                <td>
-                                                    410
-                                                </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    kes 180,550.00
+                                                    kes 12,000
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 24,500
                                                 </td>
 
 
-
-                                                <td>
-                                                    <a type="button" href="statements-tenant-statements-fullstatements.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Full Statement</a>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">10 May 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 degrees 410:Kelvin Ndungu Rent delay penalty for May 2022
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
                                                 </td>
 
 
+                                                <td class="text-right text-uppercase">
+                                                    kes 500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 25,000
+                                                </td>
+
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">1 Jun 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 degrees 410:Kelvin Ndungu Rent For April 2020 Ninety Degrees
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
+                                                </td>
+
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 12,000
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 47,000
+                                                </td>
+
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">10 Jun 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 degrees 410:Kelvin Ndungu Rent delay penalty forJune 2022
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
+                                                </td>
+
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 47,500
+                                                </td>
+
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">1 Jul 2022 12:00 AM</td>
+                                                <td class="">
+                                                    90 degrees 410:Kelvin Ndungu Rent For July 2020 Ninety Degrees
+                                                    <br> <span class="fw-semibold">Invoice No.123456</span>
+                                                </td>
+
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 12,000
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 59,500
+                                                </td>
+
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="d-none">3</td>
+                                                <td class="text-capitalize">2 Jul 10:30 PM</td>
+                                                <td class="">
+                                                    90 Degrees 410:Kelvin Njuguna Rent for July 2020 & Arrears.
+                                                    <br> <span class="fw-semibold">Receipt No.123456</span>
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    -
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 71,500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    + kes 12,000
+                                                </td>
+
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-secondary btn-sm waves-effect waves-light">
+                                                        <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
+                                                    </button>
+                                                </td>
                                             </tr>
 
 
@@ -630,100 +779,6 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
-
-            <!-- modals -->
-
-            <!-- Modal -->
-            <div class="modal fade" id="send-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content ">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="composemodalTitle">Send Rent Schedule to Landlord</h5>
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div>
-                                <ul class="no-list-style p-0 m-0">
-                                    <li class="pb-3">
-                                        <a href="javascript: void(0);">
-                                            <div class="d-flex">
-
-                                                <div class="flex-shrink-0 align-self-center me-3">
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
-                                                            HM
-                                                        </span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-truncate mb-1">Landlord</p>
-                                                    <h5 class="text-truncate font-size-14 mb-0">Hezron Muriuki</h5>
-
-                                                </div>
-
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li class="pb-3">
-                                        <a href="javascript: void(0);">
-                                            <div class="d-flex">
-
-                                                <div class="flex-shrink-0 align-self-center me-3">
-                                                    <div class="avatar-xs">
-                                                        <span class="avatar-title rounded-circle bg-primary bg-soft text-primary">
-                                                            <i class="mdi mdi-email-outline font-18px"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex-grow-1 overflow-hidden">
-                                                    <p class="text-truncate mb-1">Email Address</p>
-                                                    <h5 class="text-truncate font-size-14 mb-0">hez@email.com</h5>
-
-                                                </div>
-
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <div class="p-3 bg-light my-3">
-                                    <p class="m-0 p-0">Rent schedule for <strong>90 Degrees</strong> as from <strong>1st Jun 2022</strong> to <strong>24 Jun 2022</strong> prepared on
-                                        <strong class="text-capitalize">24 jun 2022 at 1:24 PM</strong>
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="send-msg-land">Send <i class="fab fa-telegram-plane ms-1"></i></button>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- success alert -->
-            <div class="position-fixed top-0 end-0 p-3" style="z-index: 1005">
-                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-                        <i class="mdi mdi-email-check-outline text-info font-16px pr-2"></i>
-                        <strong class="me-auto fw-semibold">Email sent</strong>
-                        <small>1 Sec ago</small>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-                        The email has been sent succesfuly to the landlord
-                    </div>
-                </div>
-            </div>
-            <!-- success alert here -->
-
-            <!-- end of modals -->
 
             <footer class="footer ">
                 <div class="container-fluid ">
@@ -786,9 +841,6 @@
     <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js "></script>
-
-    <!-- Bootstrap Toasts Js -->
-    <script src="assets/js/pages/bootstrap-toastr.init.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js "></script>
