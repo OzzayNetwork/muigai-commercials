@@ -427,13 +427,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Landlord Statements</h4>
+                                <h4 class="mb-sm-0 font-size-18">Tulip house Landlord Schedule</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="property-list.html">Statements</a></li>
-                                        <li class="breadcrumb-item active">Landlord Statements</li>
+                                        <li class="breadcrumb-item"><a href="#">Statements</a></li>
+                                        <li class="breadcrumb-item"><a href="statements-landlord-schedule.html">Landlord Schedule</a></li>
+                                        <li class="breadcrumb-item active">Tulip House</li>
                                     </ol>
                                 </div>
                             </div>
@@ -448,9 +449,10 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <div class="d-flex align-items-center flex-grow-1">
-                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">Landlords' Statements for <span class="this-month">March 2022</span></h4>
+                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">Rent Schedule for <span class="this-month">March 2022</span></h4>
                                         </div>
                                         <div class="d-flex">
+                                            <button class="btn btn-success waves-effect waves-light me-3" data-toggle="modal" data-target="#send-modal"> <i class="mdi mdi-email-send-outline me-2"></i> Send Schedule to Landlord</button>
 
 
                                             <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
@@ -481,27 +483,25 @@
                                         <thead class="table-dark">
                                             <tr>
 
-                                                <th>RC No.</th>
-                                                <th>Premises</th>
-                                                <th class="">Landlord</th>
-                                                <th class="text-right">Opening Bal.</th>
-                                                <th class="text-right">This Months Collection</th>
-                                                <th class="text-right">MCA Commission</th>
-                                                <th class="text-right">VAT (16%)</th>
-                                                <th class="text-right">Closing Bal.</th>
-                                                <th></th>
+                                                <th>Tenant Code</th>
+                                                <th>Hse No.</th>
+                                                <th class="">Name</th>
+                                                <th class="text-right">Monthly Rent</th>
+                                                <th class="text-right">Arrears</th>
+                                                <th class="text-right">Total Expected</th>
+                                                <th class="text-right">Amount Paid</th>
+                                                <th class="text-right">Balance</th>
 
                                             </tr>
                                         </thead>
                                         <tfoot class="table-light">
                                             <tr>
-                                                <th colspan="3" class="text-capitalize">3 Premises</th>
-                                                <th class="text-right text-uppercase">kes 2,772,089.67 </th>
-                                                <th class="text-right text-uppercase">kes 453,500.00</th>
-                                                <th class="text-right text-uppercase"><span class="">kes 906,850</span></th>
-                                                <th class="text-right text-uppercase">kes 36,280 </th>
-                                                <th class="text-right text-uppercase">kes 2,914,845.87</th>
-                                                <th></th>
+                                                <th colspan="3" class="text-capitalize">22 Tenants</th>
+                                                <th class="text-right text-uppercase">kes 51,900 </th>
+                                                <th class="text-right text-uppercase">kes 5,500</th>
+                                                <th class="text-right text-uppercase"><span class="">kes 46,850</span></th>
+                                                <th class="text-right text-uppercase">kes 50,950 </th>
+                                                <th class="text-right text-uppercase">kes -4,180</th>
 
 
                                             </tr>
@@ -512,100 +512,178 @@
 
                                             <tr>
 
-                                                <td class="text-capitalize">RC/1302/C</td>
+                                                <td class="text-capitalize">123/123/01</td>
                                                 <td class="">
-                                                    <a href="statements-landlord-statements-premises.html">Kenlands 1412</a>
+                                                    01
                                                 </td>
 
                                                 <td class="text-capitalize">
-                                                    Eustace G. Muhonyo
+                                                    kelvin Njuguna
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 1,689,186.96
+                                                    kes 8,650
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 70,100.00
+                                                    kes 1,600
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 5,608.00<i>(8%)</i>
+                                                    kes 10,250
                                                 </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    kes 897.00
+                                                    kes 7,850
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 1,752,781.68
-                                                </td>
-                                                <td>
-                                                    <a type="button" href="statements-landlord-statements-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
-                                                </td>
-
-
-                                            </tr>
-                                            <tr>
-                                                <td class="text-capitalize">RC/1302/B</td>
-                                                <td class="">
-                                                    <a href="statements-landlord-statements-premises.html">THE PALACE</a>
-                                                </td>
-
-                                                <td class="text-capitalize">
-                                                    Cleophas Kabienga
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 5,571.51
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 333,200.00
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 26,656.00 <i>(8.00%)</i>
-                                                </td>
-
-                                                <td class="text-right text-uppercase">
-                                                    kes 4,265.96
-                                                </td>
-                                                <td class="text-right text-uppercase">
-                                                    kes 39,191.55
-                                                </td>
-                                                <td>
-                                                    <a type="button" href="statements-landlord-statements-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
+                                                    kes 2,400
                                                 </td>
 
 
                                             </tr>
                                             <tr>
 
-                                                <td class="text-capitalize">123/123/D</td>
+                                                <td class="text-capitalize">123/123/02</td>
                                                 <td class="">
-                                                    <a href="statements-landlord-statements-premises.html">Mejja Jenga</a>
+                                                    02
                                                 </td>
 
                                                 <td class="text-capitalize">
-                                                    Evanoseph Chege Maina
+                                                    joseph muraya gatheru
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 1,077,331.20
+                                                    kes 8,650
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 50,200.00
+                                                    kes 1,500
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 4,016.00 <i>(8.00%)</i>
+                                                    kes 8,350
                                                 </td>
 
                                                 <td class="text-right text-uppercase">
-                                                    kes 642.56
+                                                    kes 8,300
                                                 </td>
                                                 <td class="text-right text-uppercase">
-                                                    kes 1,122,872.64
-                                                </td>
-                                                <td>
-                                                    <a type="button" href="statements-landlord-statements-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
+                                                    kes -130
                                                 </td>
 
 
                                             </tr>
+                                            <tr>
 
+                                                <td class="text-capitalize">123/123/03</td>
+                                                <td class="">
+                                                    03
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Veronicah Mumbi
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 150
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,800
+                                                </td>
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 300
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-capitalize">123/123/05</td>
+                                                <td class="">
+                                                    04
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Emmy Chepngeno
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 1,950
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 10,500
+                                                </td>
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,500
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 2,100
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-capitalize">123/123/06</td>
+                                                <td class="">
+                                                    05
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    William Fredrick
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 300
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,950
+                                                </td>
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 300
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-capitalize">123/123/07</td>
+                                                <td class="">
+                                                    06
+                                                </td>
+
+                                                <td class="text-capitalize">
+                                                    Marvelline Oyoko
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 8,650
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 0.00
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes 0.00
+                                                </td>
+
+                                                <td class="text-right text-uppercase">
+                                                    kes 9,150
+                                                </td>
+                                                <td class="text-right text-uppercase">
+                                                    kes -9,150
+                                                </td>
+
+
+                                            </tr>
 
                                         </tbody>
                                     </table>
@@ -629,7 +707,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content ">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="composemodalTitle">Send Rent Schedule to Landlord</h5>
+                            <h5 class="modal-title" id="composemodalTitle">Send Schedule to Landlord</h5>
                             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
