@@ -442,13 +442,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Tenant Statements</h4>
+                                <h4 class="mb-sm-0 font-size-18">Monthly Rent Reports</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="property-list.html">Statements</a></li>
-                                        <li class="breadcrumb-item active">Tenant Statements</li>
+                                        <li class="breadcrumb-item"><a href="#">Reports</a></li>
+                                        <li class="breadcrumb-item active">Monthly Rent Reports</li>
                                     </ol>
                                 </div>
                             </div>
@@ -463,12 +463,29 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <div class="d-flex align-items-center flex-grow-1">
-                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">All Tenants statements</h4>
+                                            <h4 class="mb-0 card-header bg-transparent  p-0 m-0">All Properties Monthly Reports for <span class="this-month"></span></h4>
                                         </div>
                                         <div class="d-flex">
 
+                                            <select class="form-control selectpicker w-auto  show-tick me-3" data-live-search="true" title="Select County">
+                                                <option value="">All counties</option>
+                                                <option value="">Nairobi</option>
+                                                <option value="">Nakuru</option>
+                                               
+                                            </select>
 
-                                            <select class="form-control selectpicker w-auto  show-tick d-none" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the property">
+
+                                            <select class="form-control selectpicker w-auto  show-tick me-3" data-live-search="true" title="Select Zone">
+                                                <option value="">All Zones</option>
+                                                <option value="">Zone A</option>
+                                                <option value="">Zone B</option>
+                                                <option value="">Zone C</option>
+                                                <option value="">Zone D</option>
+                                                <option value="">Zone E</option>
+                                                <option value="">Zone F</option>
+                                            </select>
+
+                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select the Month">
                                                 <option value="" selected>Mar 2022</option>
                                                 <option value="">Feb 2022</option>
                                                 <option value="">Jan 2022</option>
@@ -528,7 +545,7 @@
 
                                                 <td class="text-uppercase">RC/1794/A</td>
                                                 <td class="">
-                                                    <a href="statements-tenant-statements-for-premises.html">Kinamba</a>
+                                                    <a href="reports-monthly-premises.html">Kinamba</a>
                                                 </td>
 
                                                 <td class="text-capitalize">
@@ -548,7 +565,7 @@
 
 
                                                 <td>
-                                                    <a type="button" href="statements-tenant-statements-for-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
+                                                    <a type="button" href="reports-monthly-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
                                                 </td>
 
 
@@ -558,7 +575,7 @@
 
                                                 <td class="text-uppercase">RC/1794/B</td>
                                                 <td class="">
-                                                    <a href="statements-tenant-statements-for-premises.html">New Heights</a>
+                                                    <a href="reports-monthly-premises.html">New Heights</a>
                                                 </td>
 
                                                 <td class="text-capitalize">
@@ -578,7 +595,7 @@
 
 
                                                 <td>
-                                                    <a type="button" href="statements-tenant-statements-for-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
+                                                    <a type="button" href="reports-monthly-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
                                                 </td>
 
 
@@ -588,7 +605,7 @@
 
                                                 <td class="text-uppercase">RC/1794/G</td>
                                                 <td class="">
-                                                    <a href="statements-tenant-statements-for-premises.html">Kennlands</a>
+                                                    <a href="reports-monthly-premises.html">Kennlands</a>
                                                 </td>
 
                                                 <td class="text-capitalize">
@@ -606,7 +623,7 @@
                                                 </td>
 
                                                 <td>
-                                                    <a type="button" href="statements-tenant-statements-for-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
+                                                    <a type="button" href="reports-monthly-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
                                                 </td>
 
 
@@ -616,7 +633,7 @@
 
                                                 <td class="text-uppercase">RC/1794/H</td>
                                                 <td class="">
-                                                    <a href="statements-tenant-statements-for-premises.html">New Day Apartments</a>
+                                                    <a href="reports-monthly-premises.html">New Day Apartments</a>
                                                 </td>
 
                                                 <td class="text-capitalize">
@@ -636,7 +653,7 @@
 
 
                                                 <td>
-                                                    <a type="button" href="statements-tenant-statements-for-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
+                                                    <a type="button" href="reports-monthly-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
                                                 </td>
 
 
@@ -646,7 +663,7 @@
 
                                                 <td class="text-uppercase">RC/1794/X</td>
                                                 <td class="">
-                                                    <a href="statements-tenant-statements-for-premises.html">Honor Buildings</a>
+                                                    <a href="reports-monthly-premises.html">Honor Buildings</a>
                                                 </td>
 
                                                 <td class="text-capitalize">
@@ -666,7 +683,7 @@
 
 
                                                 <td>
-                                                    <a type="button" href="statements-tenant-statements-for-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
+                                                    <a type="button" href="reports-monthly-premises.html" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3 text-right">Detailed View</a>
                                                 </td>
 
 
