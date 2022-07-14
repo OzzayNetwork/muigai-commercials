@@ -457,269 +457,180 @@
                     </div>
                     <!-- end page title -->
 
-                    <!-- eTransactions table -->
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                                <div class="card-body pt-2 pb-3">
+                                    <nav class="navbar navbar-expand-md navbar-white bg-white py-2">
+                                        <button class="navbar-toggler btn btn-sm px-3 font-size-16 header-item waves-effect h-auto text-primary" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                          <span class="mdi mdi-menu"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                                            <div class="navbar-nav">
+                                                <a class="nav-item nav-link" href="user-details.html">User's Profile<span class="sr-only">(current)</span></a>
+                                                <a class="nav-item nav-link" href="user-logs.html">All Logs</a>
 
-                                <div class="card-body">
-                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
-                                        <thead class="table-light">
-                                            <tr>
+                                            </div>
+                                            <div class="navbar-nav">
+                                                <a href="collector-new.html" type="button" class="btn btn-primary waves-effect waves-light text-white">
+                                                    <i class="bx bx bxs-edit-alt font-size-16 align-middle me-2"></i> Edit Account
+                                                </a>
+                                            </div>
 
-                                                <th scope="col" style="width: 40px;">
-                                                    <div class="the-mail-checkbox pr-4">
-                                                        <label for="selectAll" class="d-none">Select All</label>
-                                                        <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="selectAll">
-
-                                                    </div>
-                                                </th>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Email</th>
-                                                <th scope="col">Phone</th>
-                                                <th scope="col">System Role</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col">Last Seen</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-
-                                                <td>
-                                                    <div class="d-flex  align-items-center">
-                                                        <div class="the-mail-checkbox pr-4">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark" type="checkbox" id="formCheck1">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="user-details.html">
-                                                        <div class=" d-flex align-items-center ">
-                                                            <div class="avatar-xs mr-15px ">
-                                                                <span class="avatar-title rounded-circle ">
-                                                                        D
-                                                                    </span>
-                                                            </div>
-                                                            <div>
-                                                                <h5 class="font-size-14 mb-1 "><a href="javascript: void(0); " class="text-dark ">Mark Ellison</a></h5>
-                                                                <p class="text-muted mb-0 ">Front end Engineer</p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                                <td>david@skote.com</td>
-                                                <td>
-                                                    <a href="tell:254704549859 ">254 704 549 859</a>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <div class="badge badge-soft-primary font-size-11 m-1 ">Messenger</div>
-                                                    </div>
-                                                </td>
-
-
-                                                <td>
-                                                    <div>
-                                                        <div class="badge badge-soft-success font-size-11 m-1 ">Activated</div>
-                                                    </div>
-
-                                                </td>
-                                                <td>
-                                                    9:15 AM
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end ">
-                                                            <a class="dropdown-item " href="user-details.html "><i class="font-size-15 mdi mdi-eye-plus-outline me-3 "></i>View Profile</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Edit account</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat-plus me-3 "></i>Compose Message</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 dripicons-trash me-3 "></i>Remove Account</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center ">
-                                                        <div class="the-mail-checkbox pr-4 ">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark " type="checkbox " id="formCheck1 ">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="user-details.html">
-                                                        <div class="d-flex align-items-center ">
-                                                            <div class="mr-15px ">
-                                                                <img class="rounded-circle avatar-xs " src="assets/images/users/avatar-3.jpg " alt=" ">
-                                                            </div>
-                                                            <div>
-                                                                <h5 class="font-size-14 mb-1 "><a href="javascript: void(0); " class="text-dark ">Rafael Morales</a></h5>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                </td>
-
-                                                <td>Rafael@skote.com</td>
-
-                                                <td>
-                                                    <a href="tell:254704549859 ">254 704 549 859</a>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <div class="badge badge-soft-primary font-size-11 m-1 ">Messenger</div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <div href="javascript: void(0); " class="badge badge-soft-danger font-size-11 m-1 ">Inactive</div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    3 Jul 2022
-                                                </td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end ">
-                                                            <a class="dropdown-item " href="user-details.html "><i class="font-size-15 mdi mdi-eye-plus-outline me-3 "></i>View Profile</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Edit account</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat-plus me-3 "></i>Compose Message</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 dripicons-trash me-3 "></i>Remove Account</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center ">
-                                                        <div class="the-mail-checkbox pr-4 ">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark " type="checkbox " id="formCheck1 ">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="user-details.html">
-                                                        <div class="d-flex align-items-center ">
-                                                            <div class="avatar-xs mr-15px ">
-                                                                <span class="avatar-title rounded-circle ">
-                                                                M
-                                                            </span>
-                                                            </div>
-                                                            <div>
-                                                                <h5 class="font-size-14 mb-1 "><a href="javascript: void(0); " class="text-dark ">Mark Ellison</a></h5>
-                                                                <p class="text-muted mb-0 ">Full Stack Developer</p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                                <td>mark@skote.com</td>
-
-                                                <td>
-                                                    <a href="tell:254704549859 ">254 704 549 859</a>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <div class="badge badge-soft-secondary font-size-11 m-1 ">Super Admin</div>
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div>
-                                                        <div class="badge badge-soft-success font-size-11 m-1 ">Activated</div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-pill badge-soft-success font-size-11 "><i class="mdi mdi-checkbox-blank-circle pr-5 "></i>Online</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end ">
-                                                            <a class="dropdown-item " href="user-details.html "><i class="font-size-15 mdi mdi-eye-plus-outline me-3 "></i>View Profile</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Edit account</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat-plus me-3 "></i>Compose Message</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 dripicons-trash me-3 "></i>Remove Account</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex align-items-center ">
-                                                        <div class="the-mail-checkbox pr-4 ">
-                                                            <input class="form-check-input mt-0 pt-0 form-check-dark " type="checkbox " id="formCheck1 ">
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="user-details.html">
-                                                        <div class="d-flex align-items-center ">
-                                                            <div class="avatar-xs mr-15px ">
-                                                                <span class="avatar-title rounded-circle ">
-                                                                        J
-                                                                    </span>
-                                                            </div>
-                                                            <div>
-                                                                <h5 class="font-size-14 mb-1 "><a href="javascript: void(0); " class="text-dark ">John Santiago</a></h5>
-                                                                <p class="text-muted mb-0 ">The manager</p>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </td>
-
-                                                <td>john@skote.com</td>
-
-                                                <td>
-                                                    <a href="tell:254704549859 ">254 704 549 859</a>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <div class="badge badge-soft-primary font-size-11 m-1 ">Messenger</div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <div class="badge badge-soft-success font-size-11 m-1 ">Activated</div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-pill badge-soft-success font-size-11 "><i class="mdi mdi-checkbox-blank-circle pr-5 "></i>Online</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end ">
-                                                            <a class="dropdown-item " href="user-details.html "><i class="font-size-15 mdi mdi-eye-plus-outline me-3 "></i>View Profile</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Edit account</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat-plus me-3 "></i>Compose Message</a>
-                                                            <a class="dropdown-item " href="# "><i class="font-size-15 dripicons-trash me-3 "></i>Remove Account</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                                        </div>
+                                    </nav>
                                 </div>
                             </div>
+
+                        </div>
+                    </div>
+
+                    <!-- eTransactions table -->
+
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="card calc-h-3px">
+                                <div class="card-body pb-5">
+
+                                    <div>
+                                        <div class="mb-4 me-3">
+                                            <i class="mdi mdi-account-circle text-primary h1"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Kelvin Thuku <span class="badge badge-pill badge-soft-success font-size-11">Active</span></h5>
+                                            <p class="text-muted mb-0">
+                                                <span>Super Admin</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <p class="text-muted mb-0 d-flex align-items-center">
+                                        <a href="tel:0704549859" class="d-flex align-items-center"><i class="mdi mdi-phone me-2 font-size-18"></i> 0704 549 859</a> <span class="px-3 px-3">|</span>
+                                        <a class="d-flex align-items-center" href="mailto:email@email.com"><i class="mdi mdi-email-outline font-size-18 me-2"></i> email@email.com</a>
+                                    </p>
+                                </div>
+                                <div class="card-body border-top">
+                                    <p class="p-0 m-0"><span class="text-muted">Status</span> <span class="text-success">Online</span></p>
+
+                                </div>
+
+                                <div class="card-body border-top pb-2 pt-3">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="text-muted">
+                                                <table class="table table-borderless mb-3 table-sm table-striped">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Last edited</td>
+                                                            <td class="pb-0"><span class="text-black">22 Feb 2022</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Last edited by</td>
+                                                            <td class="pb-0"><span class="text-black">Edwin Shanikwa</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Date registered</td>
+                                                            <td class="pb-0"><span class="text-black">22 Mar 2021</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Registered By</td>
+                                                            <td class="pb-0"><span class="text-black">Mabata Mapengo</span></td>
+                                                        </tr>
+
+                                                        <!-- <tr class="bg-white d-none">
+                                                            <td colspan="2" class="pl-0 pb-0 text-muted bg-white">
+                                                                <hr>
+                                                            </td>
+                                                        </tr> -->
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Gender</td>
+                                                            <td class="pb-0"><span class="text-black">Male</span></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Company Role</td>
+                                                            <td class="pb-0"><span class="text-black">Developer</span></td>
+                                                        </tr>
+                                                        
+                                                        
+
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <br><br>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8">                            
+                            <div class="card">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="p-4">
+                                                <h5 class="">Recent Logs</h5>
+                                                <span class="d-none">last logged in 20 Min Ago</span>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table" id="datatable-buttons">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th scope="col">Date</th>
+                                                                    <th scope="col">Details</th>
+                    
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><span class="fw-semibold">3 Jan 2023 2023 06:45 AM</span></td>
+                                                                    <td>Wrote 203 SMSs messages for 25 Contacts</td>
+                                                                </tr>
+                    
+                                                                <tr>
+                                                                    <td><span class="fw-semibold">3 Jan 2023 03:23 AM</span></td>
+                                                                    <td>Logged into the system</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span class="fw-semibold">3 Jan 2023 03:23 AM</span></td>
+                                                                    <td>Moved 33 contacts to the trash</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><span class="fw-semibold">3 Jan 2023 03:23 AM</span></td>
+                                                                    <td>Moved 33 contacts to the trash</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><span class="fw-semibold">3 Jan 2023 03:23 AM</span></td>
+                                                                    <td>Moved 33 contacts to the trash</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><span class="fw-semibold">3 Jan 2023 03:23 AM</span></td>
+                                                                    <td>Moved 33 contacts to the trash</td>
+                                                                </tr>
+                    
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                         <!-- end col -->
                     </div>

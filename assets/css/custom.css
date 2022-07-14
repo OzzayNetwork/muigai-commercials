@@ -1186,3 +1186,7 @@ padding: 0px;
     .no-list-style li {
         list-style: none;
     }
+    
+    #sidebar-menu ul li ul.sub-menu li a {
+        text-transform: capitalize;
+    }
